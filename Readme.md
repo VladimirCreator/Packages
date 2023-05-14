@@ -2,6 +2,7 @@
 ## Table of Contents
 1. Alphabet
 2. GitHub Explorer
+3. Reverse Polish Notation
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -20,3 +21,13 @@ A tool for viewing repositories on GitHub.
 
 ### Example
 ![GitHub Explorer](./videos/github_explorer.gif)
+
+## Reverse Polish Notation
+A tool for solving expressions.
+
+### Files
+1. [`./reverse_polish_notation.swift`](./reverse_polish_notation.swift)
+
+### Example
+![Reverse Polish Notation](./photos/reverse_polish_notation.png)
+=======
