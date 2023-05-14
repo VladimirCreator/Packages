@@ -15,7 +15,7 @@ rpn.split(separator: " ").forEach {
         proxy = number
     }
     else if let evaluate = evaluate[$0.lowercased()] {
-        let (lhs, rhs) = (number.removeFirst(), number.removeFirst())
+        let (rhs, lhs) = (number.removeLast(), number.removeLast())
         proxy = evaluate(lhs, rhs)
     }
     number.append(proxy)
