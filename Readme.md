@@ -6,7 +6,7 @@
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
 
-## Files
+### Files
 1. [`./alphabet.swift`](./alphabet.swift)
 
 ![Alphabet.swift](./photos/alphabet.png)
@@ -14,7 +14,7 @@ A tool to sort a list of words in alphabetical order.
 ## GitHub Explorer
 A tool for viewing repositories on GitHub.
 
-## Files
+### Files
 `nil`
 
 ![GitHub Explorer](./videos/github_explorer.gif)
