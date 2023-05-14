@@ -18,4 +18,4 @@ A tool for solving expressions.
 1. [`./reverse_polish_notation.swift`](./reverse_polish_notation.swift)
 
 ### Example
-![Reverse Polish Notation](reverse_polish_notation.png)
+![Reverse Polish Notation](./photos/reverse_polish_notation.png)
