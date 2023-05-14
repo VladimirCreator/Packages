@@ -17,4 +17,4 @@ A tool for viewing repositories on GitHub.
 ## Files
 `nil`
 
-![GitHub Explorer](./videos/github_explorer.png)
+![GitHub Explorer](./videos/github_explorer.mp4)
