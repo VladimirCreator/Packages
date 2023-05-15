@@ -3,7 +3,7 @@
 1. Alphabet
 2. GitHub Explorer
 3. Reverse Polish Notation
-4. Text -> Numbers
+4. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -32,7 +32,7 @@ A tool for solving expressions.
 ### Example
 ![Reverse Polish Notation](./photos/reverse_polish_notation.png)
 
-## Text -> Numbers
+## Text2Binary
 A tool for converting texts to binaries.
 
 ### Files
