@@ -4,6 +4,7 @@
 2. GitHub Explorer
 3. KVO
 4. Reverse Polish Notation
+5. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -40,4 +41,12 @@ A tool for solving expressions.
 
 ### Example
 ![Reverse Polish Notation](./photos/reverse_polish_notation.png)
-=======
+
+## Text2Binary
+A tool for converting texts to binaries.
+
+### Files
+1. [`./text2binary.swift`](./text2binary.swift)
+
+### Example
+![Text -> Binary](./photos/text2binary.png)
