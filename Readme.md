@@ -41,7 +41,7 @@ An algorithm for sorting collections.
 1. [`./swift/quick_sort.swift`](./swift/quick_sort.swift)
 
 ### Example
-![Quick Sort](./swift/quick_sort.png)
+![Quick Sort](./photos/quick_sort.png)
 
 ## Reverse Polish Notation
 A tool for solving expressions.
