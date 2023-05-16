@@ -9,7 +9,7 @@
 A tool to sort a list of words in alphabetical order.
 
 ### Files
-1. [`./alphabet.swift`](./alphabet.swift)
+1. [`.swift//alphabet.swift`](./swift/alphabet.swift)
 
 ### Example
 ![Alphabet.swift](./photos/alphabet.png)
@@ -38,8 +38,7 @@ A tool for being productive.
 A tool for solving expressions.
 
 ### Files
-1. [`./reverse_polish_notation.swift`](./reverse_polish_notation.swift)
+1. [`./swift/reverse_polish_notation.swift`](./swift/reverse_polish_notation.swift)
 
 ### Example
 ![Reverse Polish Notation](./photos/reverse_polish_notation.png)
-=======
