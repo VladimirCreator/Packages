@@ -50,7 +50,7 @@ A tool for sorting collections.
 1. [`./swift/selection_sort.swift`](./swift/selection_sort.swift)
 
 ### Example
-![Selection Sort](./swift/selection_sort.swift)
+![Selection Sort](./photos/selection_sort.png)
 
 ## Text2Binary
 A tool for converting texts to binaries.
