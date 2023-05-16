@@ -23,7 +23,7 @@ An algorithm for sorting collections.
 1. [`./swift/bubble_sort.swift`](./swift/bubble_sort.swift)
 
 ### Example
-![Bubble Sort](./swift/bubble_sort.swift)
+![Bubble Sort](./photos/bubble_sort.png)
 
 ## GitHub Explorer
 A tool for viewing repositories on GitHub.
