@@ -4,9 +4,10 @@
 2. Bubble Sort
 3. GitHub Explorer
 4. KVO
-5. Reverse Polish Notation
-6. Selection Sort
-7. Text2Binary
+5. Quick Sort
+6. Reverse Polish Notation
+7. Selection Sort
+8. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -43,6 +44,15 @@ A tool for viewing repositories on GitHub.
 
 ### Example
 ![KVO](./photos/kvo.png)
+
+## Quick Sort
+An algorithm for sorting collections.
+
+### Files
+1. [`./swift/quick_sort.swift`](./swift/quick_sort.swift)
+
+### Example
+![Quick Sort](./photos/quick_sort.png)
 
 ## Reverse Polish Notation
 A tool for solving expressions.
