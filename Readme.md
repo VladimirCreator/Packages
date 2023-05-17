@@ -13,7 +13,7 @@
 A tool to sort a list of words in alphabetical order.
 
 ### Files
-1. [`./alphabet.swift`](./alphabet.swift)
+1. [`./swift/alphabet.swift`](./swift/alphabet.swift)
 
 ### Example
 ![Alphabet.swift](./photos/alphabet.png)
@@ -40,7 +40,7 @@ A tool for viewing repositories on GitHub.
 `nil`
 
 ### Files
-1. [`./kvo.swift`](./kvo.swift)
+1. [`./swift/kvo.swift`](./swift/kvo.swift)
 
 ### Example
 ![KVO](./photos/kvo.png)
@@ -58,7 +58,7 @@ An algorithm for sorting collections.
 A tool for solving expressions.
 
 ### Files
-1. [`./reverse_polish_notation.swift`](./reverse_polish_notation.swift)
+1. [`./swift/reverse_polish_notation.swift`](./swift/reverse_polish_notation.swift)
 
 ### Example
 ![Reverse Polish Notation](./photos/reverse_polish_notation.png)
@@ -76,7 +76,7 @@ A tool for sorting collections.
 A tool for converting texts to binaries.
 
 ### Files
-1. [`./text2binary.swift`](./text2binary.swift)
+1. [`./swift/text2binary.swift`](./swift/text2binary.swift)
 
 ### Example
 ![Text -> Binary](./photos/text2binary.png)
