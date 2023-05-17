@@ -1,6 +1,7 @@
 # Vladimir's Swift Playgrounds
 ## Table of Contents
 1. Alphabet
+2. Binary Search
 2. Bubble Sort
 3. GitHub Explorer
 4. KVO
@@ -18,8 +19,17 @@ A tool to sort a list of words in alphabetical order.
 ### Example
 ![Alphabet.swift](./photos/alphabet.png)
 
+## Binary Search
+A tool for searching an item in a collection.
+
+### Files
+1. [`./swift/binary_search.swift`](./swift/binary_search.swift)
+
+### Example
+![Binary Search](./photos/binary_search.png)
+
 ## Bubble Sort
-An algorithm for sorting collections.
+An algorithm for sorting a collection.
 
 ### Files
 1. [`./swift/bubble_sort.swift`](./swift/bubble_sort.swift)
