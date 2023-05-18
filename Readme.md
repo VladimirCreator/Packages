@@ -28,9 +28,10 @@ A tool for being productive.
 
 ### Files
 1. [`./swift/reminders/reminder.swift`](./swift/reminders/reminder.swift)
-2. [`./swift/reminders/UIReminderTableViewController.swift`](./swift/reminders/UIReminderTableViewController.swift)
-3. [`./swift/reminders/UIReminderTableViewControllerDelegate.swift`](./swift/reminders/UIReminderTableViewControllerDelegate.swift)
-4. [`./swift/reminders/UIReminderViewController.swift`](./swift/reminders/UIReminderViewController.swift)
+2. [`./swift/reminders/AppDelegate.swift`](./swift/reminders/AppDelegate.swift)
+3. [`./swift/reminders/UIReminderTableViewController.swift`](./swift/reminders/UIReminderTableViewController.swift)
+4. [`./swift/reminders/UIReminderTableViewControllerDelegate.swift`](./swift/reminders/UIReminderTableViewControllerDelegate.swift)
+5. [`./swift/reminders/UIReminderViewController.swift`](./swift/reminders/UIReminderViewController.swift)
 
 ### Example
 ![Reminders](./videos/reminders.gif)
