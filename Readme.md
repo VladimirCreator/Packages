@@ -2,13 +2,14 @@
 ## Table of Contents
 1. Alphabet
 2. Binary Search
-2. Bubble Sort
-3. GitHub Explorer
-4. KVO
-5. Quick Sort
-6. Reverse Polish Notation
-7. Selection Sort
-8. Text2Binary
+3. Bubble Sort
+4. Delegate
+5. GitHub Explorer
+6. KVO
+7. Quick Sort
+8. Reverse Polish Notation
+9. Selection Sort
+10. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -36,6 +37,15 @@ An algorithm for sorting a collection.
 
 ### Example
 ![Bubble Sort](./photos/bubble_sort.png)
+
+## Delegate
+`nil`
+
+### Files
+`nil`
+
+### Example
+![Delegate](./videos/delegate.gif)
 
 ## GitHub Explorer
 A tool for viewing repositories on GitHub.
