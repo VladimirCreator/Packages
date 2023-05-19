@@ -3,13 +3,14 @@
 1. Alphabet
 2. Binary Search
 3. Bubble Sort
-4. Euclidean Algorithm
-5. GitHub Explorer
-6. KVO
-7. Quick Sort
-8. Reverse Polish Notation
-9. Selection Sort
-10. Text2Binary
+4. Delegate
+5. Euclidean Algorithm
+6. GitHub Explorer
+7. KVO
+8. Quick Sort
+9. Reverse Polish Notation
+10. Selection Sort
+11. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -37,6 +38,15 @@ An algorithm for sorting a collection.
 
 ### Example
 ![Bubble Sort](./photos/bubble_sort.png)
+
+## Delegate
+`nil`
+
+### Files
+`nil`
+
+### Example
+![Delegate](./videos/delegate.gif)
 
 ## Euclidean Algorithm
 ### Files
