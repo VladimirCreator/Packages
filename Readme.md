@@ -4,12 +4,13 @@
 2. Binary Search
 3. Bubble Sort
 4. Delegate
-5. GitHub Explorer
-6. KVO
-7. Quick Sort
-8. Reverse Polish Notation
-9. Selection Sort
-10. Text2Binary
+5. Euclidean Algorithm
+6. GitHub Explorer
+7. KVO
+8. Quick Sort
+9. Reverse Polish Notation
+10. Selection Sort
+11. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -46,6 +47,13 @@ An algorithm for sorting a collection.
 
 ### Example
 ![Delegate](./videos/delegate.gif)
+
+## Euclidean Algorithm
+### Files
+1. [`./swift/euclidean_algorithm.swift`](./swift/euclidean_algorithm.swift)
+
+### Example
+![Euclidean Algorithm](./photos/euclidean_algorithm.png)
 
 ## GitHub Explorer
 A tool for viewing repositories on GitHub.
