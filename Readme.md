@@ -4,13 +4,14 @@
 2. Binary Search
 3. Bubble Sort
 4. Delegate
-5. Euclidean Algorithm
-6. GitHub Explorer
-7. KVO
-8. Quick Sort
-9. Reverse Polish Notation
-10. Selection Sort
-11. Text2Binary
+5. Design Patterns
+6. Euclidean Algorithm
+7. GitHub Explorer
+8. KVO
+9. Quick Sort
+10. Reverse Polish Notation
+11. Selection Sort
+12. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -47,6 +48,15 @@ An algorithm for sorting a collection.
 
 ### Example
 ![Delegate](./videos/delegate.gif)
+
+## Design Patterns
+`nil`
+
+### Files
+1. [`./swift/design_patterns/AppDelegate.swift`](./swift/design_patterns/AppDelegate.swift)
+
+### Examples
+![Design Patterns](./videos/design_patterns.gif)
 
 ## Euclidean Algorithm
 ### Files
