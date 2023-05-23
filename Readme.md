@@ -11,6 +11,7 @@
 9. Reverse Polish Notation
 10. Selection Sort
 11. Text2Binary
+12. Дипломная работа
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -108,3 +109,16 @@ A tool for converting texts to binaries.
 
 ### Example
 ![Text -> Binary](./photos/text2binary.png)
+
+## Дипломная работа
+`nil`
+
+### Files
+1. [`./javascript/UIView.javascript`](./javascript/UIView.javascript)
+2. [`./javascript/UITreeView.javascript`](./javascript/UITreeView.javascript)
+3. [`./javascript/UITableView.javascript`](./javascript/UITableView.javascript)
+4. [`./javascript/UIToolbarView.javascript`](./javascript/UIToolbarView.javascript)
+
+### Example
+![Дипломная работа](./videos/дипломная_работа.gif)
+
