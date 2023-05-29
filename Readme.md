@@ -108,7 +108,7 @@ A game.
 `nil`
 
 ### Example
-![Shade Explorer](./videos/shade-explorer.gif)
+![Shade Explorer](./videos/shade_explorer.gif)
 
 ## Text2Binary
 A tool for converting texts to binaries.
