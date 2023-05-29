@@ -16,10 +16,11 @@
 A tool to sort a list of words in alphabetical order.
 
 ### Files
-1. [`./swift/alphabet.swift`](./swift/alphabet.swift)
+1. [`./swift/alphabet/alphabet.swift`](./swift/alphabet/alphabet.swift)
+2. [`./swift/alphabet/UIAlphabetViewController.swift`](./swift/alphabet/UIAlphabetViewController.swift)
 
 ### Example
-![Alphabet.swift](./photos/alphabet.png)
+![Alphabet.swift](./videos/alphabet.gif)
 
 ## Binary Search
 A tool for searching an item in a collection.
