@@ -10,7 +10,8 @@
 8. Quick Sort
 9. Reverse Polish Notation
 10. Selection Sort
-11. Text2Binary
+11. Shade Explorer
+12. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -100,6 +101,15 @@ A tool for sorting collections.
 
 ### Example
 ![Selection Sort](./photos/selection_sort.png)
+
+## Shade Explorer
+A game.
+
+### Files
+`nil`
+
+### Example
+![Shade Explorer](./videos/shade_explorer.gif)
 
 ## Text2Binary
 A tool for converting texts to binaries.
