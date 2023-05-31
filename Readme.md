@@ -8,9 +8,10 @@
 6. GitHub Explorer
 7. KVO
 8. Quick Sort
-9. Reverse Polish Notation
-10. Selection Sort
-11. Text2Binary
+9. Quiz
+10. Reverse Polish Notation
+11. Selection Sort
+12. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -81,6 +82,19 @@ An algorithm for sorting collections.
 
 ### Example
 ![Quick Sort](./photos/quick_sort.png)
+
+## Quiz
+`nil`
+
+### Files
+`nil`
+
+### Quick Look
+![Quiz](./videos/quiz.gif)
+
+![Quiz Start Screen](./photos/quiz/quiz_startScreen.png)
+![Quiz Success Screen](./photos/quiz/quiz_successScreen.png)
+![Quiz Fail Screen](./photos/quiz/quiz_failScreen.png)
 
 ## Reverse Polish Notation
 A tool for solving expressions.
