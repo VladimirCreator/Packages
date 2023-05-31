@@ -116,6 +116,7 @@ A tool for converting texts to binaries.
 
 ### Files
 1. [`./swift/text2binary.swift`](./swift/text2binary.swift)
+2. [`./swift/UIText2BinaryViewController.swift`](./swift/UIText2BinaryViewController.swift)
 
 ### Example
-![Text -> Binary](./photos/text2binary.png)
+![Text2Binary](./videos/text2binary.gif)
