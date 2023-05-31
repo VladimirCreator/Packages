@@ -11,16 +11,18 @@
 9. Quiz
 10. Reverse Polish Notation
 11. Selection Sort
-12. Text2Binary
+12. Shade Explorer
+13. Text2Binary
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
 
 ### Files
-1. [`./swift/alphabet.swift`](./swift/alphabet.swift)
+1. [`./swift/alphabet/alphabet.swift`](./swift/alphabet/alphabet.swift)
+2. [`./swift/alphabet/UIAlphabetViewController.swift`](./swift/alphabet/UIAlphabetViewController.swift)
 
 ### Example
-![Alphabet.swift](./photos/alphabet.png)
+![Alphabet.swift](./videos/alphabet.gif)
 
 ## Binary Search
 A tool for searching an item in a collection.
@@ -114,11 +116,21 @@ A tool for sorting collections.
 ### Example
 ![Selection Sort](./photos/selection_sort.png)
 
+## Shade Explorer
+A game.
+
+### Files
+`nil`
+
+### Example
+![Shade Explorer](./videos/shade_explorer.gif)
+
 ## Text2Binary
 A tool for converting texts to binaries.
 
 ### Files
 1. [`./swift/text2binary.swift`](./swift/text2binary.swift)
+2. [`./swift/UIText2BinaryViewController.swift`](./swift/UIText2BinaryViewController.swift)
 
 ### Example
-![Text -> Binary](./photos/text2binary.png)
+![Text2Binary](./videos/text2binary.gif)
