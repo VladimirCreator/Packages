@@ -13,6 +13,7 @@
 11. Selection Sort
 12. Shade Explorer
 13. Text2Binary
+14. Тестовое задание №0
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
@@ -134,3 +135,12 @@ A tool for converting texts to binaries.
 
 ### Example
 ![Text2Binary](./videos/text2binary.gif)
+
+## Тестовое задание №0
+Описание.
+
+### Files
+1. [`./html_css_js/тестовое_задание_0/index.html`](./html_css_js/тестовое_задание_0/index.html)
+
+### Quick Look
+![Тестовое задание №0](./videos/тестовое_задание_0.gif)
