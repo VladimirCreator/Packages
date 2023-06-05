@@ -1,19 +1,19 @@
 # Vladimir's Swift Playgrounds
 ## Table of Contents
-1. Alphabet
-2. Binary Search
-3. Bubble Sort
-4. Delegate
-5. Euclidean Algorithm
-6. GitHub Explorer
-7. KVO
-8. Quick Sort
-9. Quiz
-10. Reverse Polish Notation
-11. Selection Sort
-12. Shade Explorer
-13. Text2Binary
-14. Тестовое задание №0
+1. [Alphabet](https://github.com/VladimirCreator/Swift-Playgrounds#alphabet)
+2. [Binary Search](https://github.com/VladimirCreator/Swift-Playgrounds#binary-search)
+3. [Bubble Sort](https://github.com/VladimirCreator/Swift-Playgrounds#bubble-sort)
+4. [Delegate](https://github.com/VladimirCreator/Swift-Playgrounds#delegate)
+5. [Euclidean Algorithm](https://github.com/VladimirCreator/Swift-Playgrounds#euclidean-algorithm)
+6. [GitHub Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#github-explorer)
+7. [KVO](https://github.com/VladimirCreator/Swift-Playgrounds#kvo)
+8. [Quick Sort](https://github.com/VladimirCreator/Swift-Playgrounds#quick-sort)
+9. [Quiz](https://github.com/VladimirCreator/Swift-Playgrounds#quiz)
+10. [Reverse Polish Notation](https://github.com/VladimirCreator/Swift-Playgrounds#reverse-polish-notation)
+11. [Selection Sort](https://github.com/VladimirCreator/Swift-Playgrounds#selection-sort)
+12. [Shade Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#shade-explorer)
+13. [Text2Binary](https://github.com/VladimirCreator/Swift-Playgrounds#text2binary)
+14. [Тестовое задание №0](https://github.com/VladimirCreator/Swift-Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0)
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
