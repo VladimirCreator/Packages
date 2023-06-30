@@ -13,7 +13,7 @@ export default function Letter({ letter, disclose, onClick }) {
 
             <section className="grow">
                 <LetterHeader {...letter} />
-                <LetterContent text={letter.content} disclose={disclose} onClick={onClick} />
+                <LetterContent content={letter.content} disclose={disclose} onClick={onClick} />
                 <LetterAttachment attachments={letter.attachments} />
                 <LetterFooter />
             </section>
