@@ -6,7 +6,6 @@
 
 ## Table of Contents
 4. [Delegate](https://github.com/VladimirCreator/Swift-Playgrounds#delegate)
-5. [Euclidean Algorithm](https://github.com/VladimirCreator/Swift-Playgrounds#euclidean-algorithm)
 6. [GitHub Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#github-explorer)
 7. [KVO](https://github.com/VladimirCreator/Swift-Playgrounds#kvo)
 8. [Quick Sort](https://github.com/VladimirCreator/Swift-Playgrounds#quick-sort)
@@ -26,13 +25,6 @@
 
 ### Example
 ![Delegate](./videos/delegate.gif)
-
-## Euclidean Algorithm
-### Files
-1. [`./swift/euclidean_algorithm.swift`](./swift/euclidean_algorithm.swift)
-
-### Example
-![Euclidean Algorithm](./photos/euclidean_algorithm.png)
 
 ## GitHub Explorer
 A tool for viewing repositories on GitHub.
