@@ -42,10 +42,6 @@ A tool for viewing repositories on GitHub.
 ### Quick Look
 ![Quiz](./videos/quiz.gif)
 
-![Quiz Start Screen](./photos/quiz/quiz_startScreen.png)
-![Quiz Success Screen](./photos/quiz/quiz_successScreen.png)
-![Quiz Fail Screen](./photos/quiz/quiz_failScreen.png)
-
 ## Reverse Polish Notation
 A tool for solving expressions.
 
