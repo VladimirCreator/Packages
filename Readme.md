@@ -7,7 +7,6 @@
 ## Table of Contents
 4. [Delegate](https://github.com/VladimirCreator/Swift-Playgrounds#delegate)
 6. [GitHub Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#github-explorer)
-7. [KVO](https://github.com/VladimirCreator/Swift-Playgrounds#kvo)
 8. [Quick Sort](https://github.com/VladimirCreator/Swift-Playgrounds#quick-sort)
 9. [Quiz](https://github.com/VladimirCreator/Swift-Playgrounds#quiz)
 10. [Reverse Polish Notation](https://github.com/VladimirCreator/Swift-Playgrounds#reverse-polish-notation)
@@ -34,15 +33,6 @@ A tool for viewing repositories on GitHub.
 
 ### Example
 ![GitHub Explorer](./videos/github_explorer.gif)
-
-## KVO
-`nil`
-
-### Files
-1. [`./swift/kvo.swift`](./swift/kvo.swift)
-
-### Example
-![KVO](./photos/kvo.png)
 
 ## Quick Sort
 An algorithm for sorting collections.
