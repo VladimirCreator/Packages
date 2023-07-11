@@ -68,28 +68,28 @@ A game.
 ![Тестовое задание №0](./videos/тестовое_задание_0.gif)
 
 ## Тестовое задание №1
-Описание.
+[Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
 
-### Files
-1. [`./html_css_js/тестовое_задание_1/package.json`](./html_css_js/тестовое_задание_1/package.json)
-2. [`./html_css_js/тестовое_задание_1/package-lock.json`](./html_css_js/тестовое_задание_1/package-lock.json)
-3. [`./html_css_js/тестовое_задание_1/tailwind.config.js`](./html_css_js/тестовое_задание_1/tailwind.config.js)
-4. [`./html_css_js/тестовое_задание_1/src/index.css`](./html_css_js/тестовое_задание_1/src/index.css)
-5. [`./html_css_js/тестовое_задание_1/src/index.js`](./html_css_js/тестовое_задание_1/src/index.js)
-6. [`./html_css_js/тестовое_задание_1/src/components/App/App.css`](./html_css_js/тестовое_задание_1/src/components/App/App.css)
-7. [`./html_css_js/тестовое_задание_1/src/components/App/App.js`](./html_css_js/тестовое_задание_1/src/components/App/App.js)
-8. [`./html_css_js/тестовое_задание_1/src/components/Letter/Letter.js`](./html_css_js/тестовое_задание_1/src/components/Letter/Letter.js)
-9. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterAside.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterAside.js)
-10. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterAttachment.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterAttachment.js)
-11. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterContent.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterContent.js)
-12. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterFooter.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterFooter.js)
-13. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterHeader.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterHeader.js)
-14. [`./html_css_js/тестовое_задание_1/src/components/LetterList/LetterList.js`](./html_css_js/тестовое_задание_1/src/components/LetterList/LetterList.js)
-15. [`./html_css_js/тестовое_задание_1/src/redux/store.js`](./html_css_js/тестовое_задание_1/src/redux/store.js)
-16. [`./html_css_js/тестовое_задание_1/src/redux/slices/applicationSlice.js`](./html_css_js/тестовое_задание_1/src/redux/slices/applicationSlice.js)
-17. [`./html_css_js/тестовое_задание_1/public/index.html`](./html_css_js/тестовое_задание_1/public/index.html)
-18. [`./html_css_js/тестовое_задание_1/public/manifest.json`](./html_css_js/тестовое_задание_1/public/manifest.json)
-19. [`./html_css_js/тестовое_задание_1/public/robots.txt`](./html_css_js/тестовое_задание_1/public/robots.txt)
+Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где у каждого сообщения есть уникальный идентификатор, дата публикации, автор, содержимое и список вложений, который включает в себя фотографии и видео.
+
+> Ответственность за этот запрос берёт на себя стандартная функция `useEffect`.
+
+Далее, тот же самый запрос повторяется каждые 5 секунд.
+
+> Ответственность за повторные запросы берёт на себя отдельный `useEffect`.
+
+Есть возможность интерактивного взаимодействия, а именно:
+
+- пометка сообщения как избранного;
+> сообщение, которое было помечено как избранное остаётся таким даже после того, как происходит перезагрузка страницы
+
+- в случае, когда сообщение является слишком длинным, появляется кнопка "Далее", которая позволяет отобразить всё сообщение, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот.
+
+> длинное сообщением считается сообщение, которое занимает более 3 строк.
+
+- можно выбрать тег "новое" или "эксперт", но они ничего не делают
+- загрузка старых сообщений при нажатии кнопки "Загрузить старые сообщения"
+- сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
 ### Quick Look
 ![Тестовое задание №1](./videos/тестовое_задание_1.gif)
