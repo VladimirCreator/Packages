@@ -1,7 +1,7 @@
 # Vladimir's Swift Playgrounds
 
 ## Changelog
-> ### Sat 8 Jul 2023 8:10 PM\
+> ### Sat 8 Jul 2023 8:10 PM
 > Rename from Swift-Playgrounds to Playgrounds
 
 ## Table of Contents
