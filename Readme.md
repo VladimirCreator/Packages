@@ -10,7 +10,6 @@
 9. [Quiz](https://github.com/VladimirCreator/Swift-Playgrounds#quiz)
 10. [Reverse Polish Notation](https://github.com/VladimirCreator/Swift-Playgrounds#reverse-polish-notation)
 12. [Shade Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#shade-explorer)
-13. [Text2Binary](https://github.com/VladimirCreator/Swift-Playgrounds#text2binary)
 14. [Тестовое задание №0](https://github.com/VladimirCreator/Swift-Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0)
 15. [Тестовое задание №1](https://github.com/VladimirCreator/Swift-Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
 
@@ -58,16 +57,6 @@ A game.
 
 ### Example
 ![Shade Explorer](./videos/shade_explorer.gif)
-
-## Text2Binary
-A tool for converting texts to binaries.
-
-### Files
-1. [`./swift/text2binary.swift`](./swift/text2binary.swift)
-2. [`./swift/UIText2BinaryViewController.swift`](./swift/UIText2BinaryViewController.swift)
-
-### Example
-![Text2Binary](./videos/text2binary.gif)
 
 ## Тестовое задание №0
 Описание.
