@@ -7,7 +7,6 @@
 ## Table of Contents
 4. [Delegate](https://github.com/VladimirCreator/Swift-Playgrounds#delegate)
 6. [GitHub Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#github-explorer)
-8. [Quick Sort](https://github.com/VladimirCreator/Swift-Playgrounds#quick-sort)
 9. [Quiz](https://github.com/VladimirCreator/Swift-Playgrounds#quiz)
 10. [Reverse Polish Notation](https://github.com/VladimirCreator/Swift-Playgrounds#reverse-polish-notation)
 11. [Selection Sort](https://github.com/VladimirCreator/Swift-Playgrounds#selection-sort)
@@ -33,15 +32,6 @@ A tool for viewing repositories on GitHub.
 
 ### Example
 ![GitHub Explorer](./videos/github_explorer.gif)
-
-## Quick Sort
-An algorithm for sorting collections.
-
-### Files
-1. [`./swift/quick_sort.swift`](./swift/quick_sort.swift)
-
-### Example
-![Quick Sort](./photos/quick_sort.png)
 
 ## Quiz
 `nil`
