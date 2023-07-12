@@ -111,13 +111,7 @@ A tool for converting texts to binaries.
 ![Text -> Binary](./photos/text2binary.png)
 
 ## Дипломная работа
-`nil`
-
-### Files
-1. [`./javascript/UIView.javascript`](./javascript/UIView.javascript)
-2. [`./javascript/UITreeView.javascript`](./javascript/UITreeView.javascript)
-3. [`./javascript/UITableView.javascript`](./javascript/UITableView.javascript)
-4. [`./javascript/UIToolbarView.javascript`](./javascript/UIToolbarView.javascript)
+[Попробовать](https://graduate-work-gilt.vercel.app/).
 
 ### Example
 ![Дипломная работа](./videos/дипломная_работа.gif)
