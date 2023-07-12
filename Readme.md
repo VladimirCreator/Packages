@@ -142,6 +142,27 @@ A tool for converting texts to binaries.
 ### Example
 ![Text2Binary](./videos/text2binary.gif)
 
+## Дипломная работа
+[Попробовать](https://graduate-work-gilt.vercel.app/).
+
+### Example
+![Дипломная работа](./videos/дипломная_работа.gif)
+
+#### Desktop Landscape
+![Desktop Landscape](./photos/дипломная_работа/desktop_landscape.png)
+
+#### iPhone 6 Landscape
+![iPhone 6 Landscape](./photos/дипломная_работа/iPhone6_landscape.png)
+
+#### iPhone 6 Portrait
+![iPhone 6 Portrait](./photos/дипломная_работа/iPhone6_portrait.png)
+
+#### iPhone X Landscape
+![iPhone X Landscape](./photos/дипломная_работа/iPhoneX_landscape.png)
+
+#### iPhone X Portrait
+![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
+
 ## Тестовое задание №0
 Описание.
 
