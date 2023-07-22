@@ -5,71 +5,142 @@
 > Rename from Swift-Playgrounds to Playgrounds
 
 ## Table of Contents
-1. [Delegate](https://github.com/VladimirCreator/Playgrounds#delegate)
-1. [GitHub Explorer](https://github.com/VladimirCreator/Playgrounds#github-explorer)
-1. [Quiz](https://github.com/VladimirCreator/Playgrounds#quiz)
-1. [Reverse Polish Notation](https://github.com/VladimirCreator/Playgrounds#reverse-polish-notation)
-1. [Shade Explorer](https://github.com/VladimirCreator/Playgrounds#shade-explorer)
-1. [Тестовое задание №0](https://github.com/VladimirCreator/Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0)
+
+1. <details>
+     <summary>
+         <a href="https://github.com/VladimirCreator/Playgrounds#delegate">
+           Delegate
+         </a>
+     </summary>
+
+     <h3>
+       Quick Look
+     </h3>
+
+     <p>
+       <img src="./videos/delegate.gif" />
+     </p>
+   </details>
+
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#github-explorer">
+         GitHub Explorer
+       </a>
+     </summary>
+
+     <h3>
+       Quick Look
+     </h3>
+
+     <p>
+       <img src="./videos/github_explorer.gif" />
+     </p>
+   </details>
+
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#quiz">
+         Quiz
+       </a>
+     </summary>
+
+     <h3>
+       Quick Look
+     </h3>
+
+     <p>
+       <img src="./videos/quiz.gif" />
+     </p>
+   </details>
+
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#reverse-polish-notation">
+         Reverse Polish Notation
+       </a>
+     </summary>
+
+     <h3>
+       Quick Look
+     </h3>
+
+     <p>
+       <img src="./photos/reverse_polish_notation.png" />
+     </p>
+
+     <h3>
+       Files
+     </h3>
+
+     <ol>
+       <li>
+         <code>
+         <a href="./swift/reverse_polish_notation.swift">
+           ./swift/reverse_polish_notation.swift
+         </a>
+         </code>
+       </li>
+     </ol>
+   </details>
+
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#shade-explorer">
+         Shade Explorer
+       </a>
+     </summary>
+
+     <h3>
+       Quick Look
+     </h3>
+
+     <p>
+       <img src="./videos/shade_explorer.gif" />
+     </p>
+   </details>
+
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0">
+         Тестовое задание №0
+       </a>
+     </summary>
+
+     <p>
+       <a href="https://application-0.vercel.app">
+         Попробовать
+       </a>
+     </p>
+
+     <p>
+       Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть идентификатор, название, идентификатор политики, поле <code>agent_js_config</code> и поле <code>correlations_config</code>.
+     </p>
+
+     <p>
+       Есть возможность интерактивного взаимодействия, а именно:
+     </p>
+
+     <ul>
+       <li>
+         отправка нового приложения на сервер;
+       </li>
+       <li>
+         изменение существующего приложения на сервере.
+       </li>
+     </ul>
+
+     <h3>
+       Quick Look
+     </h3>
+
+     <p>
+       <img src="./videos/тестовое_задание_0.gif" />
+     </p>
+   </details>
+
+
 1. [Тестовое задание №1](https://github.com/VladimirCreator/Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
-
-## Delegate
-`nil`
-
-### Files
-`nil`
-
-### Example
-![Delegate](./videos/delegate.gif)
-
-## GitHub Explorer
-A tool for viewing repositories on GitHub.
-
-### Files
-`nil`
-
-### Example
-![GitHub Explorer](./videos/github_explorer.gif)
-
-## Quiz
-`nil`
-
-### Files
-`nil`
-
-### Quick Look
-![Quiz](./videos/quiz.gif)
-
-## Reverse Polish Notation
-A tool for solving expressions.
-
-### Files
-1. [`./swift/reverse_polish_notation.swift`](./swift/reverse_polish_notation.swift)
-
-### Example
-![Reverse Polish Notation](./photos/reverse_polish_notation.png)
-
-## Shade Explorer
-A game.
-
-### Files
-`nil`
-
-### Example
-![Shade Explorer](./videos/shade_explorer.gif)
-
-## [Тестовое задание №0](./html_css_js/тестовое_задание_0/index.html)
-[Попробовать](https://application-0.vercel.app).
-
-Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть идентификатор, название, идентификатор политики, поле `agent_js_config` и поле `correlations_config`.
-
-Есть возможность интерактивного взаимодействия, а именно:
-
-- отправка нового приложения на сервер;
-- изменение существующего приложения на сервере.
-
-### Quick Look
-![Тестовое задание №0](./videos/тестовое_задание_0.gif)
 
 ## Тестовое задание №1
 [Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
