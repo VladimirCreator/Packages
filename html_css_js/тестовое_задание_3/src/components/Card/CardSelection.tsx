@@ -1,11 +1,12 @@
-
- 
 import {
     useState
 } from "react";
+
 import CardProps from "../shared/CardProps";
+
 export default function CardSelection({ colors }: Pick<CardProps, 'colors'>) {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
     return (
         <section className='card__selection'>
             <p>Choose your colour</p>
@@ -24,6 +25,7 @@ export default function CardSelection({ colors }: Pick<CardProps, 'colors'>) {
             </ul>
         </section>
     );
+
     function handleClick(index: number) {
         setSelectedIndex(index);
     }

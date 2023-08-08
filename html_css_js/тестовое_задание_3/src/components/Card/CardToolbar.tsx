@@ -1,5 +1,3 @@
-
- 
 export default function CardToolbar() {
     return (
         <section className='card__toolbar'>

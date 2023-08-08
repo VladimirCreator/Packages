@@ -1,5 +1,3 @@
-
- 
 export default function CardFooter({ href }: { href: string }) {
     return (
         <footer className='card__footer'>

@@ -1,30 +1,36 @@
-
- 
 @mixin UICardView {
     article.card {
         /* These properties can be safely deleted.
         */
         margin: 0 auto;
+
         @include UICardHeaderView;
         @include UICardSelectionView;
         @include UICardToolbarView;
         @include UICardFooterView;
+
         display: flex; flex-direction: column;
         justify-content: space-between;
+
         aspect-ratio: .477326968973747;
         width:  400px; max-width:  400px;
         height: 838px; max-height: 838px;
+
         padding: 2.5rem;
         outline: .1rem solid #E7E6EB;
+
         color     : #333;
         background: #FFF;
+
         border-radius: .5rem;
         box-shadow: 0 .5rem 1.5rem 0 rgba(0, 0, 0, .08);
     }
 }
+
 @mixin UICardHeaderView {
     > header.card__header {
         display: flex; flex-direction: column;
+
         > figure {
             > img {
                 max: { width: 256px; height: 256px; }
@@ -33,22 +39,27 @@
             > figcaption.header__price {
                 font-weight: 700;
                 font-size: 2rem;
+
                 margin-top: 1.5rem;
+
                 color: #333F;
             }
         }
         > h1.header__heading { order: 1;
             font-weight: 500;
             font-size: 1.5em;
+
             margin-top: 1rem;
         }
         > p.header__description { order: 1;
             font-size: 1em;
             line-height: 1.5;
+
             margin-top: .5rem;
         }
     }
 }
+
 @mixin UICardSelectionView {
     > section.card__selection {
         > p {
@@ -57,16 +68,21 @@
         }
         > ul {
             display: flex;
+
             padding: 0;
             margin-top: 1rem;
+
             list-style: none;
             > li {
                 aspect-ratio: 1;
                 min: { width: 40px; height: 40px; }
+
                 stroke-width: .25rem;
                 stroke: #FFF;
+
                 border-radius: 50%;
                 filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, .25));
+
                 &:not(:last-child) {
                     margin-right: 1rem;
                 }
@@ -77,33 +93,42 @@
         }
     }
 }
+
 @mixin UICardToolbarView {
     > section.card__toolbar {
         display: flex; flex-direction: column;
+        
         > button {
             font-size: 1.5em;
             font-family: inherit;
+
             min-height: 55px;
+
             color: inherit;
+
             border: none;
             border-radius: .5rem;
+
             &#addToCart {
                 background: #FBBF23;
             }
+
             &#buyNow {
                 border: .1rem solid #61A5FA;
                 background: #FFF;
             }
+
             &:not(:first-child) {
                 margin-top: 1rem;
             }
         }
     }
 }
+
 @mixin UICardFooterView {
-    > footer.card__footer {
-                    color: #61A5FA;
-        }
+    >footer.card__footer {
+        color: #61A5FA;
     }
 }
+
 @include UICardView;
