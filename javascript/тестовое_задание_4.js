@@ -113,7 +113,10 @@ function init_main(matrix) {
 
             for (let columnIndex = 0; columnIndex < matrix[rowIndex].length; ++columnIndex) {
                 row.push(matrix[rowIndex][columnIndex]);
-                column.push(matrix[columnIndex][rowIndex]);
+
+                if (columnIndex < matrix.length) {
+                    column.push(matrix[columnIndex][rowIndex]);
+                }
             }
             didReadRow?.call(undefined, row, min);
             didReadColumn?.call(undefined, column);
