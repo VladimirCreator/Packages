@@ -111,7 +111,7 @@ function init_main(matrix) {
             row = [];
             column = [];
 
-            for (let columnIndex = 0; columnIndex < matrix.length; ++columnIndex) {
+            for (let columnIndex = 0; columnIndex < matrix[rowIndex].length; ++columnIndex) {
                 row.push(matrix[rowIndex][columnIndex]);
                 column.push(matrix[columnIndex][rowIndex]);
             }
