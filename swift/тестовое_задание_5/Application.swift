@@ -22,9 +22,10 @@ fileprivate struct Application: App {
 
     fileprivate var body: some Scene {
         WindowGroup() {
-            switch 1 {
-            case 0: RootView()
-            case 1: PrototypeView()
+            switch 2 {
+            case 0: Text("") //RootView()
+            case 1: Text("") //PrototypeView()
+            case 2: JSONView()
             default: Text("body").monospaced(true)
             }
         }
