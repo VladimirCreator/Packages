@@ -21,28 +21,34 @@
 import SwiftUI
 
 internal struct BookingView: View {
+    @EnvironmentObject private var navigationViewModel: NavigationViewModel // 9 27 PM Mon 11 Sep 2023
+
+    internal let booking: Booking // Initially Modified: 08:21 PM Mon 11 Sep 2023
+
     @State private var tourists: [(String)] = []
 
-    private let title: String = "Steigenberger Makadi"
-    private let subtitle: String = "Madinat Makadi, Safaga Road, Makadi Bay, Египет"
-    private let rating: (value: Int, name: String) = (5, "Превосходно")
-    private let info: [(label: String, info: String)] = [ // 08:21 PM Sat Sep 2023
-        (label: "Вылет из", info: "Санкт-Петербург"),
-        (label: "Страна, город", info: "Египет, Хургада"),
-        (label: "Даты", info: "19.09.2023 - 27.09.2023"),
-        (label: "Кол-во ночей", info: "7"),
-        (label: "Отель", info: "St Makadi"),
-        (label: "Номер", info: "Стандартный с видом на бассйен или сад"),
-        (label: "Питание", info: "Все включено")
-    ]
-    private let items: [(text: String, price: Int)] = [ // 08:03 PM Sat 9 Sep 2023
-        (text: "Тур", price: 186_600),
-        (text: "Топливный сбор", price: 9300),
-        (text: "Сервисный сбор", price: 2136)
-    ]
+    private var info: [(label: String, info: String)] { // 08:21 PM Sat Sep 2023
+        return [
+            (label: "Вылет из", info: booking.departure),
+            (label: "Страна, город", info: booking.arrival_country),
+            (label: "Даты", info: "\(booking.tour_date_start) - \(booking.tour_date_stop)"),
+            (label: "Кол-во ночей", info: "\(booking.number_of_nights)"),
+            (label: "Отель", info: booking.hotel_adress),
+            (label: "Номер", info: booking.room),
+            (label: "Питание", info: booking.nutrition)
+        ]
+    }
 
-    private var totalPrice: Int {
-        return items.reduce(Int.zero) {
+    private var items: [(text: String, price: UInt)] { // 08:03 PM Sat 9 Sep 2023
+        return [
+            (text: "Тур", price: booking.tour_price),
+            (text: "Топливный сбор", price: booking.fuel_charge),
+            (text: "Сервисный сбор", price: booking.service_charge)
+        ]
+    }
+
+    private var totalPrice: UInt {
+        return items.reduce(UInt.zero) {
             $0 + $1.price
         }
     }
@@ -51,7 +57,7 @@ internal struct BookingView: View {
         ScrollView {
             VStack(spacing: 8.0) {
                 Card {
-                    InfoSection(verbatim1: title, verbatim2: subtitle, literal3: rating)
+                    InfoSection(name: booking.hotel_name, adress: booking.hotel_adress, literal3: (value: booking.horating, name: booking.rating_name))
                         .scaledToFill()
                 }
                 Card { // Initially: 8:19 PM Sat 9 Sep 2023
@@ -90,7 +96,7 @@ internal struct BookingView: View {
         .navigationTitle("Бронирование")
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Button(action: {}) {
+                Button(action: { navigationViewModel.path.append(RootView.PresentedView.paidOrder) }) {
                     Text("Оплатить \(totalPrice) ₽")
                 }
                 .buttonStyle(.nePridumalNazvanie)

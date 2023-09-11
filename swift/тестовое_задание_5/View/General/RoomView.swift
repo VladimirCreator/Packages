@@ -21,16 +21,19 @@
 import SwiftUI
 
 internal struct RoomView: View {
+    internal let hotel_name: String
+    internal let room: Rooms
+
     internal var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 8.0) {
-                ForEach(0..<2, id: \.self) { _ in
+                ForEach(room.rooms) { room in
                     Card {
-                        Cell3()
+                        Cell3(room: room)
                     }
                 }
             }
         }
-        .navigationTitle("Title")
+        .navigationTitle(hotel_name)
     }
 }

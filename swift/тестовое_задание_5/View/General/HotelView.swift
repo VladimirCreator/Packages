@@ -21,23 +21,27 @@
 import SwiftUI
 
 internal struct HotelView: View {
+    @EnvironmentObject private var navigationViewModel: NavigationViewModel
+
+    internal let hotel: Hotel // 07:07 PM Mon 11 Sep 2023
+
     internal var body: some View {
         ScrollView {
             Card {
-                Cell1()
+                Cell1(hotel: hotel)
                     .toolbarBackground(.visible)
                     .toolbarBackground(.white, for: .navigationBar)
                     .toolbarBackground(.red, for: .bottomBar)
             }
             Card {
-                Cell2()
+                Cell2(hotel: hotel)
             }
         }
         .navigationTitle("Отель")
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Button("К выбору номера") { 
-                    print(true)
+                Button("К выбору номера") {
+                    navigationViewModel.path.append(RootView.PresentedView.room)
                 }
                 .buttonStyle(.nePridumalNazvanie)
             }

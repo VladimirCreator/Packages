@@ -19,32 +19,34 @@ import SwiftUI
 
 internal struct PrototypeView: View {
     @State private var index: Int = 0
-    @State private var key: String = "AnyView"
+    @State private var key: String = "SharedCell1"
 
     private var views: [String: AnyView] {
         [
-            "SharedCell1": AnyView(Cell1()),
-            "SharedCell2": AnyView(Cell2()),
+            "SharedCell1": AnyView(
+                Cell1(hotel: hotel)
+            ),
+            "SharedCell2": AnyView(Cell2(hotel: hotel)),
             "AnyView": AnyView(
                 Card {
                     Text("|")
                 }
             ),
             "SectionPrice": AnyView(
-                PriceSection(price: 0xFFFF, description: "fdsiofjdsklfj") {
+                PriceSection(minimal_price: 0xFFFF, price_for_it: "fdsiofjdsklfj") {
                     "от \($0.formatted()) ₽"
                 }
             ),
             "Info": AnyView( // 09:20 PM Fri 8 Sep 2023
                 InfoSection(
-                    verbatim1: true ? "Steigenberger Makadi" : "",
-                    verbatim2: true ? "Madinat Makadi, Safaga Road, Makadi Bay, Egypt" : nil,
+                    name: true ? "Steigenberger Makadi" : "",
+                    adress: true ? "Madinat Makadi, Safaga Road, Makadi Bay, Egypt" : nil,
                     literal3: true ? (value: 5, name: "Превосходно") : nil
                 )
                 .background(.green)
             ),
             "SharedCell3": AnyView( // Initially 4:34 PM Sat 9 Sep 2023
-                Cell3()
+                Cell3(room: room.rooms[0])
                                   ),
             "SharedCell4": AnyView( // Initially 4:55 PM Sat 9 Sep
                 Cell4(totalPrice: 0, items: [
@@ -72,10 +74,10 @@ internal struct PrototypeView: View {
     }
     
     private let collection: [AnyView] = [
-        //AnyView(HotelView()),
-        //AnyView(RoomView()),
-        AnyView(BookingView()),
-        //AnyView(PaidOrderView())
+        AnyView(HotelView(hotel: hotel)),
+        AnyView(RoomView(hotel_name: "Плотная", room: room)),
+        AnyView(BookingView(booking: booking)),
+        AnyView(PaidOrderView())
     ]
     
     internal var body: some View {
@@ -92,7 +94,7 @@ internal struct PrototypeView: View {
             }
             views[key]
                 .background {
-                    false ? Color.clear : Color.red
+                    true ? Color.clear : Color.red
                 }
                 .toolbar {
                     ToolbarItem(placement: .bottomBar) {

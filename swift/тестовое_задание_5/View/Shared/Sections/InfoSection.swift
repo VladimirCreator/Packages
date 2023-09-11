@@ -18,9 +18,9 @@
 import SwiftUI
 
 internal struct InfoSection: View {
-    internal let verbatim1: String
-    internal let verbatim2: String?
-    internal let literal3: (value: Int, name: String)?
+    internal let name: String
+    internal let adress: String?
+    internal let literal3: (value: UInt, name: String)?
 
     internal var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
@@ -40,14 +40,14 @@ internal struct InfoSection: View {
     }
 
     private var issue2: some View { // Initially Modified: _5:08 PM Sun 10 Sep 2023
-        Text(verbatim1)
+        Text(name)
             .textStyle(Issue1TextStyle())
     }
 
     private var issue3: some View { // Initially Modified: _5:08 PM Sun 10 Sep 2023
-        guard let verbatim2 else { return EmptyView() }
+        guard let adress else { return EmptyView() }
 
-        return Text(verbatim2)
+        return Text(adress)
             .textStyle(Issue2TextStyle())
     }
 }

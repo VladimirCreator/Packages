@@ -31,8 +31,7 @@ internal struct NePridumalNazvanieButtonStyle: ButtonStyle {
             // ...
             .foregroundColor(.white)
             .background {
-                Color(.sRGB, red: 0.051, green: 0.447, blue: 1.0)
-                Color("sky-500", bundle: nil) // <- #0D72FF
+                Color.x0d72ff
             }
             // ...
             .cornerRadius(15.0)

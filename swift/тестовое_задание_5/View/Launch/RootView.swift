@@ -29,14 +29,42 @@
 import SwiftUI
 
 internal struct RootView: View {
+    @StateObject private var navigationViewModel: NavigationViewModel = .init()
+
     internal var body: some View {
-        NavigationStack {
-            HotelView()
+        NavigationStack(path: $navigationViewModel.path) {
+            HotelView(hotel: hotel)
                 .background {
                     Color.xf6f6f9
                 }
                 .preferredColorScheme(.light)
                 .navigationBarTitleDisplayMode(.inline)
+                .navigationDestination(for: RootView.PresentedView.self) { requestedView in
+                    switch requestedView {
+                    case .hotel:
+                        HotelView(hotel: hotel)
+                            .background {
+                                Color.xf6f6f9
+                            }
+                    case .room:
+                        RoomView(hotel_name: hotel.name, room: room)
+                            .background {
+                                Color.xf6f6f9
+                            }
+                    case .booking(let id):
+                        BookingView(booking: booking)
+                            .background {
+                                Color.xf6f6f9
+                            }
+                    case .paidOrder:
+                        PaidOrderView()
+                            .background {
+                                Color.xf6f6f9
+                            }
+                    }
+                }
         }
+        .environmentObject(navigationViewModel)
+        .accentColor(.black)
     }
 }

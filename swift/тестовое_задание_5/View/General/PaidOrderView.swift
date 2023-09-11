@@ -21,6 +21,8 @@
 import SwiftUI
 
 internal struct PaidOrderView: View {
+    @EnvironmentObject private var navigationViewModel: NavigationViewModel
+
     internal var body: some View {
         ZStack {
             Color.white
@@ -36,7 +38,7 @@ internal struct PaidOrderView: View {
         .toolbarBackground(.red, for: .bottomBar)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Button(action: { print(true) }) {
+                Button(action: { navigationViewModel.getToRoot() }) {
                     Text("Супер!")
                 }
                 .buttonStyle(.nePridumalNazvanie)

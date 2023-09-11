@@ -24,8 +24,11 @@ internal struct Rooms: Decodable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: JSONKeys.self)
-        let rooms = try? values.decode([Room].self, forKey: .rooms)
-        guard let rooms else { fatalError("Rooms from decoder") }
+        
+        guard let rooms = try? values.decode([Room].self, forKey: .rooms)
+        else {
+            fatalError("Rooms from decoder")
+        }
 
         self.rooms = rooms
     }
@@ -35,49 +38,43 @@ internal struct Room: Identifiable { // 12:44 AM Mon 11 Sep 2023
     typealias ID = UInt
     let id: Self.ID
 
-    let label: String
+    let name: String
 
     let price: UInt
-    let price_description: String
+    let price_per: String
 
     let peculiarities: [String]
 
-    let urls_of_images: [String]
+    let image_urls: [String]
 }
 
 extension Room: Decodable { // 12:45 AM Mon 11 Sep 2023
     private enum JSONKeys: String, CodingKey {
         case id
-        case label = "name"
+        case name
         case price
-        case price_description = "price_per"
+        case price_per
         case peculiarities
-        case urls_of_images = "image_urls"
+        case image_urls
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: JSONKeys.self)
-        let id = try? values.decode(UInt.self, forKey: .id)
-        let label = try? values.decode(String.self, forKey: .label)
-        let price = try? values.decode(UInt.self, forKey: .price)
-        let price_description = try? values.decode(String.self, forKey: .price_description)
-        let peculiarities = try? values.decode([String].self, forKey: .peculiarities)
-        let urls_of_images = try? values.decode([String].self, forKey: .urls_of_images)
         
-        guard let id,
-            let label,
-            let price,
-            let price_description,
-            let peculiarities,
-            let urls_of_images
+        guard let id = try? values.decode(UInt.self, forKey: .id),
+              let name = try? values.decode(String.self, forKey: .name),
+              let price = try? values.decode(UInt.self, forKey: .price),
+              let price_per = try? values.decode(String.self, forKey: .price_per),
+              let peculiarities = try? values.decode([String].self, forKey: .peculiarities),
+              let image_urls = try? values.decode([String].self, forKey: .image_urls)
         else {
             fatalError("Room from decoder")
         }
         self.id = id
-        self.label = label
+        self.name = name
         self.price = price
-        self.price_description = price_description
+        self.price_per = price_per
         self.peculiarities = peculiarities
-        self.urls_of_images = urls_of_images
+        self.image_urls = image_urls
     }
 }

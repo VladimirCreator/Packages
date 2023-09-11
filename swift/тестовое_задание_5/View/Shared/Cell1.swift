@@ -18,22 +18,15 @@
 import SwiftUI
 
 internal struct Cell1: View {
-    private let name: String = "Лучший пятизвездочный отель в Хургаде, Египет"
-    private let rating: UInt = 5
-    private let rating_name: String = "Превосходно"
-    private let address: String = "Madinat Makadi, Safaga Road, Makadi Bay, Египет"
-    
+    internal let hotel: Hotel
+
     internal var body: some View {
         VStack(alignment: .leading, spacing: 16.0) {
-            PageView(considerToChangeDistance: 0.1, urls: [
-                "https://is4-ssl.mzstatic.com/image/thumb/WhpeVjuxJ9w-XfYxHAGe2g/1250x703.jpg",
-                "https://is3-ssl.mzstatic.com/image/thumb/JJo1Kp84yVQ1emwipSnq2A/1250x703.jpg",
-                "https://is3-ssl.mzstatic.com/image/thumb/UCZN3mY6yJIRxtxlPtxvPw/1250x703.jpg",
-                "https://is5-ssl.mzstatic.com/image/thumb/3_emSGtqKrdKh-MNRvGwFQ/1250x703.jpg"
-            ])
+            PageView(considerToChangeDistance: 0.1, urls: hotel.image_urls)
             .frame(height: 257)
-            InfoSection(verbatim1: "Steigenberger Makadi", verbatim2: "Madinat Makadi, Safaga Road, Makadi Bay, Египет", literal3: (5, "Превосходно"))
-            PriceSection(price: 134_673, description: "за тур с перелётом") {
+
+            InfoSection(name: hotel.name, adress: hotel.adress, literal3: (5, "Превосходно"))
+            PriceSection(minimal_price: hotel.minimal_price, price_for_it: hotel.price_for_it) {
                 return "\($0.formatted()) ₽"
             }
         }

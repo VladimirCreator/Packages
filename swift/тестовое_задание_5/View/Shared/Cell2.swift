@@ -17,24 +17,9 @@
 
 import SwiftUI
 
-struct B: LabelStyle { // 6:14
-    internal func makeBody(configuration: Configuration) -> some View {
-        HStack(spacing: 2.0) {
-            configuration.icon
-            configuration.title
-        }
-        .font(.system(size: 16.0))
-        .fontWeight(.medium)
-        .padding(.horizontal, 10.0)
-        .padding(.vertical, 5.0)
-        .foregroundColor(Color(.sRGB, red: 1, green: 0.66, blue: 0))
-        .background(Color(.sRGB, red: 1, green: 0.66, blue: 0, opacity: 0.2))
-        .cornerRadius(5.0)
-        .padding(.bottom, 8.0)
-    }
-}
-
 internal struct Cell2: View {
+    internal let hotel: Hotel
+
     internal var body: some View { // 6:16 PM Thu 7 Sep 2023
         VStack(alignment: .leading, spacing: 16.0) {
             about
@@ -51,7 +36,7 @@ internal struct Cell2: View {
     
     private var nePridumalNazvanie: some View {
         NePridumalNazvanieLayout {
-            ForEach(["3-я линия", "Платный Wi-Fi в фойе", "30 км до аэропорта", "1 км до пляжа"], id: \.self) { label in
+            ForEach(hotel.about_the_hotel.peculiarities, id: \.self) { label in
                 Label(label, systemImage: "")
                     .labelStyle(Issue1LabelStyle(verbatimOnly: false, foregroundColor: .x828796, backgroundColor: .xfbfbfc))
                     .padding(.trailing, 8.0)
@@ -61,7 +46,7 @@ internal struct Cell2: View {
     }
     
     private var description: some View { // 6:19 PM Thu 7 Sep 2023
-        Text("Отель VIP-класса с собственными гольф полями. Высокий уровень сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!")
+        Text(hotel.about_the_hotel.description)
             .font(.system(size: 16.0))
             .padding(.top, -4.0)
     }

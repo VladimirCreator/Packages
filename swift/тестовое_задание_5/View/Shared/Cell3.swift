@@ -18,19 +18,18 @@
 import SwiftUI
 
 internal struct Cell3: View {
+    @EnvironmentObject private var navigationViewModel: NavigationViewModel
+
+    internal let room: Room
+
     internal var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
-            PageView(considerToChangeDistance: 0.1, urls: [
-                "https://is4-ssl.mzstatic.com/image/thumb/WhpeVjuxJ9w-XfYxHAGe2g/1250x703.jpg",
-                "https://is3-ssl.mzstatic.com/image/thumb/JJo1Kp84yVQ1emwipSnq2A/1250x703.jpg",
-                "https://is3-ssl.mzstatic.com/image/thumb/UCZN3mY6yJIRxtxlPtxvPw/1250x703.jpg",
-                "https://is5-ssl.mzstatic.com/image/thumb/3_emSGtqKrdKh-MNRvGwFQ/1250x703.jpg"
-            ])
+            PageView(considerToChangeDistance: 0.1, urls: room.image_urls)
             .frame(height: 257)
-            InfoSection(verbatim1: "Стандартный с видом на бассйен или сад", verbatim2: nil, literal3: nil)
+            InfoSection(name: room.name, adress: nil, literal3: nil)
             
             NePridumalNazvanieLayout {
-                ForEach(["Всё включено", "Кондиционер"], id: \.self) {
+                ForEach(room.peculiarities, id: \.self) {
                     Label($0, systemImage: "")
                         .labelStyle(Issue1LabelStyle(verbatimOnly: true, foregroundColor: .x828796, backgroundColor: .xfbfbfc))
                         .padding(.trailing, 8.0)
@@ -45,12 +44,12 @@ internal struct Cell3: View {
             }
             .padding(.bottom, 8.0)
             
-            PriceSection(price: 186_600, description: "За 7 ночей с перелётом") {
+            PriceSection(minimal_price: room.price, price_for_it: room.price_per) {
                 "\($0) ₽"
             }
             .padding(.bottom, 8.0)
             
-            Button(action: {}) {
+            Button(action: { navigationViewModel.path.append(RootView.PresentedView.booking(room.id)) }) {
                 Text("Выбрать номер")
             }
             .buttonStyle(.nePridumalNazvanie)

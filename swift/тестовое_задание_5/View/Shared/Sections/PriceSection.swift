@@ -18,17 +18,17 @@
 import SwiftUI
 
 internal struct PriceSection: View {
-    internal let price: Int
-    internal let description: String
-    internal let priceCallback: (Int) -> String // 09:12 PM Fri 8 Sep 2023
+    internal let minimal_price: UInt
+    internal let price_for_it: String
+    internal let price_for_it_strategy: (UInt) -> String // 09:12 PM Fri 8 Sep 2023
 
     internal var body: some View {
         HStack(alignment: .bottom, spacing: 8.0) {
-            Text(priceCallback(price)) // 2:41 PM Thu 7 Sep 2023
+            Text(price_for_it_strategy(minimal_price)) // 2:41 PM Thu 7 Sep 2023
                 .font(.system(size: 30.0))
                 .fontWeight(.semibold)
-            
-            Text(description) // 2:50 PM Thu 7 Sep 2023
+
+            Text(price_for_it) // 2:50 PM Thu 7 Sep 2023
                 .font(.system(size: 16.0))
                 .foregroundColor(.init(.sRGB, red: 0.51, green: 0.53, blue: 0.59))//.foregroundColor(Color("", bundle: nil)) // <- #828796
         }
