@@ -5,7 +5,7 @@
 
    Swift
    - class
- 
+
    Swift Playgrounds
  - file
  - folder
@@ -24,7 +24,7 @@ internal struct Rooms: Decodable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: JSONKeys.self)
-        
+
         guard let rooms = try? values.decode([Room].self, forKey: .rooms)
         else {
             fatalError("Rooms from decoder")
@@ -60,7 +60,7 @@ extension Room: Decodable { // 12:45 AM Mon 11 Sep 2023
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: JSONKeys.self)
-        
+
         guard let id = try? values.decode(UInt.self, forKey: .id),
               let name = try? values.decode(String.self, forKey: .name),
               let price = try? values.decode(UInt.self, forKey: .price),

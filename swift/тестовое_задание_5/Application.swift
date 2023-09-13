@@ -30,8 +30,10 @@ fileprivate struct Application: App {
                 //Text("1").monospaced(true)
                 PrototypeView()
             case 2:
-                Text("2").monospaced(true)
-                //JSONView(hotel: hotel, room: room, booking: booking)
+                //Text("2").monospaced(true)
+                JSONView()
+            case 3:
+                Text("3").monospaced(true)
             default:
                 Text("default").monospaced(true)
             }

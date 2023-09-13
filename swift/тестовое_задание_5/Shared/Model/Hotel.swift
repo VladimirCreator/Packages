@@ -70,7 +70,7 @@ extension Hotel: Decodable { // Initially Modified: 11:31 PM Sun 10 Sep 2023
         else {
             fatalError("Hotel from decoder")
         }
-        
+
         self.id = id
         self.name = name
         self.adress = adress
@@ -100,4 +100,8 @@ extension Hotel.AboutTheHotel: Decodable { // 11:48 PM Sun 10 Sep 2023
         self.description = description
         self.peculiarities = peculiarities
     }
+}
+
+extension Hotel { // Initially Modified: 03:47 PM Tue 12 Sep 2023
+    static let abstractHotel: Hotel = .init(id: 0, name: "Абстрактный отель", adress: "Абстрактный адрес", minimal_price: 0, price_for_it: "Абстрактное описание", rating: 0, rating_name: "Абстрактный рейтинг", image_urls: ["https://is4-ssl.mzstatic.com/image/thumb/WhpeVjuxJ9w-XfYxHAGe2g/1250x703.jpg"], about_the_hotel: .init(description: "Абстрактное описание.", peculiarities: ["Абстрактная особенность 1"]))
 }

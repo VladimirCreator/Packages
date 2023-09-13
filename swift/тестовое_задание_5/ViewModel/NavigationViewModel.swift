@@ -9,7 +9,7 @@
    Swift Playgrounds
  - file
  - folder
- 
+
    Tue 5 Sep 2023
  __:__ PM | `` | (+)
  #
@@ -18,7 +18,7 @@
 import SwiftUI
 
 internal class NavigationViewModel: ObservableObject {
-    
+
     @Published internal var path: NavigationPath = .init()
 
     internal func getToRoot() { // 09:25 PM Mon 11 Sep 2023
