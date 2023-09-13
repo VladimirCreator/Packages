@@ -52,9 +52,9 @@ internal struct Cell2: View {
 
     private var oida: some View { // 06:43 PM Fri 8 Sep 2023
         VStack(spacing: 10.0) {
-            Cell2Row(verbatim1: "Удобства", verbatim2: "Удобства", imageName: "poweroutlet.type.k.square")
-            Cell2Row(verbatim1: "Что включено", verbatim2: "Самое необходимое", imageName: "checkmark.square")
-            Cell2Row(verbatim1: "Что не включено", verbatim2: "Самое необходимое", imageName: "xmark.square")
+            Cell2Row(verbatim1: "Удобства", verbatim2: "Удобства", imageName: "emoji-happy")
+            Cell2Row(verbatim1: "Что включено", verbatim2: "Самое необходимое", imageName: "tick-square")
+            Cell2Row(verbatim1: "Что не включено", verbatim2: "Самое необходимое", imageName: "close-square")
         }
         .padding(.all, 15.0)
         .background(.xfbfbfc)
@@ -69,7 +69,7 @@ fileprivate struct Cell2Row: View {
 
     fileprivate var body: some View {
         HStack(alignment: .lastTextBaseline, spacing: 12.0) {
-            Image(systemName: imageName)
+            Image(imageName)
                 .resizable()
                 .frame(width: 24.0, height: 24.0)
             VStack(spacing: 10.0) {

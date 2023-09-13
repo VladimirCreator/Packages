@@ -1,11 +1,9 @@
-/* Read Me
-   -> History Entry | iPadOS 17.0 | Swift Playgrounds | Тестовое задание №5 | Application.swift | Initially Modified: 01:08 PM Tue 05 Sep 2023
-   -> History Entry | iPadOS 17.0 | Swift Playgrounds | Тестовое задание №5 | Application.swift |      Last Modified: 03:46 PM Sun 10 Sep 2023
-   /Application.swift
-   Tue 5 Sep 2023
-     __:__ PM | `` | (+)
-     #
-*/
+//
+//  test_vladimirApp.swift
+//  test_vladimir
+//
+//  Created by Vladimir Petrov on 13.09.2023.
+//
 
 import SwiftUI
 
