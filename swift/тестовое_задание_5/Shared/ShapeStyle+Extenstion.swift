@@ -2,14 +2,6 @@
    -> History Entry | iPadOS 17.0 | Swift Playgrounds | Тестовое задание №5 | ShapeStyle+Extension.swift | Initially Modified: 02:41 PM Sun 10 Sep 2023
    -> History Entry | iPadOS 17.0 | Swift Playgrounds | Тестовое задание №5 | ShapeStyle+Extension.swift |      Last Modified: __:__ PM Sun 10 Sep 2023
    /Shared/ShapeStyle+Extension.swift
-
-   Swift
-     - class
-
-   Swift Playgrounds
-     - file
-     - folder
-
    Sun 10 Sep 2023
      03:08 PM | Color+Extension -> ShapeStyle+Extension | (~)
      #file

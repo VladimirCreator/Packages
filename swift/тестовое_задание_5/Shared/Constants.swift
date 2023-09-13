@@ -2,20 +2,10 @@
    -> History Entry | iPadOS 17.0 | Swift Playgrounds | Тестовое задание №5 | Constants.swift | Initially Modified: 06:58 PM Mon 11 Sep 2023
    -> History Entry | iPadOS 17.0 | Swift Playgrounds | Тестовое задание №5 | Constants.swift |      Last Modified: __:__ _M ___ __ Sep 2023
    /Shared/Constants.swift
-
-   Swift
-   - class
-
-   Swift Playgrounds
-   - file
-   - folder
-
    Tue 5 Sep 2023
-   __:__ PM | `` | (+)
-   #
+     __:__ PM | `` | (+)
+     #
 */
-
-import SwiftUI
 
 internal let HOTEL_URL: String = "https://run.mocky.io/v3/35e0d18e-2521-4f1b-a575-f0fe366f66e3"   // Initially Modified: 12:07 AM Tue 12 Sep 2023
 internal let ROOM_URL: String = "https://run.mocky.io/v3/f9a38183-6f95-43aa-853a-9c83cbb05ecd"    // Initially Modified: 12:07 AM Tue 12 Sep 2023
