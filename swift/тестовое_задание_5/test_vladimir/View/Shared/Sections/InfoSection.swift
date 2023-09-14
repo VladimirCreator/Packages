@@ -23,30 +23,33 @@ internal struct InfoSection: View {
     }
 
     private var issue1: some View { // Initially Modified: _4:56 PM Sun 10 Sep 2023
-            guard let literal3 else { return AnyView(EmptyView()) }
-            let verbatim1: String = "\(literal3.value) \(literal3.name)"
-            let verbatim2: String = "star.fill"
+        guard let literal3 else { return AnyView(EmptyView()) }
 
-            return AnyView(
-                Label(verbatim1, systemImage: verbatim2)
-                .labelStyle(Issue1LabelStyle(verbatimOnly: false, foregroundColor: .xffa800, backgroundColor: nil))
-                )
-        }
+        let verbatim1: String = "\(literal3.value) \(literal3.name)"
+        let verbatim2: String = "star.fill"
+
+        return AnyView(
+            Label(verbatim1, systemImage: verbatim2)
+            .labelStyle(Issue1LabelStyle(verbatimOnly: false, foregroundColor: .xffa800, backgroundColor: nil))
+            )
+    }
 
     private var issue2: some View { // Initially Modified: _5:08 PM Sun 10 Sep 2023
         Text(name)
             .textStyle(Issue1TextStyle())
     }
+
     @ViewBuilder
-    private var issue3: some View {
-        if let address = adress {
+    private var issue3: some View { // Initially Modified: _5:08 PM Sun 10 Sep 2023
+        if let adress {
+            // Техническое задание утверждает, что эта надпись является кнопкой.
             Button(action: { print(true) }) {
-                Text(address)
+                Text(adress)
                     .textStyle(Issue2TextStyle())
             }
-        } else {
+        }
+        else {
             EmptyView()
         }
     }
-
 }

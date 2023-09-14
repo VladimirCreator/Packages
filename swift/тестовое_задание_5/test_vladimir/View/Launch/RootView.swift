@@ -20,22 +20,38 @@
 
 import SwiftUI
 
+internal struct ShouldPopToRoot: EnvironmentKey { // Initially Modified: 04:15 AM Thu 14 Sep 2023
+    static let defaultValue: Binding<Bool> = .constant(false)
+}
+
+extension EnvironmentValues {
+    internal var shouldPopToRoot: Binding<Bool> {
+        get {
+            self[ShouldPopToRoot.self]
+        }
+        set {
+            self[ShouldPopToRoot.self] = newValue
+        }
+    }
+}
+
 internal struct RootView: View {
-    @StateObject private var navigationViewModel: NavigationViewModel = .init()
+    @State private var path: NavigationPath = .init()
+    @State private var shouldPopToRoot: Bool = false
 
     internal init() {
         // Weird!
         UINavigationBar.appearance().backgroundColor = .white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().shadowImage = nil
-
+        
         // Weird again!
         UIToolbar.appearance().backgroundColor = .white
         UIToolbar.appearance().isTranslucent = false
     }
 
     internal var body: some View {
-        NavigationStack(path: $navigationViewModel.path) {
+        NavigationStack(path: $path) {
             HotelView()
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationDestination(for: RootView.PresentedView.self) { requestedView in
@@ -50,10 +66,15 @@ internal struct RootView: View {
                         Text("default").monospaced(true)
                     }
                 }
+                .onChange(of: shouldPopToRoot) {
+                    guard $0 else { return }
+                    shouldPopToRoot = false
+                    path.removeLast(path.count)
+                }
         }
         .accentColor(.black)
         .preferredColorScheme(.light)
         .environment(\.backgroundStyle, .init(.xf6f6f9))
-        .environmentObject(navigationViewModel)
+        .environment(\.shouldPopToRoot, $shouldPopToRoot)
     }
 }

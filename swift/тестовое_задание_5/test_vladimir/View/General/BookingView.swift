@@ -15,7 +15,6 @@ import SwiftUI
 internal struct BookingView: View { // Странно, но техническое задание не говорит, что этому экрану нужен идентификатор номера.
     @Environment(\.backgroundStyle) private var background // Initially Modified: 11:01 AM Wed 13 Sep 2023
 
-    @EnvironmentObject private var navigationViewModel: NavigationViewModel // 9 27 PM Mon 11 Sep 2023
     @StateObject private var bookingViewModel: BookingViewModel = .init() // Initially Modified: 04:41 PM Tue 12 Sep 2023
 
     private var info: [(label: String, info: String)] { // 08:21 PM Sat Sep 2023
@@ -49,10 +48,11 @@ internal struct BookingView: View { // Странно, но техническо
             VStack(spacing: 8.0) {
                 Card {
                     InfoSection(name: bookingViewModel.booking.hotel_name, adress: bookingViewModel.booking.hotel_adress, literal3: (value: bookingViewModel.booking.horating, name: bookingViewModel.booking.rating_name))
-                        .scaledToFill()
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 Card { // Initially: 8:19 PM Sat 9 Sep 2023
                     Cell5(info: info)
+                        .frame(maxWidth: .infinity)
                 }
                 Card {
                     Cell6(consumer: $bookingViewModel.consumer)
@@ -84,7 +84,7 @@ internal struct BookingView: View { // Странно, но техническо
         .navigationTitle("Бронирование")
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Button(action: { navigationViewModel.path.append(RootView.PresentedView.paidOrder) }) {
+                NavigationLink(value: RootView.PresentedView.paidOrder) {
                     Text("Оплатить \(totalPrice) ₽")
                 }
                 .buttonStyle(.nePridumalNazvanie)
@@ -92,7 +92,9 @@ internal struct BookingView: View { // Странно, но техническо
         }
         .onAppear {
             Task {
-                try? await bookingViewModel.fetch()
+                try? await bookingViewModel.fetch(Booking.self, from: BOOKING_URL) {
+                    bookingViewModel.booking = $0
+                }
             }
         }
     }

@@ -13,9 +13,8 @@
 import SwiftUI
 
 internal struct HotelView: View {
-    @Environment(\.backgroundStyle) private var background // Initially Modified: 10:55 AM Wed 13 Sep 2023
+    @Environment(\.backgroundStyle) private var background // Initially Modified: 10:55 AM Wed 
 
-    @EnvironmentObject private var navigationViewModel: NavigationViewModel
     @StateObject private var hotelViewModel: HotelViewModel = .init() // Initially Modified: 03:31 PM Tue 12 Sep 2023
 
     internal var body: some View {
@@ -36,14 +35,18 @@ internal struct HotelView: View {
         }
         .onAppear {
             Task {
-                try? await hotelViewModel.fetch()
+                try? await hotelViewModel.fetch(Hotel.self, from: HOTEL_URL) {
+                    hotelViewModel.hotel = $0
+                }
             }
         }
     }
 
     private var pickRoomButton: some View { // Initially Modified: 03:40 PM Tue 12 Sep 2023
-        Button("К выбору номера") {
-            navigationViewModel.path.append(RootView.PresentedView.room(hotelViewModel.hotel.name))
+        let hotel_name: String = hotelViewModel.hotel.name // 02:24 AM Thu 14 Sep 2023
+        
+        return NavigationLink(value: RootView.PresentedView.room(hotel_name)) {
+            Text("К выбору номера")
         }
         .buttonStyle(.nePridumalNazvanie)
     }

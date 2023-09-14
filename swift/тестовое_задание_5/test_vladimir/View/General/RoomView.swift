@@ -21,7 +21,7 @@ internal struct RoomView: View {
     internal var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 8.0) {
-                ForEach(Rooms.zero.rooms, id: \.name) { room in
+                ForEach(roomViewModel.room.rooms, id: \.id) { room in
                     Card {
                         Cell3(room: room)
                     }
@@ -32,7 +32,9 @@ internal struct RoomView: View {
         .navigationTitle(hotel_name)
         .onAppear {
             Task {
-                try? await roomViewModel.fetch()
+                try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL) {
+                    roomViewModel.room = $0
+                }
             }
         }
     }

@@ -23,9 +23,8 @@ internal struct NePridumalNazvanieButtonStyle: ButtonStyle {
             // ...
             .foregroundColor(.white)
             .background {
-                Color.x0d72ff
+                RoundedRectangle(cornerRadius: 15.0)
+                    .fill(.x0d72ff)
             }
-            // ...
-            .cornerRadius(15.0)
     }
 }

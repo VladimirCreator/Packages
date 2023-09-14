@@ -13,24 +13,24 @@
 import SwiftUI
 
 internal struct PaidOrderView: View {
-    @EnvironmentObject private var navigationViewModel: NavigationViewModel
+    @Environment(\.shouldPopToRoot) private var shouldPopToRoot
 
     internal var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea(.all, edges: .top)
-            VStack(alignment: .center, spacing: 32.0) { // 5:42 PM Tue 5 Sep 2023
-                graphic
-                title
-                description
-            }
+        VStack(alignment: .center, spacing: 32.0) { // 5:42 PM Tue 5 Sep 2023 
+            graphic
+            title
+            description
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.white)
         .navigationTitle("Заказ оплачен")
         .toolbar(.visible, for: .bottomBar)
         .toolbarBackground(.red, for: .bottomBar)
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Button(action: { navigationViewModel.getToRoot() }) {
+                Button {
+                    shouldPopToRoot.wrappedValue = true
+                } label: {
                     Text("Супер!")
                 }
                 .buttonStyle(.nePridumalNazvanie)

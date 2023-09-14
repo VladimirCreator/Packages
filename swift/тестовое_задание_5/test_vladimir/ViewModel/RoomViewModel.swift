@@ -7,23 +7,10 @@
    #folder
 */
 
-import SwiftUI
+import Foundation
+import Combine
 
 internal class RoomViewModel: ObservableObject {
-
     @Published
     internal var room: Rooms = .zero // Initially Modified: 03:28 PM Tue 12 Sep 2023
-
-    internal func fetch() async throws -> Void {
-        //guard false else { return }
-        guard let url = URL(string: ROOM_URL) else { return }
-
-        let (data, _) = try await URLSession.shared.data(for: URLRequest(url: url))
-
-        Task { @MainActor in
-            let decoder: JSONDecoder = .init()
-            self.room = try decoder.decode(Rooms.self, from: data)
-        }
-    }
-
 }
