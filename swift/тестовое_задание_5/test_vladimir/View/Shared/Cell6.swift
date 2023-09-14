@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-internal class PhoneNumberFormatter: Formatter { // 08:32 PM TUe 12 Sep 2023
+internal class PhoneNumberFormatter: Formatter { // Initially Modified: 08:32 PM Tue 12 Sep 2023
     internal override func string(for obj: Any?) -> String? {
         guard var string = obj as? String else { return nil }
         guard string.count != 0 else { return nil }
@@ -31,15 +31,15 @@ return template
 }
 
 internal struct Cell6: View {
-    @Binding internal var consumer: Consumer // 08:19 PM Tue 12 Sep 2023
-    private var formatted: String { // 02:47 AM Wed 13 Sep 2023
+    @Binding internal var consumer: Consumer // Initially Modified: 08:19 PM Tue 12 Sep 2023
+    private var formatted: String { // Initially Modified: 02:47 AM Wed 13 Sep 2023
         consumer.phone.reduce("+7 (***) ***-**-**") {
             guard $1.isNumber else { return $0 }
             return $0.replacing(/\*/, with: [$1], maxReplacements: 1)
         }
     }
 
-    @FocusState private var focused: Bool // 01:40 AM Wed 13 Sep 2023
+    @FocusState private var focused: Bool // Initially Modified: 01:40 AM Wed 13 Sep 2023
 
     internal var body: some View {
         Markup(

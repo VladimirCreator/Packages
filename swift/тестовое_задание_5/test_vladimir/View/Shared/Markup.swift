@@ -11,9 +11,9 @@ import SwiftUI
 
 internal struct Markup<Content, Toolbar>: View where Content : View, Toolbar : View {
     internal let title: String
-    internal let description: String? // 08:5_ PM Sat 9 Sep 2023
-    internal let content: () -> Content // 09:02 PM Sat 9 Sep 2023
-    internal let toolbar: () -> Toolbar // 09:03 PM Sat 9 Sep 2023
+    internal let description: String? // Initially Modified: 08:5_ PM Sat _9 Sep 2023
+    internal let content: () -> Content // Initially Modified: 09:02 PM Sat _9 Sep 2023
+    internal let toolbar: () -> Toolbar // Initially Modified: 09:03 PM Sat _9 Sep 2023
 
     internal var body: some View {
         VStack(alignment: .leading, spacing: 20.0) {

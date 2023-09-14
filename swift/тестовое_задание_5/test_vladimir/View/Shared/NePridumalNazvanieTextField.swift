@@ -31,8 +31,6 @@ internal struct NePridumalNazvanieTextField<Overlay>: View where Overlay : View 
 
     @FocusState private var isFocused: Bool // 12:27 AM Wed 12 Sep 2023
 
-    //internal let onChange: ((Bool) -> Void)? // 12:29 AM Wed 12 Sep 2023
-
     internal var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
             if text.count != 0 || isFocused {

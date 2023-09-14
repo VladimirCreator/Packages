@@ -24,7 +24,7 @@ internal protocol FetchViewModel: AnyObject { // Initially Modified: 12:21 AM Th
 extension FetchViewModel { // Initially Modified: 12:21 AM Thu 14 Sep 2023
                            //      Last Modified: 12:31 AM Thu 14 Sep 2023
     func fetch<T>(_ type: T.Type, from url: String, _ handle: @escaping (T) -> Void) async throws -> Void where T : Decodable {
-        guard false else { return }
+        //guard false else { return }
         
         guard let url: URL = .init(string: url) else { return }
         let request: URLRequest = .init(url: url)

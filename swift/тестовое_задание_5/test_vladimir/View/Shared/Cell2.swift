@@ -5,7 +5,7 @@
  Thu 7 Sep 2023
  __:__ PM | `` | (+)
  #
- */
+*/
 
 import SwiftUI
 
@@ -44,13 +44,13 @@ internal struct Cell2: View {
         }
     }
 
-    private var description: some View { // 6:19 PM Thu 7 Sep 2023
+    private var description: some View { // Initially Modified: _6:19 PM Thu 7 Sep 2023
         Text(hotel.about_the_hotel.description)
             .font(.system(size: 16.0))
             .padding(.top, -4.0)
     }
 
-    private var oida: some View { // 06:43 PM Fri 8 Sep 2023
+    private var oida: some View { // Initially Modified: 06:43 PM Fri 8 Sep 2023
         VStack(spacing: 10.0) {
             Cell2Row(verbatim1: "Удобства", verbatim2: "Удобства", imageName: "emoji-happy")
             Cell2Row(verbatim1: "Что включено", verbatim2: "Самое необходимое", imageName: "tick-square")

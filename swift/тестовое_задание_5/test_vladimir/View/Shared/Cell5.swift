@@ -10,7 +10,7 @@
 import SwiftUI
 
 internal struct Cell5: View {
-    internal let info: [(label: String, info: String)] // 8:27 Pm Sat 9 Sep 2023
+    internal let info: [(label: String, info: String)] // Initially Modified: 8:27 PM Sat _9 Sep 2023
 
     internal var body: some View {
         Grid(alignment: .leading, verticalSpacing: 16.0) {
