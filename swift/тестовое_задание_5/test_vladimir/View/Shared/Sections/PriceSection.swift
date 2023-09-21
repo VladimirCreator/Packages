@@ -15,7 +15,7 @@ internal struct PriceSection: View {
     internal let price_for_it_strategy: (UInt) -> String // 09:12 PM Fri 8 Sep 2023
 
     internal var body: some View {
-        HStack(alignment: .bottom, spacing: 8.0) {
+        HStack(alignment: .lastTextBaseline, spacing: 8.0) {
             Text(price_for_it_strategy(minimal_price)) // 2:41 PM Thu 7 Sep 2023
                 .font(.system(size: 30.0))
                 .fontWeight(.semibold)
