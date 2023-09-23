@@ -31,7 +31,7 @@ extension Room: Decodable { // Initially Modified: 12:45 AM Mon 11 Sep 2023
               let peculiarities = try? values.decode([String].self, forKey: .peculiarities),
               let image_urls = try? values.decode([String].self, forKey: .image_urls)
         else {
-            fatalError("Room from decoder")
+            fatalError("\(#function)")
         }
         self.id = id
         self.name = name

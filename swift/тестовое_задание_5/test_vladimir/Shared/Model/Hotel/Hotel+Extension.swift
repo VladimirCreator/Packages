@@ -38,7 +38,7 @@ extension Hotel: Decodable { // Initially Modified: 11:31 PM Sun 10 Sep 2023
               let image_urls = try? values.decode([String].self, forKey: .image_urls),
               let about_the_hotel = try? values.decode(AboutTheHotel.self, forKey: .about_the_hotel)
         else {
-            fatalError("Hotel(from decoder: Decoder)")
+            fatalError("\(#function)")
         }
 
         self.id = id

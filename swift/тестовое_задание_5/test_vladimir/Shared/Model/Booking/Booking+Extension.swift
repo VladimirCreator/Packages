@@ -49,7 +49,7 @@ extension Booking: Decodable { // Initially Modified: 01:17 AM Mon 11 Sep 2023
               let fuel_charge = try? values.decode(UInt.self, forKey: .fuel_charge),
               let service_charge = try? values.decode(UInt.self, forKey: .service_charge)
         else {
-            fatalError("Booking(from decoder: Decoder)")
+            fatalError("\(#function)")
         }
 
         self.id = id

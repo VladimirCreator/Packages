@@ -23,7 +23,7 @@ internal struct Rooms: Decodable {
         let values = try decoder.container(keyedBy: JSONKeys.self)
 
         guard let rooms = try? values.decode([Room].self, forKey: .rooms) else {
-            fatalError("Rooms from decoder")
+            fatalError("\(#function)")
         }
         self.rooms = rooms
     }
