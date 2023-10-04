@@ -33,12 +33,9 @@ internal struct HotelView: View {
                 pickRoomButton
             }
         }
-        .onAppear {
-            Task {
-                try? await hotelViewModel.fetch(Hotel.self, from: HOTEL_URL) {
-                    hotelViewModel.hotel = $0
-                }
-            }
+        .task {
+            guard let hotel = try? await hotelViewModel.fetch(Hotel.self, from: HOTEL_URL) else { return }
+            hotelViewModel.hotel = hotel
         }
     }
 

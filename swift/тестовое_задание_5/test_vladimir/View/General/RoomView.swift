@@ -30,12 +30,9 @@ internal struct RoomView: View {
         }
         .background(background ?? .init(.clear))
         .navigationTitle(hotel_name)
-        .onAppear {
-            Task {
-                try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL) {
-                    roomViewModel.room = $0
-                }
-            }
+        .task {
+            guard let room = try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL) else { return }
+            roomViewModel.room = room
         }
     }
 }

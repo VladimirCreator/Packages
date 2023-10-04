@@ -90,12 +90,9 @@ internal struct BookingView: View { // Странно, но техническо
                 .buttonStyle(.nePridumalNazvanie)
             }
         }
-        .onAppear {
-            Task {
-                try? await bookingViewModel.fetch(Booking.self, from: BOOKING_URL) {
-                    bookingViewModel.booking = $0
-                }
-            }
+        .task {
+            guard let booking = try? await bookingViewModel.fetch(Booking.self, from: BOOKING_URL) { return }
+            bookingViewModel.booking = booking
         }
     }
 }

@@ -18,24 +18,16 @@
 import Foundation
 
 internal protocol FetchViewModel: AnyObject { // Initially Modified: 12:21 AM Thu 14 Sep 2023
-    func fetch<T>(_ type: T.Type, from url: String, _ handle: @escaping (T) -> Void) async throws -> Void where T : Decodable
+    func fetch<T>(_ type: T.Type, from url: String) async throws -> T where T : Decodable
 }
 
 extension FetchViewModel { // Initially Modified: 12:21 AM Thu 14 Sep 2023
                            //      Last Modified: 12:31 AM Thu 14 Sep 2023
-    func fetch<T>(_ type: T.Type, from url: String, _ handle: @escaping (T) -> Void) async throws -> Void where T : Decodable {
-        //guard false else { return }
-        
-        guard let url: URL = .init(string: url) else { return }
-        let request: URLRequest = .init(url: url)
-        let (data, _) = try await URLSession.shared.data(for: request)
-        
-        Task { @MainActor in
-            let decoder: JSONDecoder = .init()
-            let instance: T = try decoder.decode(type, from: data)
+    func fetch<T>(_ type: T.Type, from url: String) async throws -> T where T : Decodable { //guard false else { return }
+        guard let url: URL = .init(string: url) else { return /* I do not know how to handle it gracefully. */ }
+        async let (data, _) = try URLSession.shared.data(from: url)
 
-            handle(instance)
-        }
+        return try await JSONDecoder().decode(type, from: data)
     }
 }
 
