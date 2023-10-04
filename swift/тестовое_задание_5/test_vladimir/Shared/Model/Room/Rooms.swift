@@ -15,7 +15,7 @@ internal struct Rooms: Decodable {
 
     internal let rooms: [Room]
 
-    internal init(rooms: [Room]) { // Initially Modified: 10:33 AM Wed 13 Sep 2023
+    internal init(rooms: [Room]) {
         self.rooms = rooms
     }
 
@@ -29,6 +29,6 @@ internal struct Rooms: Decodable {
     }
 }
 
-extension Rooms { // Initially Modified: 10:27 AM Wed 13 Sep 2023
+extension Rooms {
     static let zero: Rooms = .init(rooms: [.zero])
 }

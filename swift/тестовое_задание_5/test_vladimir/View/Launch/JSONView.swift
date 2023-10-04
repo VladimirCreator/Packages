@@ -12,8 +12,8 @@ import SwiftUI
 fileprivate let decoder: JSONDecoder = .init()
 
 internal let hotel = try! decoder.decode(Hotel.self, from: json[0]),
-             room = try! decoder.decode(Rooms.self, from: json[1]),     // Initially Modified: 12:54 AM Mon 11 Sep 2023
-             booking = try! decoder.decode(Booking.self, from: json[2]) // Initially Modified: 01:32 AM Mon 11 Sep 2023
+             room = try! decoder.decode(Rooms.self, from: json[1]),
+             booking = try! decoder.decode(Booking.self, from: json[2])
 
 fileprivate let json: [Data] = [
     """
@@ -22,14 +22,13 @@ fileprivate let json: [Data] = [
     """
     {"rooms":[{"id":1,"name":"Стандартный номер с видом на бассейн","price":186600,"price_per":"За 7 ночей с перелетом","peculiarities":["Включен только завтрак","Кондиционер"],"image_urls":[""]},{"id":2,"name":"Люкс номер с видом на море","price":289400,"price_per":"За 7 ночей с перелетом","peculiarities":["Все включено","Кондиционер","Собственный бассейн"],"image_urls":[""]}]}
     """,
-    // Initially Modified: 01:13 AM Mon 11 Sep 2023
     """
     {"id":1,"hotel_name":"Лучший пятизвездочный отель в Хургаде, Египет","hotel_adress":"Madinat Makadi, Safaga Road, Makadi Bay, Египет","horating":5,"rating_name":"Превосходно","departure":"Москва","arrival_country":"Египет, Хургада","tour_date_start":"19.09.2023","tour_date_stop":"27.09.2023","number_of_nights":7,"room":"Люкс номер с видом на море","nutrition":"Все включено","tour_price":289400,"fuel_charge":9300,"service_charge":2150}
     """
 ].map { $0.data(using: .utf8)! }
 
 internal struct JSONView: View {
-    @State private var pageIndex: Int = 0 // Initially Modified: 12:26 AM Mon 11 Sep 2023
+    @State private var pageIndex: Int = 0
 
     internal var body: some View {
         NavigationStack {
@@ -43,7 +42,7 @@ internal struct JSONView: View {
         }
     }
 
-    private var issue1: some View { // Initially Modified: 12:31 AM Mon 11 Sep 2023
+    private var issue1: some View {
         VStack(alignment: .leading, spacing: .zero) {
             Text(hotel.id.description)
             Text(hotel.name)
@@ -64,7 +63,7 @@ internal struct JSONView: View {
         .background(.red)
     }
 
-    private var issue2: some View { // Initially Modified: 12:55 AM Mon 11 Sep 2023
+    private var issue2: some View {
         VStack(alignment: .leading, spacing: .zero) {
             ForEach(room.rooms) { room in
                 Text(room.id.description)
@@ -83,7 +82,7 @@ internal struct JSONView: View {
         .background(.orange)
     }
 
-    private var issue3: some View { // Initially Modified: 01:32 AM Mon 11 Sep 2023
+    private var issue3: some View {
         VStack(alignment: .leading, spacing: .zero) {
             Text(booking.id.description)
             Text(booking.hotel_name)

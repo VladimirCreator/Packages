@@ -7,13 +7,29 @@
      #
 */
 
-extension Hotel { // Initially Modified: 03:47 PM Tue 12 Sep 2023
-    static let zero: Hotel = .init(id: .zero, name: "Название отеля", adress: "Адрес отеля", minimal_price: .zero, price_for_it: "Описание цены", rating: .zero, rating_name: "Описание рейтинга", image_urls: ["https://is4-ssl.mzstatic.com/image/thumb/WhpeVjuxJ9w-XfYxHAGe2g/1250x703.jpg"], about_the_hotel: .init(description: "Описание отеля.", peculiarities: ["Особенность отеля №1"]))
+extension Hotel {
+    static let zero: Hotel = .init(
+        id: .zero,
+        name: "Название отеля",
+        adress: "Адрес отеля",
+        minimal_price: .zero,
+        price_for_it: "Описание цены",
+        rating: .zero,
+        rating_name: "Описание рейтинга",
+        image_urls: [
+            "https://is4-ssl.mzstatic.com/image/thumb/WhpeVjuxJ9w-XfYxHAGe2g/1250x703.jpg"
+        ],
+        about_the_hotel: .init(
+            description: "Описание отеля.",
+            peculiarities: [
+                "Особенность отеля №1"
+            ]
+        )
+    )
 }
 
-extension Hotel: Decodable { // Initially Modified: 11:31 PM Sun 10 Sep 2023
-    private enum JSONKeys: String, CodingKey { // Initially Modified: 11:32 PM Sun 10 Sep 2023
-                                               //      Last Modified: 11:41 PM Sun 10 Sep 2023
+extension Hotel: Decodable {
+    private enum JSONKeys: String, CodingKey {
         case id
         case name
         case adress
@@ -53,7 +69,7 @@ extension Hotel: Decodable { // Initially Modified: 11:31 PM Sun 10 Sep 2023
     }
 }
 
-extension Hotel.AboutTheHotel: Decodable { // Initially Modified: 11:48 PM Sun 10 Sep 2023
+extension Hotel.AboutTheHotel: Decodable {
     private enum JSONKeys: String, CodingKey {
         case description
         case peculiarities

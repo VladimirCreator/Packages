@@ -10,9 +10,9 @@
 import SwiftUI
 
 internal struct PageIndicatorView: View {
-    internal let count: Int // 1:37 Sat 9 Sep 2023
+    internal let count: Int
 
-    @Binding internal var selection: Int // 1:47 PM Sat 9 Sep 2023
+    @Binding internal var selection: Int
 
     internal var body: some View {
         HStack(alignment: .center, spacing: 5.0) {

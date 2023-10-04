@@ -7,11 +7,11 @@
      #
 */
 
-internal extension Booking { // Initially Modified: 09:28 AM Wed 13 Sep 2023
+internal extension Booking {
     static let zero: Booking = .init(id: .zero, hotel_name: "Имя отеля", hotel_adress: "Адрес отеля", horating: .zero, rating_name: "Оценка отеля", departure: "Вылет из", arrival_country: "Прибытие в", tour_date_start: "Today", tour_date_stop: "Tomorrow", number_of_nights: .zero, room: "Описание номера", nutrition: "Описание питания", tour_price: 1, fuel_charge: .zero, service_charge: .zero)
 }
 
-extension Booking: Decodable { // Initially Modified: 01:17 AM Mon 11 Sep 2023
+extension Booking: Decodable {
     private enum JSONKeys: String, CodingKey {
         case id
         case hotel_name

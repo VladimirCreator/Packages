@@ -16,7 +16,7 @@ internal extension ButtonStyle where Self == NePridumalNazvanieButtonStyle {
         }
     }
 
-    internal static var disclose: NePridumalNazvanieButtonStyle1 { // Initially: 11:41 AM Sun 10 Sep 2023
+    internal static var disclose: NePridumalNazvanieButtonStyle1 {
         get {
             let color: Color = .x0d72ff
 
@@ -27,7 +27,7 @@ internal extension ButtonStyle where Self == NePridumalNazvanieButtonStyle {
         }
     }
 
-    internal static var append: NePridumalNazvanieButtonStyle1 { // Initially: 11:45 AM Sun 10 Sep 2023
+    internal static var append: NePridumalNazvanieButtonStyle1 {
         get {
             let color: Color = .x0d72ff
 

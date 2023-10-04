@@ -13,22 +13,20 @@ internal struct Hotel: Identifiable {
     typealias ID = UInt
     internal let id: Self.ID
 
-    internal let (name, adress): (String, String) // self.0 // Initially Modified: 11:25 PM Sun 10 Sep 2023
-                                                  // self.1 // Initially Modified: 11:26 PM Sun 10 Sep 2023
+    internal let (name, adress): (String, String)
 
-    internal let (minimal_price, price_for_it): (UInt, String) // self.0 // Initially Modified: 11:26 PM Sun 10 Sep 2023
-                                                               // self.1 // Initially Modified: 11:26 PM Sun 10 Sep 2023
+    internal let (minimal_price, price_for_it): (UInt, String)
 
-    internal let (rating, rating_name): (UInt, String) // self.0 // Initially Modified: 11:26 PM Sun 10 Sep 2023
-                                                       // self.1 // Initially Modified: 11:28 PM Sun 10 Sep 2023
+    internal let (rating, rating_name): (UInt, String)
 
-    internal let image_urls: [String] // Initially Modified: 11:29 PM Sun 10 Sep 2023
+    internal let image_urls: [String]
 
-    internal let about_the_hotel: AboutTheHotel // Initially Modified: 11:30 PM Sun 10 Sep 2023
-                                                // `(String, [String])` does not conform to `Decodable` :(
+    internal let about_the_hotel: AboutTheHotel // `(String, [String])`
+                                                // does not conform to
+                                                // `Decodable` :(
 
     internal struct AboutTheHotel {
-        internal let description: String     // Initially Modified: 11:30 PM Sun 10 Sep 2023
-        internal let peculiarities: [String] // Initially Modified: 11:30 PM Sun 10 Sep 2023
+        internal let description: String
+        internal let peculiarities: [String]
     }
 }

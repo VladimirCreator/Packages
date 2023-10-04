@@ -12,15 +12,15 @@ import SwiftUI
 internal struct PriceSection: View {
     internal let minimal_price: UInt
     internal let price_for_it: String
-    internal let price_for_it_strategy: (UInt) -> String // 09:12 PM Fri 8 Sep 2023
+    internal let price_for_it_strategy: (UInt) -> String
 
     internal var body: some View {
         HStack(alignment: .lastTextBaseline, spacing: 8.0) {
-            Text(price_for_it_strategy(minimal_price)) // 2:41 PM Thu 7 Sep 2023
+            Text(price_for_it_strategy(minimal_price))
                 .font(.system(size: 30.0))
                 .fontWeight(.semibold)
 
-            Text(price_for_it) // 2:50 PM Thu 7 Sep 2023
+            Text(price_for_it)
                 .font(.system(size: 16.0))
                 .foregroundColor(.x828796)
         }

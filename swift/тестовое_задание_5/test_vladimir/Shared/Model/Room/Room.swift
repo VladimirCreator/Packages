@@ -7,7 +7,7 @@
      #folder
 */
 
-internal struct Room: Identifiable { // Initially Modified: 12:44 AM Mon 11 Sep 2023
+internal struct Room: Identifiable {
     typealias ID = UInt
     let id: Self.ID
 

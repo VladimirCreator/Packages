@@ -27,11 +27,11 @@ fileprivate struct Application: App {
         }
     }
 
-    private var x03: some View { // Initially Modified: 08:55 AM Wed 13 Sep 2023
+    private var x03: some View {
         Text("3").monospaced(true)
     }
 
-    private var x__: some View { // Initially Modified: 08:55 AM Wed 13 Sep 2023
+    private var x__: some View {
         Text("default").monospaced(true)
     }
 }

@@ -7,11 +7,18 @@
      #
  */
 
-internal extension Room { // Initially Modified: 10:00 AM Wed 13 Sep 2023
-    static let zero: Room = .init(id: .zero, name: "Название номера", price: .zero, price_per: "Описание цены", peculiarities: ["Особенность номера №1"], image_urls: [])
+internal extension Room {
+    static let zero: Room = .init(
+        id: .zero,
+        name: "Название номера",
+        price: .zero,
+        price_per: "Описание цены",
+        peculiarities: ["Особенность номера №1"],
+        image_urls: []
+    )
 }
 
-extension Room: Decodable { // Initially Modified: 12:45 AM Mon 11 Sep 2023
+extension Room: Decodable {
     private enum JSONKeys: String, CodingKey {
         case id
         case name

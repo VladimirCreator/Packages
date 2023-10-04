@@ -9,8 +9,7 @@
 
 import SwiftUI
 
-internal class IdleFormatter: Formatter { // Initially Modified: 09:04 PM Tue 12 Sep 2023
-                                          // Initially Modified: 09:09 PM Tue 12 Sep 2023
+internal class IdleFormatter: Formatter {
     internal override func string(for obj: Any?) -> String? {
         guard let string = obj as? String else { return nil }
         return string
@@ -24,12 +23,12 @@ internal class IdleFormatter: Formatter { // Initially Modified: 09:04 PM Tue 12
 
 internal struct NePridumalNazvanieTextField<Overlay>: View where Overlay : View {
     internal let title: String
-    internal let formatter: Formatter? // Initially Modified: 08:27 PM Tue 12 Sep 20233
+    internal let formatter: Formatter?
     @Binding internal var text: String
 
     internal let overlay: (() -> Overlay)?
 
-    @FocusState private var isFocused: Bool // 12:27 AM Wed 12 Sep 2023
+    @FocusState private var isFocused: Bool
 
     internal var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
@@ -59,7 +58,7 @@ internal struct NePridumalNazvanieTextField<Overlay>: View where Overlay : View 
         }
     }
 
-    private var prompt: Text { // 10:33 PM Sat 9 Sep 2023
+    private var prompt: Text {
         Text(title)
             .foregroundColor(.xa9abb7)
     }

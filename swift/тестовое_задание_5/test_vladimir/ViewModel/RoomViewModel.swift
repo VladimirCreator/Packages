@@ -14,5 +14,5 @@ import Combine
 
 internal class RoomViewModel: ObservableObject {
     @Published
-    internal var room: Rooms = .zero // Initially Modified: 03:28 PM Tue 12 Sep 2023
+    internal var room: Rooms = .zero
 }

@@ -10,8 +10,8 @@
 import SwiftUI
 
 internal struct NePridumalNazavanieDisclosureGroupStyle: DisclosureGroupStyle { // Initially: 11:17 PM Sat 9 Sep 2023
-    internal let title: String  // 11:21 PM Sat 9 Sep 2023
-    internal let action: () -> () // Initially: 7:32 PM Sun 10 Sep 2023
+    internal let title: String
+    internal let action: () -> ()
 
     internal func makeBody(configuration: Configuration) -> some View {
         Markup(title: title, description: nil) {
