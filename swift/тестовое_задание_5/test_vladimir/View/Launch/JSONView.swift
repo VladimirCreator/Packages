@@ -93,14 +93,12 @@ internal struct JSONView: View {
             Text(booking.arrival_country)
             Text(booking.tour_date_start)
             Text(booking.tour_date_stop)
-            ForEach(0..<1, id: \.self) { _ in // 5.9 will allow me to get rid of this `ForEach`.
-                Text(booking.number_of_nights.description)
-                Text(booking.room)
-                Text(booking.nutrition)
-                Text(booking.tour_price.description)
-                Text(booking.fuel_charge.description)
-                Text(booking.service_charge.description)
-            }
+            Text(booking.number_of_nights.description)
+            Text(booking.room)
+            Text(booking.nutrition)
+            Text(booking.tour_price.description)
+            Text(booking.fuel_charge.description)
+            Text(booking.service_charge.description)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.yellow)
