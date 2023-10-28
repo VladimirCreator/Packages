@@ -20,7 +20,7 @@ jobs:
             - uses: actions/setup-node@v3
 
             - run: npm ci # IDK what it means
-            - run: npm build
+            - run: npm run build
             - run: mkdir _site
             - run: mv build/* _site
             - uses: actions/upload-pages-artifact@v2
