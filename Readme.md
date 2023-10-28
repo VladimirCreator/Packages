@@ -56,36 +56,6 @@
 
 1. <details>
      <summary>
-       <a href="https://github.com/VladimirCreator/Playgrounds#reverse-polish-notation">
-         Reverse Polish Notation
-       </a>
-     </summary>
-
-     <h3>
-       Quick Look
-     </h3>
-
-     <p>
-       <img src="./photos/reverse_polish_notation.png" />
-     </p>
-
-     <h3>
-       Files
-     </h3>
-
-     <ol>
-       <li>
-         <code>
-         <a href="./swift/reverse_polish_notation.swift">
-           ./swift/reverse_polish_notation.swift
-         </a>
-         </code>
-       </li>
-     </ol>
-   </details>
-
-1. <details>
-     <summary>
        <a href="https://github.com/VladimirCreator/Playgrounds#shade-explorer">
          Shade Explorer
        </a>
