@@ -34,7 +34,10 @@ export default function App() {
     };
   };
 
+  // eslint-disable-next-line
   useEffect(fetchOnMount, []);
+
+  // eslint-disable-next-line
   useEffect(fetchOnInterval, [trailingLetterId]);
   return (
     <>
