@@ -1,0 +1,39 @@
+# Initially Modified at 06:34 PM on Sat 28 Oct 2023
+#      Last Modified at 08:42 PM on Sat 28 Oct 2023
+
+name: Message Fetcher
+run-name: ${{ github.actor }} deploys via GitHub Actions
+
+on:
+    workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./html_css_js/тестовое_задание_1/
+        steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v3
+
+            - run: npm ci # IDK what it means
+            - run: npm build
+            - run: mkdir _site
+            - run: mv build/* _site
+            - uses: actions/upload-pages-artifact@v2
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+
+        # What does this do?
+        permissions:
+            id-token: write
+            pages: write
+
+        steps:
+            - name: Deploy to GitHub Pages
+              uses: actions/deploy-pages@v2

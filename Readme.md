@@ -143,6 +143,27 @@
 1. [Тестовое задание №1](https://github.com/VladimirCreator/Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
 1. [License](#license)
 
+## Дипломная работа
+[Попробовать](https://graduate-work-gilt.vercel.app/).
+
+### Example
+![Дипломная работа](./videos/дипломная_работа.gif)
+
+#### Desktop Landscape
+![Desktop Landscape](./photos/дипломная_работа/desktop_landscape.png)
+
+#### iPhone 6 Landscape
+![iPhone 6 Landscape](./photos/дипломная_работа/iPhone6_landscape.png)
+
+#### iPhone 6 Portrait
+![iPhone 6 Portrait](./photos/дипломная_работа/iPhone6_portrait.png)
+
+#### iPhone X Landscape
+![iPhone X Landscape](./photos/дипломная_работа/iPhoneX_landscape.png)
+
+#### iPhone X Portrait
+![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
+
 ## Тестовое задание №1
 [Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
 
@@ -163,6 +184,7 @@
 Есть возможность интерактивного взаимодействия, а именно:
 
 - пометка сообщения как избранного;
+
 > сообщение, которое было помечено как избранное остаётся таким даже после того, как происходит перезагрузка страницы
 
 - в случае, когда сообщение является слишком длинным, появляется кнопка "Далее", которая позволяет отобразить всё сообщение, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот.
