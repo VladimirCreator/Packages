@@ -1,11 +1,5 @@
 # Vladimir's Swift Playgrounds
 
-```
-/* (add-github-workflow-for-message-fetcher)
-   branch: Created at 06:28 PM on Sat 28 Oct 2023
-*/
-```
-
 ## Changelog
 > ### Sat 8 Jul 2023 8:10 PM\
 > Rename from Swift-Playgrounds to Playgrounds
