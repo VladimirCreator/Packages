@@ -141,6 +141,7 @@
 
 
 1. [Тестовое задание №1](https://github.com/VladimirCreator/Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
+1. [License](#license)
 
 ## Тестовое задание №1
 [Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
@@ -174,3 +175,6 @@
 
 ### Quick Look
 ![Тестовое задание №1](./videos/тестовое_задание_1.gif)
+
+## License
+See [License](LICENSE).
