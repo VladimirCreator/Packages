@@ -1,146 +1,147 @@
 # Vladimir's Swift Playgrounds
 
 ## Changelog
-> ### Sat 8 Jul 2023 8:10 PM\
+> ### Sat 8 Jul 2023 8:10 PM
 > Rename from Swift-Playgrounds to Playgrounds
 
 ## Table of Contents
-1. [Alphabet](https://github.com/VladimirCreator/Swift-Playgrounds#alphabet)
-2. [Binary Search](https://github.com/VladimirCreator/Swift-Playgrounds#binary-search)
-3. [Bubble Sort](https://github.com/VladimirCreator/Swift-Playgrounds#bubble-sort)
-4. [Delegate](https://github.com/VladimirCreator/Swift-Playgrounds#delegate)
-5. [Euclidean Algorithm](https://github.com/VladimirCreator/Swift-Playgrounds#euclidean-algorithm)
-6. [GitHub Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#github-explorer)
-7. [KVO](https://github.com/VladimirCreator/Swift-Playgrounds#kvo)
-8. [Quick Sort](https://github.com/VladimirCreator/Swift-Playgrounds#quick-sort)
-9. [Quiz](https://github.com/VladimirCreator/Swift-Playgrounds#quiz)
-10. [Reverse Polish Notation](https://github.com/VladimirCreator/Swift-Playgrounds#reverse-polish-notation)
-11. [Selection Sort](https://github.com/VladimirCreator/Swift-Playgrounds#selection-sort)
-12. [Shade Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#shade-explorer)
-13. [Text2Binary](https://github.com/VladimirCreator/Swift-Playgrounds#text2binary)
-14. [Тестовое задание №0](https://github.com/VladimirCreator/Swift-Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0)
-15. [Тестовое задание №1](https://github.com/VladimirCreator/Swift-Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
 
-## Alphabet
-A tool to sort a list of words in alphabetical order.
+1. <details>
+     <summary>
+         <a href="https://github.com/VladimirCreator/Playgrounds#delegate">
+           Delegate
+         </a>
+     </summary>
 
-### Files
-1. [`./swift/alphabet/alphabet.swift`](./swift/alphabet/alphabet.swift)
-2. [`./swift/alphabet/UIAlphabetViewController.swift`](./swift/alphabet/UIAlphabetViewController.swift)
+     <h3>
+       Quick Look
+     </h3>
 
-### Example
-![Alphabet.swift](./videos/alphabet.gif)
+     <p>
+       <img src="./videos/delegate.gif" />
+     </p>
+   </details>
 
-## Binary Search
-A tool for searching an item in a collection.
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#github-explorer">
+         GitHub Explorer
+       </a>
+     </summary>
 
-### Files
-1. [`./swift/binary_search.swift`](./swift/binary_search.swift)
+     <h3>
+       Quick Look
+     </h3>
 
-### Example
-![Binary Search](./photos/binary_search.png)
+     <p>
+       <img src="./videos/github_explorer.gif" />
+     </p>
+   </details>
 
-## Bubble Sort
-An algorithm for sorting a collection.
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#quiz">
+         Quiz
+       </a>
+     </summary>
 
-### Files
-1. [`./swift/bubble_sort.swift`](./swift/bubble_sort.swift)
+     <h3>
+       Quick Look
+     </h3>
 
-### Example
-![Bubble Sort](./photos/bubble_sort.png)
+     <p>
+       <img src="./videos/quiz.gif" />
+     </p>
+   </details>
 
-## Delegate
-`nil`
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#reverse-polish-notation">
+         Reverse Polish Notation
+       </a>
+     </summary>
 
-### Files
-`nil`
+     <h3>
+       Quick Look
+     </h3>
 
-### Example
-![Delegate](./videos/delegate.gif)
+     <p>
+       <img src="./photos/reverse_polish_notation.png" />
+     </p>
 
-## Euclidean Algorithm
-### Files
-1. [`./swift/euclidean_algorithm.swift`](./swift/euclidean_algorithm.swift)
+     <h3>
+       Files
+     </h3>
 
-### Example
-![Euclidean Algorithm](./photos/euclidean_algorithm.png)
+     <ol>
+       <li>
+         <code>
+         <a href="./swift/reverse_polish_notation.swift">
+           ./swift/reverse_polish_notation.swift
+         </a>
+         </code>
+       </li>
+     </ol>
+   </details>
 
-## GitHub Explorer
-A tool for viewing repositories on GitHub.
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#shade-explorer">
+         Shade Explorer
+       </a>
+     </summary>
 
-### Files
-`nil`
+     <h3>
+       Quick Look
+     </h3>
 
-### Example
-![GitHub Explorer](./videos/github_explorer.gif)
+     <p>
+       <img src="./videos/shade_explorer.gif" />
+     </p>
+   </details>
 
-## KVO
-`nil`
+1. <details>
+     <summary>
+       <a href="https://github.com/VladimirCreator/Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0">
+         Тестовое задание №0
+       </a>
+     </summary>
 
-### Files
-1. [`./swift/kvo.swift`](./swift/kvo.swift)
+     <p>
+       <a href="https://application-0.vercel.app">
+         Попробовать
+       </a>
+     </p>
 
-### Example
-![KVO](./photos/kvo.png)
+     <p>
+       Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть идентификатор, название, идентификатор политики, поле <code>agent_js_config</code> и поле <code>correlations_config</code>.
+     </p>
 
-## Quick Sort
-An algorithm for sorting collections.
+     <p>
+       Есть возможность интерактивного взаимодействия, а именно:
+     </p>
 
-### Files
-1. [`./swift/quick_sort.swift`](./swift/quick_sort.swift)
+     <ul>
+       <li>
+         отправка нового приложения на сервер;
+       </li>
+       <li>
+         изменение существующего приложения на сервере.
+       </li>
+     </ul>
 
-### Example
-![Quick Sort](./photos/quick_sort.png)
+     <h3>
+       Quick Look
+     </h3>
 
-## Quiz
-`nil`
+     <p>
+       <img src="./videos/тестовое_задание_0.gif" />
+     </p>
+   </details>
 
-### Files
-`nil`
 
-### Quick Look
-![Quiz](./videos/quiz.gif)
-
-![Quiz Start Screen](./photos/quiz/quiz_startScreen.png)
-![Quiz Success Screen](./photos/quiz/quiz_successScreen.png)
-![Quiz Fail Screen](./photos/quiz/quiz_failScreen.png)
-
-## Reverse Polish Notation
-A tool for solving expressions.
-
-### Files
-1. [`./swift/reverse_polish_notation.swift`](./swift/reverse_polish_notation.swift)
-
-### Example
-![Reverse Polish Notation](./photos/reverse_polish_notation.png)
-
-## Selection Sort
-A tool for sorting collections.
-
-### Files
-1. [`./swift/selection_sort.swift`](./swift/selection_sort.swift)
-
-### Example
-![Selection Sort](./photos/selection_sort.png)
-
-## Shade Explorer
-A game.
-
-### Files
-`nil`
-
-### Example
-![Shade Explorer](./videos/shade_explorer.gif)
-
-## Text2Binary
-A tool for converting texts to binaries.
-
-### Files
-1. [`./swift/text2binary.swift`](./swift/text2binary.swift)
-2. [`./swift/UIText2BinaryViewController.swift`](./swift/UIText2BinaryViewController.swift)
-
-### Example
-![Text2Binary](./videos/text2binary.gif)
+1. [Тестовое задание №1](https://github.com/VladimirCreator/Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
+1. [License](#license)
 
 ## Дипломная работа
 [Попробовать](https://graduate-work-gilt.vercel.app/).
@@ -163,38 +164,39 @@ A tool for converting texts to binaries.
 #### iPhone X Portrait
 ![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
 
-## Тестовое задание №0
-Описание.
-
-### Files
-1. [`./html_css_js/тестовое_задание_0/index.html`](./html_css_js/тестовое_задание_0/index.html)
-
-### Quick Look
-![Тестовое задание №0](./videos/тестовое_задание_0.gif)
-
 ## Тестовое задание №1
-Описание.
+[Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
 
-### Files
-1. [`./html_css_js/тестовое_задание_1/package.json`](./html_css_js/тестовое_задание_1/package.json)
-2. [`./html_css_js/тестовое_задание_1/package-lock.json`](./html_css_js/тестовое_задание_1/package-lock.json)
-3. [`./html_css_js/тестовое_задание_1/tailwind.config.js`](./html_css_js/тестовое_задание_1/tailwind.config.js)
-4. [`./html_css_js/тестовое_задание_1/src/index.css`](./html_css_js/тестовое_задание_1/src/index.css)
-5. [`./html_css_js/тестовое_задание_1/src/index.js`](./html_css_js/тестовое_задание_1/src/index.js)
-6. [`./html_css_js/тестовое_задание_1/src/components/App/App.css`](./html_css_js/тестовое_задание_1/src/components/App/App.css)
-7. [`./html_css_js/тестовое_задание_1/src/components/App/App.js`](./html_css_js/тестовое_задание_1/src/components/App/App.js)
-8. [`./html_css_js/тестовое_задание_1/src/components/Letter/Letter.js`](./html_css_js/тестовое_задание_1/src/components/Letter/Letter.js)
-9. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterAside.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterAside.js)
-10. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterAttachment.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterAttachment.js)
-11. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterContent.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterContent.js)
-12. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterFooter.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterFooter.js)
-13. [`./html_css_js/тестовое_задание_1/src/components/Letter/LetterHeader.js`](./html_css_js/тестовое_задание_1/src/components/Letter/LetterHeader.js)
-14. [`./html_css_js/тестовое_задание_1/src/components/LetterList/LetterList.js`](./html_css_js/тестовое_задание_1/src/components/LetterList/LetterList.js)
-15. [`./html_css_js/тестовое_задание_1/src/redux/store.js`](./html_css_js/тестовое_задание_1/src/redux/store.js)
-16. [`./html_css_js/тестовое_задание_1/src/redux/slices/applicationSlice.js`](./html_css_js/тестовое_задание_1/src/redux/slices/applicationSlice.js)
-17. [`./html_css_js/тестовое_задание_1/public/index.html`](./html_css_js/тестовое_задание_1/public/index.html)
-18. [`./html_css_js/тестовое_задание_1/public/manifest.json`](./html_css_js/тестовое_задание_1/public/manifest.json)
-19. [`./html_css_js/тестовое_задание_1/public/robots.txt`](./html_css_js/тестовое_задание_1/public/robots.txt)
+### Dependencies
+- TypeScript;
+- React;
+- Redux Toolkit;
+- Tailwind CSS.
+
+Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где у каждого сообщения есть уникальный идентификатор, дата публикации, автор, содержимое и список вложений, который включает в себя фотографии и видео.
+
+> Ответственность за этот запрос берёт на себя стандартная функция `useEffect`.
+
+Далее, тот же самый запрос повторяется каждые 5 секунд.
+
+> Ответственность за повторные запросы берёт на себя отдельный `useEffect`.
+
+Есть возможность интерактивного взаимодействия, а именно:
+
+- пометка сообщения как избранного;
+
+> сообщение, которое было помечено как избранное остаётся таким даже после того, как происходит перезагрузка страницы
+
+- в случае, когда сообщение является слишком длинным, появляется кнопка "Далее", которая позволяет отобразить всё сообщение, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот.
+
+> длинное сообщением считается сообщение, которое занимает более 3 строк.
+
+- можно выбрать тег "новое" или "эксперт", но они ничего не делают
+- загрузка старых сообщений при нажатии кнопки "Загрузить старые сообщения"
+- сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
 ### Quick Look
 ![Тестовое задание №1](./videos/тестовое_задание_1.gif)
+
+## License
+See [License](LICENSE).
