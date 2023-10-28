@@ -20,6 +20,58 @@
 13. [Text2Binary](https://github.com/VladimirCreator/Swift-Playgrounds#text2binary)
 14. [Тестовое задание №0](https://github.com/VladimirCreator/Swift-Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0)
 15. [Тестовое задание №1](https://github.com/VladimirCreator/Swift-Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
+1. <details>
+     <summary>
+       Тестовое задание №2
+     </summary>
+
+     <p>
+       <a href="https://disk-uploader-1sjpzx74p-thisusernameisalreadybusy.vercel.app/">
+         Попробовать.
+       </a>
+     </p>
+
+     <h3>
+       Dependencies
+     </h3>
+
+     <ul>
+       <li>
+         TypeScript;
+       </li>
+       <li>
+         React;
+       </li>
+       <li>
+         Tailwind CSS.
+       </li>
+     </ul>
+
+     <h3>
+        Description
+     </h3>
+
+     <p>
+       Запуск сопровождается появлением экрана авторизации или основного экрана. Появление экрана авторизации происходит в случае, когда нет токена, который требуется для авторизации при помощи протокола OAuth 2.0 и чтобы его получить, используется кнопка "Авторизоваться".
+     </p>
+
+     <p>
+       После всех процедур, происходит возврат на основной экран, где у пользователя появляется возможность выбрать файлы на его устройстве.
+     </p>
+
+     <blockquote>
+       <p>
+         Полученный токен сохраняется в <code>localStorage</code>.
+       </p>
+       <p>
+         Ответственность за хранение выбранных файлов берёт на себя отдельный <code>useState</code>.
+       </p>
+     </blockquote>
+
+     <p>
+       Далее, необходимо выбрать файлы, которые необходимо загрузить в диск и нажать кнопку "Опубликовать выбранные файлы".
+     </p>
+   </detials>
 
 ## Alphabet
 A tool to sort a list of words in alphabetical order.
