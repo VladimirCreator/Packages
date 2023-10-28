@@ -20,10 +20,10 @@ internal struct BookingView: View { // Странно, но техническо
     private var info: [(label: String, info: String)] { // 08:21 PM Sat Sep 2023
         return [
             (label: "Вылет из", info: bookingViewModel.booking.departure),
-            (label: "Страна, город", info: bookingViewModel.booking.arrival_country),
-            (label: "Даты", info: "\(bookingViewModel.booking.tour_date_start) - \(bookingViewModel.booking.tour_date_stop)"),
-            (label: "Кол-во ночей", info: "\(bookingViewModel.booking.number_of_nights)"),
-            (label: "Отель", info: bookingViewModel.booking.hotel_adress),
+            (label: "Страна, город", info: bookingViewModel.booking.arrivalCountry),
+            (label: "Даты", info: "\(bookingViewModel.booking.tourDateStart) - \(bookingViewModel.booking.tourDateStop)"),
+            (label: "Кол-во ночей", info: "\(bookingViewModel.booking.numberOfNights)"),
+            (label: "Отель", info: bookingViewModel.booking.hotelAdress),
             (label: "Номер", info: bookingViewModel.booking.room),
             (label: "Питание", info: bookingViewModel.booking.nutrition)
         ]
@@ -31,9 +31,9 @@ internal struct BookingView: View { // Странно, но техническо
 
     private var items: [(text: String, price: UInt)] { // 08:03 PM Sat 9 Sep 2023
         return [
-            (text: "Тур", price: bookingViewModel.booking.tour_price),
-            (text: "Топливный сбор", price: bookingViewModel.booking.fuel_charge),
-            (text: "Сервисный сбор", price: bookingViewModel.booking.service_charge)
+            (text: "Тур", price: bookingViewModel.booking.tourPrice),
+            (text: "Топливный сбор", price: bookingViewModel.booking.fuelCharge),
+            (text: "Сервисный сбор", price: bookingViewModel.booking.serviceCharge)
         ]
     }
 
@@ -47,7 +47,7 @@ internal struct BookingView: View { // Странно, но техническо
         ScrollView {
             VStack(spacing: 8.0) {
                 Card {
-                    InfoSection(name: bookingViewModel.booking.hotel_name, adress: bookingViewModel.booking.hotel_adress, literal3: (value: bookingViewModel.booking.horating, name: bookingViewModel.booking.rating_name))
+                    InfoSection(name: bookingViewModel.booking.hotelName, adress: bookingViewModel.booking.hotelAdress, literal3: (value: bookingViewModel.booking.horating, name: bookingViewModel.booking.ratingName))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 Card { // Initially: 8:19 PM Sat 9 Sep 2023

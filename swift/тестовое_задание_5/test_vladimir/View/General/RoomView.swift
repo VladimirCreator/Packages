@@ -16,7 +16,7 @@ internal struct RoomView: View {
     @Environment(\.backgroundStyle) private var background // Initially Modified: 11:00 AM Wed 13 Sep 2023
 
     @StateObject private var roomViewModel: RoomViewModel = .init() // Initially Modified: 04:5_ AM Wed 13 Sep 2023
-    internal let hotel_name: String // Требование технического задания.
+    internal let hotelName: String // Требование технического задания.
 
     internal var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -29,7 +29,7 @@ internal struct RoomView: View {
             }
         }
         .background(background ?? .init(.clear))
-        .navigationTitle(hotel_name)
+        .navigationTitle(hotelName)
         .onAppear {
             Task {
                 try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL) {

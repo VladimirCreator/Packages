@@ -43,9 +43,9 @@ internal struct HotelView: View {
     }
 
     private var pickRoomButton: some View { // Initially Modified: 03:40 PM Tue 12 Sep 2023
-        let hotel_name: String = hotelViewModel.hotel.name // 02:24 AM Thu 14 Sep 2023
+        let hotelName: String = hotelViewModel.hotel.name // 02:24 AM Thu 14 Sep 2023
         
-        return NavigationLink(value: RootView.PresentedView.room(hotel_name)) {
+        return NavigationLink(value: RootView.PresentedView.room(hotelName)) {
             Text("К выбору номера")
         }
         .buttonStyle(.nePridumalNazvanie)

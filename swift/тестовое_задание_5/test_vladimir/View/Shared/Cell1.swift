@@ -14,11 +14,11 @@ internal struct Cell1: View {
 
     internal var body: some View {
         VStack(alignment: .leading, spacing: 16.0) {
-            PageView(considerToChangeDistance: 0.1, urls: hotel.image_urls)
+            PageView(considerToChangeDistance: 0.1, urls: hotel.imageUrls)
                 .frame(height: 257)
 
             InfoSection(name: hotel.name, adress: hotel.adress, literal3: (5, "Превосходно"))
-            PriceSection(minimal_price: hotel.minimal_price, price_for_it: hotel.price_for_it) {
+            PriceSection(minimalPrice: hotel.minimalPrice, priceForIt: hotel.priceForIt) {
                 return "\($0.formatted()) ₽"
             }
         }

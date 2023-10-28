@@ -48,15 +48,15 @@ internal struct JSONView: View {
             Text(hotel.id.description)
             Text(hotel.name)
             Text(hotel.adress)
-            Text(hotel.minimal_price.description)
-            Text(hotel.price_for_it)
+            Text(hotel.minimalPrice.description)
+            Text(hotel.priceForIt)
             Text(hotel.rating.description)
-            Text(hotel.rating_name)
-            ForEach(hotel.image_urls, id: \.self) {
+            Text(hotel.ratingName)
+            ForEach(hotel.imageIrls, id: \.self) {
                 Text($0)
             }
-            Text(hotel.about_the_hotel.description)
-            ForEach(hotel.about_the_hotel.peculiarities, id: \.self) {
+            Text(hotel.aboutTheHotel.description)
+            ForEach(hotel.aboutTheHotel.peculiarities, id: \.self) {
                 Text($0)
             }
         }
@@ -70,11 +70,11 @@ internal struct JSONView: View {
                 Text(room.id.description)
                 Text(room.name)
                 Text(room.price.description)
-                Text(room.price_per)
+                Text(room.pricePer)
                 ForEach(room.peculiarities, id: \.self) {
                     Text($0)
                 }
-                ForEach(room.image_urls, id: \.self) { url in
+                ForEach(room.imageUrls, id: \.self) { url in
                     Text(url)
                 }
             }
@@ -86,21 +86,21 @@ internal struct JSONView: View {
     private var issue3: some View { // Initially Modified: 01:32 AM Mon 11 Sep 2023
         VStack(alignment: .leading, spacing: .zero) {
             Text(booking.id.description)
-            Text(booking.hotel_name)
-            Text(booking.hotel_adress)
+            Text(booking.hotelName)
+            Text(booking.hotelAdress)
             Text(booking.horating.description)
-            Text(booking.rating_name)
+            Text(booking.ratingName)
             Text(booking.departure)
-            Text(booking.arrival_country)
-            Text(booking.tour_date_start)
-            Text(booking.tour_date_stop)
+            Text(booking.arrivalCountry)
+            Text(booking.tourDateStart)
+            Text(booking.tourDateStop)
             ForEach(0..<1, id: \.self) { _ in // 5.9 will allow me to get rid of this `ForEach`.
-                Text(booking.number_of_nights.description)
+                Text(booking.numberOfNights.description)
                 Text(booking.room)
                 Text(booking.nutrition)
-                Text(booking.tour_price.description)
-                Text(booking.fuel_charge.description)
-                Text(booking.service_charge.description)
+                Text(booking.tourPrice.description)
+                Text(booking.fuelCharge.description)
+                Text(booking.serviceCharge.description)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

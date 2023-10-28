@@ -7,14 +7,14 @@
      #folder
 */
 
-internal struct Room: Identifiable { // Initially Modified: 12:44 AM Mon 11 Sep 2023
+internal struct Room: Identifiable, Decodable { // Initially Modified: 12:44 AM Mon 11 Sep 2023
     typealias ID = UInt
     let id: Self.ID
 
     let name: String
-    let (price, price_per): (UInt, String)
+    let (price, pricePer): (UInt, String)
 
     let peculiarities: [String]
 
-    let image_urls: [String]
+    let imageUrls: [String]
 }

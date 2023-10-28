@@ -16,8 +16,8 @@ internal struct PrototypeView: View {
     private var views: [String: AnyView] {
         [
             "SharedCell1": AnyView(
-                Cell1(hotel: .init(id: 0, name: "Image", adress: "Image", minimal_price: 0, price_for_it: "Image", rating: 0, rating_name: "Image", image_urls: ["https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/CollectionTypes_intro_2x.png", "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/closureReferenceCycle02@2x.png", "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/bitshiftSignedFour@2x.png"
-                                                                                                                                                        ], about_the_hotel: .init(description: "Image", peculiarities: ["Image", "Image"])))
+                Cell1(hotel: .init(id: 0, name: "Image", adress: "Image", minimalPrice: 0, priceForIt: "Image", rating: 0, ratingName: "Image", imageUrls: ["https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/CollectionTypes_intro_2x.png", "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/closureReferenceCycle02@2x.png", "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/bitshiftSignedFour@2x.png"
+                                                                                                                                                        ], aboutTheHotel: .init(description: "Image", peculiarities: ["Image", "Image"])))
             ),
             "SharedCell2": AnyView(Cell2(hotel: hotel)),
             "AnyView": AnyView(
@@ -30,7 +30,7 @@ internal struct PrototypeView: View {
                 }
             ),
             "SectionPrice": AnyView(
-                PriceSection(minimal_price: 0xFFFF, price_for_it: "fdsiofjdsklfj") {
+                PriceSection(minimalPrice: 0xFFFF, priceForIt: "fdsiofjdsklfj") {
                     "от \($0.formatted()) ₽"
                 }
             ),
