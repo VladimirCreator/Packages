@@ -40,9 +40,9 @@ internal struct HotelView: View {
     }
 
     private var pickRoomButton: some View {
-        let hotel_name: String = hotelViewModel.hotel.name
+        let hotelName: String = hotelViewModel.hotel.name
         
-        return NavigationLink(value: RootView.PresentedView.room(hotel_name)) {
+        return NavigationLink(value: RootView.PresentedView.room(hotelName)) {
             Text("К выбору номера")
         }
         .buttonStyle(.nePridumalNazvanie)

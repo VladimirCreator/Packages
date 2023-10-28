@@ -7,23 +7,23 @@
      #folder
 */
 
-internal struct Booking: Identifiable {
+internal struct Booking: Identifiable, Decodable {
     internal typealias ID = UInt
 
     internal let id: Self.ID
 
-    internal let (hotel_name, hotel_adress): (String, String)
+    internal let (hotelName, hotelAdress): (String, String)
 
-    internal let (horating, rating_name): (UInt, String)
+    internal let (horating, ratingName): (UInt, String)
 
-    internal let (departure, arrival_country): (String, String)
+    internal let (departure, arrivalCountry): (String, String)
 
-    internal let (tour_date_start, tour_date_stop): (String, String)
+    internal let (tourDateStart, tourDateStop): (String, String)
 
-    internal let number_of_nights: UInt
+    internal let numberOfNights: UInt
     internal let room: String
 
     internal let nutrition: String
 
-    internal let (tour_price, fuel_charge, service_charge): (UInt, UInt, UInt)
+    internal let (tourPrice, fuelCharge, serviceCharge): (UInt, UInt, UInt)
 }

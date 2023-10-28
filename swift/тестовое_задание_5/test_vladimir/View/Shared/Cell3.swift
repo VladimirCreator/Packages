@@ -14,7 +14,7 @@ internal struct Cell3: View {
 
     internal var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
-            PageView(considerToChangeDistance: 0.1, urls: room.image_urls)
+            PageView(considerToChangeDistance: 0.1, urls: room.imageUrls)
                 .frame(height: 257)
             InfoSection(name: room.name, adress: nil, literal3: nil)
             
@@ -38,7 +38,7 @@ internal struct Cell3: View {
             }
             .padding(.bottom, 8.0)
             
-            PriceSection(minimal_price: room.price, price_for_it: room.price_per) {
+            PriceSection(minimalPrice: room.price, priceForIt: room.pricePer) {
                 "\($0.formatted()) ₽"
             }
             .padding(.bottom, 8.0)

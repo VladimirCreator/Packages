@@ -28,7 +28,7 @@ internal struct Cell2: View {
 
     private var nePridumalNazvanie: some View {
         NePridumalNazvanieLayout {
-            ForEach(hotel.about_the_hotel.peculiarities, id: \.self) { label in
+            ForEach(hotel.aboutTheHotel.peculiarities, id: \.self) { label in
                 Label(label, systemImage: "square")
                     .labelStyle(
                         Issue1LabelStyle(
@@ -45,7 +45,7 @@ internal struct Cell2: View {
     }
 
     private var description: some View {
-        Text(hotel.about_the_hotel.description)
+        Text(hotel.aboutTheHotel.description)
             .font(.system(size: 16.0))
             .padding(.top, -4.0)
     }

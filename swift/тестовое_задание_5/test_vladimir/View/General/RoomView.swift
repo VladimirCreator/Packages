@@ -16,7 +16,7 @@ internal struct RoomView: View {
     @Environment(\.backgroundStyle) private var background
 
     @StateObject private var roomViewModel: RoomViewModel = .init()
-    internal let hotel_name: String // Требование технического задания.
+    internal let hotelName: String // Требование технического задания.
 
     internal var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -29,9 +29,12 @@ internal struct RoomView: View {
             }
         }
         .background(background ?? .init(.clear))
-        .navigationTitle(hotel_name)
+        .navigationTitle(hotelName)
         .task {
-            guard let room = try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL) else { return }
+            guard let room = try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL)
+            else {
+                return
+            }
             roomViewModel.room = room
         }
     }

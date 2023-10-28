@@ -21,14 +21,14 @@ internal struct PrototypeView: View {
                         id: 0,
                         name: "Image",
                         adress: "Image",
-                        minimal_price: 0,
-                        price_for_it: "Image",
+                        minimalPrice: 0,
+                        priceForIt: "Image",
                         rating: 0,
-                        rating_name: "Image",
-                        image_urls: [
+                        ratingName: "Image",
+                        imageUrls: [
                             "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/CollectionTypes_intro_2x.png", "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/closureReferenceCycle02@2x.png", "https://github.com/apple/swift-book/blob/main/TSPL.docc/Assets/bitshiftSignedFour@2x.png"
                         ],
-                        about_the_hotel: .init(
+                        aboutTheHotel: .init(
                             description: "Image",
                             peculiarities: [
                                 "Image",
@@ -49,7 +49,7 @@ internal struct PrototypeView: View {
                 }
             ),
             "SectionPrice": AnyView(
-                PriceSection(minimal_price: 0xFFFF, price_for_it: "fdsiofjdsklfj") {
+                PriceSection(minimalPrice: 0xFFFF, priceForIt: "fdsiofjdsklfj") {
                     "от \($0.formatted()) ₽"
                 }
             ),

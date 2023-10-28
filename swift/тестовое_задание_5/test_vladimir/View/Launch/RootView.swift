@@ -56,8 +56,8 @@ internal struct RootView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationDestination(for: RootView.PresentedView.self) { requestedView in
                     switch requestedView {
-                    case .room(let hotel_name):
-                        RoomView(hotel_name: hotel_name)
+                    case .room(let hotelName):
+                        RoomView(hotelName: hotelName)
                     case .booking:
                         BookingView()
                     case .paidOrder:

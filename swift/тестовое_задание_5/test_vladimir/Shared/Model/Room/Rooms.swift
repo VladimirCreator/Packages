@@ -9,26 +9,13 @@
 */
 
 internal struct Rooms: Decodable {
-    private enum JSONKeys: String, CodingKey {
-        case rooms
-    }
-
     internal let rooms: [Room]
-
-    internal init(rooms: [Room]) {
-        self.rooms = rooms
-    }
-
-    internal init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: JSONKeys.self)
-
-        guard let rooms = try? values.decode([Room].self, forKey: .rooms) else {
-            fatalError("\(#function)")
-        }
-        self.rooms = rooms
-    }
 }
 
 extension Rooms {
-    static let zero: Rooms = .init(rooms: [.zero])
+    static let zero: Rooms = .init(
+        rooms: [
+            .zero
+        ]
+    )
 }

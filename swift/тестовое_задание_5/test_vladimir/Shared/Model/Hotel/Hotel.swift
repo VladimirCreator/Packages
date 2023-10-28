@@ -9,23 +9,23 @@
 
 import SwiftUI
 
-internal struct Hotel: Identifiable {
+internal struct Hotel: Identifiable, Decodable {
     typealias ID = UInt
     internal let id: Self.ID
 
     internal let (name, adress): (String, String)
 
-    internal let (minimal_price, price_for_it): (UInt, String)
+    internal let (minimalPrice, priceForIt): (UInt, String)
 
-    internal let (rating, rating_name): (UInt, String)
+    internal let (rating, ratingName): (UInt, String)
 
-    internal let image_urls: [String]
+    internal let imageUrls: [String]
 
-    internal let about_the_hotel: AboutTheHotel // `(String, [String])`
-                                                // does not conform to
-                                                // `Decodable` :(
+    internal let aboutTheHotel: AboutTheHotel // `(String, [String])`
+                                              // does not conform to
+                                              // `Decodable` :(
 
-    internal struct AboutTheHotel {
+    internal struct AboutTheHotel: Decodable {
         internal let description: String
         internal let peculiarities: [String]
     }
