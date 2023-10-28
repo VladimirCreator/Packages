@@ -71,4 +71,4 @@ const applicationSlice = createSlice(
 );
 
 export default applicationSlice;
-export const { } = applicationSlice.actions;
+//export const { fetchLetters } = applicationSlice.actions;

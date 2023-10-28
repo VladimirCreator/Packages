@@ -6,8 +6,8 @@ import { fetchLetters } from "../../redux/slices/applicationSlice";
 import Letter from "../Letter/Letter";
 
 const using = {
-  date_ascending: (a, b) => new Date(a.date).getTime() - new Date(b. date).getTime(),
-  date_descending: (a, b) => new Date(b. date).getTime() - new Date(a. date).getTime()
+  date_ascending: (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+  date_descending: (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 };
 
 function Button({ text, onClick, props }) {
