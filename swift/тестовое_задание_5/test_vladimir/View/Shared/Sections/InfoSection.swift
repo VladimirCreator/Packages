@@ -22,7 +22,7 @@ internal struct InfoSection: View {
         }
     }
 
-    private var issue1: some View { // Initially Modified: _4:56 PM Sun 10 Sep 2023
+    private var issue1: some View {
         guard let literal3 else { return AnyView(EmptyView()) }
 
         let verbatim1: String = "\(literal3.value) \(literal3.name)"
@@ -34,13 +34,13 @@ internal struct InfoSection: View {
             )
     }
 
-    private var issue2: some View { // Initially Modified: _5:08 PM Sun 10 Sep 2023
+    private var issue2: some View {
         Text(name)
             .textStyle(Issue1TextStyle())
     }
 
     @ViewBuilder
-    private var issue3: some View { // Initially Modified: _5:08 PM Sun 10 Sep 2023
+    private var issue3: some View {
         if let adress {
             // Техническое задание утверждает, что эта надпись является кнопкой.
             Button(action: { print(true) }) {

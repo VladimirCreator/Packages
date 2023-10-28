@@ -16,7 +16,7 @@ internal struct PaidOrderView: View {
     @Environment(\.shouldPopToRoot) private var shouldPopToRoot
 
     internal var body: some View {
-        VStack(alignment: .center, spacing: 32.0) { // 5:42 PM Tue 5 Sep 2023 
+        VStack(alignment: .center, spacing: 32.0) {
             graphic
             title
             description
@@ -39,7 +39,7 @@ internal struct PaidOrderView: View {
         .environment(\.multilineTextAlignment, .center)
     }
 
-    private var graphic: some View { // 06:49 PM Tue 5 Sep 2023
+    private var graphic: some View {
         Circle()
             .fill(.xf6f6f9)
             .frame(width: 94, height: 94)
@@ -51,12 +51,12 @@ internal struct PaidOrderView: View {
             )
     }
 
-    private var title: some View { // 06:3_ PM Tue 5 Sep 2023
+    private var title: some View {
         Text("Ваш заказ принят в работу")
             .textStyle(Issue1TextStyle())
     }
 
-    private var description: some View { // 06:38 PM Tue 5 Sep 2023
+    private var description: some View {
         Text("Подтверждение заказа №\(UInt.random(in: UInt.zero...UInt.max)) может занять некоторое время (от 1 часа до суток).\nКак только мы получим ответ от туроператора, вам на почту придёт уведомление.")
             .textStyle(NePridumalNazvanieTextStyle(color: .x828796))
             .padding(.top, -12.0)

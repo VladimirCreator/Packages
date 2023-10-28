@@ -11,7 +11,7 @@ import SwiftUI
 
 internal struct NePridumalNazvanieButtonStyle1: ButtonStyle {
     internal let foregroundColor: Color
-    internal let backgroundColor: Color // 11:40 AM Sun 10 Sep 2023
+    internal let backgroundColor: Color
 
     internal func makeBody(configuration: Configuration) -> some View {
         return configuration.label

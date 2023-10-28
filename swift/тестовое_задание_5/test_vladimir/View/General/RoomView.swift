@@ -13,9 +13,9 @@
 import SwiftUI
 
 internal struct RoomView: View {
-    @Environment(\.backgroundStyle) private var background // Initially Modified: 11:00 AM Wed 13 Sep 2023
+    @Environment(\.backgroundStyle) private var background
 
-    @StateObject private var roomViewModel: RoomViewModel = .init() // Initially Modified: 04:5_ AM Wed 13 Sep 2023
+    @StateObject private var roomViewModel: RoomViewModel = .init()
     internal let hotelName: String // Требование технического задания.
 
     internal var body: some View {
@@ -30,12 +30,12 @@ internal struct RoomView: View {
         }
         .background(background ?? .init(.clear))
         .navigationTitle(hotelName)
-        .onAppear {
-            Task {
-                try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL) {
-                    roomViewModel.room = $0
-                }
+        .task {
+            guard let room = try? await roomViewModel.fetch(Rooms.self, from: ROOM_URL)
+            else {
+                return
             }
+            roomViewModel.room = room
         }
     }
 }

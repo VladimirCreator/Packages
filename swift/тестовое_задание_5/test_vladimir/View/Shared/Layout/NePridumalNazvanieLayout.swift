@@ -8,11 +8,10 @@ import SwiftUI
  #typealias
  */
 
-internal struct NePridumalNazvanieLayout: Layout { // 3:29 PM Fri Sep 2023
+internal struct NePridumalNazvanieLayout: Layout {
     // This is code is not safe!
     // The Reason: It assumes that `proposal.width` is not `nil`.
-    internal func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize { // Initially Modified: __:__ PM Fri 8 Sep 2023
-                           //      Last Modified: 06:08 PM Fri 8 Sep 2023
+    internal func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         guard let availableWidth: CGFloat = proposal.width else { fatalError("`proposal.width` is `nil`") }
 
         var heights: Set<CGFloat> = []
@@ -21,7 +20,7 @@ internal struct NePridumalNazvanieLayout: Layout { // 3:29 PM Fri Sep 2023
             let size: CGSize = view.sizeThatFits(proposal)
             occupiedWidth += size.width
             heights.insert(size.height)
-                let biggestHeightInRow = heights.max() // 10:39 PM Mon 11 Sep 2023
+                let biggestHeightInRow = heights.max()
             if occupiedWidth > availableWidth {
                 occupiedWidth = size.width
                 return CGSize(width: availableWidth, height: accumulator.height + biggestHeightInRow!)
@@ -30,7 +29,7 @@ internal struct NePridumalNazvanieLayout: Layout { // 3:29 PM Fri Sep 2023
         }
     }
 
-    internal func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) { // Last Modified: __:__ PM Fri 8 Sep 2023
+    internal func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         var occupiedWidth: CGFloat = .zero
         var occupiedHeight: CGFloat = .zero
 

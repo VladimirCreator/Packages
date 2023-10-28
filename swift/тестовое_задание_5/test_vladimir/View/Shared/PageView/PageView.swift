@@ -14,12 +14,12 @@
 import SwiftUI
 
 internal struct PageView: View {
-    internal let considerToChangeDistance: Double // 05:05 AM Sat 9 2023
-    @State private var gestureProgress: CGFloat = 0 // 04:48 AM Sat 9 Sep 2023
-    @State private var urlIndex: Int = 0 // 12:04 AM Sat 9 Sep 2023
+    internal let considerToChangeDistance: Double
+    @State private var gestureProgress: CGFloat = 0
+    @State private var urlIndex: Int = 0
     internal let urls: [String]
 
-    @State private var progress: Double = .zero // 11:33 AM Sat 9 Sep 2023
+    @State private var progress: Double = .zero
 
     internal var body: some View {
         ZStack(alignment: .bottom) {

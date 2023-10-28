@@ -7,7 +7,7 @@
      #
  */
 
-internal extension Room { // Initially Modified: 10:00 AM Wed 13 Sep 2023
+internal extension Room {
     static let zero: Room = .init(
         id: .zero,
         name: "Название номера",

@@ -16,7 +16,7 @@ internal struct Tourist {
     internal var (abroadPassportNumber, abroadPassportVailidityDate): (String, String)
 }
 
-internal extension Tourist { // Initially Modified: 04:34 PM Tue 12 Sep 2023
+internal extension Tourist {
     internal enum Field: String, CaseIterable {
         case firstName = "Имя"
         case lastName = "Фамилия"

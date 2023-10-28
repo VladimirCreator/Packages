@@ -20,7 +20,7 @@
 
 import SwiftUI
 
-internal struct ShouldPopToRoot: EnvironmentKey { // Initially Modified: 04:15 AM Thu 14 Sep 2023
+internal struct ShouldPopToRoot: EnvironmentKey {
     static let defaultValue: Binding<Bool> = .constant(false)
 }
 

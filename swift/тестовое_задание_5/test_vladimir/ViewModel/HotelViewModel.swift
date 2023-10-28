@@ -17,25 +17,16 @@
 
 import Foundation
 
-internal protocol FetchViewModel: AnyObject { // Initially Modified: 12:21 AM Thu 14 Sep 2023
-    func fetch<T>(_ type: T.Type, from url: String, _ handle: @escaping (T) -> Void) async throws -> Void where T : Decodable
+internal protocol FetchViewModel: AnyObject {
+    func fetch<T>(_ type: T.Type, from url: String) async throws -> T where T : Decodable
 }
 
-extension FetchViewModel { // Initially Modified: 12:21 AM Thu 14 Sep 2023
-                           //      Last Modified: 12:31 AM Thu 14 Sep 2023
-    func fetch<T>(_ type: T.Type, from url: String, _ handle: @escaping (T) -> Void) async throws -> Void where T : Decodable {
-        //guard false else { return }
-        
-        guard let url: URL = .init(string: url) else { return }
-        let request: URLRequest = .init(url: url)
-        let (data, _) = try await URLSession.shared.data(for: request)
-        
-        Task { @MainActor in
-            let decoder: JSONDecoder = .init()
-            let instance: T = try decoder.decode(type, from: data)
+extension FetchViewModel {
+    func fetch<T>(_ type: T.Type, from url: String) async throws -> T where T : Decodable { //guard false else { return }
+        guard let url: URL = .init(string: url) else { return /* I do not know how to handle it gracefully. */ }
+        async let (data, _) = try URLSession.shared.data(from: url)
 
-            handle(instance)
-        }
+        return try await JSONDecoder().decode(type, from: data)
     }
 }
 
@@ -53,7 +44,7 @@ import Combine
 
 internal class HotelViewModel: ObservableObject {
     @Published
-    internal var hotel: Hotel = .zero // Initially Modified: 03:28 PM Tue 12 Sep 2023
+    internal var hotel: Hotel = .zero
 }
 
 /* Read Me
@@ -73,10 +64,10 @@ internal class HotelViewModel: ObservableObject {
    #import
 */
 
-extension HotelViewModel: FetchViewModel { // Initially Modified: 12:43 AM Thu 14 Sep 2023
+extension HotelViewModel: FetchViewModel {
 }
-extension RoomViewModel: FetchViewModel { // Initially Modified: 12:34 AM Thu 14 Sep 2023
+extension RoomViewModel: FetchViewModel {
 }
-extension BookingViewModel: FetchViewModel { // Initially Modified: 12:44 AM Thu 14 Sep 2023
+extension BookingViewModel: FetchViewModel {
 }
 

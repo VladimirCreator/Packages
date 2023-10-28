@@ -7,7 +7,7 @@
      #
 */
 
-extension Hotel { // Initially Modified: 03:47 PM Tue 12 Sep 2023
+extension Hotel {
     static let zero: Hotel = .init(
         id: .zero,
         name: "Название отеля",

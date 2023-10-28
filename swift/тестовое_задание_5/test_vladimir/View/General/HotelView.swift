@@ -13,9 +13,9 @@
 import SwiftUI
 
 internal struct HotelView: View {
-    @Environment(\.backgroundStyle) private var background // Initially Modified: 10:55 AM Wed 
+    @Environment(\.backgroundStyle) private var background
 
-    @StateObject private var hotelViewModel: HotelViewModel = .init() // Initially Modified: 03:31 PM Tue 12 Sep 2023
+    @StateObject private var hotelViewModel: HotelViewModel = .init()
 
     internal var body: some View {
         ScrollView {
@@ -33,17 +33,14 @@ internal struct HotelView: View {
                 pickRoomButton
             }
         }
-        .onAppear {
-            Task {
-                try? await hotelViewModel.fetch(Hotel.self, from: HOTEL_URL) {
-                    hotelViewModel.hotel = $0
-                }
-            }
+        .task {
+            guard let hotel = try? await hotelViewModel.fetch(Hotel.self, from: HOTEL_URL) else { return }
+            hotelViewModel.hotel = hotel
         }
     }
 
-    private var pickRoomButton: some View { // Initially Modified: 03:40 PM Tue 12 Sep 2023
-        let hotelName: String = hotelViewModel.hotel.name // 02:24 AM Thu 14 Sep 2023
+    private var pickRoomButton: some View {
+        let hotelName: String = hotelViewModel.hotel.name
         
         return NavigationLink(value: RootView.PresentedView.room(hotelName)) {
             Text("К выбору номера")

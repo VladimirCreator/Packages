@@ -18,5 +18,5 @@ internal extension Consumer {
         case mail = "Почта"
     }
 
-    internal static let zero: Consumer = .init(phone: "Номер телефона", mail: "Почта") // Initially Modified: 09:52 AM Wed 13 Sep 2023
+    internal static let zero: Consumer = .init(phone: "Номер телефона", mail: "Почта")
 }

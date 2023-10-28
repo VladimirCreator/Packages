@@ -9,8 +9,8 @@
 import SwiftUI
 
 internal struct ArrayLayout: Layout {
-    internal func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize { // Last Modified: 12:33 PM Sat 9 PM 2023
-        let maxHeight: CGFloat = subviews.max { // 12:11 PM Sat 9 Sep 2023
+    internal func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        let maxHeight: CGFloat = subviews.max {
             $0.sizeThatFits(.unspecified).height > $1.sizeThatFits(.unspecified).height
         }!.sizeThatFits(proposal).height
 
@@ -22,7 +22,7 @@ internal struct ArrayLayout: Layout {
         }
     }
 
-    internal func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {  // Last Modified: 12:36 PM Sat 9 PM 2023
+    internal func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         var occupiedWidth: CGFloat = .zero
 
         subviews.forEach { view in

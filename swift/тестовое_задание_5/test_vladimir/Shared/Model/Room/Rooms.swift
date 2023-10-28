@@ -12,7 +12,7 @@ internal struct Rooms: Decodable {
     internal let rooms: [Room]
 }
 
-extension Rooms { // Initially Modified: 10:27 AM Wed 13 Sep 2023
+extension Rooms {
     static let zero: Rooms = .init(
         rooms: [
             .zero

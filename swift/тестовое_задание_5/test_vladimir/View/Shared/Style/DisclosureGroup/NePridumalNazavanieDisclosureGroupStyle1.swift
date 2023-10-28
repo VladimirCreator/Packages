@@ -3,7 +3,7 @@
 import SwiftUI
 
 internal struct NePridumalNazavanieDisclosureGroupStyle1: DisclosureGroupStyle {
-    internal let action: () -> () // Initially: 7:32 PM Sun 10 Sep 2023
+    internal let action: () -> ()
 
     internal func makeBody(configuration: Configuration) -> some View {
         Markup(title: "Добавить туриста", description: nil) {

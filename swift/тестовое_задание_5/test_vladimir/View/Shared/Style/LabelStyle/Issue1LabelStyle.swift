@@ -11,8 +11,8 @@ import SwiftUI
 
 internal struct Issue1LabelStyle: LabelStyle { // 4:09 ?? Sep 2023
     internal let verbatimOnly: Bool
-    internal let foregroundColor: Color // Initially Modified: _5:31 PM Sun 10 Sep 2023
-    internal let backgroundColor: Color? // Initially Modified: _5:49 PM Sun 10 Sep 2023
+    internal let foregroundColor: Color
+    internal let backgroundColor: Color?
 
     internal func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 2.0) {
