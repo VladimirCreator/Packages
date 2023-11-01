@@ -1,5 +1,9 @@
 # Vladimir's Playgrounds
 
+## GitHub Actions
+[![Authentication](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml)
+[![Message Fetcher](https://github.com/VladimirCreator/Playgrounds/actions/workflows/message-fetcher.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/message-fetcher.yml)
+
 ## Changelog
 > ### Sat 8 Jul 2023 8:10 PM
 > `github`: Rename Swift-Playgrounds to Playgrounds.
