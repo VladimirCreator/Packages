@@ -2,7 +2,7 @@
     "name": "application",
     "version": "0.?.?",
     "private": true,
-    "homepage": "https://github.com/VladimirCreator/Playgrounds/",
+    "homepage": "https://vladimircreator.github.io/Playgrounds/",
 
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
