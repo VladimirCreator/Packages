@@ -21,10 +21,9 @@ jobs:
 
             - run: npm ci # IDK what it means
             - run: npm run build
-            - run: mkdir _site/
-            - run: mv build/* _site/
+            - run: mkdir ../_site/
+            - run: mv build/* ../_site/
             - uses: actions/upload-pages-artifact@v2
-              working-directory: ./Message Fetcher/
 
     deploy:
         needs: build
@@ -38,4 +37,3 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               uses: actions/deploy-pages@v2
-              working-directory: ./Message Fetcher/
