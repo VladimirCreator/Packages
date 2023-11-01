@@ -24,13 +24,11 @@ jobs:
             - run: mkdir _site/
             - run: mv build/* _site/
             - uses: actions/upload-pages-artifact@v2
+              working-directory: ./Message Fetcher/
 
     deploy:
         needs: build
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: ./Message Fetcher
 
         # What does this do?
         permissions:
@@ -40,3 +38,4 @@ jobs:
         steps:
             - name: Deploy to GitHub Pages
               uses: actions/deploy-pages@v2
+              working-directory: ./Message Fetcher/
