@@ -28,6 +28,9 @@ jobs:
     deploy:
         needs: build
         runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: ./Message Fetcher
 
         # What does this do?
         permissions:

@@ -6,6 +6,7 @@
 
 ## Table of Contents
 
+1. [Booking](#booking)
 1. <details>
      <summary>
        <a href="https://github.com/VladimirCreator/Playgrounds#github-explorer">
@@ -96,6 +97,9 @@
 
 1. [Message Fetcher](#message-fetcher)
 1. [License](#license)
+
+## Booking
+![Booking](videos/booking.gif)
 
 ## Дипломная работа
 [Попробовать](https://graduate-work-gilt.vercel.app/).
