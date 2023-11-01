@@ -8,22 +8,6 @@
 
 1. <details>
      <summary>
-         <a href="https://github.com/VladimirCreator/Playgrounds#delegate">
-           Delegate
-         </a>
-     </summary>
-
-     <h3>
-       Quick Look
-     </h3>
-
-     <p>
-       <img src="./videos/delegate.gif" />
-     </p>
-   </details>
-
-1. <details>
-     <summary>
        <a href="https://github.com/VladimirCreator/Playgrounds#github-explorer">
          GitHub Explorer
        </a>
@@ -110,7 +94,7 @@
    </details>
 
 
-1. [Тестовое задание №1](https://github.com/VladimirCreator/Playgrounds/tree/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-1)
+1. [Message Fetcher](#message-fetcher)
 1. [License](#license)
 
 ## Дипломная работа
@@ -134,7 +118,7 @@
 #### iPhone X Portrait
 ![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
 
-## Тестовое задание №1
+## Message Fetcher
 [Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
 
 ### Dependencies
@@ -166,7 +150,7 @@
 - сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
 ### Quick Look
-![Тестовое задание №1](./videos/тестовое_задание_1.gif)
+![Message Fetcher](./videos/message_fetcher.gif)
 
 ## License
 See [License](LICENSE).
