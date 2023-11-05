@@ -20,13 +20,15 @@ jobs:
             - run: mkdir _site
             - run: mkdir _site/message-fetcher
             - run: mkdir _site/authentication
-            - run: midir _site/applications # Initially Modified: 11:36 AM Sun 5 Nov 2023
-                                            #      Last Modified: 11:38 AM Sun 05 Nov 2023
+            - run: mkdir _site/applications
+            - run: mkdir _site/proportional # Initially Modified: 11:50 AM Sun 5 Nov 2023
+                                            #      Last Modified: 04:03 PM Sun 05 Nov 2023
 
             # Message Fetcher
             - run: npm ci
               working-directory: Message Fetcher/
-            - run: npm run build
+            - name: Build “Message Fetcher”
+              run: npm run build
               working-directory: Message Fetcher/
             - run: mv Message\ Fetcher/build/* _site/message-fetcher/
 
@@ -35,6 +37,15 @@ jobs:
 
             # Applications
             - run: mv html_css_js/тестовое_задание_0/* _site/applications
+
+            # Proportional
+            - run: npm ci
+              working-directory: Next.js/proportional
+            - name: Build “Proportional”
+              run: npm run build
+              working-directory: Next.js/proportional
+
+            - run: mv Next.js/proportional/out/* _site/proportional
 
             - uses: actions/upload-pages-artifact@v2
     deploy:
