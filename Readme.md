@@ -15,22 +15,6 @@
 1. [Card](#card)
 1. <details>
      <summary>
-       <a href="https://github.com/VladimirCreator/Playgrounds#github-explorer">
-         GitHub Explorer
-       </a>
-     </summary>
-
-     <h3>
-       Quick Look
-     </h3>
-
-     <p>
-       <img src="./videos/github_explorer.gif" />
-     </p>
-   </details>
-
-1. <details>
-     <summary>
        <a href="https://github.com/VladimirCreator/Playgrounds#quiz">
          Quiz
        </a>
