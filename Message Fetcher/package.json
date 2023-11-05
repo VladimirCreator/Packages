@@ -2,7 +2,7 @@
     "name": "application",
     "version": "0.?.?",
     "private": true,
-    "homepage": "https://vladimircreator.github.io/Playgrounds/",
+    "homepage": "https://vladimircreator.github.io/Playgrounds/message-fetcher/",
 
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
