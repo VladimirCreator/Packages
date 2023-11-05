@@ -1,6 +1,3 @@
-# Initially Modified at 01:45 AM on Thu 02 Nov 2023
-#      Last Modified at 01:47 AM on Thu 02 Nov 2023
-
 name: Authentication
 run-name: ${{ github.actor }} deploys via GitHub Actions
 
