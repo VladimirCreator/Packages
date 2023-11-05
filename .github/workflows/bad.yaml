@@ -21,8 +21,17 @@ jobs:
             - run: mkdir _site/message-fetcher
             - run: mkdir _site/authentication
             - run: mkdir _site/applications
-            - run: mkdir _site/proportional # Initially Modified: 11:50 AM Sun 5 Nov 2023
-                                            #      Last Modified: 04:03 PM Sun 05 Nov 2023
+            - run: mkdir _site/proportional
+            - run: mkdir _site/card # Initially Modified: 05:25 PM Sun 05 Nov 2023
+                                    #      Last Modified: 05:30 PM Sun 05 Nov 2023
+
+            # Card
+            - run: npm ci
+              working-directory: Card/
+            - name: Build “Card”
+              run: npm run build
+              working-directory: Card/
+            - run: mv Card/build/* _site/card/
 
             # Message Fetcher
             - run: npm ci

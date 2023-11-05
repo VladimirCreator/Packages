@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig}
 */
-const config = { output: 'export' }
+const config = { basePath: 'proportional', output: 'export' }
 
 module.exports = config
