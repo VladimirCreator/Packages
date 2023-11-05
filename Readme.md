@@ -1,4 +1,4 @@
-# Vladimir's Playgrounds
+# Vladimir's Gists
 
 ## GitHub Actions
 [![Bad](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
@@ -8,6 +8,8 @@
 ## Changelog
 > ### Sat 8 Jul 2023 8:10 PM
 > `github`: Rename Swift-Playgrounds to Playgrounds.
+> ### Sun 5 Nov 2923 9:27 PM
+> `github`: Rename Playgrounds to Gists.
 
 ## Table of Contents
 
