@@ -12,6 +12,7 @@
 ## Table of Contents
 
 1. [Booking](#booking)
+1. [Card](#card)
 1. <details>
      <summary>
        <a href="https://github.com/VladimirCreator/Playgrounds#github-explorer">
@@ -105,6 +106,9 @@
 
 ## Booking
 ![Booking](videos/booking.gif)
+
+## Card
+[Попробовать](https://vladimircreator.github.io/Playgrounds/card/).
 
 ## Дипломная работа
 [Попробовать](https://graduate-work-gilt.vercel.app/).
