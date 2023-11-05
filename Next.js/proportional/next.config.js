@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig}
 */
-const config = { basePath: '/proportional', output: 'export' }
+const config = { basePath: '/Playgrounds/proportional', output: 'export' }
 
 module.exports = config
