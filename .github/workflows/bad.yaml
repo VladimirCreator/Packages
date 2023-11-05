@@ -1,0 +1,50 @@
+# Initially Modified: 11:12 AM Sun 05 Nov 2023
+#      Last Modified: 11:27 AM Sun 05 Nov 2023
+
+name: Bad
+run-name: ${{ github.actor }} deploys via GitHub Actions
+
+on:
+    workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: git clone
+              uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v3
+
+            - run: mkdir _site
+            - run: mkdir _site/message-fetcher
+            - run: mkdir _site/authentication
+            - run: midir _site/applications # Initially Modified: 11:36 AM Sun 5 Nov 2023
+                                            #      Last Modified: 11:38 AM Sun 05 Nov 2023
+
+            # Message Fetcher
+            - run: npm ci
+              working-directory: Message Fetcher/
+            - run: npm run build
+              working-directory: Message Fetcher/
+            - run: mv Message\ Fetcher/build/* _site/message-fetcher/
+
+            # Authentication
+            - run: mv Authentication/* _site/authentication
+
+            # Applications
+            - run: mv html_css_js/тестовое_задание_0/* _site/applications
+
+            - uses: actions/upload-pages-artifact@v2
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+
+        permissions:
+            id-token: write
+            pages: write
+            
+        steps:
+            - name: Deploy to GitHub Pages
+              uses: actions/deploy-pages@v2
