@@ -1,6 +1,3 @@
-# Initially Modified: 11:12 AM Sun 05 Nov 2023
-#      Last Modified: 11:27 AM Sun 05 Nov 2023
-
 name: Bad
 run-name: ${{ github.actor }} deploys via GitHub Actions
 
@@ -22,8 +19,12 @@ jobs:
             - run: mkdir _site/authentication
             - run: mkdir _site/applications
             - run: mkdir _site/proportional
-            - run: mkdir _site/card # Initially Modified: 05:25 PM Sun 05 Nov 2023
-                                    #      Last Modified: 05:30 PM Sun 05 Nov 2023
+            - run: mkdir _site/card
+            - run: mkdir _site/graduate-work # Initially Modified: 07:46 PM Mon 06 Nov 2023
+                                             #      Last Modified: 07:50 PM Mon 06 Nov 2023
+
+            # Graduate Work
+            - run: mv javascript/дипломная_работа/index.html _site/graduate-work
 
             # Card
             - run: npm ci
