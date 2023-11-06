@@ -1,8 +1,5 @@
 # Vladimir's Gists
 
-
-branch: Created at 5:44 PM on Mon 6 Nov 2023 74#add-уп0202вып-раб-по-инстр-разр
-
 ## GitHub Actions
 [![Bad](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
 [![Authentication](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml)
