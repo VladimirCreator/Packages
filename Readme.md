@@ -1,4 +1,4 @@
-# Vladimir's Gists
+# Deprecated Vladimir's Gists
 
 ## GitHub Actions
 [![Bad](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
