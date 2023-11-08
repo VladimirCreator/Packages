@@ -5,12 +5,6 @@
 [![Authentication](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml)
 [![Message Fetcher](https://github.com/VladimirCreator/Playgrounds/actions/workflows/message-fetcher.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/message-fetcher.yml)
 
-## Changelog
-> ### Sat 8 Jul 2023 8:10 PM
-> `github`: Rename Swift-Playgrounds to Playgrounds.
-> ### Sun 5 Nov 2923 9:27 PM
-> `github`: Rename Playgrounds to Gists.
-
 ## Table of Contents
 
 1. [Booking](#booking)
@@ -89,6 +83,12 @@
 
 1. [Message Fetcher](#message-fetcher)
 1. [License](#license)
+
+## Changelog
+> ### Sat 8 Jul 2023 8:10 PM
+> `github`: Rename Swift-Playgrounds to Playgrounds.
+> ### Sun 5 Nov 2923 9:27 PM
+> `github`: Rename Playgrounds to Gists.
 
 ## Booking
 ![Booking](videos/booking.gif)
