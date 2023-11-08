@@ -1,0 +1,77 @@
+/* -> History Entry / The Game / Game View / Initially Modified: Mon 06 Mar 2023 07:50 PM
+    -> History Entry / The Game / Game View /      Last Modified: Fri 14 Apr 2023 : PM
+
+    TypeScript: #class, #enum, #function, #interface, #namespace, #type
+    Visual Studio Code: #file
+
+    Fri 14 Apr 2023
+        04:41 AM / #selector / `article[id='view2'] h1` / (~) / fix
+*/
+@keyframes colorin {
+    from { clip-path: circle(0%); }
+    to { clip-path: circle(100%); }
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(100%); opacity: 0%;
+    }
+    to {
+        transform: translateY(0%); opacity: 100%;
+    }
+}
+
+article[id='view2'] * {
+    padding: 0;
+    margin: 0;
+    transition: all 250ms ease, color 0s linear;
+}
+
+article[id='view2'] > article {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+
+    margin: auto;
+}
+
+article[id='view2'] > article > section { position: relative; }
+
+article[id='view2'] article > section > section {
+    position: absolute;
+
+    top: 240%; bottom: auto;
+    left: 0; right: 0;
+}
+
+article[id='view2'] section[id='color'] {
+    position: absolute;
+    inset: 0;
+    animation: colorin 1200ms cubic-bezier(.16, .76, .56, .94) paused;
+}
+
+article[id='view2'] h1 {
+    font-family: 'JetBrains Mono';
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    /* Unfortunately, Android does not understand `1lh`. */
+    max-height: 1em;
+}
+
+h1[id='target'] { font-size: 1.27em; }
+
+article[id='view2'] span { font-size: 1.27em; }
+article[id='view2'] span.deselected {
+    font-weight: 200; font-size: 1.27em;
+}
+article[id='view2'] span.selected {
+    font-weight: 800;
+    font-size: 3.2em;
+
+    transform: translateY(-240%);
+}

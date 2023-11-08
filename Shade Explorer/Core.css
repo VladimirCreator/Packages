@@ -1,0 +1,61 @@
+/* -> History Entry / The Game / Core / Initially Modified: Mon 06 Mar 2023 07:50 PM
+    -> History Entry / The Game / Core /      Last Modified: Wed 12 Apr 2023 : PM
+
+    Cascading Style Sheets: #selector
+    Visual Studio Code: #file
+
+    Tue 25 Apr 2023
+        04:22 AM / #selector / `body` / (~) / `width: ... height: ...` / (~)
+*/
+:root {
+    --regular-font: var(--regular-font-weight) var(--regular-font-size)/var(--regular-line-height) var(--regular-font-family);
+
+    --regular-font-weight: 400;
+    --regular-font-size  : 16px;
+    --regular-line-height: 1em;
+    --regular-font-family: 'Golos Text', sans-serif;
+
+    --light-transparent-color : #00000000;
+
+    --light-black-color : #000000FF;
+    --light-white-color : #FFFFFFFF;
+    --light-red-color   : #FF3B30FF;
+    --light-orange-color: #FF9500FF;
+    --light-yellow-color: #FFCC00FF;
+    --light-green-color : #34C759FF;
+    --light-mint-color  : #00C7BEFF;
+    --light-teal-color  : #30B0C7FF;
+    --light-cyan-color  : #32ADE6FF;
+    --light-blue-color  : #007AFFFF;
+    --light-indigo-color: #5856D6FF;
+    --light-purple-color: #AF52DEFF;
+    --light-pink-color  : #FF2D55FF;
+    --light-brown-color : #A2845EFF;
+
+    --initial-width : 0;
+    --initial-height: 0;
+    --initial-top   : 0;
+    --initial-left  : 0;
+}
+
+* {
+    scroll-behavior: smooth;
+    cursor: default;
+}
+
+html {
+    overflow  : hidden;
+    background: var(--light-transparent-color);
+}
+
+body {
+    display: block;
+    /* Unfortunately, Android does not understand `100dvw` and `100dvh` as well.
+    */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    backdrop-filter: blur(.6rem);
+    animation: paused normal appin 1s ease forwards;
+}

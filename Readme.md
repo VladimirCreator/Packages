@@ -1,5 +1,10 @@
 # Deprecated Vladimir's Gists
 
+```
+branch: upload-shade-explorer
+Created at 6:49 PM on Tue 7 Nov 2023
+```
+
 ## GitHub Actions
 [![Bad](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
 [![Authentication](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml)

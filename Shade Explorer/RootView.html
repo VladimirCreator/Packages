@@ -1,0 +1,201 @@
+<!-- -> History Entry / The Game / Root View / Initially Modified: Mon 10 Apr 2023 06:08 PM
+		-> History Entry / The Game / Root View /      Last Modified: Fri 14 Apr 2023 : PM
+
+		HyperText Markup Language: #tag
+		Visual Studio Code: #file
+
+		Fri 14 Apr 2023
+			: PM / # / `` / ()
+-->
+<!DOCTYPE html>
+
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+
+		<title>Root View </title>
+
+		<meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=no'>
+
+		<link
+			rel='preconnect'
+			href='https://fonts.googleapis.com'
+		>
+		<link
+			rel='preconnect'
+			href='https://fonts.gstatic.com'
+			crossorigin
+		>
+
+		<!-- JetBrains Mono
+		-->
+		<link
+			rel  ='stylesheet'
+			href ='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'
+		>
+		<!-- Golos Text
+		-->
+		<link
+			rel='stylesheet'
+			href='https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap'
+		>
+		<!-- Nabla
+		-->
+		<!--
+		<link
+			rel='stylesheet'
+			href='https://fonts.googleapis.com/css2?family=Nabla&display=swap'
+		>
+		-->
+
+		<link
+			rel='stylesheet'
+			href='./Core.css'
+		>
+		<link
+			rel='stylesheet'
+			href='./Root.css'
+		>
+		<link
+			rel='stylesheet'
+			href='./Game.css'
+		>
+
+		<style>
+			@keyframes appin {
+				from { clip-path: inset(100% round 1rem); }
+				50% { clip-path: inset(0% 50% 0% 50% round 1rem); }
+				to { clip-path: inset(0% round 0); }
+			}
+
+			article:not(:first-of-type) { display: none; }
+		</style>
+	</head>
+
+	<body>
+		<article id='view1'>
+			<h1>Shade Explorer</h1>
+
+			<section></section>
+		</article>
+
+		<article id='view2'>
+			<section id='color'></section>
+
+			<article id='body' style='top: 25%;'>
+				<section>
+					<h1 id='target'></h1>
+					<section id='target_modifiers' hidden><ul></ul></section>
+				</section>
+				<section>
+					<h1 id='sequence' style='opacity: 0%;'></h1>
+					<section id='sequence_modifiers'hidden><ul></ul></section>
+				</section>
+			</article>
+		</article>
+
+		<script src='./core.js'></script>
+		<script src='./radix.js'></script>
+		<script src='./decorator.js'></script>
+		<script src='./upgrade.js'></script>
+		<script src='./gamesequence.js'></script>
+		<script src='./gamemodel.js'></script>
+		<script src='./Controller.js'></script>
+		<script src='./gamemodelview.js'></script>
+		<script src='./application.js'></script>
+		<script>
+			// Contains Hyper-Cringe!
+			const data_from_disk = [
+				{ numbers: [0xFF3B30FF, 0xFF3B30FF], radices: [16, 2], decorators: ["padding", "padding"], complete: true },
+				{ numbers: [0xFF95CCFF, 0xFF95CCFE], radices: [16, 2], decorators: ["padding", "padding"], complete: false },
+				{ numbers: [0x0000F9AF, 0x0000F9AF], radices: [2, 16], decorators: ["padding", "padding"], complete: true }
+			];
+
+			window.addEventListener(
+				`load`, (event) => {
+					Array.from(
+						document.querySelector(`body`).getAnimations(),
+						animation => animation.play()
+					)
+				}
+			)
+			window.addEventListener(
+				`message`, (event) => {
+					if (event.data === `onDestroy`) {
+						Kotlin.receive(
+							`
+							${Application.Controller.GameModel.triumph ? 1 : 0}
+							${Application.Controller.GameModel.lhs.valueOf().toString(16).padStart(8, '0')} ${Application.Controller.GameModel.lhs.radix.toString(16).padStart(2, `0`)} padding
+							${Application.Controller.GameModel.rhs.valueOf().toString(16).padStart(8, '0')} ${Application.Controller.GameModel.rhs.radix.toString(16).padStart(2, `0`)} padding
+							`
+						)
+					}
+				}
+			);
+			window.addEventListener(
+				`message`, (event) => data_from_disk = JSON.parse(event.data)
+			)
+				document.querySelector(`body > article > section`).innerHTML = data_from_disk.reduce(
+					(acc, val, index) => {
+						return acc += `
+							<section id='${index}' ${val.complete ? `style='background: #${val.numbers[0].toString(16)}'` : `style='background: white;'`}>
+								<h2 style='color: #${val.complete ? `${val.numbers[0].toString(16)}` : `FFF`}; filter: invert();'>
+									${val.numbers[0].toString(val.radices[0]).toLowerCase().slice(0, 8)}
+								</h2>
+							</section>
+						`;
+					}, ``
+				) + `
+				<section id='new_game' style='background: #FFF;'>
+					<h2>New Game</h2>
+				</section>
+			`;
+
+
+			document.querySelector(`section[id='new_game']`).addEventListener(
+				`click`, (event) => {
+					const f = Application.shared
+					const model = new ColorGameModelFactory().GameModel
+					data_from_disk.push(
+						{
+						numbers: [model.lhs.valueOf(), model.rhs.valueOf()],
+						radices: [model.lhs.radix, model.rhs.radix],
+						decorators: ["padding", "padding"],
+						complete: false
+						}
+					)
+				}
+			)
+
+			document.querySelector(`article > section`).addEventListener(
+				`click`, (event) => {
+					if (event.target.id === ``) { return }
+					const element = event.target.cloneNode(true)
+
+					document.querySelector(`article > section`).append(element)
+					document.querySelector(`html`).style.setProperty(`--initial-width`, `${event.target.offsetWidth}px`)
+					document.querySelector(`html`).style.setProperty(`--initial-height`, `${event.target.offsetWidth}px`)
+					document.querySelector(`html`).style.setProperty(`--initial-top`, `${event.target.offsetHeight}px`)
+					document.querySelector(`html`).style.setProperty(`--initial-left`, `${event.target.offsetLeft}px`)
+
+					element.style.animation = `running fillscreen 500ms ease forwards`
+					element.style.position = `absolute`
+					element.style.padding = `0`
+
+					element.addEventListener(
+						`animationend`, (event) => {
+							document.querySelector(`body > article`).remove()
+
+							const f = Application.shared
+							if (isNaN(parseInt(event.target.id))) {
+								f.didSelectItem(data_from_disk.pop())
+							} else {
+								f.didSelectItem(data_from_disk[parseInt(event.target.id)])
+							}
+						}
+					)
+				}
+			)
+		</script>
+	</body>
+</html>
