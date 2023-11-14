@@ -2,70 +2,107 @@ name: Bad
 run-name: ${{ github.actor }} deploys via GitHub Actions
 
 on:
-    workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      path:
+        description: A folder containing a package.json file.
+        required: false
+        default: 'nil'
+        type: string
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  commit-package-lock-json-if-specified: # Initially Modified at 7:00 AM on Tue 14 Nov 2023 and Last Modified at 8:?? AM on Tue 14 Nov 2023.
+    runs-on: ubuntu-latest
+    name: Commit package-lock.json
 
-        steps:
-            - name: git clone
-              uses: actions/checkout@v4
+    if: ${{ !contains(inputs.path, 'nil') }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get package-lock.json
+        run: npm install
+        working-directory: ${{ inputs.path }}
 
-            - uses: actions/setup-node@v3
+      - uses: EndBug/add-and-commit@v9.1.3
+        with:
+          add: package-lock.json
+          working-directory: ${{ inputs.path }}
 
-            - run: mkdir _site
-            - run: mkdir _site/message-fetcher
-            - run: mkdir _site/authentication
-            - run: mkdir _site/applications
-            - run: mkdir _site/proportional
-            - run: mkdir _site/card
-            - run: mkdir _site/graduate-work # Initially Modified: 07:46 PM Mon 06 Nov 2023
-                                             #      Last Modified: 07:50 PM Mon 06 Nov 2023
+  build-all:
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: commit-package-lock-json-if-specified
+    name: Build All
 
-            # Graduate Work
-            - run: mv javascript/дипломная_работа/index.html _site/graduate-work
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
 
-            # Card
-            - run: npm ci
-              working-directory: Card/
-            - name: Build “Card”
-              run: npm run build
-              working-directory: Card/
-            - run: mv Card/dist/* _site/card/
+      - run: mkdir -v _site
+      - run: |
+          mkdir -v \
+          _r__-for-a-comment \
+          cru_-for-an-application \
+          crud-for-a-x \
+          just-a-card \
+          just-a-form \
+          x \
+          # yandex-disk
+        working-directory: _site
 
-            # Message Fetcher
-            - run: npm ci
-              working-directory: Message Fetcher/
-            - name: Build “Message Fetcher”
-              run: npm run build
-              working-directory: Message Fetcher/
-            - run: mv Message\ Fetcher/build/* _site/message-fetcher/
+# _R__ for a Comment
+      - run: npm ci
+        working-directory: Message Fetcher/
+      - name: Build “Message Fetcher”
+        run: npm run build
+        working-directory: Message Fetcher/
 
-            # Authentication
-            - run: mv Authentication/* _site/authentication
+# CRUD for a X
+      - run: mv javascript/дипломная_работа/index.html _site/crud-for-a-x
 
-            # Applications
-            - run: mv html_css_js/тестовое_задание_0/* _site/applications
+# CRU_ for an Application
+      - run: npm ci
+        working-directory: cru_-for-an-application
+      - name: Buid
+        run: npm run build:release
+        working-directory: cru_-for-an-application
 
-            # Proportional
-            - run: npm ci
-              working-directory: Next.js/proportional
-            - name: Build “Proportional”
-              run: npm run build
-              working-directory: Next.js/proportional
+# Just a Card
+      - run: npm ci
+        working-directory: just-a-card/
+      - name: Build “Just a Card”
+        run: npm run build
+        working-directory: just-a-card/
 
-            - run: mv Next.js/proportional/out/* _site/proportional
+# Just a Form
+      - run: mv just-a-form/* _site/just-a-form
 
-            - uses: actions/upload-pages-artifact@v2
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
+# X
+      - run: npm ci
+        working-directory: Next.js/x
+      - name: Build “X”
+        run: npm run build
+        working-directory: Next.js/x
 
-        permissions:
-            id-token: write
-            pages: write
-            
-        steps:
-            - name: Deploy to GitHub Pages
-              uses: actions/deploy-pages@v2
+      - run: mv cru_-for-an-application/.build/* _site/cru_-for-an-application
+      - run: mv Card/dist/* _site/just-a-card/
+      - run: mv Next.js/proportional/out/* _site/x
+      - run: mv Message\ Fetcher/build/* _site/_r__-for-a-comment/
+
+      - uses: actions/upload-pages-artifact@v2
+
+  #test-all:
+    #runs-on: ubuntu-latest
+    #steps:
+
+  deploy-all:
+    runs-on: ubuntu-latest
+    needs: build-all
+    name: Deploy All
+
+    permissions:
+      id-token: write
+      pages: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
