@@ -1,0 +1,23 @@
+{
+  "private": "true",
+  "keywords": [
+    "webpack",
+    "javascript", "css", "html"
+  ],
+
+  "scripts": {
+    "build:development": "",
+    "build:release": "webpack build --env TITLE_FOR_JUST_A_FORM=$TITLE_FOR_JUST_A_FORM --mode=production"
+  },
+
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0", "webpack-cli": "^5.1.4",
+    "css-loader": "^6.8.1",
+
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6"
+  }
+}

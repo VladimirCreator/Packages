@@ -11,21 +11,22 @@ on:
         type: string
 
 jobs:
-  commit-package-lock-json-if-specified: # Initially Modified at 7:00 AM on Tue 14 Nov 2023 and Last Modified at 8:?? AM on Tue 14 Nov 2023.
+  commit-package-lock-json-if-specified:
     runs-on: ubuntu-latest
     name: Commit package-lock.json
 
     if: ${{ !contains(inputs.path, 'nil') }}
     steps:
       - uses: actions/checkout@v4
+
       - name: Get package-lock.json
         run: npm install
         working-directory: ${{ inputs.path }}
+      - run: mv package-lock.json ..
 
       - uses: EndBug/add-and-commit@v9.1.3
         with:
           add: package-lock.json
-          working-directory: ${{ inputs.path }}
 
   build-all:
     runs-on: ubuntu-latest

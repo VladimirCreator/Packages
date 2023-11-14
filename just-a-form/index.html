@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang='ru'>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Golos+Text&display=swap'>
+  </head>
+
+  <body>
+    <form method='get' target='_self' novalidate>
+      <fieldset>
+        <input id='firstName' name='firstName' type='text' inputmode='text'
+          placeholder='Имя'
+        />
+        <input id='lastName' name='lastName' type='text' inputmode='text'
+          placeholder='Фамилия'
+        />
+      </fieldset>
+      <fieldset>
+        <input id='birthday' name='birthday' type='text'
+          placeholder='Дата рождения'
+          onblur='if(!this.value){this.type = `text`}'
+          onfocus='this.type=`date`'
+        />
+      </fieldset>
+      <fieldset>
+        <input id='email' name='email' type='email' inputmode='email'
+          placeholder='Электронная почта'
+        />
+      </fieldset>
+      <fieldset>
+        <input id='password' name='password' type='password'
+          placeholder='Пароль'
+        />
+        <input id='password_confirmation' name='password_confirmation' type='password'
+          placeholder='Подтвердите пароль'
+        />
+      </fieldset>
+      <button id='sumbit_button' type='submit' disabled>Отправить</button>
+    </form>
+  </body>
+</html>
