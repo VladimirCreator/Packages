@@ -12,15 +12,12 @@ import useAPI from '@/hooks/useAPI'
 import { applicationReducer } from '@/lib/reducers'
 
 export default function() {
-    const [id, setId] = useState(0)
+  const [id, setId] = useState(0)
 
-    const [application, dispatch] = useReducer(
-        applicationReducer,
-        { data: [], state: undefined }
-    )
+  const [application, dispatch] = useReducer(applicationReducer, { data: [], state: undefined })
 
-    useAPI('https://api.github.com/repos/vladimircreator/playgrounds/commits', (response) => dispatch(
-        { type: 'application/loaded', response: [
+  useAPI('https://api.github.com/repos/vladimircreator/playgrounds/commits', (response) => dispatch(
+    { type: 'application/loaded', response: [
         /* Root */
         { super: undefined, id: 0, title: 'Proportional', children: [1, 2, 3, 4] },
 
@@ -81,26 +78,24 @@ export default function() {
         {id:40,title:"Title 40",children:[]},{id:41,title:"Title 41",children:[]},{id:42,title:"Title 42",children:[]},{id:43,title:"Title 43",children:[]},{id:44,title:"Title 44",children:[]},{id:45,title:"Title 45",children:[]},{id:46,title:"Title 46",children:[]},{id:47,title:"Title 47",children:[]},{id:48,title:"Title 48",children:[]},{id:49,title:"Title 49",children:[]},{id:50,title:"Title 50",children:[]},{id:51,title:"Title 51",children:[]},{id:52,title:"Title 52",children:[]},{id:53,title:"Title 53",children:[]},{id:54,title:"Title 54",children:[]},{id:55,title:"Title 55",children:[]},{id:56,title:"Title 56",children:[]},{id:57,title:"Title 57",children:[]},{id:58,title:"Title 58",children:[]},{id:59,title:"Title 59",children:[]},{id:60,title:"Title 60",children:[]},{id:61,title:"Title 61",children:[]},{id:62,title:"Title 62",children:[]},{id:63,title:"Title 63",children:[]},{id:64,title:"Title 64",children:[]},{id:65,title:"Title 65",children:[]},{id:66,title:"Title 66",children:[]},{id:67,title:"Title 67",children:[]},{id:68,title:"Title 68",children:[]},{id:69,title:"Title 69",children:[]},{id:70,title:"Title 70",children:[]},{id:71,title:"Title 71",children:[]},{id:72,title:"Title 72",children:[]},{id:73,title:"Title 73",children:[]},{id:74,title:"Title 74",children:[]},{id:75,title:"Title 75",children:[]},{id:76,title:"Title 76",children:[]},{id:77,title:"Title 77",children:[]},{id:78,title:"Title 78",children:[]},{id:79,title:"Title 79",children:[]},{id:80,title:"Title 80",children:[]},{id:81,title:"Title 81",children:[]},{id:82,title:"Title 82",children:[]},{id:83,title:"Title 83",children:[]},{id:84,title:"Title 84",children:[]},{id:85,title:"Title 85",children:[]},{id:86,title:"Title 86",children:[]},{id:87,title:"Title 87",children:[]},{id:88,title:"Title 88",children:[]},{id:89,title:"Title 89",children:[]},{id:90,title:"Title 90",children:[]},{id:91,title:"Title 91",children:[]},{id:92,title:"Title 92",children:[]},{id:93,title:"Title 93",children:[]},{id:94,title:"Title 94",children:[]},{id:95,title:"Title 95",children:[]},{id:96,title:"Title 96",children:[]},{id:97,title:"Title 97",children:[]},{id:98,title:"Title 98",children:[]},{id:99,title:"Title 99",children:[]}
         ]
     }
-    ))
+  ))
 
-    if (typeof application.state === 'undefined') {
-        return (<Loading />)
-    }
-    else if (application.state === 'loaded') {
-        return (
-            <AllContext.Provider value={application.data}>
-                <List
-                    identifier={id}
-                    onClick={
-                        (id: number) => {
-                            setId(id)
-                        }
-                    }
-                />
-            </AllContext.Provider>
-        )
-    }
-    else {
-        throw new Error()
-    }
+  const handleClick = (id: number) => setId(id)
+
+  if (typeof application.state.includes('undefined')) {
+    return <Loading />
+  }
+  else if (application.state.includes('loaded')) {
+    return (
+        <AllContext.Provider value={application.data}
+          children={
+            <List
+                identifier={id}
+                onClick={handleClick}
+            />
+          }
+        />
+    )
+  }
+  throw new Error()
 }

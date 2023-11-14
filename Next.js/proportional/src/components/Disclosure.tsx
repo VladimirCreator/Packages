@@ -1,12 +1,9 @@
-import { ChevronDownIcon } from "@heroicons/react/24/outline"
+import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 export default function Disclosure({ isVisible }: { isVisible: boolean }) {
-    if (!isVisible) { return }
+  if (!isVisible) { return null }
 
-    return (
-        <ChevronDownIcon className='w-6 h-6
-                transition-transform group-data-[state=closed]:-rotate-90
-            '
-        />
-    )
+  return (
+    <ChevronDownIcon className='w-6 h-6 transition-transform group-data-[state=closed]:-rotate-90' />
+  )
 }
