@@ -1,5 +1,3 @@
-/* Initially Modified at 1:45 AM on Wed 15 Nov 2023 */
-
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -8,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = (env) => {
   return {
     entry: {
-      bundle: ''
+      bundle: './index.mjs'
     },
     output: {
       path: path.resolve(__dirname, '.build'),
