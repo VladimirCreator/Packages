@@ -1,4 +1,5 @@
 import { UICellContentConfiguration } from './UICellContentConfiguration.mjs'
+import { UIBranchCellContentConfiguration } from './UIBranchCellContentConfiguration.mjs'
 import { Translator } from '../Translator.mjs'
 
 export class UIRoomCellContentConfiguration extends UICellContentConfiguration {

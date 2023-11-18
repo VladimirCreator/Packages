@@ -1,15 +1,14 @@
-/* Last Modified at 11:20 AM on Wed 15 Nov 2023
-*/
-import { UIApplication } from './UIApplication.mjs'
+import './index.scss'
+import { crud_for_a_x } from './UIApplication.mjs'
 
 const onDOMContentLoaded = () => {
-	UIApplication.shared.attachObserver(UIApplication.shared)
+	crud_for_a_x.attachObserver(crud_for_a_x)
 }
 
 const onLoad = () => {
-	/** @param {MessageEvent} event */
+	/** @param {MessageEvent<string} event */
 	const onMessageEvent = (event) => {
-		UIApplication.shared.parse(event.data)
+		crud_for_a_x.parse(event.data)
 	}
 
 	if (true) {

@@ -1,13 +1,15 @@
 import { User } from './User.mjs'
-import { UIBranchCellContentConfiguration } from './UICellContentConfiguration/UIBranchCellContentConfiguration.mjs'
-import { UIRoomCellContentConfiguration } from './UICellContentConfiguration/UIRoomCellContentConfiguration.mjs'
-import { UIDepartmentCellContentConfiguration } from './UICellContentConfiguration/UIDepartmentCellContentConfiguration.mjs'
-import { UIWarehouseCellContentConfiguration } from './UICellContentConfiguration/UIWarehouseCellContentConfiguration.mjs'
-import { UIEmployeeCellContentConfiguration } from './UICellContentConfiguration/UIEmployeeCellContentConfiguration.mjs'
-import { UIEquipmentCellContentConfiguration } from './UICellContentConfiguration/UIEquipmentCellContentConfiguration.mjs'
-import { UIConsumableCellContentConfiguration } from './UICellContentConfiguration/UIConsumableCellContentConfiguration.mjs'
-import { UIPostCellContentConfiguration } from './UICellContentConfiguration/UIPostCellContentConfiguration.mjs'
-import { UIViewController } from './UIViewController/UIViewController.mjs'
+import {
+	UIBranchCellContentConfiguration,
+	UIRoomCellContentConfiguration,
+	UIDepartmentCellContentConfiguration,
+	UIWarehouseCellContentConfiguration,
+	UIEmployeeCellContentConfiguration,
+	UIEquipmentCellContentConfiguration,
+	UIConsumableCellContentConfiguration,
+	UIPostCellContentConfiguration
+} from './UICellContentConfiguration/index.mjs'
+import { UIViewController } from './UIViewController/index.mjs'
 
 /**
 	@typedef {object} UIApplicationObserver
@@ -17,8 +19,45 @@ import { UIViewController } from './UIViewController/UIViewController.mjs'
 		@property {UIApplicationObserverHandler} handle_object
 */
 
+const map = {
+	dateTime: Date,
+	user: User,
+	branch: UIBranchCellContentConfiguration,
+	room: UIRoomCellContentConfiguration,
+	department: UIDepartmentCellContentConfiguration,
+	responsible: UIEmployeeCellContentConfiguration
+}
+
+const populate = (contentConfiguration, value) => {
+	if (value.length === 0) return [contentConfiguration.plain]
+	return value.map(object => new contentConfiguration(object))
+}
+
+/**
+	@param {string} key
+	@param {unknown[]|unknown} value
+	@returns {void}
+*/
+const reviver = (key, value) => {
+	if (key in map)
+		return new map[key](value)
+	else if (Array.isArray(value))
+		switch (key) {
+		case 'branches': return populate(UIBranchCellContentConfiguration, value)
+		case 'rooms': return populate(UIRoomCellContentConfiguration, value)
+		case 'warehouses': return populate(UIWarehouseCellContentConfiguration, value)
+		case 'departments': return populate(UIDepartmentCellContentConfiguration, value)
+		case 'employees': return populate(UIEmployeeCellContentConfiguration, value)
+		case 'equipment': return populate(UIEquipmentCellContentConfiguration, value)
+		case 'consumables': return populate(UIConsumableCellContentConfiguration, value)
+		case 'posts': return populate(UIPostCellContentConfiguration, value)
+		default: return value
+	}
+	return value
+}
+
 /** @implements {UIApplicationObserver} */
-export class UIApplication {
+class UIApplication {
 	/** @type {UIApplication|undefined} */
 	static #shared
 	static get shared() {
@@ -40,6 +79,7 @@ export class UIApplication {
 
 	/** @param {UIApplicationObserver} observer */
 	attachObserver(observer) { this.#observers.push(observer) }
+
 	/** @param {UIApplicationObserver} observer */
 	detachObserver(observer) { this.#observers = this.#observers.filter((element) => element !== observer) }
 
@@ -54,7 +94,7 @@ if (text.includes('branches')) {
 			Array.from(Array(0xFF), ($0, $1) => ({
 				text: `Пример названия филиала ${_()}`, secondaryText: `Пример описания филиала ${_()}`, isHidden: Boolean(Math.round(Math.random())), address: `Пример адреса филиала ${_()}`
 			}))
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('rooms')) {
@@ -63,7 +103,7 @@ else if (text.includes('rooms')) {
 			Array.from(Array(0xff), ($0, $1) => ({
 				text: `Пример названия помещения ${_()}`, secondaryText: `Пример описания помещения ${_()}`, isHidden: Boolean(Math.round(Math.random())), address: `Пример адреса помещения ${_()}`,
 				branch: { text: `Пример названия филиала ${_()}`, secondaryText: `Пример описания филиала ${_()}`, isHidden: Boolean(Math.round(Math.random())), address: `Пример адреса филиала ${_()}`} }))
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('warehouses')) {
@@ -74,7 +114,7 @@ else if (text.includes('warehouses')) {
 				branch: { text: `Пример названия филиала ${_()}`, secondaryText: `Пример описания филиала ${_()}`, isHidden: Boolean(Math.round(Math.random())), address: `Пример адреса филиала ${_()}` },
 				responsible: UIEmployeeCellContentConfiguration.plain
 			}))
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('departments')) {
@@ -83,28 +123,28 @@ else if (text.includes('departments')) {
 			Array.from(Array(0xff), ($0, $1) => ({
 				text: `Пример названия отдела ${_()}`, secondaryText: `Пример описания отдела ${_()}`, isHidden: Boolean(Math.round(Math.random())), address: `Пример адреса отдела ${_()}`, employee_count: _(), equipment_count: _()
 			}))
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('employees')) {
 	object = JSON.parse(
 		`{"employees":${JSON.stringify(
 			Array.from(Array(0xff), ($0, $1) => UIEmployeeCellContentConfiguration.plain)
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('equipment')) {
 	object = JSON.parse(
 		`{"equipment":${JSON.stringify(
 			Array.from(Array(0xff), ($0, $1) => UIEquipmentCellContentConfiguration.plain)
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('consumables')) {
 	object = JSON.parse(
 		`{"consumables":${JSON.stringify(
 			Array.from(Array(0xff), ($0, $1) => UIConsumableCellContentConfiguration.plain)
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('posts')) {
@@ -113,77 +153,38 @@ else if (text.includes('posts')) {
 			Array.from(Array(0xff), ($0, $1) => ({
 				text: `"ример названия должности ${_()}`, secondaryText: `"ример описания должности ${_()}`,isHidden: Boolean(Math.round(Math.random())),employee_count: Math.round(Math.random() * 0x255)
 			}))
-		)}}`, this.#reviver
+		)}}`, reviver
 	)
 }
 else if (text.includes('user')) {
 	object = JSON.parse(
-		`{"user":${JSON.stringify(new User({ savedName: '', savedPassword: '' }))}}`, this.#reviver
+		`{"user":${JSON.stringify(new User({ savedName: '', savedPassword: '' }))}}`, reviver
 	)
 }
 else if (typeof text.match(/\/.json$/) === null) return
-		else object = JSON.parse(text, this.#reviver)
+		else object = JSON.parse(text, reviver)
 
 		this.#observers.forEach(observer => observer.handle_object(object))
 		return object
 	}
 
-	/**
-		@param {string} key
-		@param {any} value
-		@returns {void}
-	 */
-	#reviver(key, value) {
-		switch (key) {
-		case 'dateTime': return new Date(value)
-		case 'user': return new User(value)
-		case 'branch': return new UIBranchCellContentConfiguration(value)
-		case 'room': return new UIRoomCellContentConfiguration(value)
-		case 'department': return new UIDepartmentCellContentConfiguration(value)
-		case 'responsible': return new UIEmployeeCellContentConfiguration(value)
-
-		case 'branches':
-		if (value.length === 0) return [UIBranchCellContentConfiguration.plain]
-		return value.map(object => new UIBranchCellContentConfiguration(object))
-		case 'rooms':
-		if (value.length === 0) return [UIRoomCellContentConfiguration.plain]
-		return value.map(object => new UIRoomCellContentConfiguration(object))
-		case 'warehouses':
-		if (value.length === 0) return [UIWarehouseCellContentConfiguration.plain]
-		return value.map(object => new UIWarehouseCellContentConfiguration(object))
-		case 'departments':
-		if (value.length === 0) return [UIDepartmentCellContentConfiguration.plain]
-		return value.map(object => new UIDepartmentCellContentConfiguration(object))
-		case 'employees':
-		if (value.length === 0) return [UIEmployeeCellContentConfiguration.plain]
-		return value.map(object => new UIEmployeeCellContentConfiguration(object))
-		case 'equipment':
-		if (value.length === 0) return [UIEquipmentCellContentConfiguration.plain]
-		return value.map(object => new UIEquipmentCellContentConfiguration(object))
-		case 'consumables':
-		if (value.length === 0) return [UIConsumableCellContentConfiguration.plain]
-		return value.map(object => new UIConsumableCellContentConfiguration(object))
-		case 'posts':
-		if (value.length === 0) return [UIPostCellContentConfiguration.plain]
-		return value.map(object => new UIPostCellContentConfiguration(object))
-
-		default: return value
-		}
-	}
-
 	// MARK:- `UIApplicationObserver`
 
-	/** @param {object} object */
 	handle_object(object) {
-		if (typeof object.dateTime === 'undefined') return
-		else try {
-				UIApplication.shared.viewController = new UIViewController(object.dateTime)
-			}
-		catch (exception) {
-			window.alert(exception.message)
+		/** @type {Date|undefined} */
+		const launchDate = object.dateTime
+		if (typeof launchDate === 'undefined') return
+
+		try {
+			UIApplication.shared.viewController = new UIViewController(launchDate)
+		}
+		catch (error) {
+			alert(error)
 		}
 		finally {
 			UIApplication.shared.detachObserver(UIApplication.shared)
 		}
 	}
 }
+
+export const crud_for_a_x = UIApplication.shared
