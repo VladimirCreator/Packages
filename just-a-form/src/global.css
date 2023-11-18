@@ -1,6 +1,7 @@
 :root {
-  --light-red-color: #FF3B30;
-  --light-blue-color: #007AFF;
+	--light-white-color: #FFF;
+  --light-red-color: #FF3B30; --light-blue-color: #007AFF;
+	--light-background-color: #F2F2F7;
 }
 
 * {
@@ -18,14 +19,13 @@ body {
   display: flex;
   justify-content: center; align-items: center;
 
-  background: #F2F2F7;
+  background: var(--light-background-color);
 }
 
 form {
   aspect-ratio: 1/.65;
   display: flex; position: relative;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-wrap: wrap; flex-direction: column;
   justify-content: space-evenly;
 }
 
@@ -40,8 +40,7 @@ button {
 
   padding: 1.1rem 1.45rem;
 
-  color: #FFFF;
-  background: var(--light-blue-color);
+  color: var(--light-white-color); background: var(--light-blue-color);
 
   border-radius: 2rem;
   opacity: 100%;
@@ -79,10 +78,11 @@ form:not([novalidate]) input:not(:focus-visible):invalid {
 *:focus-visible { outline: .0625rem #999 solid }
 
 *::selection,
-::-webkit-datetime-edit-year-field:focus,
-::-webkit-datetime-edit-month-field:focus,
-::-webkit-datetime-edit-day-field:focus {
-  color: #FFFF;
+ ::-webkit-datetime-edit-year-field:focus,
+ ::-webkit-datetime-edit-month-field:focus,
+ ::-webkit-datetime-edit-day-field:focus
+{
+  color: var(--light-white-color);
   background: var(--light-blue-color) !important;
 }
 

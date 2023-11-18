@@ -11,7 +11,7 @@ module.exports = (env, argv) => {
 
 	return {
 		entry: {
-			client: 'src/index.mjs'
+			client: './src/index.mjs'
 		},
 		output: {
 			filename: '[name].[contenthash].min.js', path: path.resolve(__dirname, '.build'),

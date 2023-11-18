@@ -53,7 +53,10 @@ jobs:
         working-directory: just-a-card/
 
 # Just a Form
-      - run: mv just-a-form/* _site/just-a-form
+      - run: npm ci
+        working-directory: cru_-for-an-application
+      - run: npm run build:release
+        working-directory: cru_-for-an-application
 
 # X
       - run: npm ci
