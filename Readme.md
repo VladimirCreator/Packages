@@ -86,7 +86,8 @@
 |  |JavaScript|TypeScript|Swift|
 |:-|:--------:|:--------:|:---:|
 |CRUD for a X|✔️| | |
-|_R__ for a Comment|✔️| | |
+|\_R\__ for a Comment|✔️| | |
+|\_R\__ for a Hotel| | |✔️|
 |CRU_ for an Application|✔️| | |
 |Just a Card| |✔️| |
 |Just a Form| |✔️| |
