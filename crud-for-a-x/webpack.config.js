@@ -36,7 +36,7 @@ module.exports = (env, argv) => {
 		},
 
 		plugins: [
-			new HtmlPlugin({ title: title ? { title } : title }),
+			new HtmlPlugin({ title: title ? { title } : title, template: 'index.html' }),
 			new MiniCssExtractPlugin({ filename: '[name].[contenthash].min.css' })
 		]
 	}
