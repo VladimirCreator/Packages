@@ -1,5 +1,3 @@
-/* Last Modified at 11:20 AM on Wed 15 Nov 2023
-*/
 import { UIApplication } from './UIApplication.mjs'
 
 const onDOMContentLoaded = () => {
