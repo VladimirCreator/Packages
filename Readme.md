@@ -7,6 +7,7 @@
 There are 0 - 3 items.
 
 1. [Overview](#overview)
+1. [Description](#description)
 1. [\_R\__ for a Comment](#_r__-for-a-comment)
 1. [\_R\__ for a Hotel](#_r__-for-a-hotel)
 1. [CRUD for a X](#crud-for-a-x)
@@ -29,6 +30,9 @@ There are 0 - 3 items.
 |6|Just a Form| |✔️| |
 |7|Shade Explorer|✔️| | |
 |8|X| |✔️| |
+
+## Description
+A collection of packages where I practice git, GitHub, TypeScript, Swift and so on.
 
 ## \_R\__ for a Comment
 [Give it a shot](https://vladimircreator.github.io/gists/_r__-for-a-comment/).
