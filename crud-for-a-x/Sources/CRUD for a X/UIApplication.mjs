@@ -9,7 +9,7 @@ import {
 	UIConsumableCellContentConfiguration,
 	UIPostCellContentConfiguration
 } from './UICellContentConfiguration/index.mjs'
-import { UIViewController } from './UIViewController/UIViewController.mjs'
+import { UIViewController } from './UIViewController/index.mjs'
 
 /**
 	@typedef {object} UIApplicationObserver
