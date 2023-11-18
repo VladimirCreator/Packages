@@ -17,11 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
+      - run: mkdir -p -v ../_site/
 
       - run: npm ci
       - run: npm run ${{ inputs.script }}
 
-      - run: mv -p -v .build/* ../_site/
+      - run: mv -v .build/* ../_site/
       - uses: actions/upload-pages-artifact@v2
 
     defaults:

@@ -1,134 +1,37 @@
 # Deprecated Vladimir's Gists
 
 ## GitHub Actions
-[![All](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
+[![Deploy All](https://github.com/VladimirCreator/gists/actions/workflows/deploy-all.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/gists/actions/workflows/deploy-all.yaml)
 
 ## Table of Contents
+There are 0 - 3 items.
+
 1. [Overview](#overview)
-1. [Booking](#booking)
-1. [Card](#card)
-1. <details>
-     <summary>
-       <a href="https://github.com/VladimirCreator/Playgrounds#quiz">
-         Quiz
-       </a>
-     </summary>
-
-     <h3>
-       Quick Look
-     </h3>
-
-     <p>
-       <img src="./videos/quiz.gif" />
-     </p>
-   </details>
-
-1. <details>
-     <summary>
-       <a href="https://github.com/VladimirCreator/Playgrounds#shade-explorer">
-         Shade Explorer
-       </a>
-     </summary>
-
-     <h3>
-       Quick Look
-     </h3>
-
-     <p>
-       <img src="./videos/shade_explorer.gif" />
-     </p>
-   </details>
-
-1. <details>
-     <summary>
-       <a href="https://github.com/VladimirCreator/Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0">
-         Тестовое задание №0
-       </a>
-     </summary>
-
-     <p>
-       <a href="https://application-0.vercel.app">
-         Попробовать
-       </a>
-     </p>
-
-     <p>
-       Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть идентификатор, название, идентификатор политики, поле <code>agent_js_config</code> и поле <code>correlations_config</code>.
-     </p>
-
-     <p>
-       Есть возможность интерактивного взаимодействия, а именно:
-     </p>
-
-     <ul>
-       <li>
-         отправка нового приложения на сервер;
-       </li>
-       <li>
-         изменение существующего приложения на сервере.
-       </li>
-     </ul>
-
-     <h3>
-       Quick Look
-     </h3>
-
-     <p>
-       <img src="./videos/тестовое_задание_0.gif" />
-     </p>
-   </details>
-
-
-1. [Message Fetcher](#message-fetcher)
+1. [\_R\__ for a Comment](#_r__-for-a-comment)
+1. [\_R\__ for a Hotel](#_r__-for-a-hotel)
+1. [CRUD for a X](#crud-for-a-x)
+1. [CRU_ for an Application](#cru_-for-an-application)
+1. [Just a Card](#just-a-card)
+1. [Just a Form](#just-a-form)
+1. [Shade Explorer](#shade-explorer)
+1. [X](#x)
+1. [Changelog](#changelog)
 1. [License](#license)
 
-# Overview
-|  |JavaScript|TypeScript|Swift|
-|:-|:--------:|:--------:|:---:|
-|CRUD for a X|✔️| | |
-|\_R\__ for a Comment|✔️| | |
-|\_R\__ for a Hotel| | |✔️|
-|CRU_ for an Application|✔️| | |
-|Just a Card| |✔️| |
-|Just a Form| |✔️| |
-|X| |✔️| |
+## Overview
+|№|  |JavaScript|TypeScript|Swift|
+|-:|:-|:--------:|:--------:|:---:|
+|1|\_R\__ for a Comment|✔️| | |
+|2|\_R\__ for a Hotel| | |✔️|
+|3|CRUD for a X|✔️| | |
+|4|CRU_ for an Application|✔️| | |
+|5|Just a Card| |✔️| |
+|6|Just a Form| |✔️| |
+|7|Shade Explorer|✔️| | |
+|8|X| |✔️| |
 
-## Changelog
-
-> ### Sat 8 Jul 2023 8:10 PM
-> `github`: Rename Swift-Playgrounds to Playgrounds.
-> ### Sun 5 Nov 2923 9:27 PM
-> `github`: Rename Playgrounds to Gists.
-
-## Booking
-![Booking](videos/booking.gif)
-
-## Card
-[Попробовать](https://vladimircreator.github.io/Playgrounds/card/).
-
-## Дипломная работа
-[Попробовать](https://graduate-work-gilt.vercel.app/).
-
-### Example
-![Дипломная работа](./videos/дипломная_работа.gif)
-
-#### Desktop Landscape
-![Desktop Landscape](./photos/дипломная_работа/desktop_landscape.png)
-
-#### iPhone 6 Landscape
-![iPhone 6 Landscape](./photos/дипломная_работа/iPhone6_landscape.png)
-
-#### iPhone 6 Portrait
-![iPhone 6 Portrait](./photos/дипломная_работа/iPhone6_portrait.png)
-
-#### iPhone X Landscape
-![iPhone X Landscape](./photos/дипломная_работа/iPhoneX_landscape.png)
-
-#### iPhone X Portrait
-![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
-
-## Message Fetcher
-[Посмотреть](https://application-m78h6t34y-thisusernameisalreadybusy.vercel.app/).
+## \_R\__ for a Comment
+[Give it a shot](https://vladimircreator.github.io/gists/_r__-for-a-comment/).
 
 ### Dependencies
 - TypeScript;
@@ -161,7 +64,67 @@
 - сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
 ### Quick Look
-![Message Fetcher](./videos/message_fetcher.gif)
+![_R__ for a Comment](./videos/message_fetcher.gif)
+
+## \_R\__ for a Hotel
+![_R__ for a Hotel](videos/booking.gif)
+
+## CRUD for a X
+[Give it a shot](https://vladimircreator.github.io/gists/crud-for-a-x/).
+
+### Example
+![CRUD for a X](./videos/дипломная_работа.gif)
+
+#### Desktop Landscape
+![Desktop Landscape](./photos/дипломная_работа/desktop_landscape.png)
+
+#### iPhone 6 Landscape
+![iPhone 6 Landscape](./photos/дипломная_работа/iPhone6_landscape.png)
+
+#### iPhone 6 Portrait
+![iPhone 6 Portrait](./photos/дипломная_работа/iPhone6_portrait.png)
+
+#### iPhone X Landscape
+![iPhone X Landscape](./photos/дипломная_работа/iPhoneX_landscape.png)
+
+#### iPhone X Portrait
+![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
+
+## CRU_ for an Application
+
+[Give it a shot](https://vladimircreator.github.io/gists/cru_-for-an-application/).
+
+Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть идентификатор, название, идентификатор политики, поле `agent_js_config` и поле `correlations_config`.
+
+Есть возможность интерактивного взаимодействия, а именно:
+- отправка нового приложения на сервер;
+- изменение существующего приложения на сервере.
+
+### Quick Look
+![CRU_ for an Application](./videos/тестовое_задание_0.gif)
+
+## Just a Card
+[Take a look](https://vladimircreator.github.io/gists/just-a-card/).
+
+## Just a Form
+[Give it a shot](https://vladimircreator.github.io/gists/just-a-form/).
+
+## Shade Explorer
+[Give it a shot](https://vladimircreator.github.io/gists/shade-explorer/).
+
+### Quick Look
+![Shade Explorer](./videos/shade_explorer.gif)
+
+## X
+[Give it a shot](https://vladimircreator.github.io/gists/X/).
+
+## Changelog
+
+### Sat 8 Jul 2023 8:10 PM
+Rename this repository from Swift-Playgrounds to Playgrounds.
+
+### Sun 5 Nov 2923 9:27 PM
+Rename this repository from Playgrounds to gists.
 
 ## License
 See [License](LICENSE).
