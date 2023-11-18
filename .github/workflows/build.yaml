@@ -1,7 +1,5 @@
-# initially-modified at 3:34 PM on 18 Nov 2023
-# last-modified at 3:43 PM on 18 Nov 2023
 name: Build
-run-name: ${{ github.actor } wants to check if ${{ inputs.gist }} is fine
+run-name: ${{ github.actor }} wants to check if ${{ inputs.gist }} is fine
 
 on:
   workflow_dispatch:
@@ -12,10 +10,6 @@ on:
       script:
         required: true
         type: string
-
-defaults:
-  run:
-    working-directory: ${{ inputs.gist }}
 
 jobs:
   build:
@@ -30,6 +24,9 @@ jobs:
 
       - run: mv .build/* ../_site/
       - uses: actions/upload-pages-artifact@v2
+    defaults:
+      run:
+        working-directory: ${{ inputs.gist }}
 
   deploy:
     runs-on: ubuntu-latest

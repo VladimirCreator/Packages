@@ -1,10 +1,7 @@
 # Deprecated Vladimir's Gists
 
 ## GitHub Actions
-branch: created at дипломная-работа at 3:58 PM on Mon 6 Nov 2023.
-[![Bad](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
-[![Authentication](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/authentication.yml)
-[![Message Fetcher](https://github.com/VladimirCreator/Playgrounds/actions/workflows/message-fetcher.yml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/message-fetcher.yml)
+[![All](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml/badge.svg)](https://github.com/VladimirCreator/Playgrounds/actions/workflows/bad.yaml)
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -89,13 +86,14 @@ branch: created at дипломная-работа at 3:58 PM on Mon 6 Nov 2023.
 |  |JavaScript|TypeScript|Swift|
 |:-|:--------:|:--------:|:---:|
 |CRUD for a X|✔️| | |
-|_R__|✔️| | |
+|_R__ for a Comment|✔️| | |
 |CRU_ for an Application|✔️| | |
 |Just a Card| |✔️| |
 |Just a Form| |✔️| |
 |X| |✔️| |
 
 ## Changelog
+
 > ### Sat 8 Jul 2023 8:10 PM
 > `github`: Rename Swift-Playgrounds to Playgrounds.
 > ### Sun 5 Nov 2923 9:27 PM

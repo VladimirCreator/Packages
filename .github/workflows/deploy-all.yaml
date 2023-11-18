@@ -1,37 +1,12 @@
-name: Bad
+name: Deploy All
 run-name: ${{ github.actor }} deploys via GitHub Actions
 
 on:
-  workflow_dispatch:
-    inputs:
-      path:
-        description: A folder containing a package.json file.
-        required: false
-        default: 'nil'
-        type: string
+  workflow_dispatch
 
 jobs:
-  commit-package-lock-json-if-specified:
-    runs-on: ubuntu-latest
-    name: Commit package-lock.json
-
-    if: ${{ !contains(inputs.path, 'nil') }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Get package-lock.json
-        run: npm install
-        working-directory: ${{ inputs.path }}
-
-      - uses: EndBug/add-and-commit@v9.1.3
-        with:
-          new_branch: add-package-lock-json-for-${{ inputs.path }}
-          add: ${{ inputs.path }}/package-lock.json
-
   build-all:
     runs-on: ubuntu-latest
-    if: ${{ always() }}
-    needs: commit-package-lock-json-if-specified
     name: Build All
 
     steps:
