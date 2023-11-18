@@ -1,5 +1,4 @@
 import './index.scss'
-
 import { UIApplication } from './UIApplication.mjs'
 
 const onDOMContentLoaded = () => {

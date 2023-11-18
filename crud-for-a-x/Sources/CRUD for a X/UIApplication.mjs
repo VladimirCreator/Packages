@@ -1,12 +1,14 @@
 import { User } from './User.mjs'
-import { UIBranchCellContentConfiguration } from './UICellContentConfiguration/UIBranchCellContentConfiguration.mjs'
-import { UIRoomCellContentConfiguration } from './UICellContentConfiguration/UIRoomCellContentConfiguration.mjs'
-import { UIDepartmentCellContentConfiguration } from './UICellContentConfiguration/UIDepartmentCellContentConfiguration.mjs'
-import { UIWarehouseCellContentConfiguration } from './UICellContentConfiguration/UIWarehouseCellContentConfiguration.mjs'
-import { UIEmployeeCellContentConfiguration } from './UICellContentConfiguration/UIEmployeeCellContentConfiguration.mjs'
-import { UIEquipmentCellContentConfiguration } from './UICellContentConfiguration/UIEquipmentCellContentConfiguration.mjs'
-import { UIConsumableCellContentConfiguration } from './UICellContentConfiguration/UIConsumableCellContentConfiguration.mjs'
-import { UIPostCellContentConfiguration } from './UICellContentConfiguration/UIPostCellContentConfiguration.mjs'
+import {
+	UIBranchCellContentConfiguration,
+	UIRoomCellContentConfiguration,
+	UIDepartmentCellContentConfiguration,
+	UIWarehouseCellContentConfiguration,
+	UIEmployeeCellContentConfiguration,
+	UIEquipmentCellContentConfiguration,
+	UIConsumableCellContentConfiguration,
+	UIPostCellContentConfiguration
+} from './UICellContentConfiguration/index.mjs'
 import { UIViewController } from './UIViewController/UIViewController.mjs'
 
 /**
