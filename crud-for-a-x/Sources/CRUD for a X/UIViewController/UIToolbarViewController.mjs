@@ -1,5 +1,6 @@
 import { Translator } from '../Translator.mjs'
 import { UIFormBuilder, UIBooleanFormBuilder, UINumberFormBuilder, UIStringFormBuilder, UIObjectFormBuilder } from '../UIView/UIFormBuilder/UIFormBuilder.mjs'
+import { UIToolbarView } from '../UIView/UIToolbarView.mjs'
 
 /**
 	@callback UIToolbarViewControllerDelegateHandler

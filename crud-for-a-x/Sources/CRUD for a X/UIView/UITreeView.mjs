@@ -1,5 +1,7 @@
 import { Translator } from '../Translator.mjs'
 
+const wordsToTranslate = [...Translator.UITreeView.keys()]
+
 /**
 	@typedef {object} UITreeViewDelegate
 		@callback UITreeViewDelegateHandler
@@ -21,21 +23,19 @@ export class UITreeView {
 
 	draw() {
 		const tree = this.#tree
-		const wordsToTranslate = [...Translator.UITreeView.keys()]
 
-		const buttonsHTML = [wordsToTranslate].reduce(
+		const buttonsHTML = wordsToTranslate.reduce(
 			(html, word) => (
-				html += `<button id=${word}class='list-group-item list-group-item-action'>
+				html += `<button id=${word} class='list-group-item list-group-item-action'>
 					${Translator.shared.translate(word)}
 				</button>`
 			), ''
 		)
-		const buttons = tree.querySelectorAll('button')
+		tree.querySelector(`div.list-group`).innerHTML = buttonsHTML
 
 		const clickHandler = (event) => {
 			if (event.target instanceof HTMLButtonElement) this.delegate?.treeViewDidSelect(event.target)
 		}
-		tree.querySelector(`div.list-group`).innerHTML = buttonsHTML
-		buttons.forEach(li => li.addEventListener('click', clickHandler))
+		tree.querySelectorAll('button').forEach(button => button.addEventListener('click', clickHandler))
 	}
 }
