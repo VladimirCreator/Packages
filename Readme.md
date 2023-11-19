@@ -1,10 +1,10 @@
-# Deprecated Vladimir's Gists
+# Vladimir’s Packages
 
 ## GitHub Actions
 [![Deploy All](https://github.com/VladimirCreator/gists/actions/workflows/deploy-all.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/gists/actions/workflows/deploy-all.yaml)
 
 ## Table of Contents
-There are 0 - 3 items.
+There are 0 - 4 items.
 
 1. [Overview](#overview)
 1. [Description](#description)
@@ -127,8 +127,11 @@ A collection of packages where I practice git, GitHub, TypeScript, Swift and so 
 ### Sat 8 Jul 2023 8:10 PM
 Rename this repository from Swift-Playgrounds to Playgrounds.
 
-### Sun 5 Nov 2923 9:27 PM
+### Sun 5 Nov 2023 9:27 PM
 Rename this repository from Playgrounds to gists.
+
+### Sun 10 Nov 2023 8:03 AM
+Rename this repository from gists to Packages.
 
 ## License
 See [License](LICENSE).
