@@ -27,16 +27,16 @@ jobs:
 
 # _R__ for a Comment
       - run: npm ci
-        working-directory: Message Fetcher/
-      - name: Build “Message Fetcher”
+        working-directory: _r__-for-a-comment
+      - name: Build “_R__ for a Comment”
         run: npm run build
-        working-directory: Message Fetcher/
+        working-directory: _r__-for-a-comment
 
 # CRUD for a X
       - run: npm ci
-        working-directory: cru_-for-an-application
+        working-directory: cru_-for-a-x
       - run: npm run build:release
-        working-directory: cru_-for-an-application
+        working-directory: cru_-for-a-x
 
 # CRU_ for an Application
       - run: npm ci

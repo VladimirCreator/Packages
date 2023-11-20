@@ -9,8 +9,8 @@ import './index.css'
 
 const root = ReactDOM.createRoot(document.querySelector("section#root"))
 root.render(
-  <StrictMode children={
-      <Provider store={store} children={<App />} />
-    }
-  />
+	<StrictMode children={
+			<Provider store={store} children={<App />} />
+		}
+	/>
 )

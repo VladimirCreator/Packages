@@ -7,12 +7,12 @@ import CardToolbar from './CardToolbar'
 import CardFooter from './CardFooter'
 
 export default function Card({ price, title, description, colors, imgHref }: CardProps) {
-  return (
-    <article className='card'>
-      <CardHeader price={price} title={title} description={description} imgHref={imgHref} />
-      <CardSelection colors={colors} />
-      <CardToolbar />
-      <CardFooter href='#' />
-    </article>
-  )
+	return (
+		<article className='card'>
+			<CardHeader price={price} title={title} description={description} imgHref={imgHref} />
+			<CardSelection colors={colors} />
+			<CardToolbar />
+			<CardFooter href='#' />
+		</article>
+	)
 }

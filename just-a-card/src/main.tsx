@@ -4,12 +4,8 @@ import ReactDOM from 'react-dom/client'
 import './index.scss'
 import App from './components/App/App'
 
+const root = document.querySelector('article#root')!
+
 ReactDOM
-  .createRoot(
-    document.querySelector('article#root')!
-  )
-  .render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  )
+	.createRoot(root)
+	.render(<React.StrictMode children={ <App /> } />)
