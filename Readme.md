@@ -98,7 +98,7 @@ A collection of packages where I practice git, GitHub, TypeScript, Swift and so 
 
 [Give it a shot](https://vladimircreator.github.io/gists/cru_-for-an-application/).
 
-Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть идентификатор, название, идентификатор политики, поле `agent_js_config` и поле `correlations_config`.
+Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть ① идентификатор, ② название, ③ идентификатор политики, ④ поле `agent_js_config` и ⑤ поле `correlations_config`.
 
 Есть возможность интерактивного взаимодействия, а именно:
 - отправка нового приложения на сервер;

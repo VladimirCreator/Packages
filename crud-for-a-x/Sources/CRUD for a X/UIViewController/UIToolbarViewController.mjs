@@ -1,4 +1,5 @@
 import { Translator } from '../Translator.mjs'
+import { crud_for_a_x } from '../UIApplication.mjs'
 import { UIFormBuilder, UIBooleanFormBuilder, UINumberFormBuilder, UIStringFormBuilder, UIObjectFormBuilder } from '../UIView/UIFormBuilder/UIFormBuilder.mjs'
 import { UIToolbarView } from '../UIView/UIToolbarView.mjs'
 
@@ -37,7 +38,7 @@ export class UIToolbarViewController {
 		numberFormBuilder.delegate = stringFormBuilder
 		stringFormBuilder.delegate = objectFormBuilder
 
-		UIApplication.shared.attachObserver(objectFormBuilder)
+		crud_for_a_x.attachObserver(objectFormBuilder)
 
 		document.querySelector('button#buttonAdd')?.addEventListener('click', event => this.didPressAddButton(event))
 		document.querySelector('button#buttonEdit')?.addEventListener('click', event => this.didPressEditButton(event))
@@ -86,12 +87,9 @@ export class UIToolbarViewController {
 		const selector = ['div#modalAdd','div.modal-body','form.vstack'].join('>')
 
 		document.querySelector(selector).innerHTML = Object.keys(this.#contentConfiguration).reduce(
-			(accumulator, key) =>
-				(accumulator += this.#formBuilder.build(
-					key,
-					this.#contentConfiguration[key]
-				)),
-			""
+			(accumulator, key) => (
+				accumulator += this.#formBuilder.build(key, this.#contentConfiguration[key])
+			), ''
 		)
 	}
 	toolbarViewDidSelectRemove(toolbarView) {}
@@ -99,12 +97,9 @@ export class UIToolbarViewController {
 		const selector = ['div#modalEdit','div.modal-body','form.vstack'].join('>')
 
 		document.querySelector(selector).innerHTML = Object.keys(this.#contentConfiguration).reduce(
-			(accumulator, key) =>
-				(accumulator += this.#formBuilder.build(
-					key,
-					this.#contentConfiguration[key]
-				)),
-			""
+			(accumulator, key) => (
+				accumulator += this.#formBuilder.build(key, this.#contentConfiguration[key])
+			), ''
 		)
 	}
 
