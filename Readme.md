@@ -1,6 +1,6 @@
 # Vladimir’s Packages
 
-[![GitHub Pages](https://github.com/VladimirCreator/gists/actions/workflows/github-pages.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/gists/actions/workflows/github-pages.yaml)
+[![GitHub Pages](https://github.com/VladimirCreator/Packages/actions/workflows/github-pages.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/Packages/actions/workflows/github-pages.yaml)
 
 ## Description
 A collection of packages where I practice git, JavaScript, TypeScript, Swift, GitHub and even more!
@@ -39,6 +39,8 @@ This package includes at least these dependencies:
 ### Description
 Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где каждое сообщение включает в себя ① уникальный идентификатор, ② дату публикации, ③ автора, ④ содержимое и ⑤ список вложений[^1].
 
+[^1]: Данный список состоит из фотографий и видео.
+
 Далее, тот же самый запрос отправляется каждые 5 секунд.
 
 Пакет предусматривает возможности интерактивного взаимодействия, а именно:
@@ -62,6 +64,53 @@ This package includes at least these dependencies:
 ### Quick Look
 
 ![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-hotel.mov)
+
+### Dependencies
+This package includes at least these dependencies:
+
+- SwiftUI
+
+### Description
+Данный пакет включает в себя 4 экрана:
+
+1. Экран со списком отелей
+1. Экран со списком номеров в отеле
+1. Экран с процессом бронирования
+1. Экран с подтверждённой оплатой
+
+#### Экран со списком отелей
+Появление данного экрана сопровождается GET-запросом к серверу, который возвращает список отелей, где каждый отель включает в себя информацию о своём ① идентификаторе, ② названии, ③ адресе, ④ цене, ⑤ информации о том, что включает в себя эта цена, ⑥ рейтинге, ⑦ описании рейтинга, ⑧ изображениями отеля, ⑨ описанием об отеле и ⑩ что включено. Изображения отеля можно листать.
+
+Далее, предоставляется возможность выбора определённого отеля с осуществлением перехода на [экран со списком номеров](#экран-со-списком-номеров-в-отеле) в нём.
+
+#### Экран со списком номеров в отеле
+Появление данного экрана сопровождается GET-запросом к серверу, который возвращает список номеров в выбранном отеле, где каждый номер содержит ① идентификатор, ② название, ③ цену, ④ что включает в себя цена, ⑤ что включает номер и ⑥ изображения. Изображения номера можно листать.
+
+Далее, предоставляется возможность выбора определённого номера в отеле с осуществлением перехода на [экран с процессом бронирования](#экран-с-процессом-бронирования).
+
+#### Экран с процессом бронирования
+Появление данного экрана сопровождается GET-запросом к серверу, который возвращает информацию, которая необходима для процесса принятия решения о бронировании желаемого номера. Эта информация включает в себя ① название отеля, ② адрес отеля, ③ рейтинг отеля, ④ описание рейтинга, ⑤ страну вылета, ⑥ страну прилёта, ⑦ дату начала тура, ⑧ дату конца тура, ⑨ количество ночей, ⑩ описание номера, ⑪ описание питания, ⑫ цену за тур, ⑬ топливный сбор и ⑭ сервисный сбор.
+
+Здесь происходит процесс заполнения информации о покупателе и туристах:
+
+- Требуемая информация о покупателе включает в себя ① номер телефона и ② почту.
+- Требуемая информация о туристе включает в себя ① имя, ② фамилию, ③ дату рождения, ④ гражданство, ⑤ номер заграничного паспорта и ⑥ его срок действия.
+
+> [!NOTE]
+> Стоит отметить, что нет ограничения на количество туристов и здесь есть возможность добавлять такое количество туристов, которое небходимо.
+
+После всех этих утомительных процедур происходит процесс оплаты нажатием кнопки “Оплатить” и осуществляется переход на [экран с подтверждённой оплатой](#экран-с-подтверждённой-оплатой).
+
+> [!NOTE]
+> Никакой оплаты на самом деле не происходит.
+
+#### Экран с подтверждённой оплатой
+Здорово! Это последний экран этого пакета.
+
+Единственное, что здесь можно сделать нажать кнопку “Супер!”, чтобы вернуться на [экран со списком отелей](#экран-со-списком-отелей).
+
+> [!NOTE]
+> Я считаю, что я реализовал это интересным способом, а именно способом передачи состояния через окружение.
 
 ## CRUD for a X
 
@@ -90,6 +139,13 @@ This package includes at least these dependencies:
 #### iPhone X Portrait
 
 ![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX:portrait.png)
+
+### Dependencies
+
+- Vite
+
+### Description
+
 
 ## CRU_ for an Application
 
@@ -131,8 +187,19 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 ## Just a Card
 [Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
+### Dependencies
+- Vite
+- TypeScript
+
+### Description
+
+
 ## Just a Form
 [Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
+
+### Dependencies
+
+### Description
 
 ## Shade Explorer
 
@@ -145,10 +212,16 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 ## X
 
 ### Quick Look
-
 [Give it a shot](https://vladimircreator.github.io/Packages/x/).
 
 ![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
+
+### Dependencies
+- Vite
+- TypeScript
+- React
+- Redux Toolkit
+- Taildwind CSS
 
 ## Changelog
 
@@ -163,5 +236,3 @@ Rename this repository from gists to Packages.
 
 ## License
 See [License](LICENSE).
-
-[^1]: Данный список состоит из фотографий и видео.

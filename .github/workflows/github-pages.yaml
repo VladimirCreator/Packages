@@ -34,9 +34,9 @@ jobs:
       - run: mkdir _site/${{ matrix.package.directory }}/
 
       - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
-        working-directiry: ${{ matrix.package.directory }}
+        working-directory: ${{ matrix.package.directory }}
       - run: ${{ matrix.package.build }} # For example: npm run-script build
-        working-directiry: ${{ matrix.package.directory }}
+        working-directory: ${{ matrix.package.directory }}
       - run: ${{ matrix.package.postbuild }} # For example: mv directory/.build/* _site/directory/
 
       - uses: actions/upload-artifact@v3
