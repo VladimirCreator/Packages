@@ -1,18 +1,6 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Folders
+##
+.build
 
-# next.js
-/.next/
-/out/
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+## The Node Package Manager
+node_modules

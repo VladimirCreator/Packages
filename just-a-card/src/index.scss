@@ -2,13 +2,18 @@
 
 :root {
 	font: 400 16px/1 'Roboto', sans-serif;
+
 	color: #000F;
 }
 
-* {
-	box-sizing: border-box;
+* { box-sizing: border-box;
 	margin: 0;
 }
 
-body > article { padding-top: 2rem }
-img { display: block }
+body > article {
+	padding-top: 2rem
+}
+
+img {
+	display: block
+}

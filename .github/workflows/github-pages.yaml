@@ -1,0 +1,80 @@
+name: GitHub Pages
+run-name: ${{ github.actor }} ran deployment
+
+on:
+  workflow_dispatch
+
+jobs:
+  build-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+      - run: for directory in $(ls -d /*); do mkdir "_site${directory}"; done
+
+# _R__ for a Comment
+      - run: npm ci
+        working-directory: _r__-for-a-comment/
+      - run: npm run build:release
+        working-directory: _r__-for-a-comment/
+      - run: mv _r__-for-a-comment/.build/* _site/_r__-for-a-comment/
+
+# CRUD for a X
+      - run: npm ci
+        working-directory: cru_-for-a-x/
+      - run: npm run build:release
+        working-directory: cru_-for-a-x/
+      - run: mv cru_-for-a-x/.build/* _site/cru_-for-a-x/
+
+# CRU_ for an Application
+      - run: npm ci
+        working-directory: cru_-for-an-application/
+      - run: npm run build:release
+        working-directory: cru_-for-an-application/
+      - run: mv cru_-for-an-application/.build/* _site/cru_-for-an-application/
+
+# Exam for December 2022
+      - run: npm ci
+        working-directory: exam-for-december-2022
+      - run: npm run build:release
+        working-directory: exam-for-december-2022
+      - run: mv exam-for-december-2022/.build/* _site/exam-for-december-2022/
+
+# Just a Card
+      - run: npm ci
+        working-directory: just-a-card/
+      - run: npm run build:release
+        working-directory: just-a-card/
+      - run: mv just-a-card/.build/* _site/just-a-card/
+
+# Just a Form
+      - run: npm ci
+        working-directory: just-a-form
+      - run: npm run build:release
+        working-directory: just-a-form
+      - run: mv just-a-form/.build/* _site/just-a-form/
+
+# X
+      - run: npm ci
+        working-directory: x/
+      - run: npm run build:release
+        working-directory: x/
+      - run: mv x/.build/* _site/x/
+
+      - uses: actions/upload-pages-artifact@v2
+
+  #test-all:
+    #runs-on: ubuntu-latest
+    #steps:
+
+  deploy-all:
+    runs-on: ubuntu-latest
+    needs: build-all
+    steps:
+      - uses: actions/deploy-pages@v2
+
+    permissions:
+      id-token: write
+      pages: write

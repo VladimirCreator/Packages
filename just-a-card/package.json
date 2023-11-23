@@ -4,13 +4,11 @@
 		"name": "Vladimir",
 		"url": "https://github.com/vladimircreator"
 	},
-	"version": "0.0.0", "type": "module",
+	"version": "?.?.?",
+	"type": "module",
 
 	"scripts": {
-		"build": "tsc && vite build",
-		"dev": "vite",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview"
+		"build:release": "tsc && vite build --base ./ --outDir .build"
 	},
 
 	"dependencies": {
@@ -18,16 +16,16 @@
 	},
 
 	"devDependencies": {
-		"@types/react-dom": "^18.2.7",
-		"@types/react": "^18.2.15",
+		"vite": "^4.4.5", "@vitejs/plugin-react": "^4.0.3",
+		"typescript": "^5.0.2",
+		"@types/react": "^18.2.15", "@types/react-dom": "^18.2.7",
+
+		"sass": "^1.64.2",
+
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
-		"@vitejs/plugin-react": "^4.0.3",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.3",
-		"eslint": "^8.45.0",
-		"sass": "^1.64.2",
-		"typescript": "^5.0.2",
-		"vite": "^4.4.5"
+		"eslint": "^8.45.0"
 	}
 }

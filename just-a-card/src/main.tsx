@@ -2,10 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.scss'
-import App from './components/App/App'
+import { App } from './Component/App'
 
-const root = document.querySelector('article#root')!
+const article: HTMLElement = document.querySelector('article#root')!
+const root = ReactDOM.createRoot(article)
 
-ReactDOM
-	.createRoot(root)
-	.render(<React.StrictMode children={ <App /> } />)
+root.render(<React.StrictMode children={ <App /> } />)

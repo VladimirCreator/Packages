@@ -1,7 +1,7 @@
-import '../styles.scss'
+import './bootstrap.scss'
 
 import * as bootstrap from 'bootstrap'
-import { UIViewController } from './UIViewController'
+import { ViewController } from './Controller/ViewController'
 
-window.addEventListener('load', UIViewController.shared)
-window.addEventListener('load', UIViewController.shared.loadView.bind(UIViewController.shared))
+window.addEventListener('load', ViewController.shared)
+window.addEventListener('load', ViewController.shared.loadView.bind(ViewController.shared))

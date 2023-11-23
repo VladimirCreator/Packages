@@ -1,5 +1,5 @@
-import pencilSquare from '../Assets/pencil-square.svg'
-import plusCircle from '../Assets/plus-circle.svg'
+import pencilSquare from '../../public/pencil-square.svg'
+import plusCircle from '../../public/plus-circle.svg'
 
 export class ViewController {
 

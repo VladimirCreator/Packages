@@ -1,126 +1,154 @@
 # Vladimir’s Packages
 
-## GitHub Actions
-[![Deploy All](https://github.com/VladimirCreator/gists/actions/workflows/deploy-all.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/gists/actions/workflows/deploy-all.yaml)
-
-## Table of Contents
-There are 0 - 4 items.
-
-1. [Overview](#overview)
-1. [Description](#description)
-1. [\_R\__ for a Comment](#_r__-for-a-comment)
-1. [\_R\__ for a Hotel](#_r__-for-a-hotel)
-1. [CRUD for a X](#crud-for-a-x)
-1. [CRU_ for an Application](#cru_-for-an-application)
-1. [Just a Card](#just-a-card)
-1. [Just a Form](#just-a-form)
-1. [Shade Explorer](#shade-explorer)
-1. [X](#x)
-1. [Changelog](#changelog)
-1. [License](#license)
-
-## Overview
-|№|  |JavaScript|TypeScript|Swift|
-|-:|:-|:--------:|:--------:|:---:|
-|1|\_R\__ for a Comment|✔️| | |
-|2|\_R\__ for a Hotel| | |✔️|
-|3|CRUD for a X|✔️| | |
-|4|CRU_ for an Application|✔️| | |
-|5|Just a Card| |✔️| |
-|6|Just a Form| |✔️| |
-|7|Shade Explorer|✔️| | |
-|8|X| |✔️| |
+[![GitHub Pages](https://github.com/VladimirCreator/gists/actions/workflows/github-pages.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/gists/actions/workflows/github-pages.yaml)
 
 ## Description
-A collection of packages where I practice git, GitHub, TypeScript, Swift and so on.
+A collection of packages where I practice git, JavaScript, TypeScript, Swift, GitHub and even more!
+
+## Overview
+
+|№|Package|![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)|![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)|![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)|
+|:-:|:-|:-:|:-:|:-:|
+|1|[\_R\__ for a Comment](#_r__-for-a-comment)|✔️| | |
+|2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️|
+|3|[CRUD for a X](#crud-for-a-x)|✔️| | |
+|4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | |
+|5|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
+|6|[Just a Card](#just-a-card)| |✔️| |
+|7|[Just a Form](#just-a-form)| |✔️| |
+|8|[Shade Explorer](#shade-explorer)|✔️| | |
+|9|[X](#x)| |✔️| |
 
 ## \_R\__ for a Comment
-[Give it a shot](https://vladimircreator.github.io/gists/_r__-for-a-comment/).
+
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-comment.gif)
 
 ### Dependencies
-- TypeScript;
-- React;
-- Redux Toolkit;
-- Tailwind CSS.
+This package includes at least these dependencies:
 
+- Vite
+- TypeScript
+- React
+- Redux Toolkit
+- Tailwind CSS
+
+### Description
 Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где каждое сообщение включает в себя ① уникальный идентификатор, ② дату публикации, ③ автора, ④ содержимое и ⑤ список вложений[^1].
-
-> Ответственность за этот запрос берёт на себя стандартная функция `useEffect`.
 
 Далее, тот же самый запрос отправляется каждые 5 секунд.
 
-> Ответственность за повторные запросы берёт на себя отдельный `useEffect`.
+Пакет предусматривает возможности интерактивного взаимодействия, а именно:
 
----
+- пометка сообщения как избранного
 
-Есть возможность интерактивного взаимодействия, а именно:
+> [!NOTE]
+> Сообщение, которое было помечено как избранное остаётся таким даже после того, как произошла перезагрузка страницы.
 
-- пометка сообщения как избранного;
+- в случае, когда текстовое содержимое сообщения является слишком длинным , появляется кнопка "Далее", которая позволяет отобразить всё текстовое содержимое, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот
 
-> сообщение, которое было помечено как избранное остаётся таким даже после того, как происходит перезагрузка страницы
+> [!NOTE]
+> Длинное текстовое содержимое считается длинным, когда занимает более 3-ёх строк.
 
-- в случае, когда текстовое содержимое сообщения является слишком длинным, появляется кнопка "Далее", которая позволяет отобразить всё текстовое содержимое, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот.
-
-> длинное текстовое содержимое считается длинным, когда занимает более 3-ёх строк.
-
-- можно выбрать тег "новое" или "эксперт", но они ничего не делают
+- можно выбрать тег "новое" или "эксперт", но это не влияет на что-либо
 - загрузка старых сообщений при нажатии кнопки "Загрузить старые сообщения"
 - сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
-### Quick Look
-![_R__ for a Comment](./videos/message_fetcher.gif)
-
 ## \_R\__ for a Hotel
-![_R__ for a Hotel](videos/booking.gif)
+
+### Quick Look
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-hotel.mov)
 
 ## CRUD for a X
-[Give it a shot](https://vladimircreator.github.io/gists/crud-for-a-x/).
 
-### Example
-![CRUD for a X](./videos/дипломная_работа.gif)
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/crud-for-a-x/).
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/crud-for-a-x.gif)
 
 #### Desktop Landscape
-![Desktop Landscape](./photos/дипломная_работа/desktop_landscape.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/windows:landscape.png)
 
 #### iPhone 6 Landscape
-![iPhone 6 Landscape](./photos/дипломная_работа/iPhone6_landscape.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6:landscape.png)
 
 #### iPhone 6 Portrait
-![iPhone 6 Portrait](./photos/дипломная_работа/iPhone6_portrait.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6:portrait.png)
 
 #### iPhone X Landscape
-![iPhone X Landscape](./photos/дипломная_работа/iPhoneX_landscape.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX:landscape.png)
 
 #### iPhone X Portrait
-![iPhone X Portrait](./photos/дипломная_работа/iPhoneX_portrait.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX:portrait.png)
 
 ## CRU_ for an Application
 
-[Give it a shot](https://vladimircreator.github.io/gists/cru_-for-an-application/).
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/cru_-for-an-application.gif)
+
+### Description
 
 Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть ① идентификатор, ② название, ③ идентификатор политики, ④ поле `agent_js_config` и ⑤ поле `correlations_config`.
 
-Есть возможность интерактивного взаимодействия, а именно:
-- отправка нового приложения на сервер;
-- изменение существующего приложения на сервере.
+Пакет предусматривает возможность интерактивного взаимодействия, а именно:
+
+- отправка нового приложения на сервер
+- изменение существующего приложения на сервере
+
+## Exam for December 2022
 
 ### Quick Look
-![CRU_ for an Application](./videos/тестовое_задание_0.gif)
+
+[Give it a shot](https://vladimircreator.github.io/Packages/exam-for-december-2022/).
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/exam-for-december-2022.gif)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/:initial.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/:success.png)
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/:fail.png)
+
+### Getting Started
+
+```bash
+$ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
+```
 
 ## Just a Card
-[Take a look](https://vladimircreator.github.io/gists/just-a-card/).
+[Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
 ## Just a Form
-[Give it a shot](https://vladimircreator.github.io/gists/just-a-form/).
+[Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
 
 ## Shade Explorer
-[Give it a shot](https://vladimircreator.github.io/gists/shade-explorer/).
 
 ### Quick Look
-![Shade Explorer](./videos/shade_explorer.gif)
+
+[Give it a shot](https://vladimircreator.github.io/Packages/shade-explorer/).
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/shade-explorer.gif)
 
 ## X
-[Give it a shot](https://vladimircreator.github.io/gists/X/).
+
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/x/).
+
+![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
 
 ## Changelog
 

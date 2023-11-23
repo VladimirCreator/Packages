@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang='ru'>
+	<head>
+		<title>%VITE_TITLE%</title>
+
+		<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' crossorigin='anonymous'>
+	</head>
+
+	<body class='container-xxl p-4 bg-light'>
+		<div class='table-responsive'>
+			<table class='table table-striped align-middle text-center'>
+				<thead>
+					<tr class='table-dark'></tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<canvas id='interceptedRequests' class='bg-light-subtle'></canvas>
+
+		<div id='applicationForm' class='modal'>
+			<div class='modal-dialog modal-fullscreen-sm-down'>
+				<div class='modal-content'>
+					<div class='modal-header'>
+						<h1 class='fs-3'>Новое приложение</h1>
+					</div>
+
+					<div class='modal-body'>
+						<ul class='nav nav-tabs'>
+							<li class='nav-item'><a class='nav-link active' href='#'>Основные</a></li>
+						</ul>
+
+						<form class='vstack gap-3 px-1 py-3'></form>
+					</div>
+
+					<div class='modal-footer'>
+						<button id='cancelButton' class='btn btn-secondary' type='button' data-bs-dismiss='modal'>Отмена</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz' crossorigin='anonymous'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
+		<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+
+		<script type='module' src='./Sources/index.js'></script>
+	</body>
+</html>

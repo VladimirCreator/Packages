@@ -23,40 +23,38 @@ export const fetchLetters = createAsyncThunk(
 			return data.Messages
 		}
 		catch (problem) {
-			console.error(problem)
 			return thunkAPI.rejectWithValue([])
 		}
 	}
 )
 
-const applicationSlice = createSlice(
-	{
-		name: 'application',
+const initialState = {
+	letters: [],
+	trailingLetterId: 0
+}
 
-		initialState: {
-			letters: [], trailingLetterId: 0
-		},
+const applicationSlice = createSlice({
+	name: 'application', initialState,
 
-		reducers: {},
-		extraReducers: (builder) => {
-			const fetchLettersFulfilled = (state, action) => {
-				if (!Array.isArray(action.payload)) { return }
-				//state.letters = state.letters.concat(action.payload)
-				state.letters = state.letters.concat(action.payload.reduce((letters, message) => {
-					if (state.letters.findIndex(letter => message.id === letter.id) !== -1) {
-						return letters
-					}
-					return letters.concat(message)
-				}, []))
-				state.trailingLetterId = state.letters.at(-1)?.id ?? 0
-			};
-			const fetchLettersRejected = (state, action) => {}
+	reducers: {},
+	extraReducers: (builder) => {
+		const fetchLettersFulfilled = (state, action) => {
+			if (!Array.isArray(action.payload)) { return }
+			//state.letters = state.letters.concat(action.payload)
+			state.letters = state.letters.concat(action.payload.reduce((letters, message) => {
+				if (state.letters.findIndex(letter => message.id === letter.id) !== -1) {
+					return letters
+				}
+				return letters.concat(message)
+			}, []))
+			state.trailingLetterId = state.letters.at(-1)?.id ?? 0
+		};
+		const fetchLettersRejected = (state, action) => {}
 
-			builder.addCase(fetchLetters.fulfilled, fetchLettersFulfilled)
-				.addCase(fetchLetters.rejected, fetchLettersRejected)
-		}
+		builder.addCase(fetchLetters.fulfilled, fetchLettersFulfilled)
+			.addCase(fetchLetters.rejected, fetchLettersRejected)
 	}
-)
+})
 
 export default applicationSlice;
 //export const { fetchLetters } = applicationSlice.actions;

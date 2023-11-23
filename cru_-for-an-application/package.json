@@ -1,19 +1,16 @@
 {
-	"private": "true",
-	"keywords": ["bootstrap","html","javascript","webpack"],
+	"private": true,
+	"keywords": ["bootstrap","html","javascript","vite"],
 
 	"scripts": {
-		"build:release": "webpack build --env TITLE_FOR_CRU__FOR_AN_APPLICATION=$TITLE_FOR_CRU__FOR_AN_APPLICATION --mode=production"
+		"build:release": "vite build --base ./ --outDir .build"
 	},
 
 	"dependencies": {
 		"bootstrap": "^5.3.2", "@popperjs/core": "^2.11.8"
 	},
 	"devDependencies": {
-		"webpack": "^5.89.0", "webpack-cli": "^5.1.4", "style-loader": "^3.3.3",
-		"css-loader": "^6.8.1", "sass-loader": "^13.3.2",
-
-		"html-webpack-plugin": "^5.5.3", "mini-css-extract-plugin": "^2.7.6",
+		"vite": "^5.0.2",
 
 		"sass": "^1.69.5",
 		"autoprefixer": "^10.4.16", "postcss-loader": "^7.3.3"
