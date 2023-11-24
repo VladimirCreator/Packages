@@ -1,0 +1,38 @@
+:root {
+	--light-white-color: #FFF;
+	--light-red-color: #FF3B30; --light-blue-color: #007AFF;
+	--light-background-color: #F2F2F7;
+}
+
+* {
+	font: 400 16px/1.2em 'Golos Text', sans-serif;
+
+	padding: 0; margin: 0;
+	border: unset;
+
+	transition: all 250ms linear;
+}
+
+body {
+	width: 100lvw; height: 100lvh;
+
+	display: flex;
+	justify-content: center; align-items: center;
+
+	background: var(--light-background-color);
+}
+
+*:focus-visible {
+	outline: .0625rem #999 solid
+}
+
+*::selection,
+ ::-webkit-datetime-edit-year-field:focus,
+ ::-webkit-datetime-edit-month-field:focus,
+ ::-webkit-datetime-edit-day-field:focus {
+	color: var(--light-white-color); background: var(--light-blue-color) !important;
+}
+
+*::placeholder {
+	color: #8E8E93
+}

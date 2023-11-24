@@ -25,13 +25,14 @@ jobs:
           retention-days: 1
   build:
     runs-on: ${{ inputs.runs-on }}
+    needs: checkout
     strategy:
       matrix:
         package: ${{ fromJSON(inputs.json) }}
     steps:
       - uses: actions/download-artifact@v2
       - uses: actions/setup-node@v3
-      - run: mkdir _site/${{ matrix.package.directory }}/
+      - run: mkdir -p _site/${{ matrix.package.directory }}/
 
       - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
         working-directory: ${{ matrix.package.directory }}
