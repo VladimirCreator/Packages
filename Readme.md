@@ -25,7 +25,7 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 [Give it a shot](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-comment.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-comment.gif)
 
 ### Dependencies
 This package includes at least these dependencies:
@@ -63,7 +63,7 @@ This package includes at least these dependencies:
 
 ### Quick Look
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-hotel.mov)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-hotel.mov)
 
 ### Dependencies
 This package includes at least these dependencies:
@@ -118,27 +118,27 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/crud-for-a-x/).
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/crud-for-a-x.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/crud-for-a-x.gif)
 
 #### Desktop Landscape
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/windows:landscape.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/windows-landscape.png)
 
 #### iPhone 6 Landscape
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6:landscape.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6-landscape.png)
 
 #### iPhone 6 Portrait
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6:portrait.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6-portrait.png)
 
 #### iPhone X Landscape
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX:landscape.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX-landscape.png)
 
 #### iPhone X Portrait
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX:portrait.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX-portrait.png)
 
 ### Dependencies
 
@@ -153,7 +153,7 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/cru_-for-an-application.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/cru_-for-an-application.gif)
 
 ### Description
 
@@ -170,13 +170,13 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/exam-for-december-2022/).
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/exam-for-december-2022.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/exam-for-december-2022.gif)
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/:initial.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-initial.png)
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/:success.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-success.png)
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/:fail.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-fail.png)
 
 ### Getting Started
 
@@ -198,6 +198,8 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 [Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
 
 ### Dependencies
+- Vite
+- React
 
 ### Description
 
@@ -207,14 +209,14 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 
 [Give it a shot](https://vladimircreator.github.io/Packages/shade-explorer/).
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/shade-explorer.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/shade-explorer.gif)
 
 ## X
 
 ### Quick Look
 [Give it a shot](https://vladimircreator.github.io/Packages/x/).
 
-![](./ZGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
 
 ### Dependencies
 - Vite
