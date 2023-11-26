@@ -31,6 +31,8 @@ jobs:
         package: ${{ fromJSON(inputs.json) }}
     steps:
       - uses: actions/download-artifact@v2
+        with:
+          name: artifact
       - uses: actions/setup-node@v3
       - run: mkdir -p _site/${{ matrix.package.directory }}/
 
