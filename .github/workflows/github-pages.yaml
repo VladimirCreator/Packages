@@ -36,7 +36,7 @@ jobs:
         with:
           name: repository
       - uses: actions/setup-node@v3
-      - run: mkdir -p _site/${{ matrix.package.directory }}/
+      - run: mkdir -p _site/
 
       - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
         working-directory: ${{ matrix.package.directory }}
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.package.directory }}
-          path: _site/**/*
+          path: _site/*
 
   boilerplate:
     needs: build
