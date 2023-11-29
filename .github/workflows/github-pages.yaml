@@ -44,19 +44,14 @@ jobs:
         working-directory: ${{ matrix.package.directory }}
       - run: ${{ matrix.package.postbuild }} # For example: mv directory/.build/* _site/directory/
 
-      - uses: actions/upload-artifact@v3
-        with:
-          path: _site/**/*
-          name: ${{ matrix.package.directory }}
-  deploy:
+      - uses: actions/upload-pages-artifact@v2
+  github-pages:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - uses: actions/download-artifact@v3
-        with:
-          path: _site/
       - uses: actions/deploy-pages@v2
 
+    name: GitHub Pages
     permissions:
       id-token: write
       pages: write
