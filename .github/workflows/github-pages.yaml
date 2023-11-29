@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/upload-artifact@v3 # It does not make sense to upload this repository as an artifact but I have to because I do not want my repository to be cloned as many times as this workflow needs.
         with:
-          # name: repo:VladimirCreator/Packages
+          name: repository
           path: .
           retention-days: 1
   build:
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: artifact
+          name: repository
       - uses: actions/setup-node@v3
       - run: mkdir -p _site/${{ matrix.package.directory }}/
 
@@ -46,6 +46,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
+          name: ${{ matrix.package.directory }}
           path: _site/**/*
 
   boilerplate:
@@ -53,9 +54,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
-        with:
-          path: _site/
-      - run: tar -cf artifact.tar _site/*
+
+      - run: tar -cf artifact.tar ./*
+
       - uses: actions/upload-artifact@v3
         with:
           name: github-pages
