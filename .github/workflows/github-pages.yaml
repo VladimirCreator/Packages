@@ -28,8 +28,9 @@ jobs:
     needs: checkout
     strategy:
       matrix:
-        fail-fast: false
         package: ${{ fromJSON(inputs.json) }}
+      fail-fast: false
+
     steps:
       - uses: actions/download-artifact@v2
         with:
