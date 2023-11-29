@@ -54,8 +54,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
+        with:
+          path: .
 
-      - run: tar -cf artifact.tar ./*
+      - run: tar -cf -X=repository artifact.tar ./*
 
       - uses: actions/upload-artifact@v3
         with:
