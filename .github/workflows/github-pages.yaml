@@ -57,7 +57,7 @@ jobs:
         with:
           path: .
 
-      - run: tar -cf -X=repository artifact.tar ./*
+      - run: tar -X=./repository -cf artifact.tar ./*
 
       - uses: actions/upload-artifact@v3
         with:
