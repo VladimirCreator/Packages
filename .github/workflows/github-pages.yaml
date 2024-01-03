@@ -13,11 +13,17 @@ on:
         options:
           - ubuntu-latest
           - windows-latest
+      ref:
+        required: true
+        type: string
+        default: master
 jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
       - uses: actions/upload-artifact@v3 # It does not make sense to upload this repository as an artifact but I have to because I do not want my repository to be cloned as many times as this workflow needs.
         with:
           # name: repo:VladimirCreator/Packages
