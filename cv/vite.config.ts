@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+const config: ReturnType<typeof defineConfig> = {
+	plugins: [react()]
+} as const
+
+export default defineConfig(config)
