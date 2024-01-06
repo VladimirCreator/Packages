@@ -15,11 +15,11 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 |3|[CRUD for a X](#crud-for-a-x)|✔️| | |
 |4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | |
 |5|[CV](#cv)| |✔️| |
-|5|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
-|6|[Just a Card](#just-a-card)| |✔️| |
-|7|[Just a Form](#just-a-form)| |✔️| |
-|8|[Shade Explorer](#shade-explorer)|✔️| | |
-|9|[X](#x)| |✔️| |
+|6|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
+|7|[Just a Card](#just-a-card)| |✔️| |
+|8|[Just a Form](#just-a-form)| |✔️| |
+|9|[Shade Explorer](#shade-explorer)|✔️| | |
+|10|[X](#x)| |✔️| |
 
 ## \_R\__ for a Comment
 
