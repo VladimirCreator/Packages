@@ -1,10 +1,10 @@
 name: Build
-run-name: ${{ github.actor }} wants to check if ${{ inputs.gist }} is fine
+run-name: ${{ github.actor }} wants to check if ${{ inputs.package }} is fine
 
 on:
   workflow_dispatch:
     inputs:
-      gist:
+      package:
         required: true
         type: string
       script:
@@ -27,7 +27,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ${{ inputs.gist }}
+        working-directory: ${{ inputs.package }}
 
   deploy:
     runs-on: ubuntu-latest

@@ -14,7 +14,7 @@ type Resume = {
 	[key: string]: any
 }
 
-const RESUME: Resume = JSON.parse(import.meta.env.VITE_DATA)
+const RESUME: Resume = JSON.parse(import.meta.env.VITE_DATA ?? '{}')
 
 export const App = () => {
 	const links = [
