@@ -1,0 +1,64 @@
+name: GitHub Pages
+run-name: ${{ github.actor }} ran GitHub Pages
+on:
+  workflow_dispatch:
+    inputs:
+      json:
+        required: true
+        type: string
+      runs-on:
+        required: false
+        type: choice
+        default: ubuntu-latest
+        options:
+          - ubuntu-latest
+          - windows-latest
+      ref:
+        required: true
+        type: string
+        default: master
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/upload-artifact@v3 # It does not make sense to upload this repository as an artifact but I have to because I do not want my repository to be cloned as many times as this workflow needs.
+        with:
+          # name: repo:VladimirCreator/Packages
+          path: .
+          retention-days: 1
+  build:
+    runs-on: ${{ inputs.runs-on }}
+    needs: checkout
+    strategy:
+      matrix:
+        package: ${{ fromJSON(inputs.json) }}
+    steps:
+      - uses: actions/download-artifact@v2
+      - uses: actions/setup-node@v3
+      - run: mkdir -p _site/${{ matrix.package.directory }}/
+
+      - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
+        working-directory: ${{ matrix.package.directory }}
+      - run: ${{ matrix.package.build }} # For example: npm run-script build
+        working-directory: ${{ matrix.package.directory }}
+      - run: ${{ matrix.package.postbuild }} # For example: mv directory/.build/* _site/directory/
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: _site/**/*
+          name: ${{ matrix.package.directory }}
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          path: _site/
+      - uses: actions/deploy-pages@v2
+
+    permissions:
+      id-token: write
+      pages: write

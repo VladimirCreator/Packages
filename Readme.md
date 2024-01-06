@@ -1,157 +1,260 @@
-# Vladimir's Swift Playgrounds
-## Table of Contents
-1. [Alphabet](https://github.com/VladimirCreator/Swift-Playgrounds#alphabet)
-2. [Binary Search](https://github.com/VladimirCreator/Swift-Playgrounds#binary-search)
-3. [Bubble Sort](https://github.com/VladimirCreator/Swift-Playgrounds#bubble-sort)
-4. [CV](https://github.com/VladimirCreator/Swift-Playgrounds#cv)
-5. [Delegate](https://github.com/VladimirCreator/Swift-Playgrounds#delegate)
-6. [Euclidean Algorithm](https://github.com/VladimirCreator/Swift-Playgrounds#euclidean-algorithm)
-7. [GitHub Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#github-explorer)
-8. [KVO](https://github.com/VladimirCreator/Swift-Playgrounds#kvo)
-9. [Quick Sort](https://github.com/VladimirCreator/Swift-Playgrounds#quick-sort)
-10. [Quiz](https://github.com/VladimirCreator/Swift-Playgrounds#quiz)
-11. [Reverse Polish Notation](https://github.com/VladimirCreator/Swift-Playgrounds#reverse-polish-notation)
-12. [Selection Sort](https://github.com/VladimirCreator/Swift-Playgrounds#selection-sort)
-13. [Shade Explorer](https://github.com/VladimirCreator/Swift-Playgrounds#shade-explorer)
-14. [Text2Binary](https://github.com/VladimirCreator/Swift-Playgrounds#text2binary)
-15. [Тестовое задание №0](https://github.com/VladimirCreator/Swift-Playgrounds#%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-0)
+Vladimir’s Packages
+===================
 
-## Alphabet
-A tool to sort a list of words in alphabetical order.
+[![GitHub Pages](https://github.com/VladimirCreator/Packages/actions/workflows/github-pages.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/Packages/actions/workflows/github-pages.yaml)
 
-### Files
-1. [`./swift/alphabet/alphabet.swift`](./swift/alphabet/alphabet.swift)
-2. [`./swift/alphabet/UIAlphabetViewController.swift`](./swift/alphabet/UIAlphabetViewController.swift)
+## Description
+A collection of packages where I practice git, JavaScript, TypeScript, Swift, GitHub and even more!
 
-### Example
-![Alphabet.swift](./videos/alphabet.gif)
+## Overview
 
-## Binary Search
-A tool for searching an item in a collection.
+|№|Package|![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)|![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)|![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)|
+|:-:|:-|:-:|:-:|:-:|
+|1|[\_R\__ for a Comment](#_r__-for-a-comment)|✔️| | |
+|2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️|
+|3|[CRUD for a X](#crud-for-a-x)|✔️| | |
+|4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | |
+|5|[CV](#cv)| |✔️| |
+|5|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
+|6|[Just a Card](#just-a-card)| |✔️| |
+|7|[Just a Form](#just-a-form)| |✔️| |
+|8|[Shade Explorer](#shade-explorer)|✔️| | |
+|9|[X](#x)| |✔️| |
 
-### Files
-1. [`./swift/binary_search.swift`](./swift/binary_search.swift)
-
-### Example
-![Binary Search](./photos/binary_search.png)
-
-## Bubble Sort
-An algorithm for sorting a collection.
-
-### Files
-1. [`./swift/bubble_sort.swift`](./swift/bubble_sort.swift)
-
-### Example
-![Bubble Sort](./photos/bubble_sort.png)
-
-
-## CV
-`nil`
-
-### Files
-1. [`./html_css_js/cv/index.html`](./html_css_js/cv/index.html)
-
-### Example
-![CV](./videos/cv.gif)
-
-## Delegate
-`nil`
-
-### Files
-`nil`
-
-### Example
-![Delegate](./videos/delegate.gif)
-
-## Euclidean Algorithm
-### Files
-1. [`./swift/euclidean_algorithm.swift`](./swift/euclidean_algorithm.swift)
-
-### Example
-![Euclidean Algorithm](./photos/euclidean_algorithm.png)
-
-## GitHub Explorer
-A tool for viewing repositories on GitHub.
-
-### Files
-`nil`
-
-### Example
-![GitHub Explorer](./videos/github_explorer.gif)
-
-## KVO
-`nil`
-
-### Files
-1. [`./swift/kvo.swift`](./swift/kvo.swift)
-
-### Example
-![KVO](./photos/kvo.png)
-
-## Quick Sort
-An algorithm for sorting collections.
-
-### Files
-1. [`./swift/quick_sort.swift`](./swift/quick_sort.swift)
-
-### Example
-![Quick Sort](./photos/quick_sort.png)
-
-## Quiz
-`nil`
-
-### Files
-`nil`
+## \_R\__ for a Comment
 
 ### Quick Look
-![Quiz](./videos/quiz.gif)
 
-![Quiz Start Screen](./photos/quiz/quiz_startScreen.png)
-![Quiz Success Screen](./photos/quiz/quiz_successScreen.png)
-![Quiz Fail Screen](./photos/quiz/quiz_failScreen.png)
+[Give it a shot](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
 
-## Reverse Polish Notation
-A tool for solving expressions.
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-comment.gif)
 
-### Files
-1. [`./swift/reverse_polish_notation.swift`](./swift/reverse_polish_notation.swift)
+### Dependencies
+This package includes at least these dependencies:
 
-### Example
-![Reverse Polish Notation](./photos/reverse_polish_notation.png)
+- Vite
+- TypeScript
+- React
+- Redux Toolkit
+- Tailwind CSS
 
-## Selection Sort
-A tool for sorting collections.
+### Description
+Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где каждое сообщение включает в себя ① уникальный идентификатор, ② дату публикации, ③ автора, ④ содержимое и ⑤ список вложений[^1].
 
-### Files
-1. [`./swift/selection_sort.swift`](./swift/selection_sort.swift)
+[^1]: Данный список состоит из фотографий и видео.
 
-### Example
-![Selection Sort](./photos/selection_sort.png)
+Далее, тот же самый запрос отправляется каждые 5 секунд.
+
+Пакет предусматривает возможности интерактивного взаимодействия, а именно:
+
+- пометка сообщения как избранного
+
+> [!NOTE]
+> Сообщение, которое было помечено как избранное остаётся таким даже после того, как произошла перезагрузка страницы.
+
+- в случае, когда текстовое содержимое сообщения является слишком длинным , появляется кнопка "Далее", которая позволяет отобразить всё текстовое содержимое, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот
+
+> [!NOTE]
+> Длинное текстовое содержимое считается длинным, когда занимает более 3-ёх строк.
+
+- можно выбрать тег "новое" или "эксперт", но это не влияет на что-либо
+- загрузка старых сообщений при нажатии кнопки "Загрузить старые сообщения"
+- сортировка списка сообщений "от новых к старым" или "от старых к новым"
+
+## \_R\__ for a Hotel
+
+### Quick Look
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-hotel.mov)
+
+### Dependencies
+This package includes at least these dependencies:
+
+- SwiftUI
+
+### Description
+Данный пакет включает в себя 4 экрана:
+
+1. Экран со списком отелей
+1. Экран со списком номеров в отеле
+1. Экран с процессом бронирования
+1. Экран с подтверждённой оплатой
+
+#### Экран со списком отелей
+Появление данного экрана сопровождается GET-запросом к серверу, который возвращает список отелей, где каждый отель включает в себя информацию о своём ① идентификаторе, ② названии, ③ адресе, ④ цене, ⑤ информации о том, что включает в себя эта цена, ⑥ рейтинге, ⑦ описании рейтинга, ⑧ изображениями отеля, ⑨ описанием об отеле и ⑩ что включено. Изображения отеля можно листать.
+
+Далее, предоставляется возможность выбора определённого отеля с осуществлением перехода на [экран со списком номеров](#экран-со-списком-номеров-в-отеле) в нём.
+
+#### Экран со списком номеров в отеле
+Появление данного экрана сопровождается GET-запросом к серверу, который возвращает список номеров в выбранном отеле, где каждый номер содержит ① идентификатор, ② название, ③ цену, ④ что включает в себя цена, ⑤ что включает номер и ⑥ изображения. Изображения номера можно листать.
+
+Далее, предоставляется возможность выбора определённого номера в отеле с осуществлением перехода на [экран с процессом бронирования](#экран-с-процессом-бронирования).
+
+#### Экран с процессом бронирования
+Появление данного экрана сопровождается GET-запросом к серверу, который возвращает информацию, которая необходима для процесса принятия решения о бронировании желаемого номера. Эта информация включает в себя ① название отеля, ② адрес отеля, ③ рейтинг отеля, ④ описание рейтинга, ⑤ страну вылета, ⑥ страну прилёта, ⑦ дату начала тура, ⑧ дату конца тура, ⑨ количество ночей, ⑩ описание номера, ⑪ описание питания, ⑫ цену за тур, ⑬ топливный сбор и ⑭ сервисный сбор.
+
+Здесь происходит процесс заполнения информации о покупателе и туристах:
+
+- Требуемая информация о покупателе включает в себя ① номер телефона и ② почту.
+- Требуемая информация о туристе включает в себя ① имя, ② фамилию, ③ дату рождения, ④ гражданство, ⑤ номер заграничного паспорта и ⑥ его срок действия.
+
+> [!NOTE]
+> Стоит отметить, что нет ограничения на количество туристов и здесь есть возможность добавлять такое количество туристов, которое небходимо.
+
+После всех этих утомительных процедур происходит процесс оплаты нажатием кнопки “Оплатить” и осуществляется переход на [экран с подтверждённой оплатой](#экран-с-подтверждённой-оплатой).
+
+> [!NOTE]
+> Никакой оплаты на самом деле не происходит.
+
+#### Экран с подтверждённой оплатой
+Здорово! Это последний экран этого пакета.
+
+Единственное, что здесь можно сделать нажать кнопку “Супер!”, чтобы вернуться на [экран со списком отелей](#экран-со-списком-отелей).
+
+> [!NOTE]
+> Я считаю, что я реализовал это интересным способом, а именно способом передачи состояния через окружение.
+
+## CRUD for a X
+
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/crud-for-a-x/).
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/crud-for-a-x.gif)
+
+#### Desktop Landscape
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/windows-landscape.png)
+
+#### iPhone 6 Landscape
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6-landscape.png)
+
+#### iPhone 6 Portrait
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6-portrait.png)
+
+#### iPhone X Landscape
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX-landscape.png)
+
+#### iPhone X Portrait
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX-portrait.png)
+
+### Dependencies
+
+- Vite
+
+### Description
+
+
+## CRU_ for an Application
+
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/cru_-for-an-application.gif)
+
+### Description
+
+Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть ① идентификатор, ② название, ③ идентификатор политики, ④ поле `agent_js_config` и ⑤ поле `correlations_config`.
+
+Пакет предусматривает возможность интерактивного взаимодействия, а именно:
+
+- отправка нового приложения на сервер
+- изменение существующего приложения на сервере
+
+## CV[^2]
+### Quick Look
+[Take a look](https://vladimircreator.github.io/Packages/cv/).
+
+### Dependencies
+- Vite
+- TypeScript
+- Radix
+	- Avatar
+	- Dialog
+	- Slot
+- Tailwind CSS
+
+### Description
+Название этого пакета говорит само за себя.
+
+[^2]: This package is possible because of [this repository](https://github.com/BartoszJarocki/cv/tree/5c0a61989eb98cf0f240d5042ceda8457f2935f0).
+
+## Exam for December 2022
+
+### Quick Look
+
+[Give it a shot](https://vladimircreator.github.io/Packages/exam-for-december-2022/).
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/exam-for-december-2022.gif)
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-initial.png)
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-success.png)
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-fail.png)
+
+### Getting Started
+
+```bash
+$ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
+```
+
+## Just a Card
+[Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
+
+### Dependencies
+- Vite
+- TypeScript
+
+### Description
+
+
+## Just a Form
+[Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
+
+### Dependencies
+- Vite
+- React
+
+### Description
 
 ## Shade Explorer
-A game.
-
-### Files
-`nil`
-
-### Example
-![Shade Explorer](./videos/shade_explorer.gif)
-
-## Text2Binary
-A tool for converting texts to binaries.
-
-### Files
-1. [`./swift/text2binary.swift`](./swift/text2binary.swift)
-2. [`./swift/UIText2BinaryViewController.swift`](./swift/UIText2BinaryViewController.swift)
-
-### Example
-![Text2Binary](./videos/text2binary.gif)
-
-## Тестовое задание №0
-Описание.
-
-### Files
-1. [`./html_css_js/тестовое_задание_0/index.html`](./html_css_js/тестовое_задание_0/index.html)
 
 ### Quick Look
-![Тестовое задание №0](./videos/тестовое_задание_0.gif)
+
+[Give it a shot](https://vladimircreator.github.io/Packages/shade-explorer/).
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/shade-explorer.gif)
+
+## X
+
+### Quick Look
+[Give it a shot](https://vladimircreator.github.io/Packages/x/).
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
+
+### Dependencies
+- Vite
+- TypeScript
+- React
+- Redux Toolkit
+- Taildwind CSS
+
+## Changelog
+
+### Sat 8 Jul 2023 8:10 PM
+Rename this repository from Swift-Playgrounds to Playgrounds.
+
+### Sun 5 Nov 2023 9:27 PM
+Rename this repository from Playgrounds to gists.
+
+### Sun 10 Nov 2023 8:03 AM
+Rename this repository from gists to Packages.
+
+## License
+See [License](LICENSE).

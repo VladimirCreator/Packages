@@ -1,0 +1,16 @@
+{
+	"name": "crud-for-a-x", "private": true,
+	"license": "Apache-2.0",
+
+	"keywords": ["html","javascript","sass","vite"],
+
+	"scripts": {
+		"build:release": "vite build --base ./ --outDir .build"
+	},
+
+	"devDependencies": {
+		"vite": "^5.0.2",
+
+		"sass": "^1.69.5"
+	}
+}

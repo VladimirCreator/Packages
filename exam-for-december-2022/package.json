@@ -1,0 +1,17 @@
+{
+	"name": "exam-for-december-2022", "private": true,
+	"version": "?.?.?",
+	"license": "Apache-2.0",
+	"keywords": ["css","html","javascript","vite"],
+	"homepage": "https://github.com/VladimirCreator/Packages/",
+	"type": "module",
+
+	"scripts": {
+		"build:release": "vite build --base ./ --outDir .build"
+	},
+
+	"devDependencies": {
+		"vite": "^5.0.0", "@vitejs/plugin-legacy": "^5.1.0",
+		"@babel/plugin-proposal-do-expressions": "^7.23.3"
+	}
+}

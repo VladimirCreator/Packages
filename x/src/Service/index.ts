@@ -1,0 +1,1 @@
+export { useRootQuery } from './Record'

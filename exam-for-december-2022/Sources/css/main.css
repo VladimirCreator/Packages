@@ -1,0 +1,83 @@
+@import url('./globals.css');
+
+@keyframes scale-out {
+	from { font-size: 0.1em }
+	to { font-size: 1.25em }
+}
+
+@keyframes blink-correct {
+	from {
+		background: transparent
+	}
+	50% {
+		background: var(--light-correct-color)
+	}
+	to {
+		background: transparent
+	}
+}
+
+@keyframes blink-incorrect {
+	from {
+		background: transparent
+	}
+	50% {
+		background: var(--light-incorrect-color)
+	}
+	to {
+		background: transparent
+	}
+}
+
+body > article:first-child > main:last-child {
+	font-family: 'Rubik';
+
+	display: flex; flex-direction: column;
+	justify-content: center; align-items: center;
+	width: 100%; height: 100vh;
+
+	background: var(--light-background-color);
+}
+
+body > article:first-child > main:last-child > section:first-child:last-child { box-sizing: border-box;
+	width: 100%; max-width: 100%;
+
+	padding: 2.5rem 1.67rem;
+	border-top: solid 1px var(--light-gray-color); border-bottom: solid 1px var(--light-gray-color);
+
+	background: var(--light-white-color);
+}
+
+article:first-child > main:last-child > section:first-child > p:first-child {
+	font-size: 1.25em; line-height: 1.7rem;
+}
+article:first-child > main:last-child > section:first-child > p:first-child > em {
+	font-weight: 700;
+	animation: scale-out .75s ease forwards;
+}
+
+input[id=stdin] { box-sizing: border-box;
+	font: inherit; font-size: 1.25em;
+
+	position: absolute;
+	right: 0; bottom: 0; left: 0;
+
+	display: block;
+	width: 100%; max-width: 100%;
+	padding: 2.4rem 1.4rem;
+
+	border: none; border-top: solid 1px var(--light-gray-color);
+
+	color: var(--light-black-color); background: var(--light-white-color);
+	outline: none; appearance: none;
+}
+
+.correct {
+	background: var(--light-correct-color);
+	animation: blink-correct .75s ease;
+}
+
+.incorrect {
+	background: var(--light-incorrect-color);
+	animation: blink-incorrect .75s ease;
+}
