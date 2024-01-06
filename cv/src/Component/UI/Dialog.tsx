@@ -1,19 +1,15 @@
-/* Initially Modified at 12:19 AM on Sat 6 Jan 2024.
-        Last Modified at 12:43 AM on Sat 6 Jan 2024.
-*/
-import { HTMLAttributes, forwardRef } from 'react' // 4:34 AM Sat 6 Jan 2024
-import * as DialogPrimitive from '@radix-ui/react-dialog' /* 12:20 AM Sat 6 Jan 2024 */
+import { HTMLAttributes, forwardRef } from 'react'
+import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { ElementRef } from 'react'
-import { X } from 'lucide-react' // 4:35 AM Sat 6 Jan 2024
+import { X } from 'lucide-react'
 
-import { cn } from '../../helpers' // 4:32 AM Sat 6 Jan 2024
+import { cn } from '../../helpers'
 
-export const Dialog = DialogPrimitive.Root // Last Modified: 12:21 AM Sat 6 Jan 2024
-export const DialogTrigger = DialogPrimitive.Trigger // Last Modified: 12:22 AM Sat 6 Jan 2024
-export const DialogPortal = DialogPrimitive.Portal // Last Modified: 12:22 AM Sat 6 Jan 2024
-export const DialogClose = DialogPrimitive.Close // Last Modified: 12:22 AM Sat 6 Jan 2024
+export const Dialog = DialogPrimitive.Root
+export const DialogTrigger = DialogPrimitive.Trigger
+export const DialogPortal = DialogPrimitive.Portal
+export const DialogClose = DialogPrimitive.Close
 
-// Last Modified: 12:26 AM Sat 6 Jan 2024
 export const DialogOverlay = forwardRef<
 	ElementRef<typeof DialogPrimitive.Overlay>,
 	React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
@@ -26,7 +22,6 @@ export const DialogOverlay = forwardRef<
 )
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
-// Last Modified: 12:36 AM Sat 6 Jan 2024
 export const DialogContent = forwardRef<
 	ElementRef<typeof DialogPrimitive.Content>,
 	React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
@@ -48,7 +43,6 @@ export const DialogContent = forwardRef<
 )
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
-// Last Modified: 12:39 AM Sat 6 Jan 2024
 export const DialogHeader = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
 	<div	className={cn('flex flex-col space-y-1.5 text-center sm:text-left', className)}
 		{...props}
@@ -56,7 +50,6 @@ export const DialogHeader = ({ className, ...props }: HTMLAttributes<HTMLDivElem
 )
 DialogHeader.displayName = 'DialogHeader'
 
-// Last Modified: 12:39 AM Sat 6 Jan 2024
 export const DialogFooter = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
 	<div	className={cn('flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2', className)}
 		{...props}
@@ -64,7 +57,6 @@ export const DialogFooter = ({ className, ...props }: HTMLAttributes<HTMLDivElem
 )
 DialogFooter.displayName = 'DialogFooter'
 
-// Last Modified: 12:42 AM Sat 6 Jan 2024
 export const DialogTitle = forwardRef<
 	ElementRef<typeof DialogPrimitive.Title>, React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(
@@ -76,7 +68,6 @@ export const DialogTitle = forwardRef<
 )
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
-// Last Modified: 12:43 AM Sat 6 Jan 2024
 export const DialogDescription = forwardRef<
 	ElementRef<typeof DialogPrimitive.Description>,
 	React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>

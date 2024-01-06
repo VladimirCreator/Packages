@@ -1,7 +1,4 @@
-/* Initially Modified at 01:02 AM on Sat 6 Jan 2024.
-        Last Modified at 01:04 AM on Sat 6 Jan 2024.
-*/
-import { cn } from '../../helpers' // 4:18 AM Sat 6 Jan 2024
+import { cn } from '../../helpers'
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
 }

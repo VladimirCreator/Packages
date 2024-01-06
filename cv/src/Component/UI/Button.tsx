@@ -1,12 +1,9 @@
-/* Initially Modified at 08:25 PM on Fri 5 Jan 2024.
-        Last Modified at 08:38 PM on Fri 5 Jan 2024.
-*/
-import { forwardRef } from 'react' /* 08:35 PM Fri 5 Jan 2024 */
-import { Slot } from '@radix-ui/react-slot' /* 08:25 PM Fri 5 Jan 2024 */
-import { cva } from 'class-variance-authority' /* 08:27 PM Fri 5 Jan 2024 */
-import type { VariantProps } from 'class-variance-authority' /* 08:27 PM Fri 5 Jan 2024 */
+import { forwardRef } from 'react'
+import { Slot } from '@radix-ui/react-slot'
+import { cva } from 'class-variance-authority'
+import type { VariantProps } from 'class-variance-authority'
 
-import { cn } from '../../helpers' // 4:23 AM Sat 6 Jan 2024
+import { cn } from '../../helpers'
 
 export const variants = cva(
 	'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
-import * as AvatarPrimitive from '@radix-ui/react-avatar' // 4:21 AM Sat 6 Jan 2024
+import * as AvatarPrimitive from '@radix-ui/react-avatar'
 
-import { cn } from '../../helpers' // 4:22 AM Sat 6 Jan 2024
+import { cn } from '../../helpers'
 
 export const Avatar = forwardRef<
 	React.ElementRef<typeof AvatarPrimitive.Root>,

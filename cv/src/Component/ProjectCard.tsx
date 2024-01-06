@@ -1,8 +1,5 @@
-/* Initially Modified at 01:34 AM on Sat 6 Jan 2024.
-        Last Modified at 01:44 AM on Sat 6 Jan 2024.
-*/
-import { Badge } from './UI/Badge' // 01:35 AM on Sat 6 Jan 2024
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './UI/Card' // 01:35 AM on Sat 6 Jan 2024
+import { Badge } from './UI/Badge'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './UI/Card'
 
 type Props = {
 	title: string; description: string

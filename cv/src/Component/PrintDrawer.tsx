@@ -1,10 +1,7 @@
-/* Initially Modified at 01:26 AM on Sat 6 Jan 2024.
-        Last Modified at 01:33 AM on Sat 6 Jan 2024.
-*/
-import { PrinterIcon } from 'lucide-react' // 01:27 AM on Sat 6 Jan 2024
+import { PrinterIcon } from 'lucide-react'
 
-import { Button } from './UI/Button' // 01:27 AM on Sat 6 Jan 2024
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from './UI/Drawer' // 01:28 AM on Sat 6 Jan 2024
+import { Button } from './UI/Button'
+import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from './UI/Drawer'
 
 export const PrintDrawer: React.FC = () => (
 	<Drawer>

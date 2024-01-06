@@ -1,15 +1,11 @@
-/* Initially Modified at 11:47 PM on Fri 5 Jan 2024.
-        Last Modified at 12:17 AM on Sat 6 Jan 2024.
-*/
-import { forwardRef } from 'react' // 4:25 AM Sat 6 Jan 2024
-import { Command as CommandPrimitive } from 'cmdk' // 4:24 AM Sat 6 Jan 2024
-import { Search } from 'lucide-react' // 4:28 AM Sat 6 Jan 2024
-import type { DialogProps } from '@radix-ui/react-dialog' /* 11:48 PM Fri 5 Jan 2024 */
+import { forwardRef } from 'react'
+import { Command as CommandPrimitive } from 'cmdk'
+import { Search } from 'lucide-react'
+import type { DialogProps } from '@radix-ui/react-dialog'
 
-import { Dialog, DialogContent } from '../UI/Dialog' // 4:26 AM Sat 6 Jan 2024
-import { cn } from '../../helpers' // 4:25 AM Sat 6 Jan 2024
+import { Dialog, DialogContent } from '../UI/Dialog'
+import { cn } from '../../helpers'
 
-// Last Modified: 11:51 PM Fri 5 Jan 2024
 export const Command = forwardRef<
 	React.ElementRef<typeof CommandPrimitive>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -24,7 +20,6 @@ Command.displayName = CommandPrimitive.displayName
 
 interface CommandDialogProps extends DialogProps {}
 
-// Last Modified: 11:57 PM Fri 5 Jan 2024
 export const CommandDialog: React.FC<CommandDialogProps> = ({ children, ...props }) => (
 	<Dialog {...props}>
 		<DialogContent className='overflow-hidden p-0 shadow-lg'>
@@ -33,7 +28,6 @@ export const CommandDialog: React.FC<CommandDialogProps> = ({ children, ...props
 	</Dialog>
 )
 
-// Last Modified: 12:03 AM Sat 6 Jan 2024
 export const CommandInput = forwardRef<
 	React.ElementRef<typeof CommandPrimitive.Input>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
@@ -49,7 +43,6 @@ export const CommandInput = forwardRef<
 )
 CommandInput.displayName = CommandPrimitive.Input.displayName
 
-// Last Modified: 12:06 AM Sat 6 Jan 2024
 export const CommandList = forwardRef<
 	React.ElementRef<typeof CommandPrimitive.List>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>
@@ -62,7 +55,6 @@ export const CommandList = forwardRef<
 )
 CommandList.displayName = CommandPrimitive.List.displayName
 
-// Last Modified: 12:08 AM Sat 6 Jan 2024
 export const CommandEmpty = forwardRef<
 	React.ElementRef<typeof CommandPrimitive.Empty>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.Empty>
@@ -73,7 +65,6 @@ export const CommandEmpty = forwardRef<
 )
 CommandEmpty.displayName = CommandPrimitive.Empty.displayName
 
-// Last Modified: 12:11 AM Sat 6 Jan 2024
 export const CommandGroup = forwardRef<
 	React.ElementRef<typeof CommandPrimitive.Group>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>
@@ -86,7 +77,6 @@ export const CommandGroup = forwardRef<
 )
 CommandGroup.displayName = CommandPrimitive.Group.displayName
 
-// Last Modified: 12:11 AM Sat 6 Jan 2024
 export const CommandSeparator = forwardRef<
 	React.ElementRef<typeof CommandPrimitive.Separator>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>
@@ -97,7 +87,6 @@ export const CommandSeparator = forwardRef<
 )
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName
 
-// Last Modified: 12:14 AM Sat 6 Jan 2024
 export const CommandItem = forwardRef<
 	React.ElementRef<typeof CommandPrimitive.Item>,
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>
@@ -110,7 +99,6 @@ export const CommandItem = forwardRef<
 )
 CommandItem.displayName = CommandPrimitive.Item.displayName
 
-// Last Modified: 12:17 AM Sat 6 Jan 2024
 export const CommandShortcut = ({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) => (
 	<span className={cn('ml-auto text-xs tracking-widest text-muted-foreground', className)} {...props} />
 )
