@@ -1,4 +1,5 @@
-# Vladimir’s Packages
+Vladimir’s Packages
+===================
 
 [![GitHub Pages](https://github.com/VladimirCreator/Packages/actions/workflows/github-pages.yaml/badge.svg?event=workflow_dispatch)](https://github.com/VladimirCreator/Packages/actions/workflows/github-pages.yaml)
 
@@ -13,6 +14,7 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 |2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️|
 |3|[CRUD for a X](#crud-for-a-x)|✔️| | |
 |4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | |
+|5|[CV](#cv)| |✔️| |
 |5|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
 |6|[Just a Card](#just-a-card)| |✔️| |
 |7|[Just a Form](#just-a-form)| |✔️| |
@@ -163,6 +165,24 @@ This package includes at least these dependencies:
 
 - отправка нового приложения на сервер
 - изменение существующего приложения на сервере
+
+## CV[^2]
+### Quick Look
+[Take a look](https://vladimircreator.github.io/Packages/cv/).
+
+### Dependencies
+- Vite
+- TypeScript
+- Radix
+	- Avatar
+	- Dialog
+	- Slot
+- Tailwind CSS
+
+### Description
+Название этого пакета говорит само за себя.
+
+[^2]: This package is possible because of [this repository](https://github.com/BartoszJarocki/cv/tree/5c0a61989eb98cf0f240d5042ceda8457f2935f0).
 
 ## Exam for December 2022
 
