@@ -1,9 +1,15 @@
 {
-	"private": true,
+	"name": "cru_-for-an-application", "private": true,
+	"version": "?.?.?",
+	"author": {
+		"name": "Vladimir", "url": "https://github.com/VladimirCreator/"
+	},
+	"license": "Apache-2.0",
+
 	"keywords": ["bootstrap","html","javascript","vite"],
 
 	"scripts": {
-		"build:release": "vite build --base ./ --outDir .build"
+		"build": "vite build"
 	},
 
 	"dependencies": {
@@ -13,6 +19,7 @@
 		"vite": "^5.0.2",
 
 		"sass": "^1.69.5",
-		"autoprefixer": "^10.4.16", "postcss-loader": "^7.3.3"
+
+		"autoprefixer": "^10.4.16","postcss-loader": "^7.3.3"
 	}
 }

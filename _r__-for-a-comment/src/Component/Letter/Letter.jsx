@@ -3,19 +3,20 @@ import { Header } from './Header'
 import { Content } from './Content'
 import { Footer } from './Footer'
 import { Attachment } from './Attachment'
+/*
+import type { Props } from './Props'
+*/
 
-export const Letter = (props) => {
+export const Letter = props => {
 	const { letter, disclose, onClick } = props
+	const { date, content, attachments } = letter
 	return (
 		<article className='flex p-2.5 bg-white sm:shadow-xl cursor-default snap-center'>
-			<aside className='flex flex-col items-center mr-2.5'>
-				<Aside date={letter.date} />
-			</aside>
-
+			<Aside date={date} />
 			<section className='grow'>
 				<Header {...letter} />
-				<Content content={letter.content} disclose={disclose} onClick={onClick} />
-				<Attachment attachments={letter.attachments} />
+				<Content content={content} disclose={disclose} onClick={onClick} />
+				<Attachment attachments={attachments} />
 				<Footer />
 			</section>
 		</article>

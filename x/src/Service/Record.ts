@@ -1,9 +1,9 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react/'
 
-type Input = string
+type Input = undefined
 type Output = Array<unknown>
 
-const baseUrl = import.meta.env.VITE_URL
+const baseUrl = import.meta.env.VITE_API_URL ?? throw new Error()
 
 export const xApi = createApi({
 	reducerPath: 'xApi',
