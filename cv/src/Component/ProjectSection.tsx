@@ -1,8 +1,5 @@
-/* Initially Modified at 11:20 PM on Sat 6 Jan 2024
-        Last Modified at 11:27 PM on Sat 6 Jan 2024
-*/
-import { Section } from './UI/Section' // 11:26 PM Sat 6 Jan 2024
-import { ProjectCard } from './ProjectCard' // 11:25 PM Sat 6 Jan 2024
+import { Section } from './UI/Section'
+import { ProjectCard } from './ProjectCard'
 
 type Props = {
 	projects: any[]

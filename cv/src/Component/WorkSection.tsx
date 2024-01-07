@@ -1,9 +1,6 @@
-/* Initially Modified at 11:43 PM on Sat 6 Jan 2024
-        Last Modified at 11:52 PM on Sat 6 Jan 2024
-*/
-import { Section } from './UI/Section' // 11:43 PM Sat 6 Jan 2024
-import { Card, CardContent, CardHeader } from './UI/Card' // 11:44 PM Sat 6 Jan 2024
-import { Badge } from './UI/Badge' // 11:44 PM Sat 6 Jan 2024
+import { Section } from './UI/Section'
+import { Card, CardContent, CardHeader } from './UI/Card'
+import { Badge } from './UI/Badge'
 
 type Props = {
 	work: any[]

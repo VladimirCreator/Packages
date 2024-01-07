@@ -1,8 +1,5 @@
-/* Initially Modified at 11:34 PM on Sat 6 Jan 2024.
-        Last Modified at 11:40 PM on Sat 6 Jan 2024.
-*/
-import { Section } from './UI/Section' // 11:35 PM Sat 6 Jan 2024
-import { Card, CardHeader, CardContent } from './UI/Card' // 11:35 PM...11:36 PM Sat 6 Jan 2024
+import { Section } from './UI/Section'
+import { Card, CardHeader, CardContent } from './UI/Card'
 
 type Props = {
 	education: any[]
