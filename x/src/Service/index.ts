@@ -1,1 +1,1 @@
-export { useRootQuery } from './Record'
+export { useRootQuery, xApi } from './Record'

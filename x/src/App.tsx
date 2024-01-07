@@ -10,7 +10,7 @@ import { useRootQuery } from './Service/'
 
 export const App: React.FC = () => {
 	const [id, setId] = useState(0)
-	const { data = iShouldNotBeTrackedByGit, isLoading } = useRootQuery('')
+	const { data = iShouldNotBeTrackedByGit, isLoading } = useRootQuery()
 
 	const handleSelect = (id: number) => {
 		setId(id)

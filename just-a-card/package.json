@@ -1,31 +1,29 @@
 {
 	"name": "just-a-card", "private": true,
-	"author": {
-		"name": "Vladimir",
-		"url": "https://github.com/vladimircreator"
-	},
 	"version": "?.?.?",
-	"type": "module",
+	"author": {
+		"name": "Vladimir", "url": "https://github.com/VladimirCreator/"
+	},
+	"license": "Apache-2.0",
+
+	"keywords": ["react","sass","typescript","vite"],
 
 	"scripts": {
-		"build:release": "tsc && vite build --base ./ --outDir .build"
+		"build": "tsc && vite build"
 	},
 
 	"dependencies": {
 		"react": "^18.2.0", "react-dom": "^18.2.0"
 	},
-
 	"devDependencies": {
-		"vite": "^4.4.5", "@vitejs/plugin-react": "^4.0.3",
 		"typescript": "^5.0.2",
-		"@types/react": "^18.2.15", "@types/react-dom": "^18.2.7",
+
+		"vite": "^4.4.5", "@vitejs/plugin-react": "^4.0.3",
 
 		"sass": "^1.64.2",
 
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-react-refresh": "^0.4.3",
-		"eslint": "^8.45.0"
-	}
+		"@types/react": "^18.2.15", "@types/react-dom": "^18.2.7"
+	},
+
+	"type": "module"
 }

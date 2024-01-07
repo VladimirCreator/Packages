@@ -14,8 +14,8 @@ const rows = [
 	{super:2,id:7,title:'Чоризо феш',total:4,moniker:['доллар','долларов'],children:[20,21]},
 	{super:2,id:8,title:'Цыпленок крри',total:8,moniker:['доллар','долларов'],children:[22,23]},
 
-	{super:3,id:9,title:'WWDC 2',total:16,moniker:['доллар','долларов'],children:[24,25,26,27,28,29]},
-	{super:3,id:10,title:'WWDC 2',total:32,moniker:['доллар','долларов'],children:[30,31,32]},
+	{super:3,id:9,title:'WWDC 22',total:16,moniker:['доллар','долларов'],children:[24,25,26,27,28,29]},
+	{super:3,id:10,title:'WWDC 23',total:32,moniker:['доллар','долларов'],children:[30,31,32]},
 
 	{super:4,id:11,title:'Треугольник',total:180,moniker:['градус','градусов'],children:[33,34,35]},
 	{super:4,id:12,title:'Квадрат',total:360,moniker:['градус','градусов'],children:[36,37,38,39]},

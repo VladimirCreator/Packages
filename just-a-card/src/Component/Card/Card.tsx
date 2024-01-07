@@ -14,7 +14,7 @@ export const Card: React.FC<Props> = (props) => {
 			<Header price={price} title={title} description={description} imgHref={imgHref} />
 			<Selection colors={colors} />
 			<Toolbar />
-			<Footer href='#' />
+			<Footer imgHref='#' />
 		</article>
 	)
 }

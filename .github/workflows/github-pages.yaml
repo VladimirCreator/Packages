@@ -26,7 +26,7 @@ jobs:
           ref: ${{ inputs.ref }}
       - uses: actions/upload-artifact@v3 # It does not make sense to upload this repository as an artifact but I have to because I do not want my repository to be cloned as many times as this workflow needs.
         with:
-          # name: repo:VladimirCreator/Packages
+          name: repository
           path: .
           retention-days: 1
   build:
@@ -35,10 +35,14 @@ jobs:
     strategy:
       matrix:
         package: ${{ fromJSON(inputs.json) }}
+      fail-fast: false
+
     steps:
       - uses: actions/download-artifact@v2
+        with:
+          name: repository
       - uses: actions/setup-node@v3
-      - run: mkdir -p _site/${{ matrix.package.directory }}/
+      - run: mkdir -p _site/
 
       - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
         working-directory: ${{ matrix.package.directory }}
@@ -48,15 +52,28 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          path: _site/**/*
           name: ${{ matrix.package.directory }}
-  deploy:
-    runs-on: ubuntu-latest
+          path: _site/*
+
+  boilerplate:
     needs: build
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
         with:
-          path: _site/
+          path: .
+
+      - run: tar --exclude='./repository' -cf artifact.tar ./*
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: github-pages
+          path: ./artifact.tar
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: boilerplate
+    steps:
       - uses: actions/deploy-pages@v2
 
     permissions:

@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react'
 
-export const Content = (props) => {
+export const Content = props => {
 	const { content, disclose, onClick } = props
 
 	const detailRef = useRef(null)
-	const paragraphRef= useRef(null)
+	const paragraphRef = useRef(null)
 
 	const resizeEffect = () => {
 		const [detail, p] = [detailRef.current, paragraphRef.current]

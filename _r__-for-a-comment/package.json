@@ -1,41 +1,29 @@
 {
 	"name": "_r__-for-a-comment", "private": true,
-	"version": "0.?.?",
-	"homepage": "https://vladimircreator.github.io/Packages/_r__-for-a-comment/",
+	"version": "?.?.?",
+	"author": {
+		"name": "Vladimir", "url": "https://github.com/VladimirCreator/"
+	},
 
 	"scripts": {
-		"build": "react-scripts build"
+		"build": "vite build --base ./ --outDir .build"
 	},
 
 	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^6.4.0",
-		"@fortawesome/free-regular-svg-icons": "^6.4.0",
-		"@fortawesome/free-solid-svg-icons": "^6.4.0",
-		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@heroicons/react": "^2.0.18",
-		"@reduxjs/toolkit": "^1.9.5",
-		"@testing-library/jest-dom": "^5.16.5",
-		"@testing-library/react": "^13.4.0",
-		"@testing-library/user-event": "^13.5.0",
 		"react": "^18.2.0", "react-dom": "^18.2.0",
 		"react-redux": "^8.1.1",
+		"@reduxjs/toolkit": "^1.9.5",
 
-		"react-scripts": "^5.0.1",
-		"web-vitals": "^2.1.4"
+		"@fortawesome/fontawesome-svg-core": "^6.4.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@fortawesome/free-regular-svg-icons": "^6.4.0", "@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@heroicons/react": "^2.0.18"
 	},
-	"eslintConfig": {
-		"extends": [
-			"react-app", "react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [">0.2%", "not dead", "not op_mini all"],
-		"development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
-	},
-
 	"devDependencies": {
-		"tailwindcss": "^3.3.2",
+		"typescript": "^5.3.2",
+		"vite": "^5.0.4", "@vitejs/plugin-react": "^4.2.0",
+		"eslint": "^8.55.0",
 
-		"prettier": "^2.8.8", "prettier-plugin-tailwindcss": "^0.3.0"
+		"tailwindcss": "^3.3.2", "autoprefixer": "^10.4.16", "postcss": "^8.4.31"
 	}
 }

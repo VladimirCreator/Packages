@@ -30,12 +30,11 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-comment.gif)
 
 ### Dependencies
-This package includes at least these dependencies:
 
 - Vite
 - TypeScript
 - React
-- Redux Toolkit
+- Redux
 - Tailwind CSS
 
 ### Description
@@ -145,6 +144,7 @@ This package includes at least these dependencies:
 ### Dependencies
 
 - Vite
+- SASS
 
 ### Description
 
@@ -156,6 +156,12 @@ This package includes at least these dependencies:
 [Give it a shot](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
 
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/cru_-for-an-application.gif)
+
+### Dependencies
+
+- Vite
+- SASS
+- Bootstrap
 
 ### Description
 
@@ -198,6 +204,10 @@ This package includes at least these dependencies:
 
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-fail.png)
 
+### Dependencies
+
+- Vite
+
 ### Getting Started
 
 ```bash
@@ -208,8 +218,11 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 [Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
 ### Dependencies
+
 - Vite
 - TypeScript
+- React
+- SASS
 
 ### Description
 
@@ -218,6 +231,7 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 [Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
 
 ### Dependencies
+
 - Vite
 - React
 
@@ -231,6 +245,8 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/shade-explorer.gif)
 
+### Dependencies
+
 ## X
 
 ### Quick Look
@@ -239,11 +255,12 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
 
 ### Dependencies
+
 - Vite
 - TypeScript
 - React
-- Redux Toolkit
-- Taildwind CSS
+- Redux
+- Tailwind CSS
 
 ## Changelog
 
