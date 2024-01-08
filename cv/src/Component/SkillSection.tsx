@@ -1,12 +1,12 @@
 import { Badge } from './UI/Badge'
-import { Card, CardContent, CardHeader } from './UI/Card' // 4:51 AM Mon 8 Jan 2024
+import { Card, CardContent, CardHeader } from './UI/Card'
 import { Section } from './UI/Section'
 
 type Props = {
 	skills: any[] | any
 }
 
-function format(key: string): string { // Mon 8 Jan 2024 4:39 AM...4:45 AM
+function format(key: string): string {
 	const getFirstCharacter = (string: string): string => string.charAt(0)
 
 	return key.split('-')
@@ -21,9 +21,7 @@ export const SkillSection: React.FC<Props> = props => {
 
 	if (Array.isArray(skills)) {
 		const badges = skills.map(
-			(skill: any) => (
-				<Badge key={skill} children={skill} />
-			)
+			(skill: any) => (<Badge key={skill} children={skill} />)
 		)
 		return (
 			<Section>
@@ -40,19 +38,21 @@ export const SkillSection: React.FC<Props> = props => {
 					<h3 className='font-semibold leading-none' children={format(key)} />
 				</CardHeader>
 				<CardContent className='mt-2' children={
-					skills[key].map(
-						(skill: any) => (
-							<Badge key={skill} children={skill} />
-						)
-					)
+					<div className='flex flex-wrap gap-1'>
+						{
+							skills[key].map(
+								(skill: any) => (<Badge key={skill} children={skill} />)
+							)
+						}
+					</div>
 				} />
 			</Card>
 		)
 	)
 	return (
 		<Section>
-				<h2 className='font-bold text-xl'>Skills</h2>
-				<div className='flex flex-wrap gap-1' children={listOfSkills} />
-			</Section>
+			<h2 className='font-bold text-xl'>Skills</h2>
+			{listOfSkills}
+		</Section>
 	)
 }

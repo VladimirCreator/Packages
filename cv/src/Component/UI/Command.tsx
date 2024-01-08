@@ -22,7 +22,7 @@ interface CommandDialogProps extends DialogProps {}
 
 export const CommandDialog: React.FC<CommandDialogProps> = ({ children, ...props }) => (
 	<Dialog {...props}>
-		<DialogContent className='overflow-hidden p-0 shadow-lg'>
+		<DialogContent className='p-0 overflow-hidden shadow-lg'>
 			<Command className='[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]]:not([hidden])_~[cmdk-group]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:w-5 [&_[cmdk-item]_svg]:h-5' children={children} />
 		</DialogContent>
 	</Dialog>
@@ -33,7 +33,7 @@ export const CommandInput = forwardRef<
 	React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 >(
 	({ className, ...props }, ref) => (
-		<div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
+		<div className='flex items-center px-3 border-b' cmdk-input-wrapper=''>
 			<Search className='size-4 mr-2 shrink-0 opacity-50' />
 			<CommandPrimitive.Input ref={ref} className={cn('flex w-full h-11 rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50', className)}
 				{...props}

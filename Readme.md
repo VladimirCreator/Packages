@@ -14,7 +14,7 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 |2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️|
 |3|[CRUD for a X](#crud-for-a-x)|✔️| | |
 |4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | |
-|5|[CV](#cv)| |✔️| |
+|5|[CV](#cv2)| |✔️| |
 |6|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
 |7|[Just a Card](#just-a-card)| |✔️| |
 |8|[Just a Form](#just-a-form)| |✔️| |
@@ -27,7 +27,7 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 [Give it a shot](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-comment.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-comment.gif)
 
 ### Dependencies
 
@@ -64,7 +64,9 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 ### Quick Look
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/_r__-for-a-hotel.mov)
+[Take a look](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-hotel.mov)
+
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-hotel.mov)
 
 ### Dependencies
 This package includes at least these dependencies:
@@ -119,27 +121,27 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/crud-for-a-x/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/crud-for-a-x.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/crud-for-a-x.gif)
 
 #### Desktop Landscape
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/windows-landscape.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/crud-for-a-x/windows-landscape.png)
 
 #### iPhone 6 Landscape
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6-landscape.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/crud-for-a-x/iPhone6-landscape.png)
 
 #### iPhone 6 Portrait
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhone6-portrait.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/crud-for-a-x/iPhone6-portrait.png)
 
 #### iPhone X Landscape
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX-landscape.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/crud-for-a-x/iPhoneX-landscape.png)
 
 #### iPhone X Portrait
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/crud-for-a-x/iPhoneX-portrait.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/crud-for-a-x/iPhoneX-portrait.png)
 
 ### Dependencies
 
@@ -155,7 +157,7 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/cru_-for-an-application.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/cru_-for-an-application.gif)
 
 ### Dependencies
 
@@ -196,13 +198,13 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/exam-for-december-2022/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/exam-for-december-2022.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/exam-for-december-2022.gif)
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-initial.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/exam-for-december-2022/-initial.png)
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-success.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/exam-for-december-2022/-success.png)
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/png/exam-for-december-2022/-fail.png)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/static/exam-for-december-2022/-fail.png)
 
 ### Dependencies
 
@@ -243,7 +245,7 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 
 [Give it a shot](https://vladimircreator.github.io/Packages/shade-explorer/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/shade-explorer.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/shade-explorer.gif)
 
 ### Dependencies
 
@@ -252,7 +254,7 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 ### Quick Look
 [Give it a shot](https://vladimircreator.github.io/Packages/x/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/gif/x.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/x.gif)
 
 ### Dependencies
 

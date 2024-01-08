@@ -1,4 +1,4 @@
-import { useEffect , useState } from 'react' //
+import { useEffect , useState } from 'react'
 import { CommandIcon } from 'lucide-react'
 
 import { Button } from './UI/Button'
