@@ -1,12 +1,15 @@
-type Props = {
+type Data = {
 	text: string
 }
 
-export const TrailingComponent: React.FC<Props> = ({ text }) => (
+type Props = Data
+
+export const TrailingComponent: React.FC<Props> = props => (
 	<p className='text-neutral-400
+		group-active:text-white
+		group-active:dark:text-black
 		ml-2
-		group-active:text-white group-active:dark:text-black
 	'
-		children={text}
+		children={props.text}
 	/>
 )

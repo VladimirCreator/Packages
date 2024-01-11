@@ -1,6 +1,6 @@
-import { Section } from './UI/Section'
-import { Card, CardContent, CardHeader } from './UI/Card'
-import { Badge } from './UI/Badge'
+import { Badge } from './UI/'
+import { Card, CardContent, CardHeader } from './UI/'
+import { Section } from './UI/'
 
 type Props = {
 	work: any[]
@@ -21,27 +21,32 @@ export const WorkSection: React.FC<Props> = props => {
 		)
 	)
 	const listOfWork = work.map(
-		(work: any) => (
-			<Card key={work.company}>
-				<CardHeader>
-					<div className='text-base flex items-center justify-between gap-x-2'>
-						<h3 className='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
-							<a className='hover:underline' href={work.link} children={work.company} />
-							<span className='inline-flex gap-x-1' children={listOfBadges} />
-						</h3>
-						<div className='text-sm text-gray-500 tabular-nums'>
-							{work.start} - {work.end}
+		(work: any) => {
+			const { company, link, start, end, title, description } = work
+			return (
+				<Card key={company}>
+					<CardHeader>
+						<div className='text-base flex items-center justify-between gap-x-2'>
+							<h3 className='inline-flex items-center justify-center gap-x-1 font-semibold leading-none'>
+								<a className='hover:underline' href={link} children={company} />
+								<span className='inline-flex gap-x-1' children={listOfBadges} />
+							</h3>
+							<div className='text-sm text-gray-500 tabular-nums'>
+								{start} - {end}
+							</div>
 						</div>
-					</div>
-					<h4 className='font-mono text-sm leading-none' children={work.title} />
-				</CardHeader>
-				<CardContent className='text-xs mt-2' children={work.description} />
-			</Card>
-		)
+						<h4 className='font-mono text-sm leading-none' children={title} />
+					</CardHeader>
+					<CardContent className='text-xs mt-2' children={description} />
+				</Card>
+			)
+		}
 	)
 	return (
 		<Section>
-			<h2 className='font-bold text-xl'>Work Experience</h2>
+			<h2 className='font-bold text-xl'>
+				Work Experience
+			</h2>
 			{listOfWork}
 		</Section>
 	)

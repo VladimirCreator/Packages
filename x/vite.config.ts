@@ -9,7 +9,7 @@ const config: UserConfig = {
 		outDir: '.build'
 	},
 	esbuild: {
-		jsxInject: 'import React from "react"'
+		jsxInject: 'import React from \'react\''
 	},
 	plugins: [
 		react()

@@ -1,0 +1,6 @@
+export { CommandMenu } from './CommandMenu'
+export { EducationSection } from './EducationSection'
+export { Header } from './Header'
+export { ProjectSection } from './ProjectSection'
+export { SkillSection } from './SkillSection'
+export { WorkSection } from './WorkSection'

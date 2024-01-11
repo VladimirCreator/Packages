@@ -1,29 +1,23 @@
 import { useState } from 'react'
 
-import { List } from './Component/List/List'
+import { useApiQuery } from './Service'
+import { List } from './Component/List/'
 import { Loading } from './Component/Loading'
 
-import { DataContext } from './Context/DataContext'
-import { iShouldNotBeTrackedByGit } from './iShouldNotBeTrackedByGit'
-
-import { useRootQuery } from './Service/'
-
 export const App: React.FC = () => {
-	const [id, setId] = useState(0)
-	const { data = iShouldNotBeTrackedByGit, isLoading } = useRootQuery()
+	const [identifier, setIdentifier] = useState(0)
+	const { isLoading } = useApiQuery()
 
-	const handleSelect = (id: number) => {
-		setId(id)
-	}
+	const handleSelect = (identifier: number) => setIdentifier(identifier)
 
-	if (isLoading)
-		return <Loading />
-	else
+	if (isLoading) {
 		return (
-			<DataContext.Provider value={data}
-				children={
-					<List id={id} onClick={handleSelect} />
-				}
-			/>
+			<Loading children='@vladimircreator' />
 		)
+	}
+	else {
+		return (
+			<List id={identifier} onSelectRow={handleSelect} />
+		)
+	}
 }

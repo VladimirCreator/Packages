@@ -1,5 +1,3 @@
-/* Imported at 11:00 AM on Mon 8 Jan 2024.
-*/
 let subpaths = FileManager.default.subpaths(atPath: ".") ?? []
 
 /* A file _does not have to_ include a line ~~ending with a space character~~!

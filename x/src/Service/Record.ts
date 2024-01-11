@@ -1,16 +1,21 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react/'
+import {
+	createApi,
+	fetchBaseQuery
+} from '@reduxjs/toolkit/query/react/'
 
-type Input = undefined
-type Output = Array<unknown>
+type Input = void
+type Output = unknown[]
 
-const baseUrl = import.meta.env.VITE_API_URL ?? throw new Error()
+const baseUrl = import.meta.env.VITE_X_API_BASE_URL
 
 export const xApi = createApi({
 	reducerPath: 'xApi',
 	baseQuery: fetchBaseQuery({ baseUrl }),
 	endpoints: builder => ({
-		root: builder.query<Output, Input>({ query: () => `` })
+		api: builder.query<Output, Input>({
+			query: () => ''
+		})
 	})
 })
 
-export const { useRootQuery } = xApi
+export const { useApiQuery } = xApi

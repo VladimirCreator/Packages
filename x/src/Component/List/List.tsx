@@ -1,21 +1,24 @@
-import { useContext } from 'react'
 import * as Accordion from '@radix-ui/react-accordion'
 
+import { useApiQuery } from '../../Service'
 import { Header } from './Header'
 import { Section } from '../Section'
 
-import { DataContext } from '../../Context/DataContext'
-
-type Props = {
-	id: number,
-	onClick: any
+type Data = {
+	id: number
 }
 
-export const List: React.FC<Props> = (props) => {
-	const { id, onClick } = props
+type Delegate = {
+	onSelectRow: (...args: any[]) => void
+}
 
-	const all = useContext<any>(DataContext)
-	const node = useContext<any>(DataContext).at(id)
+type Props = Data & Delegate
+
+export const List: React.FC<Props> = props => {
+	const { id, onSelectRow } = props
+
+	const { data: all }: any = useApiQuery()
+	const node = all.at(id)
 
 	const defaultValue = [id.toString()]
 
@@ -46,7 +49,7 @@ export const List: React.FC<Props> = (props) => {
 	}
 
 	return (
-		<Accordion.Root className='space-y-4' defaultValue={defaultValue} type={'multiple'}>
+		<Accordion.Root className='space-y-4' defaultValue={defaultValue} type='multiple'>
 			<Header title={node.title} hsl={node.hsl} />
 			{
 				node.children.map(
@@ -56,12 +59,16 @@ export const List: React.FC<Props> = (props) => {
 							onLengthCallback={onLengthCallback}
 							onLabelCallback={onLabelCallback}
 							onSecondaryLabelCallback={onSecondaryLabelCallback}
-							onClick={onClick}
+							onClick={() => {}}
 						/>
 					)
 				)
 			}
-			<button onClick={() => onClick(node.super)} disabled={id === 0}>Вернуться</button>
+			<button disabled={id === 0}
+				onClick={() => onSelectRow(node.super)}
+			>
+				Вернуться
+			</button>
 		</Accordion.Root>
 	)
 }

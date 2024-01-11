@@ -1,16 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
 import { Provider } from 'react-redux'
 
 import './main.css'
 import { App } from './App'
-import { store } from './Redux'
+import { store } from './Redux/'
 
-const main: HTMLElement = document.querySelector('main#root')!
-const root = createRoot(main)
+const main = document.querySelector('main#root') as HTMLElement|undefined
+const root = main ? ReactDOM.createRoot(main) : undefined
 
-const app = React.createElement(App)
-const provider = React.createElement(Provider, { store }, app)
-const strictMode = React.createElement(StrictMode, null, provider)
-
-root.render(strictMode)
+root?.render(
+	React.createElement(
+		React.StrictMode, null,
+		React.createElement(
+			Provider, { store, children: React.createElement(App) }
+		)
+	)
+)
