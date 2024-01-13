@@ -65,4 +65,4 @@ jobs:
 
   deploy:
     needs: boilerplate
-    uses: ${{ github.repository }}/.github/workflows/deploy.yaml@master
+    uses: ./.github/workflows/deploy.yaml
