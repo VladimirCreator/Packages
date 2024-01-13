@@ -66,3 +66,6 @@ jobs:
   deploy:
     needs: boilerplate
     uses: ./.github/workflows/deploy.yaml
+    permissions:
+      id-token: write
+      pages: write

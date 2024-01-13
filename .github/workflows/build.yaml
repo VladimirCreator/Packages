@@ -31,4 +31,7 @@ jobs:
 
   deploy:
     needs: build
-    uses: ${{ github.repository }}/.github/workflows/deploy.yaml@master
+    uses: ./.github/workflows/deploy.yaml
+    permissions:
+      id-token: write
+      pages: write
