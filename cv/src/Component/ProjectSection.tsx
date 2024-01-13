@@ -1,4 +1,4 @@
-import { compact } from 'lodash-es'
+import compact from 'lodash-es/compact'
 
 import { Section } from './UI/'
 import { ProjectCard } from './ProjectCard'

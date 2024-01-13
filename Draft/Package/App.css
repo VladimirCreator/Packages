@@ -1,0 +1,36 @@
+div {
+	position: relative;
+}
+
+h1 {
+	font-size: 30rem;
+	line-height: 1em;
+}
+
+p {
+	position: absolute;
+	right: 0; bottom: -1em; left: 0;
+	width: max-content;
+
+	font-size: 4.7rem;
+	font-weight: normal;
+	text-align: center;
+}
+
+span {
+	display: inline-block;
+
+	color: #707070FF;
+
+	transition: all 250ms ease-out;
+	transform: translateY(0%);
+}
+
+span.selected {
+	color: inherit;
+}
+
+span.completed {
+	opacity: 20%;
+	transform: translateY(100%);
+}
