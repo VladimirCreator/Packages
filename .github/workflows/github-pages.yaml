@@ -50,6 +50,7 @@ jobs:
           path: _site/*
 
   boilerplate:
+    if: ${{ always() }}
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -57,12 +58,12 @@ jobs:
         with:
           path: .
 
-      - run: tar --exclude='./repository' -cf artifact.tar ./*
+      - run: tar --exclude='./shared' -cf artifact.tar ./*
 
       - uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./artifact.tar
+          path: artifact.tar
 
   deploy:
     needs: boilerplate
