@@ -18,7 +18,7 @@ export const List: React.FC<Props> = props => {
 	const { id, onSelectRow } = props
 
 	const { data: all }: any = useApiQuery()
-	const node = all.at(id)
+	const node = all?.at(id)
 
 	const defaultValue = [id.toString()]
 

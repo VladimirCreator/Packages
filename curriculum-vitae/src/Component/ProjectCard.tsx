@@ -1,5 +1,5 @@
-import { Badge } from './UI/'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './UI/'
+import { Badge } from './UI'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './UI'
 
 type Props = {
 	title: string; description: string

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { CommandIcon } from 'lucide-react'
 
-import { Button } from './UI/'
-import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from './UI/'
+import { Button } from './UI'
+import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from './UI'
 
 type Props = {
 	links: {

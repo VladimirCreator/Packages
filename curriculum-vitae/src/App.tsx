@@ -1,5 +1,5 @@
-import { Section } from './Component/UI/'
-import { CommandMenu, EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component/'
+import { Section } from './Component/UI'
+import { CommandMenu, EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component'
 
 const RESUME: any = JSON.parse(import.meta.env.VITE_DATA ?? '{}')
 

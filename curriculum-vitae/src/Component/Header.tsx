@@ -1,7 +1,7 @@
 import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
 
-import { Avatar, AvatarFallback, AvatarImage } from './UI/'
-import { Button } from './UI/'
+import { Avatar, AvatarFallback, AvatarImage } from './UI'
+import { Button } from './UI'
 
 type Props = {
 	name: string, initials: string

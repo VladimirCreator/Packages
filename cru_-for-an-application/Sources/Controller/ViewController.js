@@ -110,12 +110,12 @@ export class ViewController {
 
 	// MARK: ...
 
-	/** @type {UIViewController|undefined} */
+	/** @type {ViewController|undefined} */
 	static #shared
 	static get shared() {
-		if (typeof UIViewController.#shared === 'undefined') {
-			UIViewController.#shared = new UIViewController(false)
+		if (typeof ViewController.#shared === 'undefined') {
+			ViewController.#shared = new ViewController(false)
 		}
-		return UIViewController.#shared
+		return ViewController.#shared
 	}
 }

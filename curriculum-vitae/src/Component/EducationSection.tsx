@@ -1,5 +1,5 @@
-import { Section } from './UI/'
-import { Card, CardHeader, CardContent } from './UI/'
+import { Section } from './UI'
+import { Card, CardHeader, CardContent } from './UI'
 
 type Props = {
 	education: any[]

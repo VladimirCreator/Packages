@@ -25,7 +25,7 @@ export const Section: React.FC<Props> = props => {
 	} = props
 
 	const { data: all }: any = useApiQuery()
-	const node = all.at(identifier)
+	const node = all?.at(identifier)
 	const hasChildren = node.children.length !== 0
 
 	const rows = node.children.map(

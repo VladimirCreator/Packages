@@ -30,7 +30,7 @@ export const Row: React.FC<Props> = props => {
 		onClick
 	} = props
 	const { data: all }: any = useApiQuery()
-	const { super: pIdentifier, title } = all.at(identifier)
+	const { super: pIdentifier, title } = all?.at(identifier)
 
 	const subtitle = onSecondaryLabelCallback(identifier)
 	const text = `${onLengthCallback(identifier)} ${onLabelCallback(identifier)}`
