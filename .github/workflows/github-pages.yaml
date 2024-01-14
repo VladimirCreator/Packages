@@ -17,7 +17,7 @@ jobs:
 
     steps:
       # 4:34 PM...4:41 PM Sun 14 Jan 2024
-      - run: echo -e "value=${{ join(fromJson(inputs.json).*.directory, '\n') }}" | sed 's/_/\\_/g' >> "$GITHUB_OUTPUT"
+      - run: echo -e "value=${{ join(fromJson(inputs.json).*.directory, '\n') }}" | sed 's/_/\\_/g' | sed 's/-/\\-/g' >> "$GITHUB_OUTPUT"
         id: interpolate
 
   checkout:
