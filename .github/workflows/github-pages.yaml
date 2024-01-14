@@ -18,7 +18,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: shared
-          path: ${{ format('**/*{{0}\}/**/*', join(fromJson(inputs.json).*.directory, ',')) }}
+          path: |
+            **/*
+            !**/script/**/*
           retention-days: 1
 
   build:
