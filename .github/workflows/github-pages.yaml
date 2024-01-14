@@ -14,8 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: |
-            ${{ join(fromJson(inputs.json).*.directory, '\n') }}
+          sparse-checkout: ${{ join(fromJson(inputs.json).*.directory, ' ') }}
       - uses: actions/upload-artifact@v4 # It does not make sense to upload this repository as an artifact but I have to because I do not want it to be cloned as many times as the next job needs.
         with:
           name: shared
