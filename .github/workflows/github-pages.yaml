@@ -1,36 +1,30 @@
 name: GitHub Pages
 run-name: ${{ github.actor }} ran GitHub Pages
+
 on:
   workflow_dispatch:
     inputs:
       json:
         required: true
         type: string
-      runs-on:
-        required: false
-        type: choice
-        default: ubuntu-latest
-        options:
-          - ubuntu-latest
-          - windows-latest
-      ref:
-        required: true
-        type: string
-        default: master
+
 jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # It does not make sense to upload this repository as an artifact but I have to because I do not want it to be cloned as many times as the next job needs.
+      - uses: actions/upload-artifact@v4
         with:
-          ref: ${{ inputs.ref }}
-      - uses: actions/upload-artifact@v3 # It does not make sense to upload this repository as an artifact but I have to because I do not want my repository to be cloned as many times as this workflow needs.
-        with:
-          name: repository
-          path: .
+          name: shared
+          path: |
+            **/*
+            !**/script/**/*
           retention-days: 1
+
   build:
-    runs-on: ${{ inputs.runs-on }}
+    runs-on: ubuntu-latest
     needs: checkout
     strategy:
       matrix:
@@ -38,10 +32,10 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
-          name: repository
-      - uses: actions/setup-node@v3
+          name: shared
+      - uses: actions/setup-node@v4
       - run: mkdir -p _site/
 
       - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
@@ -50,32 +44,30 @@ jobs:
         working-directory: ${{ matrix.package.directory }}
       - run: ${{ matrix.package.postbuild }} # For example: mv directory/.build/* _site/directory/
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.package.directory }}
           path: _site/*
 
   boilerplate:
+    if: ${{ always() }}
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           path: .
 
-      - run: tar --exclude='./repository' -cf artifact.tar ./*
+      - run: tar --exclude='./shared' -cf artifact.tar ./*
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./artifact.tar
+          path: artifact.tar
 
   deploy:
-    runs-on: ubuntu-latest
     needs: boilerplate
-    steps:
-      - uses: actions/deploy-pages@v2
-
+    uses: ./.github/workflows/deploy.yaml
     permissions:
       id-token: write
       pages: write

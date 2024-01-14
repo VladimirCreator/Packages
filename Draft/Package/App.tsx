@@ -1,6 +1,3 @@
-/* Imported at 11:52 PM on Thu 11 Jan 2024.<continue>I do not know what it will become but I created this at ??:?? PM on Thu 11 Jan 2024.
-*/
-
 import React, { useRef, useState, useEffect } from 'react'
 
 import './App.css'
@@ -116,67 +113,4 @@ export const App = () => {
 			</div>
 		</>
 	)
-}
-
-div {
-	position: relative;
-}
-
-h1 {
-	font-size: 30rem;
-	line-height: 1em;
-}
-
-p {
-	position: absolute;
-	right: 0; bottom: -1em; left: 0;
-	width: max-content;
-
-	font-size: 4.7rem;
-	font-weight: normal;
-	text-align: center;
-}
-
-span {
-	display: inline-block;
-
-	color: #707070FF;
-
-	transition: all 250ms ease-out;
-	transform: translateY(0%);
-}
-
-span.selected {
-	color: inherit;
-}
-
-span.completed {
-	opacity: 20%;
-
-	transform: translateY(100%);
-}
-
-html, body {
-	height: 100%;
-}
-
-body {
-	font-size: 16px;
-	font-family: 'JetBrains Mono', monospace;
-	color: #FFFFFFFF;
-	user-select: none;
-}
-
-body, h1, p {
-	margin: 0;
-}
-
-main {
-	display: flex;
-	justify-content: center; align-items: center;
-	height: 100%;
-
-	background: #000000FF;
-
-	overflow: hidden;
 }

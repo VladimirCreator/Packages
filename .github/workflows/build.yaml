@@ -30,11 +30,8 @@ jobs:
         working-directory: ${{ inputs.package }}
 
   deploy:
-    runs-on: ubuntu-latest
     needs: build
-    steps:
-      - uses: actions/deploy-pages@v2
-
+    uses: ./.github/workflows/deploy.yaml
     permissions:
       id-token: write
       pages: write

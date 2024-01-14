@@ -6,20 +6,25 @@ Vladimir’s Packages
 ## Description
 A collection of packages where I practice git, JavaScript, TypeScript, Swift, GitHub and even more!
 
+### Topics
+<span>swift</span>
+<span>typescript</span>
+<span>javascript</span>
+
 ## Overview
 
-|№|Package|![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)|![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)|![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)|
-|:-:|:-|:-:|:-:|:-:|
-|1|[\_R\__ for a Comment](#_r__-for-a-comment)|✔️| | |
-|2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️|
-|3|[CRUD for a X](#crud-for-a-x)|✔️| | |
-|4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | |
-|5|[CV](#cv2)| |✔️| |
-|6|[Exam for December 2022](#exam-for-december-2022)|✔️| | |
-|7|[Just a Card](#just-a-card)| |✔️| |
-|8|[Just a Form](#just-a-form)| |✔️| |
-|9|[Shade Explorer](#shade-explorer)|✔️| | |
-|10|[X](#x)| |✔️| |
+|№|Package|![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)|![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)|![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)|![](https://img.shields.io/badge/purescript-14161a?style=for-the-badge&logo=purescript&logoColor=white)|
+|:-:|:-|:-:|:-:|:-:|:-:|
+|1|[\_R\__ for a Comment](#_r__-for-a-comment)|✔️| | | |
+|2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️| |
+|3|[CRUD for a X](#crud-for-a-x)|✔️| | | |
+|4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | | |
+|5|[CV](#cv2)| |✔️| | |
+|6|[Exam for December 2022](#exam-for-december-2022)|✔️| | | |
+|7|[Just a Card](#just-a-card)| |✔️| | |
+|8|[Just a Form](#just-a-form)|✔️| | | |
+|9|[Shade Explorer](#shade-explorer)| |✔️| | |
+|10|[X](#x)| |✔️| | |
 
 ## \_R\__ for a Comment
 
@@ -27,15 +32,18 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 [Give it a shot](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-comment.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-comment/_r__-for-a-comment.gif)
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 - TypeScript
 - React
 - Redux
 - Tailwind CSS
+
+### Getting Started
 
 ### Description
 Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где каждое сообщение включает в себя ① уникальный идентификатор, ② дату публикации, ③ автора, ④ содержимое и ⑤ список вложений[^1].
@@ -53,7 +61,7 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 - в случае, когда текстовое содержимое сообщения является слишком длинным , появляется кнопка "Далее", которая позволяет отобразить всё текстовое содержимое, а на месте нажатой кнопки появляется кнопка "Скрыть" и наооборот
 
-> [!NOTE]
+> [!TIP]
 > Длинное текстовое содержимое считается длинным, когда занимает более 3-ёх строк.
 
 - можно выбрать тег "новое" или "эксперт", но это не влияет на что-либо
@@ -64,14 +72,16 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 ### Quick Look
 
-[Take a look](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-hotel.mov)
+[Take a look](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-hotel/_r__-for-a-hotel.mov)
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-hotel.mov)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/_r__-for-a-hotel/_r__-for-a-hotel.mov)
 
 ### Dependencies
 This package includes at least these dependencies:
 
 - SwiftUI
+
+### Getting Started
 
 ### Description
 Данный пакет включает в себя 4 экрана:
@@ -121,7 +131,7 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/crud-for-a-x/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/crud-for-a-x.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/crud-for-a-x/crud-for-a-x.gif)
 
 #### Desktop Landscape
 
@@ -144,9 +154,12 @@ This package includes at least these dependencies:
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/static/crud-for-a-x/iPhoneX-portrait.png)
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 - SASS
+
+### Getting Started
 
 ### Description
 
@@ -157,13 +170,16 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/cru_-for-an-application.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/cru_-for-an-application/cru_-for-an-application.gif)
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 - SASS
 - Bootstrap
+
+### Getting Started
 
 ### Description
 
@@ -179,6 +195,8 @@ This package includes at least these dependencies:
 [Take a look](https://vladimircreator.github.io/Packages/cv/).
 
 ### Dependencies
+This package includes at least these dependencies:
+
 - Vite
 - TypeScript
 - Radix
@@ -186,6 +204,8 @@ This package includes at least these dependencies:
 	- Dialog
 	- Slot
 - Tailwind CSS
+
+### Getting Started
 
 ### Description
 Название этого пакета говорит само за себя.
@@ -198,7 +218,7 @@ This package includes at least these dependencies:
 
 [Give it a shot](https://vladimircreator.github.io/Packages/exam-for-december-2022/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/exam-for-december-2022.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/exam-for-december-2022/exam-for-december-2022.gif)
 
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/static/exam-for-december-2022/-initial.png)
 
@@ -207,6 +227,7 @@ This package includes at least these dependencies:
 ![](./zGitHubAndYouShouldIgnoreThisDirectory/static/exam-for-december-2022/-fail.png)
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 
@@ -220,11 +241,14 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 [Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 - TypeScript
 - React
 - SASS
+
+### Getting Started
 
 ### Description
 
@@ -233,6 +257,7 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 [Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 - React
@@ -245,24 +270,30 @@ $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 
 [Give it a shot](https://vladimircreator.github.io/Packages/shade-explorer/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/shade-explorer.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/shade-explorer/shade-explorer.gif)
 
 ### Dependencies
+This package includes at least these dependencies:
+
+- Vite
 
 ## X
 
 ### Quick Look
 [Give it a shot](https://vladimircreator.github.io/Packages/x/).
 
-![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/x.gif)
+![](./zGitHubAndYouShouldIgnoreThisDirectory/dynamic/x/x.gif)
 
 ### Dependencies
+This package includes at least these dependencies:
 
 - Vite
 - TypeScript
 - React
 - Redux
 - Tailwind CSS
+
+### Getting Started
 
 ## Changelog
 
