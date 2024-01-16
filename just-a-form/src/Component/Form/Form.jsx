@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
-import './Form.css'
 
-import * as Rule from '../../rules'
+import './Form.css'
+import * as Rule from '../../rules.mjs'
+import { useRules } from './Form.hooks'
 
 const initialInput = {
 	firstName: '', lastName: '',
@@ -11,37 +12,38 @@ const initialInput = {
 }
 
 export const Form = props => {
-	const hasProblem = useRef(false)
 	const formRef = useRef(null)
-	const [input, setInput] = useState(initialInput)
 
-	const hasEmptyProperty = Object.values(input).some(property => !property.length)
+	const [finalInput, setInput] = useState(initialInput)
 
-	const handleFormChange = event => {
-		event.target.setCustomValidity('')
+	const firstNameHasProblem = useRules(finalInput.firstName, ...Rule.rulesForFirstName)
+	const lastNameHasProblem = useRules(finalInput.lastName, ...Rule.rulesForLastName)
+	const birthdayHasProblem = useRules(finalInput.birthday, ...Rule.rulesForBirthday)
+	const emailHasProblem = useRules(finalInput.email, ...Rule.rulesForEmail)
+	const passwordHasProblem = useRules(finalInput.password, ...Rule.rulesForPassword)
+	const passwordConfirmationHasProblem = useRules(finalInput.passwordConfirmation, ...Rule.rulesForPasswordConfirmation)
 
-		const input = { ...input,
-			[event.target.id]: event.target.value
+	const hasEmptyProperty = Object.values(finalInput).some(property => property.length === 0)
+
+	const handleFormChange = event => { const { target } = event
+		target.setCustomValidity('')
+
+		const updatedInput = { ...finalInput,
+			[target.id]: target.value
 		}
-		setInput(input)
-	}
-
-	const handleInputChange = event => {
-		const map = {
-			firstName:0, lastName:1,
-			birthday:2,
-			email:3,
-			password:4, passwordConfirmation:5
-		}
-
-		Rule[map[event.target.id]].forEach(
-			object => object.rule(event.target.value) ? formRef.current.setCustomValidity(object.description) : undefined
-		)
+		setInput(updatedInput)
 	}
 
 	const handleSubmit = event => { event.preventDefault()
 		const form = formRef.current
-		if (hasProblem.current) {
+
+		const hasProblem = [
+			firstNameHasProblem, lastNameHasProblem,
+			birthdayHasProblem,
+			emailHasProblem,
+			passwordHasProblem, passwordConfirmationHasProblem
+		].some(value => value)
+		if (hasProblem) {
 			form.noValidate = false
 			form.reportValidity()
 		}
@@ -52,20 +54,20 @@ export const Form = props => {
 	return (
 		<form ref={formRef} onChange={handleFormChange} {...props}>
 			<fieldset>
-				<input id='firstName' name='firstName' placeholder='Имя' onChange={handleInputChange} type='text' inputmode='text' />
-				<input id='lastName' name='lastName' placeholder='Фамилия' onChange={handleInputChange} type='text' inputmode='text' />
+				<input id='firstName' children={input.firstName} name='firstName' placeholder='Имя' type='text' inputmode='text' />
+				<input id='lastName' children={input.lastName} name='lastName' placeholder='Фамилия' type='text' inputmode='text' />
 			</fieldset>
 			<fieldset>
-				<input id='birthday' name='birthday' placeholder='Дата рождения' onChange={handleInputChange} type='text' onblur='if(!this.value){this.type = `text`}' onfocus='this.type=`date`' />
+				<input id='birthday' children={input.birthday} name='birthday' placeholder='Дата рождения' type='text' onblur='if(!this.value){this.type = `text`}' onfocus='this.type=`date`' />
 			</fieldset>
 			<fieldset>
-				<input id='email' name='email' placeholder='Электронная почта' onChange={handleInputChange} type='email' inputmode='email' />
+				<input id='email' children={input.email} name='email' placeholder='Электронная почта' type='email' inputmode='email' />
 			</fieldset>
 			<fieldset>
-				<input id='password' name='password' placeholder='Пароль' onChange={handleInputChange} type='password' />
-				<input id='passwordConfirmation' name='passwordConfirmation' placeholder='Подтвердите пароль' onChange={handleInputChange} type='password' />
+				<input id='password' children={input.password} name='password' placeholder='Пароль' type='password' />
+				<input id='passwordConfirmation' children={input.passwordConfirmation} name='passwordConfirmation' placeholder='Подтвердите пароль' type='password' />
 			</fieldset>
-			<button id='sendForm' onChange={handleInputChange} type='submit' disabled={hasEmptyProperty} onSubmit={handleSubmit}>
+			<button id='sendForm' type='submit' disabled={hasEmptyProperty} onSubmit={handleSubmit}>
 				Отправить
 			</button>
 		</form>
