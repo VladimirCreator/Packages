@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { useApiQuery } from './Service'
-import { List } from './Component/List/'
+import { List } from './Component/List'
 import { Loading } from './Component/Loading'
 
 export const App: React.FC = () => {

@@ -1,5 +1,5 @@
-import { Section } from './UI'
-import { Card, CardHeader, CardContent } from './UI'
+import { Section } from '../Legacy'
+import { Card, CardHeader, CardContent } from '../Legacy'
 
 type Props = {
 	education: any[]

@@ -1,6 +1,6 @@
 import random from 'lodash-es/random' // 4:02 PM Mon 15 Jan 2024
 
-import { User } from './User.mjs'
+import { User } from './User'
 import {
 	UIBranchCellContentConfiguration,
 	UIRoomCellContentConfiguration,
@@ -10,8 +10,8 @@ import {
 	UIEquipmentCellContentConfiguration,
 	UIConsumableCellContentConfiguration,
 	UIPostCellContentConfiguration
-} from './UICellContentConfiguration/index.mjs'
-import { UIViewController } from './UIViewController/index.mjs'
+} from './UICellContentConfiguration/index'
+import { UIViewController } from './UIViewController'
 
 /**
 	@typedef {object} UIApplicationObserver
@@ -93,7 +93,7 @@ class UIApplication {
 	parse(text) { if (typeof text === 'object' && 'source' in text) return
 		let object
 
-const _ = () => Math.round(Math.random() * 0xFF)
+const _ = () => random(0xFF)
 if (text.includes('branches')) {
 	object = JSON.parse(
 		`{"branches":${JSON.stringify(

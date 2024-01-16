@@ -1,7 +1,7 @@
-import { GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
+import { icons /* I should not do this but I have to Jokerge 11:42 PM Tue 16 Jan 2024 */, GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
 
-import { Avatar, AvatarFallback, AvatarImage } from './UI'
-import { Button } from './UI'
+import { Avatar, AvatarFallback, AvatarImage } from '../Legacy'
+import { Button } from '../Legacy'
 
 type Props = {
 	name: string, initials: string
@@ -42,16 +42,20 @@ const Phone: React.FC<Record<string, unknown>> = props => { /* in:Thu 11 Jan 202
 	)
 }
 
-const Socials: React.FC<Record<string, unknown[]>> = props => { /* in:Thu 11 Jan 2024 4:48 PM...4:51 PM */
+const Socials: React.FC<Record<string, Record<string, any>[]>> = props => { /* in:Thu 11 Jan 2024 4:48 PM...4:51 PM */
 	const { social } = props
 	return social.map(
-		(social: any) => (
-			<Button key={social.name} className='size-8' variant='outline' size='icon' asChild>
-				<a href={social.url}>
-					<social.icon className='size-4' />
-				</a>
-			</Button>
-		)
+		(social) => {
+			const { name, url, icon } = social
+			const Icon = icons[icon as keyof typeof icons]
+			return (
+				<Button key={name} className='size-8' variant='outline' size='icon' asChild>
+					<a href={url}>
+						<Icon className='size-4' />
+					</a>
+				</Button>
+			)
+		}
 	)
 }
 
@@ -102,7 +106,7 @@ export const Header: React.FC<Props> = props => {
 			</div>
 			<Avatar className='size-28'>
 				<AvatarImage src={avatarUrl} alt={name} />
-				<AvatarFallback>{initials}</AvatarFallback>
+				<AvatarFallback children={initials} />
 			</Avatar>
 		</div>
 	)

@@ -1,4 +1,4 @@
-import { isEmpty, isRangeUnderflow, isRangeOverflow, includesDigit, includesLatin, isAdult } from './checkers.mjs'
+import { isEmpty, isRangeUnderflow, isRangeOverflow, includesDigit, includesLatin, isAdult } from './checkers'
 
 export const rulesForFirstName = [
 	{ rule: isEmpty, description: 'Вам необходимо указать Ваше имя.' },

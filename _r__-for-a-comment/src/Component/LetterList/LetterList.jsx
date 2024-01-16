@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { Letter } from '../'
-import { useLazyLettersQuery } from "../../Service/"
+import { Letter } from '..'
+import { useLazyLetterQuery } from "../../Service"
 
 const using = {
 	date_ascending: (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
@@ -23,7 +23,7 @@ export const LetterList = props => {
 	const { letters, order } = props
 
 	const [discloseIndex, setDiscloseIndex] = useState(undefined)
-	const [query] = useLazyLettersQuery()
+	const [query] = useLazyLetterQuery()
 
 	const handleClick = () => {
 		query({ actionName: 'MessagesLoad', oldMessages: true })

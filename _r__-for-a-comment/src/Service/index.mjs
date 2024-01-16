@@ -1,2 +1,2 @@
 export { api } from './Letter'
-export { useLettersQuery, useLazyLettersQuery } from './Letter'
+export { useLetterQuery, useLazyLetterQuery } from './Letter'

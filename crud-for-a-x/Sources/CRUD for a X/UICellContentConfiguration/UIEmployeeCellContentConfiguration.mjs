@@ -1,5 +1,5 @@
 import { UICellContentConfiguration } from './UICellContentConfiguration'
-import { UIDepartmentCellContentConfiguration, UIRoomCellContentConfiguration } from './'
+import { UIDepartmentCellContentConfiguration, UIRoomCellContentConfiguration } from '.'
 import { Translator } from '../Translator'
 
 export class UIEmployeeCellContentConfiguration extends UICellContentConfiguration {

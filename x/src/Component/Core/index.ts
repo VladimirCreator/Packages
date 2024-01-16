@@ -1,1 +1,1 @@
-export { Material } from './Material'
+export * from './Material'

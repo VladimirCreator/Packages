@@ -1,6 +1,6 @@
-import { Badge } from './UI'
-import { Card, CardContent, CardHeader } from './UI'
-import { Section } from './UI'
+import { Badge } from '../Legacy'
+import { Card, CardContent, CardHeader } from '../Legacy'
+import { Section } from '../Legacy'
 
 type Props = {
 	work: any[]

@@ -1,16 +1,11 @@
-import { Section } from './Component/UI'
-import { CommandMenu, EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component'
+import { CommandMenu, Section } from './Legacy'
+import { EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component'
 
-//import type { PropsOf } from 'propsof' // 11:54 PM Mon 15 Jan 2024
+import type { PropsOf } from 'propsof/propsof' // 11:54 PM Mon 15 Jan 2024
 
 /// Just a helper. 6:?? PM...11:06 PM Mon 15 Jan 2024
 /// How does this work? I do not know :)
-type PropsOf<T> =
-	T extends (...args: infer U) => unknown ?
-		U extends { '0': unknown } ?
-			U['0'] :
-			never
-	: never
+//type PropsOf<T> =
 
 type Resume = Readonly<
 	PropsOf<typeof Header> &
@@ -23,7 +18,7 @@ type Resume = Readonly<
 >
 
 export const App = () => {
-	const data: Resume = JSON.parse(import.meta.env.VITE_DATA)
+	const data: Resume = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA)
 
 	const links = [
 		{ title: 'Personal Website', url: data.personalWebsiteUrl },

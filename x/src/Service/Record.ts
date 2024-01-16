@@ -1,7 +1,7 @@
 import {
 	createApi,
 	fetchBaseQuery
-} from '@reduxjs/toolkit/query/react/'
+} from '@reduxjs/toolkit/query/react'
 
 type Input = void
 type Output = unknown[]

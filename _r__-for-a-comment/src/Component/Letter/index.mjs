@@ -1,1 +1,1 @@
-export { Letter } from './Letter'
+export * from './Letter'

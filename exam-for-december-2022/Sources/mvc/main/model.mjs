@@ -1,5 +1,5 @@
 import { languageChecker } from '../../LanguageChecker'
-import { controller } from './controller.mjs'
+import { controller } from './controller'
 
 /** @param {{ english: string, russian: string }} word @param {number} rule @returns {void} */
 const compare = (word, rule) => {

@@ -1,15 +1,12 @@
-import { UITreeView } from '../UIView/UITreeView.mjs'
+import { UITreeView } from '../UIView/UITreeView'
 
-/**
-	@implements {UITreeViewDelegate}
-*/
+/** @implements {UITreeViewDelegate} */
 export class UITreeViewController {
 	#treeView = new UITreeView()
 
 	constructor() {
-		const treeView = this.#treeView
-		treeView.delegate = this
-		treeView.draw()
+		this.#treeView.delegate = this
+		this.#treeView.draw()
 	}
 
 	// MARK:- `UITreeViewDelegate`

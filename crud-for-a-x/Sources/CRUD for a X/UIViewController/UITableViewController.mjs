@@ -1,4 +1,4 @@
-import { UITableView } from '../UIView/UITableView.mjs'
+import { UITableView } from '../UIView/UITableView'
 
 /**
 	@implements {UITableViewDataSource}
@@ -20,9 +20,8 @@ export class UITableViewController {
 	#selectedIndex
 
 	constructor() {
-		const tableView = this.#tableView
-		tableView.dataSource = this; tableView.delegate = this
-		tableView.draw()
+		this.#tableView.dataSource = this; this.#tableView.delegate = this
+		this.#tableView.draw()
 	}
 
 	// MARK:- `UITableViewDataSource` & `UITableViewDelegate`

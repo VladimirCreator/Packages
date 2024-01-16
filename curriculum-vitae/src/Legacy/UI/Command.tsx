@@ -4,7 +4,7 @@ import { Search } from 'lucide-react'
 import type { DialogProps } from '@radix-ui/react-dialog'
 
 import { Dialog, DialogContent } from './Dialog'
-import { cn } from '../../helpers'
+import { cn } from '../helpers'
 
 export const Command = forwardRef<
 	React.ElementRef<typeof CommandPrimitive>,

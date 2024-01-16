@@ -1,7 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion'
 
 import { useApiQuery } from '../Service'
-import { Row } from './Row/'
+import { Row } from './Row'
 import { Disclosure } from './Disclosure'
 
 type Data = {

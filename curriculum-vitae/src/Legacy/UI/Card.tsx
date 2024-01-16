@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 
-import { cn } from '../../helpers'
+import { cn } from '../helpers'
 
 export const Card = forwardRef<
 	HTMLDivElement, React.HTMLAttributes<HTMLDivElement>

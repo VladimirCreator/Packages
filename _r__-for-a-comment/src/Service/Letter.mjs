@@ -1,6 +1,7 @@
 import {
-	createApi, fetchBaseQuery
-} from '@reduxjs/toolkit/query/react/'
+	createApi,
+	fetchBaseQuery
+} from '@reduxjs/toolkit/query/react'
 
 const baseUrl = import.meta.env.VITE_LETTER_API_BASE_URL
 

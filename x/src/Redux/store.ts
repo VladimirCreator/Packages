@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import { xApi } from '../Service/'
+import { xApi } from '../Service'
 
 export const store = configureStore({
 	reducer: {

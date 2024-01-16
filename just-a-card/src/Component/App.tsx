@@ -1,4 +1,4 @@
-import { Card } from './Card/'
+import { Card } from './Card'
 
 type Card = Readonly<
 	Parameters<typeof Card>['0']

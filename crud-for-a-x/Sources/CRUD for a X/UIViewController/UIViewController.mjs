@@ -1,7 +1,7 @@
 import { User } from '../User'
 import { crud_for_a_x } from '../UIApplication'
 import { UIView } from '../UIView/UIView'
-import { UITableViewController, UIToolbarViewController, UITreeViewController, UIWelcomeViewController } from './'
+import { UITableViewController, UIToolbarViewController, UITreeViewController, UIWelcomeViewController } from '.'
 
 /** @implements {UIApplicationObserver} */
 export class UIViewController {

@@ -33,8 +33,10 @@ export class UITreeView {
 		)
 		tree.querySelector(`div.list-group`).innerHTML = buttonsHTML
 
-		const clickHandler = (event) => {
-			if (event.target instanceof HTMLButtonElement) this.delegate?.treeViewDidSelect(event.target)
+		const clickHandler = event => {
+			if (event.target instanceof HTMLButtonElement) {
+				this.delegate?.treeViewDidSelect(event.target)
+			}
 		}
 		tree.querySelectorAll('button').forEach(button => button.addEventListener('click', clickHandler))
 	}
