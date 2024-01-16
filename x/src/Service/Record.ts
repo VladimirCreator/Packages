@@ -12,10 +12,10 @@ export const xApi = createApi({
 	reducerPath: 'xApi',
 	baseQuery: fetchBaseQuery({ baseUrl }),
 	endpoints: builder => ({
-		api: builder.query<Output, Input>({
+		x: builder.query<Output, Input>({
 			query: () => ''
 		})
 	})
 })
 
-export const { useApiQuery } = xApi
+export const { useXQuery } = xApi

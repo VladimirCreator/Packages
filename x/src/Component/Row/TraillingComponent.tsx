@@ -4,12 +4,12 @@ type Data = {
 
 type Props = Data
 
-export const TrailingComponent: React.FC<Props> = props => (
+export const TrailingComponent: React.FC<Props> = ({ text }) => (
 	<p className='text-neutral-400
 		group-active:text-white
 		group-active:dark:text-black
 		ml-2
 	'
-		children={props.text}
+		children={text}
 	/>
 )

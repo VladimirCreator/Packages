@@ -1,2 +1,2 @@
 export { xApi } from './Record'
-export { useApiQuery } from './Record'
+export { useXQuery } from './Record'

@@ -15,7 +15,8 @@ button {
 
 	padding: 1.1rem 1.45rem;
 
-	color: var(--light-white-color); background: var(--light-blue-color);
+	color: var(--light-white-color);
+	background: var(--light-blue-color);
 
 	border-radius: 2rem;
 	opacity: 100%;
@@ -43,7 +44,8 @@ input[name=birthday], input[name=email] { box-sizing: border-box;
 	width: 100%;
 }
 
-form:not([novalidate]) input:not(:focus-visible):invalid {
+form:not([novalidate])
+input:not(:focus-visible):invalid {
 	outline: .0625rem var(--light-red-color) solid;
 	background: #FFE9E8;
 }

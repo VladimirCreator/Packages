@@ -1,8 +1,8 @@
 import * as Accordion from '@radix-ui/react-accordion'
 
-import { useApiQuery } from '../../Service'
 import { Header } from './Header'
 import { Section } from '../Section'
+import { useXQuery } from '../../Service'
 
 type Data = {
 	id: number
@@ -17,8 +17,8 @@ type Props = Data & Delegate
 export const List: React.FC<Props> = props => {
 	const { id, onSelectRow } = props
 
-	const { data: all }: any = useApiQuery()
-	const node = all?.at(id)
+	const { data: all = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA!) } = useXQuery()
+	const node = all.at(id)
 
 	const defaultValue = [id.toString()]
 

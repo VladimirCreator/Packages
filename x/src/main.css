@@ -4,11 +4,11 @@
 	--light-background-color: #FAFAFA
 }
 
-html, body {
-	height: 100%
+html {
+	background: url('../public/pattern.svg')
+		var(--light-background-color);
 }
 
-html {
-	background-color: var(--light-background-color);
-	background-image: url('../public/pattern.svg');
+html, body {
+	height: 100%
 }

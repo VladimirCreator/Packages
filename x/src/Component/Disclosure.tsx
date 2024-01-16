@@ -8,6 +8,7 @@ type Props = Data
 
 export const Disclosure: React.FC<Props> = ({ isVisible = true }) => {
 	const isHidden = !isVisible
+
 	return isHidden ? null : (
 		<ChevronDownIcon className='size-6
 			transition-transform
