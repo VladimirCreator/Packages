@@ -12,11 +12,11 @@ export const App = () => {
   /** Unfortunately, my knowledge does not allow me to merge `ugly1` and `ugly2`.
       Please, make a pull request if you know how to make this more elegant.
   */
-	const { data: ugly1 } = useLettersQuery(
-		{ actionName: 'MessagesLoad', messageId: ugly1?.at(-1) ?? 0 },
+	const { data: ugly1 = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA) } = useLettersQuery(
+		{ actionName: 'MessagesLoad', messageId: 0 }, // `messageId` must be the last's letter id.:1:58 PM Mon 15 Jan 2024
 		{ pollingInterval }
 	)
-	const [, ugly2] = useLazyLettersQuery()
+	const [, { data: ugly2 = [] }] = useLazyLettersQuery()
 
 	const letters = ugly1.concat(ugly2)
 	return (

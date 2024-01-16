@@ -50,8 +50,8 @@ export class UITableViewController {
 	}
 
 	toolbarViewControllerDidRemoveContentConfiguration(contentConfiguration) {
-		const data = this.#data; if (data.length <= 0) return
-		data = data.filter(($0, index) => index !== this.#selectedIndex)
+		if (this.#data.length <= 0) return
+		this.#data = this.#data.filter(($0, index) => index !== this.#selectedIndex)
 		this.#tableView.draw()
 	}
 

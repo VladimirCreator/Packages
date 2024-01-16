@@ -1,12 +1,7 @@
-import { User } from '../User.mjs'
-import { crud_for_a_x } from '../UIApplication.mjs'
-import { UIView } from '../UIView/UIView.mjs'
-import {
-	UITableViewController,
-	UIToolbarViewController,
-	UITreeViewController,
-	UIWelcomeViewController
-} from './index.mjs'
+import { User } from '../User'
+import { crud_for_a_x } from '../UIApplication'
+import { UIView } from '../UIView/UIView'
+import { UITableViewController, UIToolbarViewController, UITreeViewController, UIWelcomeViewController } from './'
 
 /** @implements {UIApplicationObserver} */
 export class UIViewController {
@@ -49,20 +44,19 @@ export class UIViewController {
 			return
 		}
 		const { savedName, savedPassword } = user
-		const view = this.#view
 
 		if (typeof savedName !== 'string' || typeof savedPassword !== 'string') {
 			this.#welcomeViewController.welcomeHandler = (name, password) => {
 				/*window.postMessage('POST https://api.application.com/files/user.json'.concat(' | ').concat(JSON.stringify({user:new User({savedName:name,savedPassword:password})})));*/
 			}
-			view = new UIView()
+			this.#view = new UIView()
 			return
 		}
 		this.#welcomeViewController.welcomeHandler = (name, password) => {
 			if (name !== savedName || password !== savedPassword) {
 				return
 			} else {
-				view = new UIView()
+				this.#view = new UIView()
 			}
 		}
 		crud_for_a_x.detachObserver(this)

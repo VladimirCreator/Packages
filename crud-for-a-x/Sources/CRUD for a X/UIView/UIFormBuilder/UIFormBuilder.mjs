@@ -1,4 +1,4 @@
-import { Translator } from '../../Translator.mjs'
+import { Translator } from '../../Translator'
 
 export class UIFormBuilder {
 	/** @type {UIFormBuilder|undefined} */

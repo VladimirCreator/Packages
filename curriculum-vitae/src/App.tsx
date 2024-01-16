@@ -1,28 +1,48 @@
 import { Section } from './Component/UI'
 import { CommandMenu, EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component'
 
-const RESUME: any = JSON.parse(import.meta.env.VITE_DATA ?? '{}')
+//import type { PropsOf } from 'propsof' // 11:54 PM Mon 15 Jan 2024
+
+/// Just a helper. 6:?? PM...11:06 PM Mon 15 Jan 2024
+/// How does this work? I do not know :)
+type PropsOf<T> =
+	T extends (...args: infer U) => unknown ?
+		U extends { '0': unknown } ?
+			U['0'] :
+			never
+	: never
+
+type Resume = Readonly<
+	PropsOf<typeof Header> &
+	PropsOf<typeof WorkSection> &
+	PropsOf<typeof EducationSection> &
+	PropsOf<typeof SkillSection> &
+	PropsOf<typeof ProjectSection> &
+	{ summary: string } &
+	{ personalWebsiteUrl: string }
+>
 
 export const App = () => {
+	const data: Resume = JSON.parse(import.meta.env.VITE_DATA)
+
 	const links = [
-		{ title: 'Personal Website', url: RESUME.personalWebsiteUrl },
-		RESUME.contact.social.map(
+		{ title: 'Personal Website', url: data.personalWebsiteUrl },
+		...data.contact.social.map(
 			({ name: title, url }: any) => ({ title, url })
 		)
-	].flat(Infinity)
-
+	]
 	return (
 		<main className='container relative p-4 md:p-16 mx-auto overflow-auto scroll-my-12 print:p-12'>
 			<section className='w-full max-w-2xl mx-auto space-y-8 bg-white print:space-y-6'>
-				<Header {...RESUME} />
+				<Header {...data} />
 				<Section>
 					<h2 className='font-bold text-xl'>About</h2>
-					<p className='font-mono text-sm text-muted-foreground text-pretty' children={RESUME.summary} />
+					<p className='font-mono text-sm text-muted-foreground text-pretty' children={data.summary} />
 				</Section>
-				<WorkSection {...RESUME} />
-				<EducationSection {...RESUME} />
-				<SkillSection {...RESUME} />
-				<ProjectSection {...RESUME} />
+				<WorkSection {...data} />
+				<EducationSection {...data} />
+				<SkillSection {...data} />
+				<ProjectSection {...data} />
 			</section>
 			<CommandMenu links={links} />
 		</main>

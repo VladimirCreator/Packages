@@ -1,4 +1,6 @@
-class UIFormViewController {
+import { Application } from '../Application' // 5:43 PM Tue 16 Jan 2024
+
+export class UIFormViewController {
 
 	// MARK: Properties
 
@@ -106,7 +108,7 @@ class FormState {
 }
 
 class AddFormState extends FormState {
-	fetch(application) { UIApplication.shared.upload(application) }
+	fetch(application) { Application.shared.upload(application) }
 
 	div(div, label, input) { super.div(div, label, input) }
 
@@ -115,7 +117,7 @@ class AddFormState extends FormState {
 }
 
 class UpdateFormState extends FormState {
-	fetch(application) { UIApplication.shared.update(application) }
+	fetch(application) { Application.shared.update(application) }
 
 	div(div, label, input) {
 		super.div(div, label, input)

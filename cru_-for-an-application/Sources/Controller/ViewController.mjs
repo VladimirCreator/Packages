@@ -1,5 +1,8 @@
 import pencilSquare from '../../public/pencil-square.svg'
 import plusCircle from '../../public/plus-circle.svg'
+import { Application } from '../Application'
+import { view } from '../garbage'
+import { UIFormViewController } from './FormViewController'
 
 export class ViewController {
 
@@ -17,9 +20,9 @@ export class ViewController {
 
 		view.delegate = this
 
-		UIApplication.shared.attachObserver(this)
-		UIApplication.shared.attachObserver(UIFormViewController.shared)
-		UIApplication.shared.download()
+		Application.shared.attachObserver(this)
+		Application.shared.attachObserver(UIFormViewController.shared)
+		Application.shared.download()
 
 		UIFormViewController.shared.dataSource = this
 	}
@@ -81,7 +84,7 @@ export class ViewController {
 		UIFormViewController.shared.state = new AddFormState(); UIFormViewController.shared.present()
 	}
 	editButtonDidClick(event) {
-		UIFormViewController.shared.state = new UpdateFormState(); UIFormViewController.shared.present(UIApplication.shared.applications[this.#selectedRowIndex])
+		UIFormViewController.shared.state = new UpdateFormState(); UIFormViewController.shared.present(Application.shared.applications[this.#selectedRowIndex])
 	}
 
 	// MARK: Getters

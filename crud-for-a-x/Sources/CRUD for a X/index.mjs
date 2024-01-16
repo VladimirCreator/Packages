@@ -1,5 +1,5 @@
 import './index.scss'
-import { crud_for_a_x } from './UIApplication.mjs'
+import { crud_for_a_x } from './UIApplication'
 
 const onDOMContentLoaded = () => {
 	crud_for_a_x.attachObserver(crud_for_a_x)

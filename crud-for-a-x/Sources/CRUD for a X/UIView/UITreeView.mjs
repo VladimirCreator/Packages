@@ -1,4 +1,4 @@
-import { Translator } from '../Translator.mjs'
+import { Translator } from '../Translator'
 
 const wordsToTranslate = [...Translator.UITreeView.keys()]
 

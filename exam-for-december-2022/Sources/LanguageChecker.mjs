@@ -1,5 +1,6 @@
 class LanguageChecker {
-	#nextLanguageChecker; #comparison
+	#nextLanguageChecker
+	#comparison
 
 	constructor(languageChecker, comparison) {
 		this.#nextLanguageChecker = languageChecker; this.#comparison = comparison
@@ -10,10 +11,11 @@ class LanguageChecker {
 		const equals = this.#comparison(rule, word)
 		const hasNextChecker = typeof this.#nextLanguageChecker !== 'undefined'
 
-		if (equals)
+		if (equals) {
 			return true
+		}
 		else if (hasNextChecker) {
-			const equals = this.#nextLanguageChecker.check(rule, word)
+			const equals = this.#nextLanguageChecker.compare(rule, word)
 			return equals
 		}
 		return false

@@ -1,5 +1,6 @@
-import { UICellContentConfiguration } from './UICellContentConfiguration.mjs'
-import { Translator } from '../Translator.mjs'
+import { UICellContentConfiguration } from './UICellContentConfiguration'
+import { UIDepartmentCellContentConfiguration, UIRoomCellContentConfiguration } from './'
+import { Translator } from '../Translator'
 
 export class UIEmployeeCellContentConfiguration extends UICellContentConfiguration {
 	firstname; lastname; patronymic

@@ -1,4 +1,4 @@
-const form = {
+export const form = {
 	modal: document.querySelector("div#applicationForm.modal"),
 
 	show(application) {
@@ -7,12 +7,13 @@ const form = {
 	}
 }
 
-const form_new = {}
-const form_edit = {}
+export const form_new = {}
+export const form_edit = {}
 
-const view = {
+export const view = {
 	delegate: undefined,
 
 	table: document.querySelector("table.table"),
 	modal: document.querySelector("div#applicationForm.modal")
 }
+
