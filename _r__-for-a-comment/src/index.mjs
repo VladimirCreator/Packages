@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDom from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 
 import './index.css'

@@ -6,7 +6,7 @@ import { useXQuery } from './Service'
 
 export const App: React.FC = () => {
 	const [identifier, setIdentifier] = useState(0)
-	const { isLoading } = useXQuery()
+	const { isLoading = false } = useXQuery()
 
 	const handleSelect = (identifier: number) => {
 		setIdentifier(identifier)
