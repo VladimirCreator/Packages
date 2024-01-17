@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const Attachment = ({ attachments }) => {
 	const assets = attachments.map(
 		(attachment, index) => {

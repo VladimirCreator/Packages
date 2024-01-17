@@ -1,6 +1,6 @@
 import { LeadingComponent } from './LeadingComponent'
 import { TrailingComponent } from './TraillingComponent'
-import { useXQuery } from '../../Service'
+import { useLazyXQuery } from '../../Service'
 
 enum Text { // This `enum` is created at 9:33 AM on Wed 10 Jan 2024.
 	label,
@@ -29,7 +29,7 @@ export const Row: React.FC<Props> = props => {
 		onLengthCallback,
 		onClick
 	} = props
-	const { data: all = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA!) } = useXQuery()
+	const [_, { data: all = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA!) }] = useLazyXQuery()
 	const { super: pIdentifier, title } = all.at(identifier)
 
 	const subtitle = onSecondaryLabelCallback(identifier)

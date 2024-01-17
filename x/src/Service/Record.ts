@@ -18,4 +18,4 @@ export const xApi = createApi({
 	})
 })
 
-export const { useXQuery } = xApi
+export const { useXQuery, useLazyXQuery } = xApi

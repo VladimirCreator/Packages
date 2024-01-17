@@ -2,7 +2,7 @@ import * as Accordion from '@radix-ui/react-accordion'
 
 import { Disclosure } from './Disclosure'
 import { Row } from './Row'
-import { useXQuery } from '../Service'
+import { useLazyXQuery } from '../Service'
 
 type Data = {
 	identifier: number
@@ -24,7 +24,7 @@ export const Section: React.FC<Props> = props => {
 		onClick
 	} = props
 
-	const { data: all = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA!) } = useXQuery()
+	const [_, { data: all = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA!) }] = useLazyXQuery()
 	const node = all.at(identifier)
 	const hasChildren = node.children.length !== 0
 

@@ -19,7 +19,7 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 |2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️| |
 |3|[CRUD for a X](#crud-for-a-x)|✔️| | | |
 |4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | | |
-|5|[CV](#cv2)| |✔️| | |
+|5|[Curriculum Vitae](#curriculum-vitae-2)| |✔️| | |
 |6|[Exam for December 2022](#exam-for-december-2022)|✔️| | | |
 |7|[Just a Card](#just-a-card)| |✔️| | |
 |8|[Just a Form](#just-a-form)|✔️| | | |
@@ -190,9 +190,9 @@ This package includes at least these dependencies:
 - отправка нового приложения на сервер
 - изменение существующего приложения на сервере
 
-## CV[^2]
+## Curriculum Vitae[^2]
 ### Quick Look
-[Take a look](https://vladimircreator.github.io/Packages/cv/).
+[Take a look](https://vladimircreator.github.io/Packages/curriculum-vitae/).
 
 ### Dependencies
 This package includes at least these dependencies:
