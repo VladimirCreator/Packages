@@ -1,20 +1,27 @@
 {
-	"name": "crud-for-a-x", "private": true,
+	"name": "crud-for-a-x",
+	"private": true,
 	"version": "?.?.?",
 	"author": {
-		"name": "Vladimir", "url": "https://github.com/VladimirCreator/"
+		"name": "Vladimir",
+		"url": "https://github.com/VladimirCreator/"
 	},
 	"license": "Apache-2.0",
-
-	"keywords": ["html","javascript","sass","vite"],
-
+	"keywords": [
+		"html",
+		"javascript",
+		"sass",
+		"vite"
+	],
 	"scripts": {
 		"build": "vite build"
 	},
-
 	"devDependencies": {
-		"vite": "^5.0.2",
-
-		"sass": "^1.69.5"
+		"@babel/plugin-proposal-decorators": "^7.23.7",
+		"sass": "^1.69.5",
+		"vite": "^5.0.2"
+	},
+	"dependencies": {
+		"lodash-es": "^4.17.21"
 	}
 }

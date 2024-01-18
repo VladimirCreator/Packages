@@ -1,5 +1,5 @@
-import { UICellContentConfiguration } from './UICellContentConfiguration.mjs'
-import { Translator } from '../Translator.mjs'
+import { UICellContentConfiguration } from './UICellContentConfiguration'
+import { Translator } from '../Translator'
 
 export class UIPostCellContentConfiguration extends UICellContentConfiguration {
 	employee_count

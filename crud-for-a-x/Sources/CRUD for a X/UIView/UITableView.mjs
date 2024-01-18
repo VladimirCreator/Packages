@@ -1,5 +1,5 @@
-import { Translator } from '../Translator.mjs'
-import { UITableViewCell } from './UITableViewCell.mjs'
+import { Translator } from '../Translator'
+import { UITableViewCell } from './UITableViewCell'
 
 /**
 	@typedef {object} UITableViewDataSource

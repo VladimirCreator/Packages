@@ -1,1 +1,1 @@
-export { LetterList } from './LetterList'
+export * from './LetterList'

@@ -1,7 +1,11 @@
 :root {
-	--light-white-color: #FFF;
-	--light-red-color: #FF3B30; --light-blue-color: #007AFF;
-	--light-background-color: #F2F2F7;
+	--light-white-color: #FFFFFFFF;
+	--light-red-color: #FF3B30FF; --light-blue-color: #007AFFFF;
+
+	--light-placeholder-color: #8E8E93FF;
+	--light-background-color: #F2F2F7FF;
+
+	--light-outline-color: #999999FF;
 }
 
 * {
@@ -22,17 +26,19 @@ body {
 	background: var(--light-background-color);
 }
 
+*::placeholder {
+	color: var(--light-placeholder-color)
+}
+
 *:focus-visible {
-	outline: .0625rem #999 solid
+	outline: .0625rem var(--light-outline-color) solid
 }
 
 *::selection,
  ::-webkit-datetime-edit-year-field:focus,
  ::-webkit-datetime-edit-month-field:focus,
- ::-webkit-datetime-edit-day-field:focus {
-	color: var(--light-white-color); background: var(--light-blue-color) !important;
-}
-
-*::placeholder {
-	color: #8E8E93
+ ::-webkit-datetime-edit-day-field:focus
+{
+	color: var(--light-white-color);
+	background: var(--light-blue-color) !important;
 }

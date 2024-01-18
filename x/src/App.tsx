@@ -1,23 +1,25 @@
 import { useState } from 'react'
 
-import { useApiQuery } from './Service'
-import { List } from './Component/List/'
+import { List } from './Component/List'
 import { Loading } from './Component/Loading'
+import { useXQuery } from './Service'
 
 export const App: React.FC = () => {
 	const [identifier, setIdentifier] = useState(0)
-	const { isLoading } = useApiQuery()
+	const { isLoading = false } = useXQuery()
 
-	const handleSelect = (identifier: number) => setIdentifier(identifier)
+	const handleSelect = (identifier: number) => {
+		setIdentifier(identifier)
+	}
 
 	if (isLoading) {
 		return (
 			<Loading children='@vladimircreator' />
 		)
 	}
-	else {
-		return (
-			<List id={identifier} onSelectRow={handleSelect} />
-		)
-	}
+	return (
+		<List id={identifier}
+			onSelectRow={handleSelect}
+		/>
+	)
 }

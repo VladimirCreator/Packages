@@ -1,7 +1,7 @@
 import compact from 'lodash-es/compact'
 
-import { Section } from './UI'
-import { ProjectCard } from './ProjectCard'
+import { Section } from '../Legacy'
+import { ProjectCard } from '../Legacy'
 
 type Props = {
 	projects: any[]

@@ -1,4 +1,6 @@
-import { User } from './User.mjs'
+import random from 'lodash-es/random' // 4:02 PM Mon 15 Jan 2024
+
+import { User } from './User'
 import {
 	UIBranchCellContentConfiguration,
 	UIRoomCellContentConfiguration,
@@ -8,8 +10,8 @@ import {
 	UIEquipmentCellContentConfiguration,
 	UIConsumableCellContentConfiguration,
 	UIPostCellContentConfiguration
-} from './UICellContentConfiguration/index.mjs'
-import { UIViewController } from './UIViewController/index.mjs'
+} from './UICellContentConfiguration/index'
+import { UIViewController } from './UIViewController'
 
 /**
 	@typedef {object} UIApplicationObserver
@@ -56,6 +58,10 @@ const reviver = (key, value) => {
 	return value
 }
 
+/* in:2:17 PM...: PM Mon 15 Jan 2024
+const createParse = reviver => json => undefined
+*/
+
 /** @implements {UIApplicationObserver} */
 class UIApplication {
 	/** @type {UIApplication|undefined} */
@@ -84,10 +90,10 @@ class UIApplication {
 	detachObserver(observer) { this.#observers = this.#observers.filter((element) => element !== observer) }
 
 	/** @param {string} text */
-	parse(text) {
+	parse(text) { if (typeof text === 'object' && 'source' in text) return
 		let object
 
-const _ = () => Math.round(Math.random() * 0xFF)
+const _ = () => random(0xFF)
 if (text.includes('branches')) {
 	object = JSON.parse(
 		`{"branches":${JSON.stringify(
@@ -151,7 +157,7 @@ else if (text.includes('posts')) {
 	object = JSON.parse(
 		`{"posts":${JSON.stringify(
 			Array.from(Array(0xff), ($0, $1) => ({
-				text: `"ример названия должности ${_()}`, secondaryText: `"ример описания должности ${_()}`,isHidden: Boolean(Math.round(Math.random())),employee_count: Math.round(Math.random() * 0x255)
+				text: `"Пример названия должности ${_()}`, secondaryText: `"ример описания должности ${_()}`,isHidden: Boolean(Math.round(Math.random())),employee_count: Math.round(Math.random() * 0x255)
 			}))
 		)}}`, reviver
 	)

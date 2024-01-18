@@ -1,7 +1,7 @@
 import { PrinterIcon } from 'lucide-react'
 
-import { Button } from './UI'
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from './UI'
+import { Button } from '../Legacy'
+import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from '../Legacy'
 
 export const PrintDrawer: React.FC = () => (
 	<Drawer>

@@ -6,12 +6,11 @@ import { Toolbar } from './Toolbar'
 import { Footer } from './Footer'
 import type { Props } from './Props'
 
-export const Card: React.FC<Props> = (props) => {
-	const { price, title, description, colors, imgHref } = props
-
+export const Card: React.FC<Props> = props => {
+	const { colors, ...product } = props
 	return (
 		<article className='card'>
-			<Header price={price} title={title} description={description} imgHref={imgHref} />
+			<Header {...product} />
 			<Selection colors={colors} />
 			<Toolbar />
 			<Footer imgHref='#' />

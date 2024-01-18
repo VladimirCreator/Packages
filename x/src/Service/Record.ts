@@ -1,7 +1,7 @@
 import {
 	createApi,
 	fetchBaseQuery
-} from '@reduxjs/toolkit/query/react/'
+} from '@reduxjs/toolkit/query/react'
 
 type Input = void
 type Output = unknown[]
@@ -12,10 +12,10 @@ export const xApi = createApi({
 	reducerPath: 'xApi',
 	baseQuery: fetchBaseQuery({ baseUrl }),
 	endpoints: builder => ({
-		api: builder.query<Output, Input>({
+		x: builder.query<Output, Input>({
 			query: () => ''
 		})
 	})
 })
 
-export const { useApiQuery } = xApi
+export const { useXQuery, useLazyXQuery } = xApi

@@ -1,12 +1,20 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react/'
+import {
+	createApi,
+	fetchBaseQuery
+} from '@reduxjs/toolkit/query/react'
 
-const baseUrl = import.meta.env.VITE_API
+const baseUrl = import.meta.env.VITE_LETTER_API_BASE_URL
 
 export const api = createApi({
-	baseQuery: fetchBaseQuery({ baseUrl }),
+	reducerPath: 'letterApi',
+	baseQuery: fetchBaseQuery({
+		baseUrl
+	}),
 	endpoints: builder => ({
-		letters: builder.query({ query: () => '/' })
+		letter: builder.query({
+			query: () => ''
+		})
 	})
 })
 
-export const { useLettersQuery, useLazyLettersQuery } = api
+export const { useLetterQuery, useLazyLetterQuery } = api

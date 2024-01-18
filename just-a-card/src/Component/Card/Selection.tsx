@@ -4,7 +4,7 @@ import { Props as SelectionProps } from './Props'
 
 type Props = Pick<SelectionProps, 'colors'>
 
-export const Selection: React.FC<Props> = (props) => {
+export const Selection: React.FC<Props> = props => {
 	const { colors } = props
 	const [selectedIndex, setSelectedIndex] = useState<number|undefined>(undefined)
 

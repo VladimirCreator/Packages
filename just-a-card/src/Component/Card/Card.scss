@@ -28,11 +28,11 @@
 }
 
 @mixin UICardHeaderView {
-	>header.card__header {
+	> header.card__header {
 		display: flex;
 		flex-direction: column;
 
-		>figure {
+		> figure {
 			> img {
 				max: { width: 256px; height: 256px; }
 				margin: 0 auto;
@@ -66,7 +66,7 @@
 }
 
 @mixin UICardSelectionView {
-	>section.card__selection {
+	> section.card__selection {
 		> p { line-height: 1.5; color: #666 }
 
 		> ul {
@@ -122,7 +122,7 @@
 }
 
 @mixin UICardFooterView {
-	> footer.card__footer { color: #61A5FA }
+	> footer.card__footer > p > a { color: #61A5FA }
 }
 
 @include UICardView;

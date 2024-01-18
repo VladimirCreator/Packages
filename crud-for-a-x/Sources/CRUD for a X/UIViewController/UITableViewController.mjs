@@ -1,4 +1,4 @@
-import { UITableView } from '../UIView/UITableView.mjs'
+import { UITableView } from '../UIView/UITableView'
 
 /**
 	@implements {UITableViewDataSource}
@@ -20,9 +20,8 @@ export class UITableViewController {
 	#selectedIndex
 
 	constructor() {
-		const tableView = this.#tableView
-		tableView.dataSource = this; tableView.delegate = this
-		tableView.draw()
+		this.#tableView.dataSource = this; this.#tableView.delegate = this
+		this.#tableView.draw()
 	}
 
 	// MARK:- `UITableViewDataSource` & `UITableViewDelegate`
@@ -50,8 +49,8 @@ export class UITableViewController {
 	}
 
 	toolbarViewControllerDidRemoveContentConfiguration(contentConfiguration) {
-		const data = this.#data; if (data.length <= 0) return
-		data = data.filter(($0, index) => index !== this.#selectedIndex)
+		if (this.#data.length <= 0) return
+		this.#data = this.#data.filter(($0, index) => index !== this.#selectedIndex)
 		this.#tableView.draw()
 	}
 

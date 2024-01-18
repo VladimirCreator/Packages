@@ -1,8 +1,8 @@
 import startCase from 'lodash-es/startCase'
 
-import { Badge } from './UI'
-import { Card, CardContent, CardHeader } from './UI'
-import { Section } from './UI'
+import { Badge } from '../Legacy'
+import { Card, CardContent, CardHeader } from '../Legacy'
+import { Section } from '../Legacy'
 
 type Builder = { // init 12:06 PM Wed 10 Jan 2024
 	nextBuilder?: Builder

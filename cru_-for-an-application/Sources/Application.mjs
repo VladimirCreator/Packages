@@ -1,10 +1,10 @@
 const url = 'http://checkstatus.website:8099/'
-const init = {
+const ugly1 = {
 	method: 'POST',
 	headers: { 'Content-Type': 'application/json;charset=utf-8' }
 }
 
-class Application {
+export class Application {
 
 	// MARK: Properties
 
@@ -24,7 +24,7 @@ class Application {
 	notifyObservers(object) { this.#observers.forEach(observer => observer.applicationDidFetch(object)) }
 
 	async download() {
-		const init = { ...init,
+		const init = { ...ugly1,
 			body: '""'
 		}
 		const response = await fetch(url.concat("/Face/App_List/"), init)
@@ -86,7 +86,7 @@ class Application {
 	static get shared() {
 		const hasInstance = typeof Application.#shared !== "undefined"
 
-		if (!hasInstance) UIApplication.#shared = new UIApplication(false)
-		return UIApplication.#shared
+		if (!hasInstance) Application.#shared = new Application(false)
+		return Application.#shared
 	}
 }

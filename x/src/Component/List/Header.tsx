@@ -5,12 +5,9 @@ type Props = {
 
 export const Header: React.FC<Props> = props => {
 	const { title, hsl = '' } = props
-
-	const className = `text-4xl font-bold ${hsl}`
 	return (
-		<header children={
-				<h1 className={className} children={title} />
-			}
-		/>
+		<header>
+			<h1 className={`text-4xl font-bold ${hsl}`} children={title} />
+		</header>
 	)
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { Letter } from '../'
-import { useLazyLettersQuery } from "../../Service/"
+import { Letter } from '..'
+import { useLazyLetterQuery } from "../../Service"
 
 const using = {
 	date_ascending: (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
@@ -11,7 +11,9 @@ const using = {
 const Button = props => {
 	const { text, onClick, ...rest } = props
 	return (
-		<button className='block w-full py-2 text-slate-50 bg-sky-500' onClick={onClick} {...rest}>
+		<button {...rest} className='text-slate-50 block w-full py-2 bg-sky-500'
+			onClick={onClick}
+		>
 			{text}
 		</button>
 	)
@@ -21,7 +23,7 @@ export const LetterList = props => {
 	const { letters, order } = props
 
 	const [discloseIndex, setDiscloseIndex] = useState(undefined)
-	const [query] = useLazyLettersQuery()
+	const [query] = useLazyLetterQuery()
 
 	const handleClick = () => {
 		query({ actionName: 'MessagesLoad', oldMessages: true })
@@ -50,7 +52,7 @@ export const LetterList = props => {
 	return (
 		<div className='container lg:max-w-4xl min-h-screen md:py-4 mx-auto divide-y-2 snap-y transition-all'>
 			{ order === 'date_ascending' && button }
-			{ letterList }
+			{letterList}
 			{ order === 'date_descending' && button }
 		</div>
 	)

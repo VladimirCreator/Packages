@@ -1,8 +1,8 @@
 import * as Accordion from '@radix-ui/react-accordion'
 
-import { useApiQuery } from '../Service'
-import { Row } from './Row/'
 import { Disclosure } from './Disclosure'
+import { Row } from './Row'
+import { useLazyXQuery } from '../Service'
 
 type Data = {
 	identifier: number
@@ -24,8 +24,8 @@ export const Section: React.FC<Props> = props => {
 		onClick
 	} = props
 
-	const { data: all }: any = useApiQuery()
-	const node = all?.at(identifier)
+	const [_, { data: all = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA!) }] = useLazyXQuery()
+	const node = all.at(identifier)
 	const hasChildren = node.children.length !== 0
 
 	const rows = node.children.map(

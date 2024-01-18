@@ -1,4 +1,4 @@
-import { random } from '../../random'
+import random from 'lodash-es/random' // 5:49 PM Tue 16 Jan 2024
 
 const article = document.body.querySelector('article')
 

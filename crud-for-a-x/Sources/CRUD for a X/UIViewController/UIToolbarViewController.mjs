@@ -1,7 +1,7 @@
-import { Translator } from '../Translator.mjs'
-import { crud_for_a_x } from '../UIApplication.mjs'
-import { UIFormBuilder, UIBooleanFormBuilder, UINumberFormBuilder, UIStringFormBuilder, UIObjectFormBuilder } from '../UIView/UIFormBuilder/UIFormBuilder.mjs'
-import { UIToolbarView } from '../UIView/UIToolbarView.mjs'
+import { Translator } from '../Translator'
+import { crud_for_a_x } from '../UIApplication'
+import { UIFormBuilder, UIBooleanFormBuilder, UINumberFormBuilder, UIStringFormBuilder, UIObjectFormBuilder } from '../UIView/UIFormBuilder/UIFormBuilder'
+import { UIToolbarView } from '../UIView/UIToolbarView'
 
 /**
 	@callback UIToolbarViewControllerDelegateHandler

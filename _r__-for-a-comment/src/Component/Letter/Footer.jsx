@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const LetterFooterItem = (props) => {
+const LetterFooterItem = props => {
 	const { text, isActive, onClick, rest } = props
 	const className = `before:content-['#'] cursor-pointer ${isActive ? 'text-blue-500' : ''}`
 

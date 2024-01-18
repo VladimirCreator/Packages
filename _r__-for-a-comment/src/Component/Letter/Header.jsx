@@ -1,14 +1,17 @@
 import { useState } from 'react'
-
 import { WindowIcon, ArrowRightIcon, Cog6ToothIcon, StarIcon as OutlineStarIcon } from '@heroicons/react/24/outline'
 import { StarIcon as SolidStarIcon } from '@heroicons/react/24/solid'
 
 const Button = ({ text }) => {
 	const [isActive, setIsActive] = useState(false)
 
+	const handleClick = () => {
+		setIsActive(!isActive)
+	}
+
 	const className = `w-16 h-7 text-xs leading-none border-[1px] border-blue-500 rounded-sm ${isActive ? 'text-white bg-blue-500 hover:text-blue-500 hover:bg-white' : 'text-blue-500 hover:text-white hover:bg-blue-500'}`
 	return (
-		<button className={className} type='button' onClick={() => setIsActive(!isActive)}>
+		<button className={className} type='button' onClick={handleClick}>
 			{text}
 		</button>
 	)

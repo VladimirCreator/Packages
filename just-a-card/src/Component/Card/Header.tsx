@@ -2,9 +2,8 @@ import { Props as HeaderProps } from './Props'
 
 type Props = Omit<HeaderProps, 'colors'>
 
-export const Header: React.FC<Props> = (props) => {
+export const Header: React.FC<Props> = props => {
 	const { price, title, description, imgHref } = props
-
 	return (
 		<header className='card__header'>
 			<h1 className='header__heading'>{title}</h1>
