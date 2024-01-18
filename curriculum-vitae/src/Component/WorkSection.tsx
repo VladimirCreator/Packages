@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader } from '../Legacy'
 import { Section } from '../Legacy'
 
 type Props = {
-	work: any[]
+	work?: any[]
 }
 
-export const WorkSection: React.FC<Props> = props => {
+const List: React.FC<Required<Props>> = props => { // 4:05 PM Thu 18 Jan 2024
 	const { work } = props
 
 	const listOfBadges = work.map(
@@ -20,7 +20,7 @@ export const WorkSection: React.FC<Props> = props => {
 			)
 		)
 	)
-	const listOfWork = work.map(
+	return work.map(
 		(work: any) => {
 			const { company, link, start, end, title, description } = work
 			return (
@@ -32,22 +32,27 @@ export const WorkSection: React.FC<Props> = props => {
 								<span className='inline-flex gap-x-1' children={listOfBadges} />
 							</h3>
 							<div className='text-sm text-gray-500 tabular-nums'>
-								{start} - {end}
+								{start}&nbsp;-&nbsp;{end}
 							</div>
 						</div>
-						<h4 className='font-mono text-sm leading-none' children={title} />
+						<h4 className='font-mono text-sm leading-none'>
+							{title}
+						</h4>
 					</CardHeader>
 					<CardContent className='text-xs mt-2' children={description} />
 				</Card>
 			)
 		}
 	)
-	return (
+}
+
+export const WorkSection: React.FC<Props> = props => {
+	const { work } = props
+
+	return !work ? null : (
 		<Section>
-			<h2 className='font-bold text-xl'>
-				Work Experience
-			</h2>
-			{listOfWork}
+			<h2 className='font-bold text-xl'>Work Experience</h2>
+			<List work={work} />
 		</Section>
 	)
 }

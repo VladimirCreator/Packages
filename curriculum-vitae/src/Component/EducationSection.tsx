@@ -1,23 +1,28 @@
-import { Section } from '../Legacy'
 import { Card, CardHeader, CardContent } from '../Legacy'
+import { Section } from '../Legacy'
 
 type Props = {
 	education: any[]
 }
 
-export const EducationSection: React.FC<Props> = props => {
+const List: React.FC<Props> = props => { // 4:01 PM Thu 18 Jan 2024
 	const { education } = props
-
-	const listOfEducation = education.map(
+	return education.map(
 		(education: any) => {
 			const { school, start, end, degree } = education
 			return (
 				<Card key={school}>
 					<CardHeader>
-						<div className='text-base flex items-center justify-between gap-x-2'>
-							<h3 className='font-semibold leading-none' children={school} />
+						<div className='text-base
+							flex justify-between items-start
+							gap-x-2
+						'
+						>
+							<h3 className='font-semibold leading-none'>
+								{school}
+							</h3>
 							<div className='text-sm text-gray-500 tabular-nums'>
-								{start} - {end}
+								{start}&nbsp;-&nbsp;{end}
 							</div>
 						</div>
 					</CardHeader>
@@ -26,12 +31,14 @@ export const EducationSection: React.FC<Props> = props => {
 			)
 		}
 	)
+}
+
+export const EducationSection: React.FC<Props> = props => {
+	const { education } = props
 	return (
 		<Section>
-			<h2 className='font-bold text-xl'>
-				Education
-			</h2>
-			{listOfEducation}
+			<h2 className='font-bold text-xl'>Education</h2>
+			<List education={education} />
 		</Section>
 	)
 }

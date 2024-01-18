@@ -69,7 +69,7 @@ export const Header: React.FC<Props> = props => {
 	} = props
 
 	return (
-		<div className='flex items-center justify-between'>
+		<div className='flex justify-between items-start'>
 			<div className='flex-1 space-y-1.5'>
 				<h1 className='font-bold text-2xl' children={name} />
 				<p className='text-sm font-mono text-muted-foreground text-pretty max-w-md' children={about} />
