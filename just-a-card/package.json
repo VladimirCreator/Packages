@@ -22,7 +22,9 @@
 
 		"sass": "^1.64.2",
 
-		"@types/react": "^18.2.15", "@types/react-dom": "^18.2.7"
+		"@types/react": "^18.2.15", "@types/react-dom": "^18.2.7",
+
+		"propsof": "git+https://git@github.com:VladimirCreator/propsof.git"
 	},
 
 	"type": "module"

@@ -6,7 +6,7 @@ type Props = {
 	work?: any[]
 }
 
-const List: React.FC<Required<Props>> = props => { // 4:05 PM Thu 18 Jan 2024
+const List: React.FC<Required<Props>> = props => {
 	const { work } = props
 
 	const listOfBadges = work.map(

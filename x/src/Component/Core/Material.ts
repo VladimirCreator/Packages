@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Last Modified at 8:01 AM Wed 10 Jan 2024
 type Props = {
 	[key: string]: any
 }

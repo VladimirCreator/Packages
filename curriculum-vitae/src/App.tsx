@@ -1,11 +1,7 @@
 import { CommandMenu, Section } from './Legacy'
 import { EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component'
 
-import type { PropsOf } from 'propsof/propsof' // 11:54 PM Mon 15 Jan 2024
-
-/// Just a helper. 6:?? PM...11:06 PM Mon 15 Jan 2024
-/// How does this work? I do not know :)
-//type PropsOf<T> =
+import type { PropsOf } from 'propsof/propsof'
 
 type Resume = Readonly<
 	PropsOf<typeof Header> &

@@ -1,6 +1,6 @@
 import Foundation
 
-fileprivate func read(atPath subpath: String) -> String { // in Thu 11 Jan 2024 4:35 PM...4:3<=8 PM
+fileprivate func read(atPath subpath: String) -> String {
 	guard let contents = FileManager.default.contents(atPath: subpath) else { fatalError() }
 	guard let data = String(data: contents, encoding: .utf8) else { fatalError() }
 	return data

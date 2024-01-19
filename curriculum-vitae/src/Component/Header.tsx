@@ -1,4 +1,4 @@
-import { icons /* I should not do this but I have to Jokerge 11:42 PM Tue 16 Jan 2024 */, GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
+import { icons, GlobeIcon, MailIcon, PhoneIcon } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '../Legacy'
 import { Button } from '../Legacy'
@@ -14,7 +14,7 @@ type Props = {
 	}
 }
 
-const Mail: React.FC<Record<string, unknown>> = props => { /* in:Thu 11 Jan 2024 4:41 PM...4:45 PM */
+const Mail: React.FC<Record<string, unknown>> = props => {
 	const { email } = props
 	if (!email) {
 		return null
@@ -28,7 +28,7 @@ const Mail: React.FC<Record<string, unknown>> = props => { /* in:Thu 11 Jan 2024
 	)
 }
 
-const Phone: React.FC<Record<string, unknown>> = props => { /* in:Thu 11 Jan 2024 4:46 PM...4:47 PM */
+const Phone: React.FC<Record<string, unknown>> = props => {
 	const { tel } = props
 	if (!tel) {
 		return null
@@ -42,7 +42,7 @@ const Phone: React.FC<Record<string, unknown>> = props => { /* in:Thu 11 Jan 202
 	)
 }
 
-const Socials: React.FC<Record<string, Record<string, any>[]>> = props => { /* in:Thu 11 Jan 2024 4:48 PM...4:51 PM */
+const Socials: React.FC<Record<string, Record<string, any>[]>> = props => {
 	const { social } = props
 	return social.map(
 		(social) => {

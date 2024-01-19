@@ -6,7 +6,8 @@ type Data = {
 
 type Props = Data
 
-export const Disclosure: React.FC<Props> = ({ isVisible = true }) => {
+export const Disclosure: React.FC<Props> = props => {
+	const { isVisible = true } = props
 	const isHidden = !isVisible
 
 	return isHidden ? null : (

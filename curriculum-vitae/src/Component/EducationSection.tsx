@@ -5,7 +5,7 @@ type Props = {
 	education: any[]
 }
 
-const List: React.FC<Props> = props => { // 4:01 PM Thu 18 Jan 2024
+const List: React.FC<Props> = props => {
 	const { education } = props
 	return education.map(
 		(education: any) => {

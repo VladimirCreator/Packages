@@ -13,7 +13,7 @@ export const App = () => {
       Please, make a pull request if you know how to make this more elegant.
   */
 	const { data: ugly1 = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA) } = useLetterQuery(
-		{ actionName: 'MessagesLoad', messageId: 0 }, // `messageId` must be the last's letter id.:1:58 PM Mon 15 Jan 2024
+		{ actionName: 'MessagesLoad', messageId: 0 }, // `messageId` must be the last's letter id.
 		{ pollingInterval }
 	)
 	const [, { data: ugly2 = [] }] = useLazyLetterQuery()

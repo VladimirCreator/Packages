@@ -1,4 +1,4 @@
-import random from 'lodash-es/random' // 4:02 PM Mon 15 Jan 2024
+import random from 'lodash-es/random'
 
 import { User } from './User'
 import {
@@ -57,10 +57,6 @@ const reviver = (key, value) => {
 	}
 	return value
 }
-
-/* in:2:17 PM...: PM Mon 15 Jan 2024
-const createParse = reviver => json => undefined
-*/
 
 /** @implements {UIApplicationObserver} */
 class UIApplication {

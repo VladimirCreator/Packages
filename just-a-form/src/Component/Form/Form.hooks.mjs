@@ -1,7 +1,4 @@
-/* @VladimirCreator created this file at 1:48 AM on Wed 17 Jan 2024.
-   @VladimirCreator modified this file at 2:00 AM on Wed 17 Jan 2024 last time.
-*/
-import { useState, useEffect } from 'react' // 1:53 AM Wed 17 Jan 2024 for useEffect and 1:55 AM Wed 17 Jan 2024 for useState
+import { useState, useEffect } from 'react'
 
 /**
 	* @param {T} value
@@ -13,7 +10,7 @@ export function useRule(value, rule) {
 	return isViolated
 }
 
-export function useRules(value, ...rules) { // 2:16 PM...2:21 PM Wed 17 Jan 2024
+export function useRules(value, ...rules) {
 	const [isViolated, setIsViolated] = useState(false)
 
 	const synchronize = () => {

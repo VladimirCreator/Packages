@@ -4,7 +4,7 @@ import { Badge } from '../Legacy'
 import { Card, CardContent, CardHeader } from '../Legacy'
 import { Section } from '../Legacy'
 
-type Builder = { // init 12:06 PM Wed 10 Jan 2024
+type Builder = {
 	nextBuilder?: Builder
 
 	createElement: (skills: any[]|any) => any
@@ -22,12 +22,7 @@ const buildIfArray: Builder = {
 			)
 		)
 		return (
-			<Section>
-				<h2 className='font-bold text-xl'>
-					Skills
-				</h2>
-				<div className='flex flex-wrap gap-1' children={badges} />
-			</Section>
+			<div className='flex flex-wrap gap-1' children={badges} />
 		)
 	}
 }
@@ -39,7 +34,7 @@ const buildIfObject: Builder = {
 		if (Array.isArray(skills)) {
 			return this.nextBuilder?.createElement(skills)
 		}
-		const listOfSkills = Object.keys(skills).map(
+		return Object.keys(skills).map(
 			(key) => (
 				<Card key={key}>
 					<CardHeader>
@@ -58,16 +53,17 @@ const buildIfObject: Builder = {
 				</Card>
 			)
 		)
-		return (
-			<Section>
-				<h2 className='font-bold text-xl'>Skills</h2>
-				{listOfSkills}
-			</Section>
-		)
 	}
 }
 
 export const SkillSection: React.FC<Props> = props => {
 	const { skills } = props
-	return skills ? buildIfObject.createElement(skills) : null
+	return !skills ? null : (
+		<Section>
+			<h2 className='font-bold text-xl'>
+				Skills
+			</h2>
+			{buildIfObject.createElement(skills)}
+		</Section>
+	)
 }

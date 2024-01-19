@@ -1,11 +1,13 @@
-import random from 'lodash-es' // 5:48 PM Tue 16 Jan 2024
+import random from 'lodash-es/random'
 
 import words from '../../../words.json'
 import { model } from './model'
 
-const getRandomWord = () => words[random(0, words.length)]
+const getRandomWord = () => words[random(words.length-1)]
 
-// `0` means отображение по-английски, а принимается по-русски. `1` means отображение по-русски, а принимается по-английски.
+/* `0` means отображение по-английски, а принимается по-русски.
+   `1` means отображение по-русски, а принимается по-английски.
+*/
 let currentRule = 0
 let wordToGuess = getRandomWord()
 

@@ -1,8 +1,8 @@
-import { LeadingComponent } from './LeadingComponent'
-import { TrailingComponent } from './TraillingComponent'
+import { LeadingComponent } from '.'
+import { TrailingComponent } from '.'
 import { useLazyXQuery } from '../../Service'
 
-enum Text { // This `enum` is created at 9:33 AM on Wed 10 Jan 2024.
+enum Text {
 	label,
 	secondaryLabel,
 	length

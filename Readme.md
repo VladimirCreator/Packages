@@ -1,3 +1,7 @@
+<!--# Old Books
+[a28c892](https://github.com/VladimirCreator/Packages/tree/a28c892706de029d654f82bdd28436dbf72f8d5c)
+-->
+
 Vladimir’s Packages
 ===================
 
@@ -19,14 +23,14 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 |2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️| |
 |3|[CRUD for a X](#crud-for-a-x)|✔️| | | |
 |4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | | |
-|5|[Curriculum Vitae](#curriculum-vitae-2)| |✔️| | |
+|5|[Curriculum Vitae](#curriculum-vitae2)| |✔️| | |
 |6|[Exam for December 2022](#exam-for-december-2022)|✔️| | | |
 |7|[Just a Card](#just-a-card)| |✔️| | |
 |8|[Just a Form](#just-a-form)|✔️| | | |
 |9|[Shade Explorer](#shade-explorer)| |✔️| | |
 |10|[X](#x)| |✔️| | |
 
-## \_R\__ for a Comment
+## \_R\__ for a Comment<sup>[a480f16](https://github.com/VladimirCreator/Packages/tree/a480f16275ecc5cfa5ca4ada9a5a7142891ea331)</sup>
 
 ### Quick Look
 
@@ -44,6 +48,11 @@ This package includes at least these dependencies:
 - Tailwind CSS
 
 ### Getting Started
+
+```bash
+$ export VITE_TITLE= # Semi-optional
+$ export ENVIRONMENT_DATA= # Optional
+```
 
 ### Description
 Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где каждое сообщение включает в себя ① уникальный идентификатор, ② дату публикации, ③ автора, ④ содержимое и ⑤ список вложений[^1].
@@ -68,7 +77,7 @@ This package includes at least these dependencies:
 - загрузка старых сообщений при нажатии кнопки "Загрузить старые сообщения"
 - сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
-## \_R\__ for a Hotel
+## \_R\__ for a Hotel<sup>[6c2abc3](https://github.com/VladimirCreator/Packages/tree/6c2abc3efcadbd38b38bc20ebede92a507ac48f2)</sup>
 
 ### Quick Look
 
@@ -79,6 +88,7 @@ This package includes at least these dependencies:
 ### Dependencies
 This package includes at least these dependencies:
 
+- Swift
 - SwiftUI
 
 ### Getting Started
@@ -125,7 +135,7 @@ This package includes at least these dependencies:
 > [!NOTE]
 > Я считаю, что я реализовал это интересным способом, а именно способом передачи состояния через окружение.
 
-## CRUD for a X
+## CRUD for a X<sup>[0dfac8e](https://github.com/VladimirCreator/Packages/tree/0dfac8e0c233ea3ed7f50f0fd51d4a848319a3b6)</sup>
 
 ### Quick Look
 
@@ -161,10 +171,14 @@ This package includes at least these dependencies:
 
 ### Getting Started
 
+```bash
+$ export VITE_TITLE= # Semi-optional
+```
+
 ### Description
 
 
-## CRU_ for an Application
+## CRU_ for an Application<sup>[9c86f77](https://github.com/VladimirCreator/Packages/tree/9c86f777acc9f0e89d6771e3dea6ddf424cb3d0f)</sup>
 
 ### Quick Look
 
@@ -181,6 +195,10 @@ This package includes at least these dependencies:
 
 ### Getting Started
 
+```bash
+$ export VITE_TITLE= # Semi-optional
+```
+
 ### Description
 
 Запуск сопровождается POST-запросом к серверу, который возвращает список приложений, где у каждого приложения есть ① идентификатор, ② название, ③ идентификатор политики, ④ поле `agent_js_config` и ⑤ поле `correlations_config`.
@@ -190,7 +208,7 @@ This package includes at least these dependencies:
 - отправка нового приложения на сервер
 - изменение существующего приложения на сервере
 
-## Curriculum Vitae[^2]
+## Curriculum Vitae[^2]<sup>[019453c](https://github.com/VladimirCreator/Packages/tree/019453c82166be0e6ca94ad53103ea2fa8db9690)</sup>
 ### Quick Look
 [Take a look](https://vladimircreator.github.io/Packages/curriculum-vitae/).
 
@@ -207,12 +225,17 @@ This package includes at least these dependencies:
 
 ### Getting Started
 
+```bash
+$ export VITE_TITLE= # Semi-optional
+$ export ENVIRONMENT_DATA= # Optional
+```
+
 ### Description
 Название этого пакета говорит само за себя.
 
 [^2]: This package is possible because of [this repository](https://github.com/BartoszJarocki/cv/tree/5c0a61989eb98cf0f240d5042ceda8457f2935f0).
 
-## Exam for December 2022
+## Exam for December 2022<sup>[9b3bbd1](https://github.com/VladimirCreator/Packages/tree/9b3bbd12972d733d1376bf6a1fca8f58b04e03d6)</sup>
 
 ### Quick Look
 
@@ -234,10 +257,14 @@ This package includes at least these dependencies:
 ### Getting Started
 
 ```bash
+$ export VITE_TITLE= # Semi-optional
+```
+
+```bash
 $ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
 ```
 
-## Just a Card
+## Just a Card<sup>[97f08ef](https://github.com/VladimirCreator/Packages/tree/97f08ef1b2daad35297cd7d09edb446b07f1652f)</sup>
 [Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
 ### Dependencies
@@ -250,10 +277,15 @@ This package includes at least these dependencies:
 
 ### Getting Started
 
+```bash
+$ export VITE_TITLE= # Semi-optional
+$ export ENVIRONMENT_DATA= # Optional
+```
+
 ### Description
 
 
-## Just a Form
+## Just a Form<sup>[67e07e7](https://github.com/VladimirCreator/Packages/tree/67e07e719f376441b3bb02a33cb3952af8b79b22)</sup>
 [Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
 
 ### Dependencies
@@ -277,7 +309,7 @@ This package includes at least these dependencies:
 
 - Vite
 
-## X
+## X<sup>[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)</sup>
 
 ### Quick Look
 [Give it a shot](https://vladimircreator.github.io/Packages/x/).
@@ -295,6 +327,11 @@ This package includes at least these dependencies:
 
 ### Getting Started
 
+```bash
+$ export VITE_TITLE= # Semi-optional
+$ export ENVIRONMENT_DATA= # Optional
+```
+
 ## Changelog
 
 ### Sat 8 Jul 2023 8:10 PM
@@ -307,4 +344,4 @@ Rename this repository from Playgrounds to gists.
 Rename this repository from gists to Packages.
 
 ## License
-See [License](LICENSE).
+Packages is licensed under the [Apache-2.0](LICENSE).
