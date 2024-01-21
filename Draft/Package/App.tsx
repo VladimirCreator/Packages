@@ -12,7 +12,6 @@ export const App = () => {
 
 	useEffect(
 		() => {
-			console.log(selectedIndex)
 			const logOnKeyDown = (event: KeyboardEvent) => {
 				console.log(event.key)
 			}
@@ -63,12 +62,10 @@ export const App = () => {
 				}
 			}
 			const onKeyDown = (event: KeyboardEvent) => {
-				!true ? logOnKeyDown(event) : undefined
+				logOnKeyDown(event)
 				toUpperCaseOnSpace(event)
-				increaseOnArrowRight(event)
-				decreaseOnArrowLeft(event)
-				completeOnArrowUp(event)
-				completeOnArrowDown(event)
+				increaseOnArrowRight(event); decreaseOnArrowLeft(event)
+				completeOnArrowUp(event); completeOnArrowDown(event)
 				selectOnKeyDown(event)
 			}
 
@@ -77,14 +74,14 @@ export const App = () => {
 				window.removeEventListener('keydown', onKeyDown)
 			}
 		},
-		[toUpperCase, selectedIndex]
+		[]
 	)
 
 	useEffect(
 		() => {
 
 		},
-		[selectedIndex]
+		[]
 	)
 
 	const heading = toUpperCase ? target.charAt(selectedIndex).toUpperCase() : target.charAt(selectedIndex)
@@ -106,10 +103,8 @@ export const App = () => {
 	return (
 		<>
 			<div>
-				<h1>
-					{heading}
-				</h1>
-				<p children={subheading} />
+				<h1>{heading}</h1>
+				<p>{subheading}</p>
 			</div>
 		</>
 	)

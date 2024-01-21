@@ -37,6 +37,7 @@ jobs:
           name: shared
       - uses: actions/setup-node@v4
       - run: mkdir -p _site/
+      - run: ${{ matrix.package.prepare }}
 
       - run: ${{ matrix.package.prebuild }} # For example: npm install-clean
         working-directory: ${{ matrix.package.directory }}

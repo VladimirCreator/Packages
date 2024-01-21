@@ -53,7 +53,7 @@ This package includes at least these dependencies:
 
 ```bash
 $ export VITE_TITLE= # Semi-optional
-$ export ENVIRONMENT_DATA= # Optional
+$ export VITE_ENVIRONMENT_DATA= # Optional
 ```
 
 ### Description
@@ -229,7 +229,7 @@ This package includes at least these dependencies:
 
 ```bash
 $ export VITE_TITLE= # Semi-optional
-$ export ENVIRONMENT_DATA= # Optional
+$ export VITE_ENVIRONMENT_DATA= # Optional
 ```
 
 ### Description
@@ -262,10 +262,6 @@ This package includes at least these dependencies:
 $ export VITE_TITLE= # Semi-optional
 ```
 
-```bash
-$ export TITLE_FOR_EXAM_FOR_2022="<YOUR TITLE>"
-```
-
 ## Just a Card <sup>[`97f08ef`](https://github.com/VladimirCreator/Packages/tree/97f08ef1b2daad35297cd7d09edb446b07f1652f)</sup>
 [Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
@@ -281,7 +277,7 @@ This package includes at least these dependencies:
 
 ```bash
 $ export VITE_TITLE= # Semi-optional
-$ export ENVIRONMENT_DATA= # Optional
+$ export VITE_ENVIRONMENT_DATA= # Optional
 ```
 
 ### Description
@@ -331,7 +327,7 @@ This package includes at least these dependencies:
 
 ```bash
 $ export VITE_TITLE= # Semi-optional
-$ export ENVIRONMENT_DATA= # Optional
+$ export VITE_ENVIRONMENT_DATA= # Optional
 ```
 
 ## Changelog
@@ -346,4 +342,4 @@ Rename this repository from Playgrounds to gists.
 Rename this repository from gists to Packages.
 
 ## License
-Packages is licensed under the [Apache-2.0](LICENSE).
+Packages is licensed under the [Apache-2.0](LICENSE) license.
