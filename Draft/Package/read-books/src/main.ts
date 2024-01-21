@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom' /* @VladimirCreator added this at 2:28 AM on Mon 22 Jan 2024. */
 
 import { App } from './component/App'
+import { Error } from './component/Error'
 import './index.css'
 
 const router = createBrowserRouter([
 	{
-		path: '/', element: React.createElement(App)
+		path: '/', element: React.createElement(App),
+		errorElement: React.createElement(Error)
 	}
 ])
 

@@ -16,7 +16,7 @@ const data: Record<Topic, Omit<Data, 'topic'>> = JSON.parse(import.meta.env.VITE
 const topics = Object.keys(data) as Topic[]
 
 export const App: React.FC = () => {
-	const [searchParams] = useSearchParams({ topic: 'TypeScript' })
+	const [searchParams] = useSearchParams()
 	const topic = searchParams.get('topic') as Topic
 
 	const onKeydown = (event: KeyboardEvent) => {
