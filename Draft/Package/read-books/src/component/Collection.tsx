@@ -1,6 +1,7 @@
 /* @VladimirCreator created this file  at 8:57 PM on Sat 20 Jan 2024.
    @VladimirCreator modified this file at 3:21 AM on Sun 21 Jan 2024 last time.
    @VladimirCreator modified this file at 9:39 PM on Sun 21 Jan 2024 last time.
+   @VladimirCreator fixed this file at 4:22 AM on Mon 22 Jan 2024. `programmingLanguageAsJSX`
    @VladimirCreator renamed this file from Books.tsx to Collection.tsx at 9:28 PM on Sun 21 Jan 2024 last time.
 */
 import type { Topic } from '../type'
@@ -50,13 +51,21 @@ type SectionProps = {
 
 const mapper = (book: Book) => {
 	const { title, author, programmingLanguage } = book
-	return (
+
+	const programmingLanguageAsJSX = !programmingLanguage ? undefined : (
 		<>
-			<li key={author} title={author}>{title}</li>
 			<br />
 			<span className={`programming-language ${programmingLanguage}`}>
 				${programmingLanguage}
 			</span>
+		</>
+	)
+	return (
+		<>
+			<li key={author} title={author}>
+				{title}
+				{programmingLanguageAsJSX}
+			</li>
 		</>
 	)
 }

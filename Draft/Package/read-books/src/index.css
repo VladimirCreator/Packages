@@ -39,7 +39,7 @@ main {
 	background: white;
 }
 
-article { float: left;
+section { float: left;
 	max-width: 50%;
 }
 

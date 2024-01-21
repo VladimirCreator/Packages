@@ -8,7 +8,8 @@ import './index.css'
 
 const router = createBrowserRouter([
 	{
-		path: '/', element: React.createElement(App),
+		path: '/Packages/read-books/', // 🤮
+		element: React.createElement(App),
 		errorElement: React.createElement(Error)
 	}
 ])
