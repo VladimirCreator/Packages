@@ -1,0 +1,37 @@
+name: Build
+run-name: ${{ github.actor }} wants to check if ${{ inputs.package }} is fine
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        required: true
+        type: string
+      script:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+      - run: mkdir -p -v ../_site/
+
+      - run: npm ci
+      - run: npm run ${{ inputs.script }}
+
+      - run: mv -v .build/* ../_site/
+      - uses: actions/upload-pages-artifact@v2
+
+    defaults:
+      run:
+        working-directory: ${{ inputs.package }}
+
+  deploy:
+    needs: build
+    uses: ./.github/workflows/deploy.yaml
+    permissions:
+      id-token: write
+      pages: write

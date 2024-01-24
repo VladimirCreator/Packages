@@ -1,0 +1,29 @@
+{
+	"name": "just-a-form",
+	"private": true,
+	"version": "?.?.?",
+	"author": {
+		"name": "Vladimir",
+		"url": "https://github.com/VladimirCreator/"
+	},
+	"license": "Apache-2.0",
+	"keywords": [
+		"css",
+		"html",
+		"javascript",
+		"react",
+		"vite"
+	],
+	"scripts": {
+		"build": "vite build"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^4.2.0",
+		"jsdoc": "^4.0.2",
+		"vite": "^5.0.2"
+	}
+}

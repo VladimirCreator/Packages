@@ -1,0 +1,69 @@
+@import url('./globals.css');
+
+@keyframes swipe-out-header {
+	from {
+		transform: translateX(0%)
+	}
+	to {
+		transform: translateX(-100%)
+	}
+}
+
+@keyframes fly-in_button {
+	from {
+		transform: scale(0.6) translateY(24%)
+	}
+	to {
+		transform: scale(0.6) translateY(0%)
+	}
+}
+
+body > article:first-child > header:first-child {
+	position: absolute; inset: 0;
+	display: flex;
+	justify-content: center; align-items: center;
+
+	width: 100%; height: 100vh;
+
+	color: var(--light-white-color); background: #0000;
+
+	z-index: 1;
+}
+
+body > article:first-child > header:first-child > address:first-child > h1:first-child {
+	font: 800 1.61em 'MuseoModerno';
+
+	position: relative;
+
+	text-transform: capitalize;
+}
+
+body > article:first-child > header:first-child > address:first-child > h1:first-child > small:last-child {
+	font: 300 .505046584em 'Red Hat Mono';
+
+	position: absolute;
+
+	text-transform: uppercase; line-break: anywhere;
+}
+
+button[id=continue] { aspect-ratio: 1;
+	position: absolute;
+	right: 17px; bottom: 17px;
+	display: block;
+	width: 100px;
+
+	border: none;
+
+	color: var(--light-black-color);
+	background: var(--light-white-color); filter: invert();
+
+	border-radius: 20%;
+
+	transform: scale(.6); transform-origin: right bottom;
+
+	animation: fly-in_button .75s cubic-bezier(0, .18, .25, 1);
+	appearance: none;
+}
+button[id=continue]::after {
+	font: 300 4.4rem/normal 'Rubik'; content: '>';
+}

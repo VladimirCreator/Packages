@@ -1,0 +1,14 @@
+@import url('./tailwind.css');
+
+:root {
+	--light-background-color: #FAFAFA
+}
+
+html {
+	background: url('../public/pattern.svg')
+		var(--light-background-color);
+}
+
+html, body {
+	height: 100%
+}

@@ -1,0 +1,29 @@
+{
+	"name": "_r__-for-a-comment", "private": true,
+	"version": "?.?.?",
+	"author": {
+		"name": "Vladimir", "url": "https://github.com/VladimirCreator/"
+	},
+
+	"scripts": {
+		"build": "vite build --base ./ --outDir .build"
+	},
+
+	"dependencies": {
+		"react": "^18.2.0", "react-dom": "^18.2.0",
+		"react-redux": "^8.1.1",
+		"@reduxjs/toolkit": "^1.9.5",
+
+		"@fortawesome/fontawesome-svg-core": "^6.4.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@fortawesome/free-regular-svg-icons": "^6.4.0", "@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@heroicons/react": "^2.0.18"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.2",
+		"vite": "^5.0.4", "@vitejs/plugin-react": "^4.2.0",
+		"eslint": "^8.55.0",
+
+		"tailwindcss": "^3.3.2", "autoprefixer": "^10.4.16", "postcss": "^8.4.31"
+	}
+}
