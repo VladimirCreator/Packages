@@ -25,4 +25,7 @@
 - [ ]  5:58 PM Add a block that lists archived projects.
 
 ## Sat 20
-- [ ] 8:31 AM Sat 20 Jan 2024 Add a container button that will list dependencies.
+- [ ] 8:31 AM Add a container button that will list dependencies.
+
+## Thu 25
+- [ ] 5:42 AM Make a ProjectCard.tsx to display a preview of a project.
