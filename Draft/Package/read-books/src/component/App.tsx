@@ -1,11 +1,9 @@
-/* @VladimirCreator modified this file at 11:24 PM on Sun 21 Jan 2024 last time.
-*/
-import { useEffect /* @VladimirCreator added this on 9:19 PM on Sun 21 Jan 2024 */ } from 'react' /* @VladimirCreator added this on 9:17 PM on Sun 21 Jan 2024 (Got rid of it at 11:14 PM was `useState`) */
-import { useSearchParams } from 'react-router-dom' /* @VladimirCreator added this on 11:13 PM on Sun 21 Jan 2024 */
-import type { PropsOf } from 'propsof/propsof' /* @VladimirCreator added this on 2:20 AM on Sun 21 Jan 2024 */
+import { useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import type { PropsOf } from 'propsof/propsof'
 
 import './App.css'
-import { Collection } from './Collection' // 8:59 PM Sat 20 Jan 2024
+import { Collection } from './Collection'
 
 type Data = Readonly<
 	PropsOf<typeof Collection>

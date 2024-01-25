@@ -27,8 +27,8 @@ export class Application {
 		const init = { ...ugly1,
 			body: '""'
 		}
-		const response = await fetch(url.concat("/Face/App_List/"), init)
-		const data = response.json()
+		const response = await fetch(url.concat('/Face/App_List/'), init)
+		const data = await response.json()
 
 		const applications = []
 
@@ -40,7 +40,7 @@ export class Application {
 				application[key] = data[key][index]
 			}
 
-			applications.push(new Application(application))
+			applications.push(application)
 			index += 1
 		}
 
@@ -56,11 +56,11 @@ export class Application {
 			}, body
 		}
 
-		const response = await fetch(url.concat("/Face/New_app"), init)
+		const response = await fetch(url.concat('/Face/New_app'), init)
 		const object = await response.json()
 		this.notifyObservers(object)
 
-		if (object.error === 0 || object.error === "0") {
+		if (object.error === 0 || object.error === '0') {
 			this.applications.push(application); this.notifyObservers(this.applications)
 		}
 	}
@@ -73,7 +73,7 @@ export class Application {
 			}, body
 		}
 
-		const response = await fetch(url.concat("/Face/Update_app"), init)
+		const response = await fetch(url.concat('/Face/Update_app'), init)
 		const object = await response.json()
 
 		this.notifyObservers(object)
@@ -84,9 +84,11 @@ export class Application {
 	/* MARK: ... */
 	static #shared = undefined
 	static get shared() {
-		const hasInstance = typeof Application.#shared !== "undefined"
+		const hasInstance = typeof Application.#shared !== 'undefined'
 
-		if (!hasInstance) Application.#shared = new Application(false)
+		if (!hasInstance) {
+			Application.#shared = new Application(false)
+		}
 		return Application.#shared
 	}
 }

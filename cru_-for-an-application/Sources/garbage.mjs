@@ -17,3 +17,6 @@ export const view = {
 	modal: document.querySelector("div#applicationForm.modal")
 }
 
+export const keys = [
+	'ids', 'names', 'agent_js_configs', 'correlations_config', 'policy_ids'
+]

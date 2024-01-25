@@ -1,9 +1,3 @@
-/* @VladimirCreator created this file  at 8:57 PM on Sat 20 Jan 2024.
-   @VladimirCreator modified this file at 3:21 AM on Sun 21 Jan 2024 last time.
-   @VladimirCreator modified this file at 9:39 PM on Sun 21 Jan 2024 last time.
-   @VladimirCreator fixed this file at 4:22 AM on Mon 22 Jan 2024. `programmingLanguageAsJSX`
-   @VladimirCreator renamed this file from Books.tsx to Collection.tsx at 9:28 PM on Sun 21 Jan 2024 last time.
-*/
 import type { Topic } from '../type'
 
 type HeaderProps = {
@@ -11,7 +5,7 @@ type HeaderProps = {
 	relatedTopics: Topic[]
 }
 
-const Header: React.FC<HeaderProps> = props => { // in: 9:03 PM Sat 20 Jan 2024...1:36 AM Sun 21 Jan 2024
+const Header: React.FC<HeaderProps> = props => {
 	const {
 		topic,
 		relatedTopics
@@ -40,7 +34,7 @@ type Location = 'local' | 'server' /* Example:
 
 type Book = {
 	title: string; author: string
-	read?: boolean; pending?: boolean /* @VladimirCreator added `pending` property at 3:21 AM on Sun 21 Jan 2024 */
+	read?: boolean; pending?: boolean
 	programmingLanguage?: Topic
 }
 
@@ -70,7 +64,7 @@ const mapper = (book: Book) => {
 	)
 }
 
-const Section: React.FC<SectionProps> = props => { // in: 1:38 AM...2:00 AM Sun 21 Jan 2024
+const Section: React.FC<SectionProps> = props => {
 	const {
 		location,
 		children
@@ -85,8 +79,8 @@ const Section: React.FC<SectionProps> = props => { // in: 1:38 AM...2:00 AM Sun 
 	)
 }
 
-type FooterProps = { // in:2:03 AM Sun 21 Jan 2024
-	markdown?: string /* @VladimirCreator changed this on 2:22 AM on Sun 21 Jan 2024 (added a question mark) */
+type FooterProps = {
+	markdown?: string
 }
 
 const Footer: React.FC<FooterProps> = props => {
@@ -107,7 +101,7 @@ type Props = HeaderProps &
 		locations: Record<Location, Book[]>
 	}
 
-export const Collection: React.FC<Props> = props => { // in: ??:?? PM Sat 20 Jan 2024...2:18 AM Sun 21 Jan 2024
+export const Collection: React.FC<Props> = props => {
 	const {
 		locations: locationsAsDictionary,
 		...rest

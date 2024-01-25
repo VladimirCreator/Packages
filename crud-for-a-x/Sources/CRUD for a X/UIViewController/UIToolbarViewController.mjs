@@ -84,7 +84,7 @@ export class UIToolbarViewController {
 	// MARK:- `UIToolbarViewDelegate`
 
 	toolbarViewDidSelectAppend(toolbarView) {
-		const selector = ['div#modalAdd','div.modal-body','form.vstack'].join('>')
+		const selector = ['div#modalAdd','div.modal-dialog','div.modal-content','div.modal-body','form.vstack'].join('>')
 
 		document.querySelector(selector).innerHTML = Object.keys(this.#contentConfiguration).reduce(
 			(accumulator, key) => (
@@ -94,7 +94,7 @@ export class UIToolbarViewController {
 	}
 	toolbarViewDidSelectRemove(toolbarView) {}
 	toolbarViewDidSelectReplace(toolbarView) {
-		const selector = ['div#modalEdit','div.modal-body','form.vstack'].join('>')
+		const selector = ['div#modalEdit','div.modal-dialog','div.modal-content','div.modal-body','form.vstack'].join('>')
 
 		document.querySelector(selector).innerHTML = Object.keys(this.#contentConfiguration).reduce(
 			(accumulator, key) => (

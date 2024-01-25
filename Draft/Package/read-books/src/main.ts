@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom' /* @VladimirCreator added this at 2:28 AM on Mon 22 Jan 2024. */
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { App } from './component/App'
 import { Error } from './component/Error'
