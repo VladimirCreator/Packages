@@ -1,5 +1,5 @@
-import { LeadingComponent } from '.'
-import { TrailingComponent } from '.'
+import { LeadingComponent } from './LeadingComponent'
+import { TrailingComponent } from './TraillingComponent'
 import { useLazyXQuery } from '../../Service'
 
 enum Text {

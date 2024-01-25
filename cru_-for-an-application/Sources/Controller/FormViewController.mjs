@@ -1,4 +1,5 @@
 import { Application } from '../Application'
+import { keys } from '../garbage'
 
 export class UIFormViewController {
 
@@ -6,8 +7,8 @@ export class UIFormViewController {
 
 	state = new AddFormState();
 
-	form = document.querySelector("form.vstack")
-	modal = new bootstrap.Modal(document.querySelector("div#applicationForm.modal"))
+	form = document.querySelector('form.vstack')
+	modal = new bootstrap.Modal(document.querySelector('div#applicationForm.modal'))
 
 	// MARK: Constructors
 
@@ -18,25 +19,25 @@ export class UIFormViewController {
 
 	// MARK: Methods
 
-	loadView() { document.querySelector("div.modal-footer").append(this.saveButton) }
+	loadView() { document.querySelector('div.modal-footer').append(this.saveButton) }
 
-	present(dataSource = new Application()) {
-		this.form.innerHTML = ""
+	present(dataSource = [...keys]) {
+		this.form.innerHTML = ''
 
-		dataSource["error"] = ""
+		dataSource['error'] = ''
 
 		for (const key in dataSource) {
-			const div = document.createElement("div")
-			const label = document.createElement("label")
-			const input = document.createElement("input")
+			const div = document.createElement('div')
+			const label = document.createElement('label')
+			const input = document.createElement('input')
 
-			label.className = "form-label"
+			label.className = 'form-label'
 			label.htmlFor = key
 			label.innerText = key
 
-			input.id = key; input.className = "form-control"
-			input.type = "text"
-			input.value = dataSource[key] ?? ""
+			input.id = key; input.className = 'form-control'
+			input.type = 'text'
+			input.value = dataSource[key] ?? ''
 
 			this.state.div(div, label, input)
 
@@ -49,7 +50,7 @@ export class UIFormViewController {
 	dismiss() { this.modal.hide() }
 
 	error(message) {
-		const errorInput = this.form.querySelector("input#error")
+		const errorInput = this.form.querySelector('input#error')
 		if (!errorInput) return; else errorInput.value = this.state.message
 	}
 
@@ -68,20 +69,21 @@ export class UIFormViewController {
 	// MARK: Getters
 
 	get application() {
-		const application = new Application()
-		for (const key in application) {
-			application[key] = document.querySelector("input#".concat(key)).value
+		const application = {}
+		for (const key of keys) {
+			const input = document.querySelector(`input#${key}`)
+			application[key] = input.value
 		}
 
-		return new Application(application)
+		return application
 	}
 
 	get saveButton() {
-		const button = document.createElement("button")
-		button.id = "saveButton"; button.className = "btn btn-primary"
-		button.type = "button"
-		button.innerText = "Сохранить"
-		button.addEventListener("click", event => this.saveButtonDidClick(event))
+		const button = document.createElement('button')
+		button.id = 'saveButton'; button.className = 'btn btn-primary'
+		button.type = 'button'
+		button.innerText = 'Сохранить'
+		button.addEventListener('click', event => this.saveButtonDidClick(event))
 
 		return button
 	}
@@ -91,7 +93,7 @@ export class UIFormViewController {
 	/** @type {UIFormViewController|undefined} */
 	static #shared = undefined
 	static get shared() {
-		if (typeof UIFormViewController.#shared === "undefined") {
+		if (typeof UIFormViewController.#shared === 'undefined') {
 			UIFormViewController.#shared = new UIFormViewController(false)
 		}
 		return UIFormViewController.#shared
@@ -100,30 +102,30 @@ export class UIFormViewController {
 
 class FormState {
 	div(div, label, input) {
-		if (input.id !== "error") { return }
-		input.className = "form-control-plaintext"
-		input.setAttribute("disabled", "")
-		input.value = ""
+		if (input.id !== 'error') { return }
+		input.className = 'form-control-plaintext'
+		input.setAttribute('disabled', '')
+		input.value = ''
 	}
 }
 
-class AddFormState extends FormState {
+export class AddFormState extends FormState {
 	fetch(application) { Application.shared.upload(application) }
 
 	div(div, label, input) { super.div(div, label, input) }
 
-	get title() { return "Новое приложение" }
-	get message() { return "Приложение с указанным app_id уже существует." }
+	get title() { return 'Новое приложение' }
+	get message() { return 'Приложение с указанным app_id уже существует.' }
 }
 
-class UpdateFormState extends FormState {
+export class UpdateFormState extends FormState {
 	fetch(application) { Application.shared.update(application) }
 
 	div(div, label, input) {
 		super.div(div, label, input)
-		if (input.id === "app_id") input.setAttribute("disabled", "")
+		if (input.id === 'app_id') input.setAttribute('disabled', '')
 	}
 
-	get title() { return "Редактирование приложения" }
-	get message() { return "Приложение с указанным app_id не существует." }
+	get title() { return 'Редактирование приложения' }
+	get message() { return 'Приложение с указанным app_id не существует.' }
 }

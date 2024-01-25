@@ -1,0 +1,161 @@
+/* The place I imprted from (Notes on iPadOS) says the note was created at 5:01 PM on Dec 6 2021 and last modified at 5:02 PM on Dec 6 2021.
+Everyhing below is imported as is. The exception is converting spaces to tabs.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+#greeting {
+	font-weight: 400;
+	font-size: 36pt;
+	color: rgba(255, 45, 85, 1);
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+#copyright {
+	text-align: center;
+
+	font-weight: 700;
+	font-size: 8pt;
+
+	color: rgb(242, 242, 247);
+
+	font-family: 'Cousine', monospace;
+
+	right: 0px;
+	bottom: 0px;
+
+	position: absolute;
+
+	margin: 20px;
+
+	opacity: 100%;
+
+}
+.font {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+	font-size: 13pt;
+
+	color: rgb(0, 0, 0);
+}
+.item {
+	display: inline;
+	position: relative;
+
+	padding-right: 0px;
+}
+.item-font {
+	font-family: 'Rubik', serif;
+	font-weight: 500;
+	font-size: 30pt;
+
+	color: black;
+
+	margin: 0;
+	padding: 0;
+
+	position: relative;
+	text-align: left;
+}
+.item-link {
+	color:inherit;
+	text-decoration: inherit;
+	cursor: pointer;
+	text-align: inherit;
+	vertical-align: inherit;
+	font-family: inherit;
+}
+.item-link:hover {
+	color: rgb(50, 173, 230);
+}
+#sheet {
+	padding: 25pt;
+
+	margin: inherit;
+	position: absolute;
+	z-index: 0;
+	border: 2px outset rgba(255, 45, 85, 1);
+	box-shadow: -13px 23px 0px pink, -13px 23px 30px 5px lightpink;
+
+	margin-left: 403px;
+	margin-right: 403px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	border-radius: 3px;
+}
+#canvas {
+	margin: inherit;
+	padding: inherit;
+
+	background: #f2f2f7;
+
+	height: 768px;
+	width: 100%;
+
+	background: linear-gradient(45deg, rgb(218, 143, 255), rgb(93, 230, 255));
+}
+#sheet::before {
+	filter: blur(0);
+	background: white;
+	opacity: 100%;
+	content: '';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: -1;
+}
+.p {
+	margin: 0;
+}
+// index.html
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		About software
+	</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body style="margin: 0;">
+	<div id="canvas">
+		<div id="sheet">
+			<div id="greeting" class="font">
+				Добро пожаловать!
+			</div>
+			<div id="main" class="font">
+				<p style="margin-bottom: 7px;">На этом сайте у Вас есть возможность подробнее узнать о программном обеспечении для людей, которые его создают.</p>
+				<p style="margin-top: 0px;">Выберите, что Вас интересует:</p>
+			</div>
+			<div id="section" class="font">
+				<div class="item">
+					<div class="item-font"><a href="iOS.html" class="item-link">Compiler</a></div>
+				</div>
+				<div class="item">
+					<div class="item-font"><a href="iPadOS.html" class="item-link">Linker</a></div>
+				</div>
+				<div class="item">
+					<div class="item-font"><a href=macOS.html class="item-link">Debugger</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright" class="font">
+			Copyright © 2021 Vladimir Petrov Leonidovich. All rights reserved.
+		</div>
+	</div>
+</body>
+</html>
+
+
+#imported

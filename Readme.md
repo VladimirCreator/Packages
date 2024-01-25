@@ -12,9 +12,7 @@ Vladimir’s Packages
 A collection of packages where I practice git, JavaScript, TypeScript, Swift, GitHub and even more!
 
 ### Topics
-<span>swift</span>
-<span>typescript</span>
-<span>javascript</span>
+swift typescript javascript
 
 ## [To Do](./TODO.md)
 
@@ -22,18 +20,18 @@ A collection of packages where I practice git, JavaScript, TypeScript, Swift, Gi
 
 |№|Package|![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)|![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)|![](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)|![](https://img.shields.io/badge/purescript-14161a?style=for-the-badge&logo=purescript&logoColor=white)|
 |:-:|:-|:-:|:-:|:-:|:-:|
-|1|[\_R\__ for a Comment](#_r__-for-a-comment)|✔️| | | |
-|2|[\_R\__ for a Hotel](#_r__-for-a-hotel)| | |✔️| |
-|3|[CRUD for a X](#crud-for-a-x)|✔️| | | |
-|4|[CRU_ for an Application](#cru_-for-an-application)|✔️| | | |
-|5|[Curriculum Vitae](#curriculum-vitae2)| |✔️| | |
-|6|[Exam for December 2022](#exam-for-december-2022)|✔️| | | |
-|7|[Just a Card](#just-a-card)| |✔️| | |
-|8|[Just a Form](#just-a-form)|✔️| | | |
-|9|[Shade Explorer](#shade-explorer)| |✔️| | |
-|10|[X](#x)| |✔️| | |
+|1|[\_R\__ for a Comment](#_r__-for-a-comment)|[`a480f16`](https://github.com/VladimirCreator/Packages/tree/a480f16275ecc5cfa5ca4ada9a5a7142891ea331)|WIP|WIP| |
+|2|[\_R\__ for a Hotel](#_r__-for-a-hotel)|Not Planned|WIP|[`6c2abc3`](https://github.com/VladimirCreator/Packages/tree/6c2abc3efcadbd38b38bc20ebede92a507ac48f2)| |
+|3|[CRUD for a X](#crud-for-a-x)|[`0dfac8e`](https://github.com/VladimirCreator/Packages/tree/0dfac8e0c233ea3ed7f50f0fd51d4a848319a3b6)|WIP|WIP| |
+|4|[CRU_ for an Application](#cru_-for-an-application)|[`9c86f77`](https://github.com/VladimirCreator/Packages/tree/9c86f777acc9f0e89d6771e3dea6ddf424cb3d0f)| | | |
+|5|[Curriculum Vitae](#curriculum-vitae2)|Not Planned|[`019453c`](https://github.com/VladimirCreator/Packages/tree/019453c82166be0e6ca94ad53103ea2fa8db9690)| | |
+|6|[Exam for December 2022](#exam-for-december-2022)|[`9b3bbd1`](https://github.com/VladimirCreator/Packages/tree/9b3bbd12972d733d1376bf6a1fca8f58b04e03d6)| | | |
+|7|[Just a Card](#just-a-card)|Not Planned|[`97f08ef`](https://github.com/VladimirCreator/Packages/tree/97f08ef1b2daad35297cd7d09edb446b07f1652f)| | |
+|8|[Just a Form](#just-a-form)|[`67e07e7`](https://github.com/VladimirCreator/Packages/tree/67e07e719f376441b3bb02a33cb3952af8b79b22)| | | |
+|9|[Shade Explorer](#shade-explorer)|Not Planned|✔️| | |
+|10|[X](#x)|Not Planned|[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)| | |
 
-## \_R\__ for a Comment <sup>[`a480f16`](https://github.com/VladimirCreator/Packages/tree/a480f16275ecc5cfa5ca4ada9a5a7142891ea331)</sup>
+## \_R\__ for a Comment
 
 ### Quick Look
 
@@ -80,7 +78,7 @@ $ export VITE_ENVIRONMENT_DATA= # Optional
 - загрузка старых сообщений при нажатии кнопки "Загрузить старые сообщения"
 - сортировка списка сообщений "от новых к старым" или "от старых к новым"
 
-## \_R\__ for a Hotel <sup>[`6c2abc3`](https://github.com/VladimirCreator/Packages/tree/6c2abc3efcadbd38b38bc20ebede92a507ac48f2)</sup>
+## \_R\__ for a Hotel
 
 ### Quick Look
 
@@ -138,7 +136,7 @@ This package includes at least these dependencies:
 > [!NOTE]
 > Я считаю, что я реализовал это интересным способом, а именно способом передачи состояния через окружение.
 
-## CRUD for a X <sup>[`0dfac8e`](https://github.com/VladimirCreator/Packages/tree/0dfac8e0c233ea3ed7f50f0fd51d4a848319a3b6)</sup>
+## CRUD for a X
 
 ### Quick Look
 
@@ -181,7 +179,7 @@ $ export VITE_TITLE= # Semi-optional
 ### Description
 
 
-## CRU_ for an Application <sup>[`9c86f77`](https://github.com/VladimirCreator/Packages/tree/9c86f777acc9f0e89d6771e3dea6ddf424cb3d0f)</sup>
+## CRU_ for an Application
 
 ### Quick Look
 
@@ -211,7 +209,7 @@ $ export VITE_TITLE= # Semi-optional
 - отправка нового приложения на сервер
 - изменение существующего приложения на сервере
 
-## Curriculum Vitae[^2] <sup>[`019453c`](https://github.com/VladimirCreator/Packages/tree/019453c82166be0e6ca94ad53103ea2fa8db9690)</sup>
+## Curriculum Vitae[^2]
 ### Quick Look
 [Take a look](https://vladimircreator.github.io/Packages/curriculum-vitae/).
 
@@ -238,7 +236,7 @@ $ export VITE_ENVIRONMENT_DATA= # Optional
 
 [^2]: This package is possible because of [this repository](https://github.com/BartoszJarocki/cv/tree/5c0a61989eb98cf0f240d5042ceda8457f2935f0).
 
-## Exam for December 2022 <sup>[`9b3bbd1`](https://github.com/VladimirCreator/Packages/tree/9b3bbd12972d733d1376bf6a1fca8f58b04e03d6)</sup>
+## Exam for December 2022
 
 ### Quick Look
 
@@ -263,7 +261,7 @@ This package includes at least these dependencies:
 $ export VITE_TITLE= # Semi-optional
 ```
 
-## Just a Card <sup>[`97f08ef`](https://github.com/VladimirCreator/Packages/tree/97f08ef1b2daad35297cd7d09edb446b07f1652f)</sup>
+## Just a Card
 [Take a look](https://vladimircreator.github.io/Packages/just-a-card/).
 
 ### Dependencies
@@ -284,7 +282,7 @@ $ export VITE_ENVIRONMENT_DATA= # Optional
 ### Description
 
 
-## Just a Form <sup>[`67e07e7`](https://github.com/VladimirCreator/Packages/tree/67e07e719f376441b3bb02a33cb3952af8b79b22)</sup>
+## Just a Form
 [Give it a shot](https://vladimircreator.github.io/Packages/just-a-form/).
 
 ### Dependencies
@@ -308,7 +306,7 @@ This package includes at least these dependencies:
 
 - Vite
 
-## X <sup>[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)</sup>
+## X
 
 ### Quick Look
 [Give it a shot](https://vladimircreator.github.io/Packages/x/).
