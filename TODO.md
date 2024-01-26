@@ -37,3 +37,5 @@
 > or
 >
 > Framework, library, and a programming language.
+
+- [ ] 11:15 AM Use Lerna.
