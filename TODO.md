@@ -29,3 +29,11 @@
 
 ## Thu 25
 - [ ] 5:42 AM Make a ProjectCard.tsx to display a preview of a project.
+
+## Fri 26
+- [ ] 9:19 AM...9:25 AM I want the “Skills” section to be able to group itself by context or by topic.
+> Swift Context and JavaScript/TypeScrpt Context.
+>
+> or
+>
+> Framework, library, and a programming language.
