@@ -1,6 +1,3 @@
-<!-- @VladimirCreator created this file  at 10:57 PM on Tue 30 Jan 2024.
-     @VladimirCreator modified this file at 10:57 PM on Tue 30 Jan 2024 last time.
--->
 ## Exam for December 2022
 
 ### Предпросмотр

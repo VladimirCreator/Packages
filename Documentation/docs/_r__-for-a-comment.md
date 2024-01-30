@@ -1,15 +1,12 @@
-<!-- @VladimirCreator created this file  at 10:39 PM on Tue 30 Jan 2024.
-     @VladimirCreator modified this file at 10:49 PM on Tue 30 Jan 2024 last time.
--->
-## \_R\__ for a Comment
+# \_R\__ for a Comment
 
-### Предпросмотр
+## Предпросмотр
 
 [Попробовать](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
 
 ![](@/dynamic/_r__-for-a-comment/_r__-for-a-comment.gif)
 
-### Зависимости
+## Зависимости
 Данный пакет как минимум включает в себя эти зависимости:
 
 - Vite
@@ -18,14 +15,14 @@
 - Redux
 - Tailwind CSS
 
-### Начало работы
+## Начало работы
 
 ```bash
 $ export VITE_TITLE= # Полу-опционально
 $ export VITE_ENVIRONMENT_DATA= # Опционально
 ```
 
-### Описание
+## Описание
 Запуск сопровождается POST-запросом к серверу, который возвращает список сообщений, где каждое сообщение включает в себя ① уникальный идентификатор, ② дату публикации, ③ автора, ④ содержимое и ⑤ список вложений[^1].
 
 [^1]: Данный список состоит из фотографий и видео.

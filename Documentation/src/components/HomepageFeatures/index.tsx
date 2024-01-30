@@ -8,12 +8,15 @@ type FeatureItem = {
 	description: JSX.Element
 }
 
+/* На данный момент, я не знаю возможностей Docusaurus, поэтому пока приходится обходится таким образом.
+*/
 const FeatureList: FeatureItem[] = [
 	{ title: '_R__ for a Comment', description: (<></>) },
 	{ title: '_R__ for a Hotel', description: (<></>) },
 	{ title: 'CRUD for a X', description: (<></>) },
 	{ title: 'CRU_ for an Application', description: (<></>) },
 	{ title: 'Curriculum Vitae', description: (<></>) },
+	{ title: 'Documentation', description: (<></>) },
 	{ title: 'Exam for December 2022', description: (<></>) },
 	{ title: 'Just a Card', description: (<></>) },
 	{ title: 'Just a Form', description: (<></>) },
