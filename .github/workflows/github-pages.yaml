@@ -59,6 +59,7 @@ jobs:
         with:
           path: .
 
+      - run: mv ./Documentation/* .
       - run: tar --exclude='./shared' -cf artifact.tar ./*
 
       - uses: actions/upload-artifact@v4
