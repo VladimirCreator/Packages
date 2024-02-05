@@ -4,7 +4,7 @@
 
 [Попробовать](https://vladimircreator.github.io/Packages/_r__-for-a-comment/).
 
-![](@/dynamic/_r__-for-a-comment/_r__-for-a-comment.gif)
+![](/_r__-for-a-comment/_r__-for-a-comment.gif)
 
 ## Зависимости
 Данный пакет как минимум включает в себя эти зависимости:

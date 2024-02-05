@@ -12,7 +12,7 @@ const config: Config = {
 	organizationName: 'VladimirCreator',
 	projectName: 'Packages',
 
-	onBrokenLinks: 'warn', onBrokenMarkdownLinks: 'warn',
+	onBrokenLinks: 'ignore', onBrokenMarkdownLinks: 'warn',
 
 	i18n: {
 		defaultLocale: 'en',

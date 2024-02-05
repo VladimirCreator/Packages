@@ -1,13 +1,9 @@
-<!-- @VladimirCreator created this file at 1:38 PM on Wed 31 Jan 2024.
-     @VladimirCreator imported contents of this file at 1:38 PM on Wed 31 Jan 2024.
-9:22 PM…9:44 PM Mon 29 Jan 2024
--->
 # Dodo Pizza
 
 ## Предпросмотр
 [Попробовать](https://t.me/sterlitamakfoodbot/).
 
-[Здесь]() можно посмотреть компоненты. # 9:50 PM Mon 29 Jan 2024
+Здесь можно посмотреть компоненты. # 9:50 PM Mon 29 Jan 2024
 
 ## Зависимости
 Этот пакет включает в себя как минимум эти зависимости

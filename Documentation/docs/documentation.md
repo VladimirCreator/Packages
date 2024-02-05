@@ -1,6 +1,3 @@
-<!-- @VladimirCreator created this file  at 1:21 AM on Wed 31 Jan 2024.
-     @VladimirCreator modified this file at 1:24 PM on Wed 31 Jan 2024 last time.
--->
 # Documentation
 ## Предпросмотр
 [Взглянуть](https://vladimircreator.github.io/Packages/Documentation/).
