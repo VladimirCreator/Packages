@@ -23,12 +23,13 @@ swift typescript javascript
 |3|[CRUD for a X](https://vladimircreator.github.io/Packages/crud-for-a-x)|[`0dfac8e`](https://github.com/VladimirCreator/Packages/tree/0dfac8e0c233ea3ed7f50f0fd51d4a848319a3b6)|WIP|WIP| |
 |4|[CRU_ for an Application](https://vladimircreator.github.io/Packages/cru_-for-an-application)|[`9c86f77`](https://github.com/VladimirCreator/Packages/tree/9c86f777acc9f0e89d6771e3dea6ddf424cb3d0f)| | | |
 |5|[Curriculum Vitae](https://vladimircreator.github.io/Packages/curriculum-vitae)|Не планируется|[`019453c`](https://github.com/VladimirCreator/Packages/tree/019453c82166be0e6ca94ad53103ea2fa8db9690)| | |
-|6|[Documentation](https://vladimircreator.github.io/Packages/Documentation)|Не планируется|[`11310b5`](https://github.com/VladimirCreator/Packages/tree/11310b559d7177ff0786731be1ef7ea2baca90ef)| | |
+|6|[Documentation](https://vladimircreator.github.io/Packages/Documentation)|Не планируется|[`11310b5`](https://github.com/VladimirCreator/Packages/tree/11310b559d7177ff0786731be1ef7ea2baca90ef)| | |<!--||Dodo Pizza|Не планируется||||-->
 |7|[Exam for December 2022](https://vladimircreator.github.io/Packages/exam-for-december-2022)|[`9b3bbd1`](https://github.com/VladimirCreator/Packages/tree/9b3bbd12972d733d1376bf6a1fca8f58b04e03d6)| | | |
 |8|[Just a Card](https://vladimircreator.github.io/Packages/just-a-card)|Не планируется|[`97f08ef`](https://github.com/VladimirCreator/Packages/tree/97f08ef1b2daad35297cd7d09edb446b07f1652f)| | |
 |9|[Just a Form](https://vladimircreator.github.io/Packages/just-a-form)|[`67e07e7`](https://github.com/VladimirCreator/Packages/tree/67e07e719f376441b3bb02a33cb3952af8b79b22)| | | |
-|10|Shade Explorer|Не планируется|✔️| | |
-|11|[X](https://vladimircreator.github.io/Packages/x)|Не планируется|[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)| | |
+|10|[Mediator](https://vladimircreator.github.io/Mediator/)|Не планируется|✔️| | |
+|11|Shade Explorer|Не планируется|✔️| | |
+|12|[X](https://vladimircreator.github.io/Packages/x)|Не планируется|[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)| | |
 
 ## Подробное описание
 Подробную информацию о всех пакетах рекомендуется получать [здесь](https://vladimircreator.github.io/Packages/Documentation).
