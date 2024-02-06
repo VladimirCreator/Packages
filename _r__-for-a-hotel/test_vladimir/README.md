@@ -1,1 +1,0 @@
-Documentation/docs/_r__-for-a-hotel.md

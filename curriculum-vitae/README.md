@@ -1,1 +1,1 @@
-Documentation/docs/curriculum-vitae.md
+../Documentation/docs/curriculum-vitae.md

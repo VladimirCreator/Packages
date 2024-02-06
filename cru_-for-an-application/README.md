@@ -1,1 +1,1 @@
-Documentation/docs/cru_-for-an-application.md
+../Documentation/docs/cru_-for-an-application.md
