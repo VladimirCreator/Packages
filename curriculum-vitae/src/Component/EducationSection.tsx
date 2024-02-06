@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { Card, CardHeader, CardContent } from '../Legacy'
 import { Section } from '../Legacy'
 
@@ -35,9 +37,10 @@ const List: React.FC<Props> = props => {
 
 export const EducationSection: React.FC<Props> = props => {
 	const { education } = props
+	const { t } = useTranslation()
 	return (
 		<Section>
-			<h2 className='font-bold text-xl'>Education</h2>
+			<h2 className='font-bold text-xl'>{t('education')}</h2>
 			<List education={education} />
 		</Section>
 	)

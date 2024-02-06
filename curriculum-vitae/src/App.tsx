@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { CommandMenu, Section } from './Legacy'
 import { EducationSection, Header, ProjectSection, SkillSection, WorkSection } from './Component'
 
@@ -15,6 +17,7 @@ type Resume = Readonly<
 
 export const App = () => {
 	const data: Resume = JSON.parse(import.meta.env.VITE_ENVIRONMENT_DATA)
+	const { t } = useTranslation()
 
 	const links = [
 		{ title: 'Personal Website', url: data.personalWebsiteUrl },
@@ -27,7 +30,7 @@ export const App = () => {
 			<section className='w-full max-w-2xl mx-auto space-y-8 bg-white print:space-y-6'>
 				<Header {...data} />
 				<Section>
-					<h2 className='font-bold text-xl'>About</h2>
+					<h2 className='font-bold text-xl'>{t('about')}</h2>
 					<p className='font-mono text-sm text-muted-foreground text-pretty' children={data.summary} />
 				</Section>
 				<WorkSection {...data} />

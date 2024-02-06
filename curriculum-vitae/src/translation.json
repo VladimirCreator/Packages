@@ -1,0 +1,22 @@
+{
+	"ru": {
+		"translation": {
+			"description": "Описание",
+			"workExperience": "Опыт работы",
+			"education": "Образование",
+			"skills": "Навыки",
+			"projects": "Пакеты",
+			"wipProjects": "Пакеты в разработке"
+		}
+	},
+	"en": {
+		"translation": {
+			"description": "Description",
+			"workExperience": "Work Experince",
+			"education": "Education",
+			"skills": "Skills",
+			"projects": "Packagess",
+			"wipProjects": "Work in Progress Packages"
+		}
+	}
+}

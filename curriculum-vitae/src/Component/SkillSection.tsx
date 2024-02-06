@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import startCase from 'lodash-es/startCase'
 
 import { Badge } from '../Legacy'
@@ -58,11 +59,10 @@ const buildIfObject: Builder = {
 
 export const SkillSection: React.FC<Props> = props => {
 	const { skills } = props
+	const { t } = useTranslation()
 	return !skills ? null : (
 		<Section>
-			<h2 className='font-bold text-xl'>
-				Skills
-			</h2>
+			<h2 className='font-bold text-xl'>{t('skills')}</h2>
 			{buildIfObject.createElement(skills)}
 		</Section>
 	)
