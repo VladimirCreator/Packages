@@ -20,7 +20,7 @@ export const App = () => {
 	const { t } = useTranslation()
 
 	const links = [
-		{ title: 'Personal Website', url: data.personalWebsiteUrl },
+		{ title: t('personalWebsite'), url: data.personalWebsiteUrl },
 		...data.contact.social.map(
 			({ name: title, url }: any) => ({ title, url })
 		)
@@ -30,7 +30,7 @@ export const App = () => {
 			<section className='w-full max-w-2xl mx-auto space-y-8 bg-white print:space-y-6'>
 				<Header {...data} />
 				<Section>
-					<h2 className='font-bold text-xl'>{t('about')}</h2>
+					<h2 className='font-bold text-xl'>{t('description')}</h2>
 					<p className='font-mono text-sm text-muted-foreground text-pretty' children={data.summary} />
 				</Section>
 				<WorkSection {...data} />

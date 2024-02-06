@@ -59,7 +59,7 @@ jobs:
         with:
           path: .
 
-      - run: find ./Documentation/ -type f -exec mv {} . \; # Thanks to Copilot :)
+      - run: rsync -a --remove-source-files ./Documentation/* . # Thanks to Copilot :) I hope it now works :/
       - run: tar --exclude='./shared' -cf artifact.tar ./*
 
       - uses: actions/upload-artifact@v4

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { CommandIcon } from 'lucide-react'
 
 import { Button } from './UI'
@@ -13,6 +14,7 @@ type Props = {
 export const CommandMenu: React.FC<Props> = props => {
 	const { links } = props
 	const [open, setOpen] = useState(false)
+	const { t } = useTranslation()
 
 	useEffect(
 		() => {
@@ -45,11 +47,18 @@ export const CommandMenu: React.FC<Props> = props => {
 	return (
 		<>
 			<p className='fixed xl:block right-0 bottom-0 left-0 p-1 border-t border-t-muted text-sm text-center text-muted-foreground bg-white hidden print:hidden'>
-				Press{' '}
-				<kbd className='font-medium text-[10px] font-mono text-muted-foreground h-5 inline-flex items-center gap-1 px-1.5 border bg-muted rounded opacity-100 select-none pointer-events-none'>
-					<span className='text-xs'>⌘</span>J
-				</kbd>{' '}
-				to open the command menu
+				{
+					t(
+						'pressCmdJToOpenCmdMenu',
+						{
+							// Ugly!
+							keyComination: `
+<kbd className='font-medium text-[10px] font-mono text-muted-foreground h-5 inline-flex items-center gap-1 px-1.5 border bg-muted rounded opacity-100 select-none pointer-events-none'>
+	<span className='text-xs'>⌘</span>J
+</kbd>{' '}`
+						}
+					)
+				}
 			</p>
 			<Button className='fixed right-4 bottom-4 flex rounded-full shadow-2xl xl:hidden print:hidden'
 				onClick={() => setOpen(!open)}
@@ -58,15 +67,15 @@ export const CommandMenu: React.FC<Props> = props => {
 				<CommandIcon className='size-6 my-6' />
 			</Button>
 			<CommandDialog open={open} onOpenChange={setOpen}>
-				<CommandInput placeholder='Type a command or search...' />
+				<CommandInput placeholder={t('typeACmdOrSearch')} />
 				<CommandList>
-					<CommandEmpty children='No results found.' />
-					<CommandGroup heading='Actions'>
+					<CommandEmpty children={t('noResultsFound')} />
+					<CommandGroup heading={t('actions')}>
 						<CommandItem onSelect={handlePrint}>
-							<span>Print</span>
+							<span>{t('print')}</span>
 						</CommandItem>
 					</CommandGroup>
-					<CommandGroup heading='Links' children={commandItems} />
+					<CommandGroup heading={t('links')} children={commandItems} />
 					<CommandSeparator />
 				</CommandList>
 			</CommandDialog>

@@ -6,7 +6,14 @@
 			"education": "Образование",
 			"skills": "Навыки",
 			"projects": "Пакеты",
-			"wipProjects": "Пакеты в разработке"
+			"wipProjects": "Пакеты в разработке",
+			"pressCmdJToOpenCmdMenu": "Нажмите {{keyCombination}}, чтобы открыть меню команд",
+			"typeACmdOrSearch": "Напишите команду или запрос...",
+			"noResultsFound": "Ничего не найдено.",
+			"actions": "Действия",
+			"print": "Напечатать",
+			"links": "Ссылки",
+			"personalWebsite": "Личный вебсайт"
 		}
 	},
 	"en": {
@@ -16,7 +23,14 @@
 			"education": "Education",
 			"skills": "Skills",
 			"projects": "Packagess",
-			"wipProjects": "Work in Progress Packages"
+			"wipProjects": "Work in Progress Packages",
+			"pressCmdJToOpenCmdMenu": "Press {{keyCombination}} to open the command menu",
+			"typeACmdOrSearch": "Type a command or search...",
+			"noResultsFound": "No results found.",
+			"actions": "Actions",
+			"print": "Print",
+			"links": "Links",
+			"personalWebsite": "Personal Website"
 		}
 	}
 }
