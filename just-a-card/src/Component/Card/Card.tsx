@@ -1,4 +1,4 @@
-import './Card.scss'
+import style from './Card.module.scss'
 import { useState } from 'react'
 
 import { Header } from './Header'
@@ -20,13 +20,13 @@ export const Card: React.FC<Props> = props => {
 	}
 
 	return (
-		<article className='card'>
+		<article className={style.card}>
 			<Header {...product} src={src} />
 			<Selection selectedColorIndex={selectedColorIndex} colors={colors}
 				onSelectColor={handleColorSelection}
 			/>
 			<Toolbar />
-			<Footer imgHref='#' />
+			<Footer />
 		</article>
 	)
 }

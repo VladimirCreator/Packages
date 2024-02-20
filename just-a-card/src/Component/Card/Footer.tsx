@@ -1,14 +1,9 @@
-import { Props as FooterProps } from './Props'
+import style from './Card.module.scss'
 
-type Props = Pick<FooterProps, 'imgHref'>
-
-export const Footer: React.FC<Props> = props => {
-	const { imgHref } = props
-	return (
-		<footer className='card__footer'>
-			<p>
-				<a href={imgHref}>Read reviews</a>
-			</p>
-		</footer>
-	)
-}
+export const Footer: React.FC = () => (
+	<footer className={style.card__footer}>
+		<p>
+			<a href='#'>Read reviews</a>
+		</p>
+	</footer>
+)

@@ -1,3 +1,4 @@
+import style from './Card.module.scss'
 import type { Props as HeaderProps } from './Props'
 
 type Props = Omit<HeaderProps, 'variants'> & {
@@ -11,13 +12,13 @@ export const Header: React.FC<Props> = props => {
 		src
 	} = props
 	return (
-		<header className='card__header'>
-			<h1 className='header__heading'>{title}</h1>
+		<header className={style.card__header}>
+			<h1 className={style.header__heading}>{title}</h1>
 			<figure>
 				<img src={src} width={256} height={256} alt={title} />
-				<figcaption className='header__price'>${price}</figcaption>
+				<figcaption className={style.header__price}>${price}</figcaption>
 			</figure>
-			<p className='header__description'>{description}</p>
+			<p className={style.header__description}>{description}</p>
 		</header>
 	)
 }

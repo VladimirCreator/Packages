@@ -1,3 +1,4 @@
+import style from './Card.module.scss'
 //import type { Props as SelectionProps } from './Props'
 
 type Delegate = {
@@ -23,7 +24,7 @@ export const Selection: React.FC<Props> = props => {
 			}
 
 			return (
-				<li className={index === selectedColorIndex ? 'selection__selected' : ''}
+				<li className={index === selectedColorIndex ? style.selection__selected : ''}
 					onClick={handleClick}
 				>
 					<svg viewBox='0 0 40 40' fill={color}>
@@ -34,7 +35,7 @@ export const Selection: React.FC<Props> = props => {
 		}
 	)
 	return (
-		<section className='card__selection'>
+		<section className={style.card__selection}>
 			<p>Choose your color</p>
 			<ul>{colorsAsJsx}</ul>
 		</section>
