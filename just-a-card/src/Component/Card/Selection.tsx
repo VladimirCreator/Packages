@@ -1,33 +1,42 @@
-import { useState } from 'react'
+//import type { Props as SelectionProps } from './Props'
 
-import { Props as SelectionProps } from './Props'
+type Delegate = {
+	onSelectColor: (index: number) => void
+}
 
-type Props = Pick<SelectionProps, 'colors'>
+type Props = {
+	selectedColorIndex: number
+	colors: string[]
+} &
+	Delegate
 
 export const Selection: React.FC<Props> = props => {
-	const { colors } = props
-	const [selectedIndex, setSelectedIndex] = useState<number|undefined>(undefined)
+	const {
+		selectedColorIndex, colors,
+		onSelectColor
+	} = props
 
-	const handleClick = (index: number) => {
-		setSelectedIndex(index)
-	}
+	const colorsAsJsx = colors.map(
+		(color, index) => {
+			const handleClick = () => {
+				onSelectColor(index)
+			}
 
+			return (
+				<li className={index === selectedColorIndex ? 'selection__selected' : ''}
+					onClick={handleClick}
+				>
+					<svg viewBox='0 0 40 40' fill={color}>
+						<circle cx='20' cy='20' r='18' />
+					</svg>
+				</li>
+			)
+		}
+	)
 	return (
 		<section className='card__selection'>
-			<p>Choose your colour</p>
-			<ul>
-				{
-					colors.map(
-						(color, index) => (
-							<li className={index === selectedIndex ? 'selection__selected' : ''} onClick={() => handleClick(index)}>
-								<svg viewBox='0 0 40 40' fill={color}>
-									<circle cx='20' cy='20' r='18' />
-								</svg>
-							</li>
-						)
-					)
-				}
-			</ul>
+			<p>Choose your color</p>
+			<ul>{colorsAsJsx}</ul>
 		</section>
 	)
 }

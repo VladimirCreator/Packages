@@ -1,6 +1,11 @@
-export type Props = {
+type IHaveProblemsWithNaming = {
+	color: string; src: string
+}
+
+type Card = {
 	price: number
 	title: string; description: string
-	colors: string[]
-	imgHref: string
+	variants: IHaveProblemsWithNaming[]
 }
+
+export type Props = Readonly<Card>
