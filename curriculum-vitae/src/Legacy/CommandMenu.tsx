@@ -55,7 +55,8 @@ export const CommandMenu: React.FC<Props> = props => {
 							keyCombination: `
 <kbd className='font-medium text-[10px] font-mono text-muted-foreground h-5 inline-flex items-center gap-1 px-1.5 border bg-muted rounded opacity-100 select-none pointer-events-none'>
 	<span className='text-xs'>⌘</span>J
-</kbd>{' '}`
+</kbd>{' '}`,
+							interpolation: { escapeValue: false }
 						}
 					)
 				}
