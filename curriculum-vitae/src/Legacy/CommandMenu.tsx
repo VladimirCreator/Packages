@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation, Trans } from 'react-i18next'
 import { CommandIcon } from 'lucide-react'
 
 import { Button } from './UI'
@@ -47,19 +47,19 @@ export const CommandMenu: React.FC<Props> = props => {
 	return (
 		<>
 			<p className='fixed xl:block right-0 bottom-0 left-0 p-1 border-t border-t-muted text-sm text-center text-muted-foreground bg-white hidden print:hidden'>
-				{
-					t(
-						'pressCmdJToOpenCmdMenu',
+				<Trans i18nKey='keyCombination'
+					values={
 						{
-							// Ugly!
-							keyCombination: `
-<kbd className='font-medium text-[10px] font-mono text-muted-foreground h-5 inline-flex items-center gap-1 px-1.5 border bg-muted rounded opacity-100 select-none pointer-events-none'>
-	<span className='text-xs'>⌘</span>J
-</kbd>{' '}`,
-							interpolation: { escapeValue: false }
+							keyCombination: '⌘ J'
 						}
-					)
-				}
+					}
+					components={
+						[
+							<kbd className='font-medium text-[10px] font-mono text-muted-foreground h-5 inline-flex items-center gap-1 px-1.5 border bg-muted rounded opacity-100 select-none pointer-events-none' />
+							/*<span className='text-xs'>⌘</span>J*/
+						]
+					}
+				/>
 			</p>
 			<Button className='fixed right-4 bottom-4 flex rounded-full shadow-2xl xl:hidden print:hidden'
 				onClick={() => setOpen(!open)}
