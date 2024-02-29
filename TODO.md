@@ -33,3 +33,7 @@
 > Framework, library, and a programming language.
 
 - [ ] 11:15 AM Use Lerna.
+
+# March 2024
+## Fri 1
+- [ ] 1:34 AM Add a view that displays a user's gists. @curriculum-vitae
