@@ -29,7 +29,9 @@ swift typescript javascript
 |9|[Just a Form](https://vladimircreator.github.io/Packages/just-a-form)|[`67e07e7`](https://github.com/VladimirCreator/Packages/tree/67e07e719f376441b3bb02a33cb3952af8b79b22)| | | |
 |10|[Mediator](https://vladimircreator.github.io/Mediator/)|Не планируется|✔️| | |
 |11|Shade Explorer|Не планируется|✔️| | |
-|12|[X](https://vladimircreator.github.io/Packages/x)|Не планируется|[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)| | |
+|12|[Swift Jubilant System](https://github.com/VladimirCreator/jubilant-system-swift)|Не планируется||[`151bd70`](https://github.com/VladimirCreator/jubilant-system-swift/commit/151bd706f0bd8a6d99c37d4c5d6f50a2a361c1e3)||
+|13|[TypeScript Jubilant System](https://github.com/VladimirCreator/jubilant-system-swift)|Не планируется|[`2731caa`](https://github.com/VladimirCreator/jubilant-system-typescript/commit/2731caabaec7e2fd170b79f06edfa0d1a1e39928)|||
+|14|[X](https://vladimircreator.github.io/Packages/x)|Не планируется|[`c2099d7`](https://github.com/VladimirCreator/Packages/tree/c2099d7ef928ea59696612333efc2ad3466efcc4)| | |
 
 ## Подробное описание
 Подробную информацию о всех пакетах рекомендуется получать [здесь](https://vladimircreator.github.io/Packages/Documentation).

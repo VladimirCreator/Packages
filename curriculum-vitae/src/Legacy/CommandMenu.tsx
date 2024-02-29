@@ -47,7 +47,7 @@ export const CommandMenu: React.FC<Props> = props => {
 	return (
 		<>
 			<p className='fixed xl:block right-0 bottom-0 left-0 p-1 border-t border-t-muted text-sm text-center text-muted-foreground bg-white hidden print:hidden'>
-				<Trans i18nKey='keyCombination'
+				<Trans i18nKey='pressCmdJToOpenCmdMenu'
 					values={
 						{
 							keyCombination: '⌘ J'
