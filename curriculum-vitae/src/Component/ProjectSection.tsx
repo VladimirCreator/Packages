@@ -27,6 +27,21 @@ export const ProjectSection: React.FC<Props> = props => {
 			)
 		}
 	)
+	const listOfGists = projects.map(
+		(project: any) => {
+			const { title, description, techStack, link, gist } = project
+			if (!gist) {
+				return null
+			}
+			return (
+				<ProjectCard key={title}
+					title={title} description={description}
+					tags={techStack}
+					link={link.href}
+				/>
+			)
+		}
+	)
 	const listOfWipProjects = projects.map(
 		(project: any) => {
 			const { title, description, techStack, link, wip } = project
@@ -47,6 +62,10 @@ export const ProjectSection: React.FC<Props> = props => {
 			<h2 className='font-bold text-xl'>{t('projects')}</h2>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
 				children={compact(listOfProjects)}
+			/>
+			<h2 className='font-bold text-xl'>{t('wipProjects')}</h2>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
+				children={compact(listOfGists)}
 			/>
 			<h2 className='font-bold text-xl'>{t('wipProjects')}</h2>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
