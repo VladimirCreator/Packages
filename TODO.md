@@ -35,6 +35,6 @@
 - [ ] 11:15 AM Use Lerna.
 
 # March 2024
-## Fri 1
-- [x] 1:34 AM Add a view that displays a user's gists. @curriculum-vitae
-> 6:51 PM on Sat 2 March 2024
+## Sun 3
+- [ ] 3:46 AM Add a view that displays a user's often used GitHub Actions. @curriculum-vitae
+
