@@ -8,69 +8,66 @@ type Props = {
 	projects: any[]
 }
 
+/** Looks good!
+  * @param props
+*/
+function createFilteredProjectBlock(props: Props & {
+	title: string
+	callback: (project: any) => boolean
+}) {
+	const {
+		title, projects,
+		callback
+	} = props
+	const { t } = useTranslation()
+	const filteredProjects = projects.map(
+		(project: any) => {
+			if (callback(project)) {
+				return null
+			}
+			const { title: nazvanie, ...rest } = project
+			return (
+				<ProjectCard key={nazvanie} {...rest} />
+			)
+		}
+	)
+
+	return (
+		<>
+			<h2 className='font-bold text-xl'>{t(title)}</h2>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
+				children={compact(filteredProjects)}
+			/>
+		</>
+	)
+}
+
 export const ProjectSection: React.FC<Props> = props => {
 	const { projects } = props
-	const { t } = useTranslation()
+	const projectsJSX = createFilteredProjectBlock(
+		{
+			title: 'projects', projects,
+			callback: () => true,
+		}
+	)
+	const gistsJSX = createFilteredProjectBlock(
+		{
+			title: 'gists', projects,
+			callback: (project) => project.gist,
+		}
+	)
+	const wipProjectsJSX = createFilteredProjectBlock(
+		{
+			title: 'wipProjects', projects,
+			callback: (project) => project.wip,
+		}
+	)
 
-	const listOfProjects = projects.map(
-		(project: any) => {
-			const { title, description, techStack, link, wip } = project
-			if (wip) {
-				return null
-			}
-			return (
-				<ProjectCard key={title}
-					title={title} description={description}
-					tags={techStack}
-					link={link.href}
-				/>
-			)
-		}
-	)
-	const listOfGists = projects.map(
-		(project: any) => {
-			const { title, description, techStack, link, gist } = project
-			if (!gist) {
-				return null
-			}
-			return (
-				<ProjectCard key={title}
-					title={title} description={description}
-					tags={techStack}
-					link={link.href}
-				/>
-			)
-		}
-	)
-	const listOfWipProjects = projects.map(
-		(project: any) => {
-			const { title, description, techStack, link, wip } = project
-			if (!wip) {
-				return null
-			}
-			return (
-				<ProjectCard key={title}
-					title={title} description={description}
-					tags={techStack}
-					link={link.href}
-				/>
-			)
-		}
-	)
 	return (
 		<Section className='scroll-mb-16 print-force-new-page'>
-			<h2 className='font-bold text-xl'>{t('projects')}</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
-				children={compact(listOfProjects)}
-			/>
-			<h2 className='font-bold text-xl'>{t('gists')}</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
-				children={compact(listOfGists)}
-			/>
-			<h2 className='font-bold text-xl'>{t('wipProjects')}</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
-				children={compact(listOfWipProjects)}
-			/>
+			{projectsJSX}
+			{gistsJSX}
+			{wipProjectsJSX}
 		</Section>
 	)
 }
