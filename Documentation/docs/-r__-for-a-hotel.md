@@ -2,9 +2,9 @@
 
 ## Предпросмотр
 
-[Взглянуть](/_r__-for-a-hotel/_r__-for-a-hotel.mov)
+[Взглянуть](../static/_r__-for-a-hotel/_r__-for-a-hotel.mov)
 
-![](/_r__-for-a-hotel/_r__-for-a-hotel.mov)
+![](../static/_r__-for-a-hotel/_r__-for-a-hotel.mov)
 
 ## Зависимости
 Этот пакет как минимум включает в себя эти зависимости:

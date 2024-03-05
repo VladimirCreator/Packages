@@ -4,7 +4,7 @@
 
 [Попробовать](https://vladimircreator.github.io/Packages/cru_-for-an-application/).
 
-![](/cru_-for-an-application/cru_-for-an-application.gif)
+![](../static/cru_-for-an-application/cru_-for-an-application.gif)
 
 ## Зависимости
 Этот пакет как минимум включает в себя эти зависимости:

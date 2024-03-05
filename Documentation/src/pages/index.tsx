@@ -20,7 +20,7 @@ const HomepageHeader: React.FC = () => {
 					{tagline}
 				</p>
 				<div className={styles.buttons}>
-					<Link className='button button--secondary button--lg' to='./docs/_r__-for-a-comment'>
+					<Link className='button button--secondary button--lg' to='./docs/-r__-for-a-comment'>
 						Подробное описание всех проектов
 					</Link>
 				</div>

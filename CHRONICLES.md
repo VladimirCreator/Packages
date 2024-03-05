@@ -16,3 +16,9 @@
 ## Mon 4
 
 1. 7:14 PM...7:24 PM Create `createFilteredProjectBlock` function.@curriculum-vitae
+
+# Tue 5
+
+
+1. 7:51 PM Fix broken link on main page and get rid of featured projects.@curriculum-vitae
+1. 7:53 PM...7:57 PM Fix broken images' links.@curriculum-vitae

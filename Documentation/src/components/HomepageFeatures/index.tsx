@@ -8,21 +8,7 @@ type FeatureItem = {
 	description: JSX.Element
 }
 
-/* На данный момент, я не знаю возможностей Docusaurus, поэтому пока приходится обходится таким образом.
-*/
-const FeatureList: FeatureItem[] = [
-	{ title: '_R__ for a Comment', description: (<></>) },
-	{ title: '_R__ for a Hotel', description: (<></>) },
-	{ title: 'CRUD for a X', description: (<></>) },
-	{ title: 'CRU_ for an Application', description: (<></>) },
-	{ title: 'Curriculum Vitae', description: (<></>) },
-	{ title: 'Documentation', description: (<></>) },
-	{ title: 'Exam for December 2022', description: (<></>) },
-	{ title: 'Just a Card', description: (<></>) },
-	{ title: 'Just a Form', description: (<></>) },
-	{ title: 'Shade Explorer', description: (<></>) },
-	{ title: 'X', description: (<></>) }
-]
+const FeatureList: FeatureItem[] = []
 
 const Feature: React.FC<FeatureItem> = props => {
 	const { title, description } = props
@@ -42,15 +28,15 @@ const Feature: React.FC<FeatureItem> = props => {
 }
 
 const HomepageFeatures: React.FC = () => {
+	const featuresJSX = FeatureList.map(
+		(props, index) => (<Feature key={index} {...props} />)
+	)
+
 	return (
 		<section className={styles.features}>
 			<div className="container">
 				<div className="row">
-					{
-						FeatureList.map(
-							(props, index) => (<Feature key={index} {...props} />)
-						)
-					}
+					{featuresJSX}
 				</div>
 			</div>
 		</section>
