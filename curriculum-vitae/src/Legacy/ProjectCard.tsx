@@ -3,12 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './UI'
 
 type Props = {
 	title: string; description: string
-	readonly tags: string[]
+	readonly techStack: string[]
 	link?: string
 }
 
 export const ProjectCard: React.FC<Props> = props => {
-	const { title, description, tags, link } = props
+	const { title, description, techStack: tags, link } = props
 	return (
 		<Card className='flex flex-col p-3 overflow-hidden border border-muted'>
 			<CardHeader>
@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<Props> = props => {
 				<div className='flex flex-wrap mt-2 gap-1'>
 					{
 						tags.map(
-							(tag) => (
+							(tag: any) => (
 								<Badge key={tag} className='text-[10px] px-1 py-0' children={tag}
 									variant='secondary'
 								/>

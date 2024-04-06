@@ -3,10 +3,6 @@ run-name: ${{ github.actor }} ran GitHub Pages
 
 on:
   workflow_dispatch:
-    inputs:
-      json:
-        required: true
-        type: string
 
 jobs:
   checkout:
@@ -28,7 +24,7 @@ jobs:
     needs: checkout
     strategy:
       matrix:
-        package: ${{ fromJSON(inputs.json) }}
+        package: ${{ fromJSON(vars.VLADIMIR_CONFIGURATION) }}
       fail-fast: false
 
     steps:

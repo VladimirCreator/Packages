@@ -11,63 +11,55 @@ type Props = {
 /** Looks good!
   * @param props
 */
-function createFilteredProjectBlock(props: Props & {
+function createFilteredProjectBlock({
+	title,
+	callback
+}: {
 	title: string
 	callback: (project: any) => boolean
 }) {
-	const {
-		title, projects,
-		callback
-	} = props
-	const { t } = useTranslation()
-	const filteredProjects = projects.map(
-		(project: any) => {
-			if (callback(project)) {
-				return null
+	return (props: Props) => {
+		const { projects } = props
+		const { t } = useTranslation()
+		const filteredProjects = projects.map(
+			(project: any) => {
+				if (!callback(project)) {
+					return null
+				}
+				const { title: nazvanie, link, ...rest } = project
+				return (
+					<ProjectCard key={nazvanie} title={nazvanie} link={link.href} {...rest} />
+				)
 			}
-			const { title: nazvanie, ...rest } = project
-			return (
-				<ProjectCard key={nazvanie} {...rest} />
-			)
-		}
-	)
-
-	return (
-		<>
-			<h2 className='font-bold text-xl'>{t(title)}</h2>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2'
-				children={compact(filteredProjects)}
-			/>
-		</>
-	)
+		)
+		return (
+			<>
+				<h2 className='font-bold text-xl'>{t(title)}</h2>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 -mx-3 print:grid-cols-3 print:gap-2' children={compact(filteredProjects)} />
+			</>
+		)
+	}
 }
+
+const Projects = createFilteredProjectBlock({
+	title: 'projects', callback: (project) => !project.gist && !project.wip,
+})
+
+const WIPProjects = createFilteredProjectBlock({
+	title: 'wipProjects', callback: (project) => project.wip,
+})
+
+const GistProjects = createFilteredProjectBlock({
+	title: 'gists', callback: (project) => project.gist,
+})
 
 export const ProjectSection: React.FC<Props> = props => {
 	const { projects } = props
-	const projectsJSX = createFilteredProjectBlock(
-		{
-			title: 'projects', projects,
-			callback: () => true,
-		}
-	)
-	const gistsJSX = createFilteredProjectBlock(
-		{
-			title: 'gists', projects,
-			callback: (project) => project.gist,
-		}
-	)
-	const wipProjectsJSX = createFilteredProjectBlock(
-		{
-			title: 'wipProjects', projects,
-			callback: (project) => project.wip,
-		}
-	)
-
 	return (
 		<Section className='scroll-mb-16 print-force-new-page'>
-			{projectsJSX}
-			{gistsJSX}
-			{wipProjectsJSX}
+			<Projects projects={projects} />
+			<GistProjects projects={projects} />
+			<WIPProjects projects={projects} />
 		</Section>
 	)
 }
