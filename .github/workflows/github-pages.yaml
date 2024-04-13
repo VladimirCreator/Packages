@@ -17,7 +17,7 @@ jobs:
           path: |
             **/*
             !**/script/**/*
-          retention-days: 1
+          retention-days: 64 # So I am able to rerun my workflow.
 
   build:
     runs-on: ubuntu-latest
